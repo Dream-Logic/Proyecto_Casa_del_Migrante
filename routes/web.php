@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('bienvenido');
 });
+
+Route::get('/principal','paginaPrincipal_controller@index')
+    ->name('index.index');
+
+
+Route::get('/acceder', 'paginaPrincipal_controller@crear')
+    ->name('construccion.crear');

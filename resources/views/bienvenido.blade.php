@@ -70,7 +70,7 @@
                     <h1 class="text-uppercase" data-aos="fade-up" style="font-size: 90px; font-family: cursive">BIENVENIDOS</h1>
                     <p class="mb-5 desc"  data-aos="fade-up" data-aos-delay="100"><b style="color: #e0a800; font-size: 25px; font-family: cursive"><strong>Fundación Alivio del Sufrimiento</strong></b></p>
                     <div data-aos="fade-up" data-aos-delay="100">
-                        <a href="#contact-section" class="btn smoothscroll btn-primary mr-2 mb-2">Acceder</a>
+                        <a href="{{route('index.index')}}" class="btn smoothscroll btn-primary mr-2 mb-2">Acceder</a>
                     </div>
                 </div>
 
