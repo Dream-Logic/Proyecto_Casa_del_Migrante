@@ -61,35 +61,34 @@
                 <div class="col-lg-3 milestone_col">
                     <div class="milestone text-center">
                         <a href="{{route('formulario.uno')}}"></a>
-                        <div class="milestone_icon"><img src="imagenes/Ingreso.jpg" alt="https://www.flaticon.com/authors/zlatko-najdenovski"></div>
+                        <div class="milestone_icon"><img src="imagenes/Formu1.svg" alt="https://www.flaticon.com/authors/zlatko-najdenovski"></div>
+                        <a href="{{route('formulario.dos')}}" class="hero_box_link">Formulario de ingreso</a>
 
-                        <div class="milestone_text">Ficha de Ingreso</div>
                     </div>
                 </div>
 
+
+                <div class="col-lg-3 milestone_col">
+                    <div class="milestone text-center">
+                        <div class="milestone_icon"><img src="imagenes/Formu2.svg" alt="https://www.flaticon.com/authors/zlatko-najdenovski"></div>
+                        <a href="{{route('formulario.dos')}}" class="hero_box_link">Formulario de hechos</a>
+                    </div>
+                </div>
 
                 <div class="col-lg-3 milestone_col">
                     <div class="milestone text-center">
                         <div class="milestone_icon"><img src="imagenes/listado2.svg" alt="https://www.flaticon.com/authors/zlatko-najdenovski"></div>
 
-                        <div class="milestone_text">Listado de Huespedes</div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 milestone_col">
-                    <div class="milestone text-center">
-                        <div class="milestone_icon"><img src="images/estadisticas2.svg" alt="https://www.flaticon.com/authors/zlatko-najdenovski"></div>
-
-                        <div class="milestone_text">Estadisticas</div>
+                        <a href="{{route('formulario.tres')}}" class="hero_box_link">Formulario de personal</a>
                     </div>
                 </div>
 
 
                 <div class="col-lg-3 milestone_col">
                     <div class="milestone text-center">
-                        <div class="milestone_icon"><img src="imagenes/salud.svg" alt="https://www.flaticon.com/authors/zlatko-najdenovski"></div>
+                        <div class="milestone_icon"><img src="imagenes/formu3.svg" alt="https://www.flaticon.com/authors/zlatko-najdenovski"></div>
 
-                        <div class="milestone_text"> salud</div>
+                        <a href="{{route('formulario.cuatro')}}" class="hero_box_link">Formulario del responsable</a>
                     </div>
                 </div>
 

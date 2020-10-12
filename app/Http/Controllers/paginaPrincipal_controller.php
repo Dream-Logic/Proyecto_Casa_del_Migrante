@@ -38,4 +38,27 @@ class paginaPrincipal_controller extends Controller
         return view('datosHuesped');
 
     }
+
+    public function segundoFormulario()
+
+    {
+        //
+        return view('datosHechos');
+
+    }
+
+    public function tercerFormulario()
+
+    {
+        //
+        return view('datosPersonal');
+    }
+
+    public function cuartoFormulario()
+
+    {
+        //
+        return view('datosResponsable');
+
+    }
 }
