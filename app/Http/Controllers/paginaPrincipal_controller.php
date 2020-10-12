@@ -61,4 +61,11 @@ class paginaPrincipal_controller extends Controller
         return view('datosResponsable');
 
     }
+
+    public function atras()
+
+    {
+        //
+        return view('index');
+    }
 }

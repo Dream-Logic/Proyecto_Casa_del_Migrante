@@ -52,3 +52,8 @@ Route::get('/formulario3','paginaPrincipal_controller@tercerFormulario')
     ->name('formulario.tres');
 Route::get('/formulario4','paginaPrincipal_controller@cuartoFormulario')
     ->name('formulario.cuatro');
+/*Ruta de regreso*/
+Route::get('/Btn_atras','paginaPrincipal_controller@atras')
+    ->name('atras.regre');
+Route::get('/Btn_regresar','paginaPrincipal_controller@regreso')
+    ->name('regresar.volv');
