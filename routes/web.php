@@ -40,3 +40,7 @@ Route::get('/tecnico','TecnicoController@fichacuatro')
 /*RUTAS DE la web en construccion */
 Route::get('/construccion','ConstruccionController@vacia')
     ->name('fichaV.vacia');
+Route::get('/principalformulario','paginaPrincipal_controller@principalformulario')
+    ->name('hola.ho');
+Route::get('/formulario1','paginaPrincipal_controller@primerFormulario')
+    ->name('formulario.uno');

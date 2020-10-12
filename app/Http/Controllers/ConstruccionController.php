@@ -18,6 +18,8 @@ class ConstruccionController extends Controller
         return view('construccion');
     }
 
+
+
     /**
      * Show the form for creating a new resource.
      *

@@ -14,6 +14,7 @@ class paginaPrincipal_controller extends Controller
         return view('index');
 
     }
+
     //
     public function crear()
     {
@@ -23,5 +24,18 @@ class paginaPrincipal_controller extends Controller
 
     }
 
+    public function principalformulario()
 
+    {
+        //
+        return view('hola');
+    }
+
+    public function primerFormulario()
+
+    {
+        //
+        return view('datosHuesped');
+
+    }
 }

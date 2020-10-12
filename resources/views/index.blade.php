@@ -34,12 +34,12 @@
             <div class="row">
 
                 <div class="col-lg-3 hero_box_col" >
-                    <a href="{{route('construccion.crear')}}" >
+                    <a href="{{route('hola.ho')}}" >
                     <div class="hero_box d-flex flex-row align-items-center justify-content-start">
                         <img src="images/registro.svg"  class="svg" alt="">
                         <div class="hero_box_content">
                             <h1 class="hero_box_title">Ficha de Ingreso</h1>
-                            <a href="{{route('construccion.crear')}}" class="hero_box_link">Registro</a>
+                            <a href="{{route('hola.ho')}}" class="hero_box_link">Registro</a>
                         </div>
                     </div>
                     </a>
