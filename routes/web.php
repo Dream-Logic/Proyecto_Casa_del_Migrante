@@ -20,6 +20,23 @@ Route::get('/', function () {
 Route::get('/principal','paginaPrincipal_controller@index')
     ->name('index.index');
 
-
 Route::get('/acceder', 'paginaPrincipal_controller@crear')
     ->name('construccion.crear');
+/*rutas de primer formulario
+*/
+/*RUTAS DE LA PRIMERA FICHA */
+Route::get('/proyectos','ProyectoController@indice')
+    ->name('ficha.indice');
+
+/*RUTAS DE LA SEGUNDA FICHA */
+Route::get('/responsable','ResponsableController@fichados')
+    ->name('ficha.fichados');
+/*RUTAS DE LA TERCERA FICHA */
+Route::get('/narracion','NarracionController@fichatres')
+    ->name('fichas.fichatres');
+/*RUTAS DE LA Cuarta FICHA */
+Route::get('/tecnico','TecnicoController@fichacuatro')
+    ->name('fichasa.fichacuatro');
+/*RUTAS DE la web en construccion */
+Route::get('/construccion','ConstruccionController@vacia')
+    ->name('fichaV.vacia');
