@@ -51,7 +51,7 @@
                         <img src="images/creciente.svg" class="svg" alt="">
                         <div class="hero_box_content">
                             <h2 class="hero_box_title">Estadisticas</h2>
-                            <a href="{{route('construccion.crear')}}" class="hero_box_link">Registro</a>
+                            <a href="{{route('construccion.crear')}}" class="hero_box_link">Ver</a>
                         </div>
                     </div>
                     </a>
@@ -63,7 +63,7 @@
                         <img src="images/salud.svg" class="svg" alt="">
                         <div class="hero_box_content">
                             <h2 class="hero_box_title">Salud</h2>
-                            <a href="{{route('construccion.crear')}}" class="hero_box_link">Registro</a>
+                            <a href="{{route('construccion.crear')}}" class="hero_box_link">Ver</a>
                         </div>
                     </div>
                     </a>
@@ -74,8 +74,8 @@
                     <div class="hero_box d-flex flex-row align-items-center justify-content-start">
                         <img src="images/bueno.svg" class="svg" alt="">
                         <div class="hero_box_content">
-                            <h2 class="hero_box_title">Lista de Alumnos</h2>
-                            <a href="{{route('construccion.crear')}}" class="hero_box_link">Registro</a>
+                            <h2 class="hero_box_title">Listado  de Huespedes</h2>
+                            <a href="{{route('construccion.crear')}}" class="hero_box_link">ver</a>
                         </div>
                     </div>
                     </a>
