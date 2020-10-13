@@ -164,7 +164,7 @@
 
 
                 <div class="botones">
-                    <button type="button" class="btn btn-primary active"> Regresar </button>
+                    <a class="btn btn-primary" href="{{route('hola.ho')}}">Regresar</a>
                     <a class="btn btn-primary" href="{{route('fichaV.vacia')}}">Guardar</a>
                     <a class="btn btn-primary" href="{{route('ficha.fichados')}}">Siguiente</a>
                 </div><br>

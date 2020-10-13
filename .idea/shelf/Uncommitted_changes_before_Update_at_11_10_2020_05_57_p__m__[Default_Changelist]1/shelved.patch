@@ -1,0 +1,18 @@
+Index: routes/web.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\n\r\nuse Illuminate\\Support\\Facades\\Route;\r\n\r\n/*\r\n|--------------------------------------------------------------------------\r\n| Web Routes\r\n|--------------------------------------------------------------------------\r\n|\r\n| Here is where you can register web routes for your application. These\r\n| routes are loaded by the RouteServiceProvider within a group which\r\n| contains the \"web\" middleware group. Now create something great!\r\n|\r\n*/\r\n\r\nRoute::get('/', function () {\r\n    return view('welcome');\r\n});\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- routes/web.php	(revision eb01a150739fc6793784970bea9d099835fb700d)
++++ routes/web.php	(date 1602460625632)
+@@ -16,3 +16,4 @@
+ Route::get('/', function () {
+     return view('welcome');
+ });
++
+diff --git public/index.php public/index.php
+diff --git public/robots.txt public/robots.txt
+diff --git public/web.config public/web.config
+diff --git public/.htaccess public/.htaccess

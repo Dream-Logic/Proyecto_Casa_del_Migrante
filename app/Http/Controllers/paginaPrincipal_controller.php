@@ -43,7 +43,7 @@ class paginaPrincipal_controller extends Controller
 
     {
         //
-        return view('datosHechos');
+        return view('datosResponsable');
 
     }
 
@@ -51,14 +51,14 @@ class paginaPrincipal_controller extends Controller
 
     {
         //
-        return view('datosPersonal');
+        return view('datosHechos');
     }
 
     public function cuartoFormulario()
 
     {
         //
-        return view('datosResponsable');
+        return view('datosPersonal');
 
     }
 
@@ -67,5 +67,11 @@ class paginaPrincipal_controller extends Controller
     {
         //
         return view('index');
+    }
+    public function Btn_regresar()
+
+    {
+        //
+        return view('hola');
     }
 }

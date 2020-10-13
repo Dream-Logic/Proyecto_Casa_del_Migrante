@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<div class="milestones_background" style=" background-image:url(imagenes/Casa2.jpg)"></div>
+<div class="milestones_background" style=" background-image:url(imagenes/fondo3.jpeg)"></div>
 <nav class="navbar navbar-expand-lg navbar-expand-lg p-3 mb-0 bg-info " >
     <a class="navbar-brand text-dark"  href="{{route('atras.regre')}}">Atras</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,8 +65,8 @@
                 <div class="col-lg-3 milestone_col">
                     <div class="milestone text-center">
                         <a href="{{route('formulario.uno')}}"></a>
-                        <div class="milestone_icon"><img src="imagenes/Formu1.svg" alt="https://www.flaticon.com/authors/zlatko-najdenovski"></div>
-                        <a href="{{route('formulario.dos')}}" class="milestone_icon d-inline fa-toggle-on  text-light text-nowrap">Formulario de ingreso</a>
+                        <div class="milestone_icon"><img src="imagenes/formu4.jpg" alt="https://www.flaticon.com/authors/zlatko-najdenovski"></div>
+                        <a href="{{route('formulario.uno')}}" class="milestone_icon d-inline fa-toggle-on  text-light text-nowrap">Datos del Huesped</a>
 
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                 <div class="col-lg-3 milestone_col">
                     <div class="milestone text-center">
                         <div class="milestone_icon"><img src="imagenes/Ingreso.jpg" alt="https://www.flaticon.com/authors/zlatko-najdenovski"></div>
-                        <a href="{{route('formulario.dos')}}" class="milestone_icon text-light  text-nowrap">Formulario de hechos</a>
+                        <a href="{{route('formulario.dos')}}" class="milestone_icon text-light  text-nowrap">Datos del Responsable</a>
                     </div>
                 </div>
 
@@ -83,7 +83,7 @@
                     <div class="milestone text-center">
                         <div class="milestone_icon"><img src="imagenes/listado2.svg" alt="https://www.flaticon.com/authors/zlatko-najdenovski"></div>
 
-                        <a href="{{route('formulario.tres')}}" class="milestone_icon text-light text-nowrap">Formulario del personal</a>
+                        <a href="{{route('formulario.tres')}}" class="milestone_icon text-light text-nowrap">Datos de los Hechos</a>
                     </div>
                 </div>
 
@@ -92,7 +92,7 @@
                     <div class="milestone text-center">
                         <div class="milestone_icon"><img src="imagenes/formu3.jpg" alt="https://www.flaticon.com/authors/zlatko-najdenovski"></div>
 
-                        <a href="{{route('formulario.cuatro')}}" class="milestone_icon text-nowrap text-light text-nowrap">Formulario del responsable</a>
+                        <a href="{{route('formulario.cuatro')}}" class="milestone_icon text-nowrap text-light text-nowrap">Datos del Personal</a>
                     </div>
                 </div>
 
