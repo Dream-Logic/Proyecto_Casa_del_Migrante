@@ -67,10 +67,10 @@
             <div class="row align-items-center justify-content-center">
 
                 <div class="col-md-8 mt-lg-5 text-center">
-                    <h1 class="text-uppercase" data-aos="fade-up" style="font-size: 90px; font-family: cursive">BIENVENIDOS</h1>
+                    <h6 class="text-uppercase" data-aos="fade-up" style=" font-size: 50px; font-family: cursive; color: white">BIENVENIDOS</h6>
                     <p class="mb-5 desc"  data-aos="fade-up" data-aos-delay="100"><b style="color: #e0a800; font-size: 25px; font-family: cursive"><strong>Fundación Alivio del Sufrimiento</strong></b></p>
                     <div data-aos="fade-up" data-aos-delay="100">
-                        <a href="{{route('index.index')}}" class="btn smoothscroll btn-primary mr-2 mb-2">Acceder</a>
+                        <a href="{{route('gestor.usuario')}}" class="btn smoothscroll btn-primary mr-2 mb-2">Acceder</a>
                     </div>
                 </div>
 
@@ -99,7 +99,7 @@
                 </div>
                 <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
                     <div class="mb-4">
-                        <h2 class= "section-title mb-3"><b>Sobre Nosotros</b></h2>
+                        <h6 class= "section-title mb-3"><b>Sobre Nosotros</b></h6>
                         <p>El principal problema que el proyecto propuesto quiere abordar es la necesidad de
                             un modelo integral que atienda las necesidades de seguridad y acceso a formación
                             de calidad para reincorporarse al sistema educativo o mercado laboral. No existen
@@ -124,7 +124,7 @@
         <div class="container">
             <div class="row mb-5">
                 <div class="col-12 text-center" data-aos="fade">
-                    <h2 class="section-title mb-3">Nuestros Servicios</h2>
+                    <h6 class="section-title mb-3">Nuestros Servicios</h6>
                 </div>
             </div>
             <div class="row align-items-stretch">
@@ -132,7 +132,7 @@
                     <div class="unit-4">
                         <img src="images/comida-y-bebida (1).svg" class="svg" width="60">
                         <div>
-                            <h3>Alimentación gratuita</h3>
+                            <h6 style="color: black; font-size: 1.3em;">Alimentación gratuita</h6>
                             <p>La alimentación es un elemento importante en la buena salud, influye la calidad de
                                 los alimentos, la cantidad de comida y los hábitos alimentarios para un bienestar
                                 del ser humano, con lo cual se obtiene una nutrición equilibrada</p>
@@ -143,7 +143,7 @@
                     <div class="unit-4">
                         <img src="images/kit-de-primeros-auxilios.svg" class="svg" width="50">
                         <div>
-                            <h3>Atención médica</h3>
+                            <h6 style="color: black; font-size: 1.3em;">Atención médica</h6>
                             <p>La buena atención médica es el tipo de medicina que practican y enseñan los líderes
                                 reconocidos de la profesión médica en un cierto periodo del desarrollo.</p>
                         </div>
@@ -153,7 +153,7 @@
                     <div class="unit-4">
                         <img src="images/ropa-limpia.svg" class="svg" width="50">
                         <div>
-                            <h3>Vestuario</h3>
+                            <h6 style="color: black; font-size: 1.3em;">Vestuario</h6>
                             <p>Conjunto de prendas de vestir para los niños, niñas y jóvenes</p>
                         </div>
                     </div>
@@ -164,7 +164,7 @@
                     <div class="unit-4">
                         <img src="images/casa.svg" class="svg" width="50">
                         <div>
-                            <h3>Alojamiento</h3>
+                            <h6 style="color: black; font-size: 1.3em;">Alojamiento</h6>
                             <p>Garantizar el alojamiento de los migrantes y sus familias. Sector de la población
                                 al que va dirigido el servicio: Población inmigrante.</p>
                         </div>
@@ -174,7 +174,7 @@
                     <div class="unit-4">
                         <img src="images/llamada-telefonica.svg" class="svg" width="50">
                         <div>
-                            <h3>Llamada telefónica</h3>
+                            <h6 style="color: black; font-size: 1.3em;">Llamada telefónica</h6>
                             <p>Una llamada telefónica es la operación en la que se comunican generalmente 2 personas,
                                 aunque pueden ser varias personas, a ambos extremos.</p>
                         </div>
@@ -184,7 +184,7 @@
                     <div class="unit-4">
                         <img src="images/psicologia.svg" class="svg" width="50">
                         <div>
-                            <h3>Atención psicológica</h3>
+                            <h6 style="color: black; font-size: 1.3em;">Atención psicológica</h6>
                             <p>Como parte de la atención integral se cuenta con el servicio de atención psicológica al menor.
                                 A su corta edad muchos de los Niños, Niñas y adolescentes atendidos han sido migrantes transnacionales
                                 y en su recorrido han vivido experiencias traumáticas que pueden marcar su desarrollo. La importancia
@@ -199,7 +199,7 @@
         <div class="container">
             <div class="row mb-5">
                 <div class="col-12 text-center" data-aos="fade">
-                    <h2 class="section-title mb-3">Nuestra Galeria</h2>
+                    <h6 class="section-title mb-3">Nuestra Galeria</h6>
                 </div>
             </div>
 
@@ -256,29 +256,29 @@
         <div class="container">
             <div class="row mb-5">
                 <div class="col-12 text-center">
-                    <h2 class="section-title mb-3">Contáctanos</h2>
+                    <h6 class="section-title mb-3">Contáctanos</h6>
                 </div>
             </div>
             <div class="row mb-5">
                 <div class="col-md-4 text-center">
                     <p class="mb-4">
-                        <span class="icon-room d-block h4 text-primary"></span>
+                        <span class="icon-room  text-primary"></span>
                         <span>El Paraíso, El Paraíso Honduras C.A</span>
                     </p>
                 </div>
                 <div class="col-md-4 text-center">
                     <p class="mb-4">
-                        <span class="icon-phone d-block h4 text-primary"></span>
+                        <span class="icon-phone  text-primary"></span>
                         <a href="#">(504) 98000025</a>
                     </p>
                     <p class="mb-4">
-                        <span class="icon-phone d-block h4 text-primary"></span>
+                        <span class="icon-phone text-primary"></span>
                         <a href="#">(504) 2793-4894</a>
                     </p>
                 </div>
                 <div class="col-md-4 text-center">
                     <p class="mb-0">
-                        <span class="icon-mail_outline d-block h4 text-primary"></span>
+                        <span class="icon-mail_outline  text-primary"></span>
                         <a href="#">doncastriotti@gmail.com</a>
                     </p>
                 </div>
@@ -294,12 +294,12 @@
                 <div class="col-md-9">
                     <div class="row">
                         <div class="col-md-4">
-                            <h2 class="footer-heading mb-6">Acerca de</h2>
+                            <h6 class="footer-heading mb-6">Acerca de</h6>
                             <p>Hasta la fecha, el sistema educativo no permite la incorporación de alumnos una vez iniciado
                                 el curso escolar y las oportunidades de empleo y emprendimiento son escasas.</p>
                         </div>
                         <div class="col-md-2">
-                            <h2 class="footer-heading mb-4">Enlaces</h2>
+                            <h6 class="footer-heading mb-4">Enlaces</h6>
                             <ul class="list-unstyled">
                                 <li><a href="#about-section" class="smoothscroll">Acerca de</a></li>
                                 <li><a href="#services-section" class="smoothscroll">Servicios</a></li>
@@ -308,19 +308,19 @@
                             </ul>
                         </div>
                         <div class="col-md-4">
-                            <h2 class="footer-heading mb-4">Horarios de atención</h2>
+                            <h6 class="footer-heading mb-4">Horarios de atención</h6>
                             <p>Lunes-Viernes  8:00 am a 4:00 pm</p>
                             <p>Sábados 8:00 am a 12:00 pm</p>
                         </div>
                         <div class="col-md-2">
-                            <h2 class="footer-heading">Soporte técnico</h2>
-                            <span class="icon-mail_outline d-block h4 text-primary"></span>
+                            <h6 class="footer-heading" style="color: white; ">Soporte técnico</h6>
+                            <span class="icon-mail_outline  text-primary"></span>
                             <a href="#">montielkarina1@gmail.com</a>
-                            <span class="icon-mail_outline d-block h4 text-primary"></span>
+                            <span class="icon-mail_outline text-primary"></span>
                             <a href="#">maridiaz4455@gmail.com</a>
-                            <span class="icon-mail_outline d-block h4 text-primary"></span>
+                            <span class="icon-mail_outline  text-primary"></span>
                             <a href="#">tania.calix@yahoo.com</a><br>
-                            <span class="icon-mail_outline d-block h4 text-primary"></span>
+                            <span class="icon-mail_outline text-primary"></span>
                             <a href="#">murillodaniela408@gmail.com</a>
                         </div>
                     </div>

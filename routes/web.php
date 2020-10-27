@@ -20,11 +20,12 @@ Route::group(["middleware"=>"auth"],function () {//director
 
     Route::group(['middleware' => 'admin'], function () {
 //aquitodo lo del administrador
+/*Rutas de las vistas gestor de usuario*/
+Route::get('/gestor', 'GestorUsuarioController@indexAdmin')
+    ->name('gestor.usuario');
+
 Route::get('/principal','paginaPrincipal_controller@index')
     ->name('index.index');
-
-
-
 
 /*Rutas de vista redireccionadora de FORMULARIOS*/
 
@@ -76,6 +77,9 @@ Route::delete('/proyectos/{id}/borrar','ProyectoController@destroy')
         ->name('dire.access');
 
     Route::get('/home', 'HomeController@index')->name('home');
+    /*ruta que dirige a la vista gestor de usuario*/
+    Route::get('/gestorDirec', 'GestorUsuarioController@indexDirec')
+        ->name('gestor.direc');
 });
 Auth::routes();
 
