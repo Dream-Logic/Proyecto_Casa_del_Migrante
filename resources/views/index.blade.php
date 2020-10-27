@@ -101,18 +101,17 @@
                     </div>
                     </a>
                 </div>
-
-                <div class="col-lg-3.5 hero_box_col">
-                    <a href="" >
-                    <div class="hero_box d-flex flex-row align-items-center justify-content-start">
-                        <img src="images/creciente.svg" class="svg" alt="">
-                        <div class="hero_box_content">
-                            <h2 class="hero_box_title">Estadisticas</h2>
-                            <a href="" class="hero_box_link">Ver</a>
+                <div class="col-lg-3 hero_box_col">
+                    <a href="{{ route('listado.index') }}">
+                        <div class="hero_box d-flex flex-row align-items-center justify-content-start">
+                            <img src="images/bueno.svg" class="svg" alt="">
+                            <div class="hero_box_content">
+                                <h2 class="hero_box_title">Listado  de Huespedes</h2>
+                                <a href="" class="hero_box_link">ver</a>
+                            </div>
                         </div>
-                    </div>
                     </a>
-            </div>
+                </div>
 
                 <div class="col-lg-3 hero_box_col">
                     <a href="">
@@ -126,17 +125,18 @@
                     </a>
                 </div>
 
-                <div class="col-lg-3 hero_box_col">
-                    <a href="{{ route('listado.index') }}">
-                    <div class="hero_box d-flex flex-row align-items-center justify-content-start">
-                        <img src="images/bueno.svg" class="svg" alt="">
-                        <div class="hero_box_content">
-                            <h2 class="hero_box_title">Listado  de Huespedes</h2>
-                            <a href="" class="hero_box_link">ver</a>
+                <div class="col-lg-3.5 hero_box_col">
+                    <a href="" >
+                        <div class="hero_box d-flex flex-row align-items-center justify-content-start">
+                            <img src="images/creciente.svg" class="svg" alt="">
+                            <div class="hero_box_content">
+                                <h2 class="hero_box_title">Estadisticas</h2>
+                                <a href="" class="hero_box_link">Ver</a>
+                            </div>
                         </div>
-                    </div>
                     </a>
                 </div>
+
             </div>
         </div>
     </div>
