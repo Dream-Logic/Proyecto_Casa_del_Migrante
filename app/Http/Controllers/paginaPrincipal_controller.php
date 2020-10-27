@@ -7,36 +7,16 @@ use Illuminate\Http\Request;
 class paginaPrincipal_controller extends Controller
 {
     //
-    public function index()
-    {
-
-
-        return view('index');
-
-    }
+  /*
 
     //
-    public function crear()
-    {
 
 
-        return view('Construccion');
 
-    }
 
-    public function principalformulario()
+    public function create(){
 
-    {
-        //
-        return view('hola');
-    }
-
-    public function primerFormulario()
-
-    {
-        //
         return view('datosHuesped');
-
     }
 
     public function segundoFormulario()
@@ -73,5 +53,28 @@ class paginaPrincipal_controller extends Controller
     {
         //
         return view('hola');
+    }*/
+
+    public function principalformulario()
+
+    {
+        //
+        return view('hola');
+    }
+    public function index()
+    {
+
+
+        return view('index');
+
+    }
+
+
+    public function crear()
+    {
+
+
+        return view('Construccion');
+
     }
 }

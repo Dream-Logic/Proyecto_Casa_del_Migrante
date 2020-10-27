@@ -22,38 +22,46 @@ Route::get('/principal','paginaPrincipal_controller@index')
 
 Route::get('/acceder', 'paginaPrincipal_controller@crear')
     ->name('construccion.crear');
-/*rutas de primer formulario
-*/
-/*RUTAS DE LA PRIMERA FICHA */
-Route::get('/proyectos','ProyectoController@indice')
-    ->name('ficha.indice');
 
-/*RUTAS DE LA SEGUNDA FICHA */
-Route::get('/responsable','ResponsableController@fichados')
-    ->name('ficha.fichados');
-/*RUTAS DE LA TERCERA FICHA */
-Route::get('/narracion','NarracionController@fichatres')
-    ->name('fichas.fichatres');
-/*RUTAS DE LA Cuarta FICHA */
-Route::get('/tecnico','TecnicoController@fichacuatro')
-    ->name('fichasa.fichacuatro');
-/*RUTAS DE la web en construccion */
-Route::get('/construccion','ConstruccionController@vacia')
-    ->name('fichaV.vacia');
+
 /*Rutas de vista redireccionadora de FORMULARIOS*/
+
 Route::get('/principalformulario','paginaPrincipal_controller@principalformulario')
     ->name('hola.ho');
-/*Rutas de cada formulario de ingreso de huespedes*/
-Route::get('/formulario1','paginaPrincipal_controller@primerFormulario')
-    ->name('formulario.uno');
-Route::get('/formulario2','paginaPrincipal_controller@segundoFormulario')
-    ->name('formulario.dos');
-Route::get('/formulario3','paginaPrincipal_controller@tercerFormulario')
-    ->name('formulario.tres');
-Route::get('/formulario4','paginaPrincipal_controller@cuartoFormulario')
-    ->name('formulario.cuatro');
-/*Ruta de regreso*/
 Route::get('/Btn_atras','paginaPrincipal_controller@atras')
     ->name('atras.regre');
 Route::get('/Btn_regresar','paginaPrincipal_controller@regreso')
     ->name('regresar.volv');
+
+/*Ruta para el formulario*/
+
+
+/*RUTAS PARA EL LISTADO*/
+Route::get('/proyectos/listado','ProyectoController@index')
+    ->name('listado.index');
+/*rutas de crear */
+Route::get('/proyectos/crear', 'ProyectoController@create')
+    ->name('ficha.create');
+Route::post('/proyectos/crear', 'ProyectoController@store')
+    ->name('listado.guardar');
+/*Rutas para mostrar listado*/
+Route::get('/proyectos/{id}','ProyectoController@show')
+    ->name('detalles.mostrar')
+    ->where('id','[0-9]+');
+
+//RUTAS PARA EDITAR
+
+
+Route::get('/proyectos/{id}/editar','ProyectoController@edit')
+    ->name('listado.edit')
+    ->where('id','[0-9]+');
+
+Route::put('/proyectos/{id}/editar','ProyectoController@update')
+    ->name('listado.update')
+    ->where('id','[0-9]+');
+
+//RUTA PARA BORRAR
+
+Route::delete('/proyectos/{id}/borrar','ProyectoController@destroy')
+    ->name('listado.borrar')
+    ->where('id','[0-9]+');
