@@ -10,76 +10,104 @@
     <link href="plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="styles/elements_styles.css">
     <link rel="stylesheet" type="text/css" href="styles/elements_responsive.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+
+
 </head>
 <body>
+<div id="app">
+    <nav class="navbar fixed-top
+ navbar-expand-md navbar-light bg-white shadow-sm" >
+        <div class="container" style="background-color: #ffe8a1">
+            <h3>Fundación Alivio del Sufrimiento </h3>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Left Side Of Navbar -->
+                <ul class="navbar-nav mr-auto">
+
+                </ul>
+
+                <!-- Right Side Of Navbar -->
+                <ul class="navbar-nav ml-auto">
+                    <!-- Authentication Links -->
+                    @guest
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        </li>
+                        @if (Route::has('register'))
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            </li>
+                        @endif
+                    @else
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::user()->name }}
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                    {{ __('Cerrar Sesión') }}
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </div>
+                        </li>
+                    @endguest
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
 
 <div class="milestones_background" style=" background-image:url(imagenes/fondo9.jpg)"></div>
-<nav class="navbar navbar-expand-lg navbar-expand-lg p-3 mb-0 bg-transparent" >
-    <a class="navbar-brand text-dark"  href="{{route('atras.regre')}}">Atras</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="navbar-brand" href="#"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <a href="#" class="navbar-expand-lg"></a>
-    <div class="collapse navbar-collapse" id="navbar-1">
-    </div>
-    <ul class="nav navbar-nav text-white">
-        <li class="dropdown">
-            <a href=""class="dropdown-toggle text-dark" data-toggle="dropdown" role="button">
-                Seleccione<span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-                <li><a href="">Cambiar de usuario</a></li>
-                <li><a href="">Cerrar sesion</a></li>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-            </ul>
-        </li>
-    </ul>
-
-    <a class="navbar-brand text-dark" href="#"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    </div>
-    <a class="navbar-brand text-dark" href="#"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    </div>
-    <a class="navbar-brand text-dark" href="#"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    </div>
-
-    </div>
-
-
-</nav>
 <div class="hero_slide_content text-center text-dark">
-    <h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut"> Bienveidos!<span></span></h1>
+    <h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut"> Bienvenido al <span></span></h1>
 </div>
 <div class="hero_slide_content text-center text-dark">
-    <h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut"> Registro<span>del</span> Huesped</h1>
+    <h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut"> Registro<span> del</span> Huesped</h1>
 </div>
 <div class="milestones_container">
     <div class="container">
-            <div class="row ">
-                <div class="col-lg-3 milestone_col align-content-center">
-                    <div class="milestone icon-font-awesome text-info text-md-right h-75">
-                        <div>
-                            <h3 href="{{route('ficha.create')}}" class="milestones_background text-dark  ">Datos del Huesped</h3>
-                        </div>
-                        <a href="{{route('ficha.create')}}" class="milestones_background w-50 "><img src=" imagenes/icon6.svg"  alt="https://www.flaticon.com/authors/zlatko-najdenovski"></div>
+        <div class="row ">
+            <div class="col-lg-3 milestone_col align-content-center">
+                <div class="milestone icon-font-awesome text-info text-md-right h-75">
+                    <div>
+                        <h3 href="{{route('ficha.create')}}" class="milestones_background text-dark  ">Datos del Huesped</h3>
                     </div>
-
-                    </div>
-                </div>
+                    <a href="{{route('ficha.create')}}" class="milestones_background w-50 "><img src=" imagenes/icon6.svg"  alt="https://www.flaticon.com/authors/zlatko-najdenovski"></div>
             </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
 
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="styles/bootstrap4/popper.js"></script>
@@ -93,6 +121,8 @@
 <script src="plugins/scrollTo/jquery.scrollTo.min.js"></script>
 <script src="plugins/easing/easing.js"></script>
 <script src="js/elements_custom.js"></script>
+
+
 
 </body>
 </html>

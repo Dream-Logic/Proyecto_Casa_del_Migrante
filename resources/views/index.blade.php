@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Course</title>
+    <title>Principal Proyecto Casa del Migrante</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Course Project">
@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
     <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
     <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-    <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/stylesAdmin/main_styles.css">
     <link rel="stylesheet" type="text/css" href="styles/responsive.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,8 +25,8 @@
 <body>
 <div id="app">
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm" >
-        <div class="container">
-          <h3>Casa del Migrante </h3>
+        <div class="container" style="background-color: #ffe8a1">
+          <h3>Fundación Alivio del Sufrimiento </h3>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -59,7 +59,7 @@
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
+                                    {{ __('Cerrar Sesión') }}
                                 </a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -76,10 +76,10 @@
 <div class="hero_slider_container">
     <!-- Hero Slide -->
     <div class="hero_slide">
-        <div class="hero_slide_background" style="background-color: #17a2b8"></div>
+        <div class="hero_slide_background"  style="background-image:url(images/fondo2.jpeg)"></div>
         <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
             <div class="hero_slide_content text-center" style="height:400px ">
-                <h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut"> Proyecto  <span> Casa Del</span> Migrante</h1>
+                <h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut"> Proyecto   Casa Del  Migrante</h1>
             </div>
         </div>
     </div>
