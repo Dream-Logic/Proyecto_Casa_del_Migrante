@@ -70,11 +70,5 @@ class paginaPrincipal_controller extends Controller
     }
 
 
-    public function crear()
-    {
 
-
-        return view('Construccion');
-
-    }
 }

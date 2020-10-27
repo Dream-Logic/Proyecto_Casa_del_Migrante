@@ -16,12 +16,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('bienvenido');
 });
-
+Route::group(["middleware"=>"auth"],function () {//director
+    //todoadmin
+    Route::group(['middleware' => 'admin'], function () {
+//aquitodo lo del administrador
 Route::get('/principal','paginaPrincipal_controller@index')
     ->name('index.index');
 
-Route::get('/acceder', 'paginaPrincipal_controller@crear')
-    ->name('construccion.crear');
+
 
 
 /*Rutas de vista redireccionadora de FORMULARIOS*/
@@ -65,3 +67,12 @@ Route::put('/proyectos/{id}/editar','ProyectoController@update')
 Route::delete('/proyectos/{id}/borrar','ProyectoController@destroy')
     ->name('listado.borrar')
     ->where('id','[0-9]+');
+    });
+
+
+
+//Aqui van todas las rutas de director
+
+    Route::get('/home', 'HomeController@index')->name('home');
+});
+Auth::routes();
