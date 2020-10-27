@@ -64,9 +64,9 @@
             <div class="row">
                 <div class="col-lg-3 milestone_col">
                     <div class="milestone text-center">
-                        <a href="{{route('ficha.create')}}"></a>
+                        <a href="{{route('formulario.uno')}}"></a>
                         <div class="milestone_icon"><img src="imagenes/formu4.jpg" alt="https://www.flaticon.com/authors/zlatko-najdenovski"></div>
-                        <a href="{{route('ficha.create')}}" class="milestone_icon d-inline fa-toggle-on  text-light text-nowrap">Datos del Huesped</a>
+                        <a href="{{route('formulario.uno')}}" class="milestone_icon d-inline fa-toggle-on  text-light text-nowrap">Datos del Huesped</a>
 
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                 <div class="col-lg-3 milestone_col">
                     <div class="milestone text-center">
                         <div class="milestone_icon"><img src="imagenes/Ingreso.jpg" alt="https://www.flaticon.com/authors/zlatko-najdenovski"></div>
-                        <a href="" class="milestone_icon text-light  text-nowrap">Datos del Responsable</a>
+                        <a href="{{route('formulario.dos')}}" class="milestone_icon text-light  text-nowrap">Datos del Responsable</a>
                     </div>
                 </div>
 
@@ -83,7 +83,7 @@
                     <div class="milestone text-center">
                         <div class="milestone_icon"><img src="imagenes/listado2.svg" alt="https://www.flaticon.com/authors/zlatko-najdenovski"></div>
 
-                        <a href="" class="milestone_icon text-light text-nowrap">Datos de los Hechos</a>
+                        <a href="{{route('formulario.tres')}}" class="milestone_icon text-light text-nowrap">Datos de los Hechos</a>
                     </div>
                 </div>
 
@@ -92,7 +92,7 @@
                     <div class="milestone text-center">
                         <div class="milestone_icon"><img src="imagenes/formu3.jpg" alt="https://www.flaticon.com/authors/zlatko-najdenovski"></div>
 
-                        <a href="" class="milestone_icon text-nowrap text-light text-nowrap">Datos del Personal</a>
+                        <a href="{{route('formulario.cuatro')}}" class="milestone_icon text-nowrap text-light text-nowrap">Datos del Personal</a>
                     </div>
                 </div>
 

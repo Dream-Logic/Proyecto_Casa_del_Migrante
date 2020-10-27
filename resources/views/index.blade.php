@@ -127,7 +127,7 @@
                 </div>
 
                 <div class="col-lg-3 hero_box_col">
-                    <a href="">
+                    <a href="{{ route('listado.index') }}">
                     <div class="hero_box d-flex flex-row align-items-center justify-content-start">
                         <img src="images/bueno.svg" class="svg" alt="">
                         <div class="hero_box_content">

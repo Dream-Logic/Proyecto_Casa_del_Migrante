@@ -68,7 +68,13 @@ class paginaPrincipal_controller extends Controller
         return view('index');
 
     }
+    public function principaldirec()
+    {
 
+
+        return view('director');
+
+    }
 
 
 }

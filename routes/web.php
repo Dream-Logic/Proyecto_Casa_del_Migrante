@@ -68,11 +68,12 @@ Route::delete('/proyectos/{id}/borrar','ProyectoController@destroy')
     ->name('listado.borrar')
     ->where('id','[0-9]+');
     });
-
-
-
 //Aqui van todas las rutas de director
+//Ruta para acceso del direcctor//
+    Route::get('/dire','paginaPrincipal_controller@principaldirec')
+        ->name('dire.access');
 
     Route::get('/home', 'HomeController@index')->name('home');
 });
 Auth::routes();
+
