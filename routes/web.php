@@ -71,6 +71,7 @@ Route::delete('/proyectos/{id}/borrar','ProyectoController@destroy')
     });
 
 
+
 //Aqui van todas las rutas de director
 //Ruta para acceso del direcctor//
     Route::get('/dire','paginaPrincipal_controller@principaldirec')

@@ -18,6 +18,8 @@
         font-size: 20px;
         /*color: MediumSeaGreen;*/
         background-color:  #80ffd4;
+
+
     }
     table {     font-family: Arial;
         font-size: 18px;
@@ -65,6 +67,17 @@
     }
 
 
+    .col-5 {
+        margin-left: 50px;
+        margin-right: 30px;
+
+    }
+    .panel-footer{
+
+
+
+
+    }
 
 
 
@@ -74,8 +87,7 @@
 
 
 
-
-    </style>
+</style>
 
 
 

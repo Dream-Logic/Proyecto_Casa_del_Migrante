@@ -15,12 +15,19 @@ class ProyectoController extends Controller
 
 
 
-    public function index()
+    public function index(Request $request)
     {
 
-        $listados = Proyecto::paginate(10);
+
+        //$listados = Proyecto::paginate(10);
+
+        $listados= Proyecto::search($request->nombres)->paginate(5);
 
         return view('listadoRaiz')->with('listados', $listados);
+
+
+
+
 
 
     }
@@ -87,12 +94,12 @@ class ProyectoController extends Controller
             'piel'=>'required',
             'identidad'=>'required',
             'nacionalidad'=>'required',
-            'pasaporte'=>'required',
+            'pasaporte'=>'nullable',
             'nacimiento'=>'required',
             'direccion'=>'required',
             'signosFisicos'=>'required',
-            'enfermedad'=>'required',
-            'tratamiento'=>'required',
+            'enfermedad'=>'nullable',
+            'tratamiento'=>'nullable',
            //representantelegal
            'nombresMadre'=>'required',
             'apellidosMadre'=>'required',
@@ -101,20 +108,20 @@ class ProyectoController extends Controller
             'trabajaMadre'=>'required',
             'profesionOficio'=>'required',
             'identidadMadre'=>'required',
-            'pasaporteMadre'=>'required',
+            'pasaporteMadre'=>'nullable',
             'civil'=>'required',
-            'telefono'=>'required',
+            'telefono'=>'nullable',
             //Padre
-            'nombresPadre'=>'required',
-            'apellidosPadre'=>'required',
-            'fnacimientoPadre'=>'required',
-            'direccionPadre'=>'required',
-            'trabajaPadre'=>'required',
-            'profesionOficioPadre'=>'required',
-            'identidadPadre'=>'required',
-            'pasaportePadre'=>'required',
-            'civilPadre'=>'required',
-            'telefonoPadre'=>'required',
+            'nombresPadre'=>'nullable',
+            'apellidosPadre'=>'nullable',
+            'fnacimientoPadre'=>'nullable',
+            'direccionPadre'=>'nullable',
+            'trabajaPadre'=>'nullable',
+            'profesionOficioPadre'=>'nullable',
+            'identidadPadre'=>'nullable',
+            'pasaportePadre'=>'nullable',
+            'civilPadre'=>'nullable',
+            'telefonoPadre'=>'nullable',
              //hechos
             'vulneracion'=>'required',
             'proteccion'=>'required',
@@ -248,12 +255,12 @@ class ProyectoController extends Controller
             'piel'=>'required',
             'identidad'=>'required',
             'nacionalidad'=>'required',
-            'pasaporte'=>'required',
+            'pasaporte'=>'nullable',
             'nacimiento'=>'required',
             'direccion'=>'required',
             'signosFisicos'=>'required',
-            'enfermedad'=>'required',
-            'tratamiento'=>'required',
+            'enfermedad'=>'nullable',
+            'tratamiento'=>'nullable',
             //representantelegal
             'nombresMadre'=>'required',
             'apellidosMadre'=>'required',
@@ -262,20 +269,20 @@ class ProyectoController extends Controller
             'trabajaMadre'=>'required',
             'profesionOficio'=>'required',
             'identidadMadre'=>'required',
-            'pasaporteMadre'=>'required',
+            'pasaporteMadre'=>'nullable',
             'civil'=>'required',
             'telefono'=>'required',
             //Padre
-            'nombresPadre'=>'required',
-            'apellidosPadre'=>'required',
-            'fnacimientoPadre'=>'required',
-            'direccionPadre'=>'required',
-            'trabajaPadre'=>'required',
-            'profesionOficioPadre'=>'required',
-            'identidadPadre'=>'required',
-            'pasaportePadre'=>'required',
-            'civilPadre'=>'required',
-            'telefonoPadre'=>'required',
+            'nombresPadre'=>'nullable',
+            'apellidosPadre'=>'nullable',
+            'fnacimientoPadre'=>'nullable',
+            'direccionPadre'=>'nullable',
+            'trabajaPadre'=>'nullable',
+            'profesionOficioPadre'=>'nullable',
+            'identidadPadre'=>'',
+            'pasaportePadre'=>'nullable',
+            'civilPadre'=>'nullable',
+            'telefonoPadre'=>'nullable',
             //hechos
             'vulneracion'=>'required',
             'proteccion'=>'required',
@@ -367,4 +374,6 @@ class ProyectoController extends Controller
         return redirect()->route('listado.index')->with('mensaje', 'El huesped fue borrado completamente');
 
     }
+
+
 }

@@ -25,12 +25,12 @@ class CreateProyectosTable extends Migration
             $table->string('piel');
             $table->string('identidad')->unique();
             $table->string('nacionalidad');
-            $table->string('pasaporte')->unique();
+            $table->string('pasaporte')->nullable();
             $table->string('nacimiento');
             $table->string('direccion');
             $table->string('signosFisicos');
-            $table->string('enfermedad');
-            $table->string('tratamiento');
+            $table->string('enfermedad')->nullable();
+            $table->string('tratamiento')->nullable();
            /*datos Madre Y/O representante legal*/
             $table->string('nombresMadre');
             $table->string('apellidosMadre');
@@ -39,20 +39,20 @@ class CreateProyectosTable extends Migration
             $table->string('trabajaMadre');
             $table->string('profesionOficio');
             $table->string('identidadMadre')->unique();
-            $table->string('pasaporteMadre')->unique();
+            $table->string('pasaporteMadre')->nullable();
             $table->string('civil');
-            $table->string('telefono');
+            $table->string('telefono')->nullable();
             /*Datos padre ME FALTAAAAAAA*/
-            $table->string('nombresPadre');
-            $table->string('apellidosPadre');
-            $table->date('fnacimientoPadre');
-            $table->string('direccionPadre');
-            $table->string('trabajaPadre');
-            $table->string('profesionOficioPadre');
-            $table->string('identidadPadre')->unique();
-            $table->string('pasaportePadre')->unique();
-            $table->string('civilPadre');
-            $table->string('telefonoPadre');
+            $table->string('nombresPadre')->nullable();
+            $table->string('apellidosPadre')->nullable();
+            $table->date('fnacimientoPadre')->nullable();
+            $table->string('direccionPadre')->nullable();
+            $table->string('trabajaPadre')->nullable();
+            $table->string('profesionOficioPadre')->nullable();
+            $table->string('identidadPadre')->nullable();
+            $table->string('pasaportePadre')->nullable();
+            $table->string('civilPadre')->nullable();
+            $table->string('telefonoPadre')->nullable();
             /*Datos */
             $table->string('vulneracion');
             $table->string('proteccion');

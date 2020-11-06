@@ -7,7 +7,38 @@
             {{session('mensaje')}}
         </div>
     @endif
-    <a  class="btn btn-primary" href="{{route('ficha.create')}}">Nuevo</a>
+
+
+    <!--BUSCADOR-->
+
+
+    <form  action="" method="get" onsubmit="return showLoad()">
+        <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+        <div class="form-row">
+
+
+            <div class="panel-body">
+                <a  class="btn btn-primary" href="{{route('ficha.create')}}">Nuevo</a>
+            <input type="text" name="nombres" class="form-control"
+                   placeholder="Ingresar nombre del huesped" required="required">
+
+
+
+       <button type="submit" class="btn btn-success">buscar</button>
+                <a href="{{url('/proyectos/listado')}}" class="btn btn-warning">Restaurar busqueda</a>
+
+            </div>
+        </div>
+    </form>
+
+    <!--FIN BUSCADOR-->
+
+
+
+
+
+
+
     <table class="table">
         <thead>
         <tr class="w3-hover-green">
@@ -56,3 +87,7 @@
 
 
     </table>
+
+
+    </div>
+    </div>
