@@ -23,7 +23,7 @@
 
 
                 <button type="submit" class="btn btn-success">buscar</button>
-                <a href="{{url('/proyectos/listado')}}" class="btn btn-warning">Restaurar</a>
+                <a href="{{url('/proyectos/listadoDirector')}}" class="btn btn-warning">Restaurar</a>
 
             </div>
         </div>
