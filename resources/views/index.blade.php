@@ -126,12 +126,12 @@
                 </div>
 
                 <div class="col-lg-3.5 hero_box_col">
-                    <a href="" >
+                    <a href="{{ route('estadisticas.admin')}}" >
                         <div class="hero_box d-flex flex-row align-items-center justify-content-start">
                             <img src="images/creciente.svg" class="svg" alt="">
                             <div class="hero_box_content">
                                 <h2 class="hero_box_title">Estadisticas</h2>
-                                <a href="" class="hero_box_link">Ver</a>
+                                <a href="{{ route('estadisticas.admin') }}" class="hero_box_link">Ver</a>
                             </div>
                         </div>
                     </a>

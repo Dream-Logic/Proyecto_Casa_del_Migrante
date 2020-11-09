@@ -70,7 +70,9 @@ Route::delete('/proyectos/{id}/borrar','ProyectoController@destroy')
     ->where('id','[0-9]+');
     });
 
-
+//RUTA QUE DIRIGE A LAS ESTADISTICAS//
+Route::get('/estadisticas','GraficoController@index')
+        ->name('estadisticas.admin');
 
 
 //Aqui van todas las rutas de director
