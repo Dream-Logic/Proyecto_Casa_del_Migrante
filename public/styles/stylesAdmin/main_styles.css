@@ -393,7 +393,7 @@ section
 {
 	width: 279px;
 	height: 100%;
-	background: #ffb606;
+
 }
 .header_side img
 {
@@ -692,14 +692,6 @@ section
 	font-weight: 400;
 	color: #fff;
 }
-.hero_slide_content h1 span
-{
-	background:#ffb606;;
-	padding-left: 13px;
-	padding-right: 13px;
-	margin-left: -12px;
-	margin-right: -12px;
-}
 .animated
 {
 	-webkit-animation-duration : 1s !important;
@@ -826,6 +818,9 @@ modificar los cuadro negros
 	padding-top: 11px;
 	margin-top: -6px;
 }
+/*********************************
+Cambiar tama;o  a las letras de los cuadritoa
+*********************************/
 .hero_box_title
 {
 	font-size: 24px;
@@ -987,20 +982,8 @@ modificar los cuadro negros
 {
 	color: #a5a5a5;
 }
-.course_price
-{
-	width: 67px;
-	height: 67px;
-	background: #ffb606;
-	margin-left: auto;
-}
-.course_price span
-{
-	color: #FFFFFF;
-	font-size: 18px;
-	font-weight: 500;
-	margin-top: 7px;
-}
+
+
 
 /*********************************
 10. Register
