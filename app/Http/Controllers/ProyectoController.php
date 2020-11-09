@@ -26,8 +26,17 @@ class ProyectoController extends Controller
         return view('listadoRaiz')->with('listados', $listados);
 
 
+    }
+
+    public function director(Request $request)
+    {
 
 
+        //$listados = Proyecto::paginate(10);
+
+        $listados= Proyecto::search($request->nombres)->paginate(5);
+
+        return view('listadoRaizDirector')->with('listados', $listados);
 
 
     }

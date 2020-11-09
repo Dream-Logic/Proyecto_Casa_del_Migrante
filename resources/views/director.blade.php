@@ -97,7 +97,7 @@
                                 <img src="images/lista1.svg"  class="svg" alt="">
                                 <div class="hero_box_content">
                                     <h1 class="hero_box_title">Listado de Huesdpedes</h1>
-                                    <a href="#" class="hero_box_link">Ver</a>
+                                    <a href="{{route('listado.director')}}" class="hero_box_link">Ver</a>
                                 </div>
                             </div>
                         </a>

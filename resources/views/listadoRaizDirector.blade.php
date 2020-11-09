@@ -13,29 +13,30 @@
 
 
     <form  action="" method="get" onsubmit="return showLoad()">
+        <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+        <div class="form-row">
 
 
-       <div>
-        <a  class="btn btn-primary" href="{{route('ficha.create')}}">Nuevo Húesped</a>
-       </div>
-        <div class="btn1">
-            <input type="text" name="nombres" class="caja"
-                   placeholder="Busca el nombre del húesped" required="required">
+            <div class="btn1">
+                <input type="text" name="nombres" class="caja"
+                       placeholder="Busca el nombre del húesped" required="required">
 
 
-       <button type="submit" class="btn btn-success">buscar</button>
-        <a href="{{url('/proyectos/listado')}}" class="btn btn-warning">Restaurar</a>
+                <button type="submit" class="btn btn-success">buscar</button>
+                <a href="{{url('/proyectos/listado')}}" class="btn btn-warning">Restaurar</a>
 
+            </div>
         </div>
     </form>
     <br>
+
 
     <!--FIN BUSCADOR-->
 
 
 
 
-<div>
+
 
 
     <table class="table">
@@ -46,8 +47,7 @@
             <th scope="col">Apellidos</th>
             <th scope="col">Fecha de Nacimiento</th>
             <th scope="col">Ver</th>
-            <th scope="col">Editar</th>
-            <th scope="col">Borrar</th>
+
 
 
 
@@ -62,14 +62,6 @@
                 <td> {{ $huesped->apellidos }}</td>
                 <td>{{ $huesped->fnacimiento }}</td>
                 <td><a class="btn btn-info" href="{{route('detalles.mostrar',['id' =>$huesped->id])}}">Ver</a></td>
-                <td><a class="btn btn-warning" href="{{route('listado.edit',['id' =>$huesped->id])}}">Editar</a></td>
-
-                <td>
-                    <form method="post" action="{{route('listado.borrar',['id'=>$huesped->id])}}">
-                        @csrf
-                        @method('delete')
-                        <input type="submit" value="Eliminar" class="btn btn-danger">
-                    </form>
 
             </tr>
         @empty
@@ -81,8 +73,8 @@
         </tbody>
 
 
-    {{ $listados->links()}}
-    @endsection
+        {{ $listados->links()}}
+        @endsection
 
 
     </table>

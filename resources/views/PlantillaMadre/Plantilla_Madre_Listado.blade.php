@@ -67,21 +67,21 @@
     }
 
 
-    .col-5 {
-        margin-left: 50px;
-        margin-right: 30px;
 
-    }
-    .panel-footer{
+      .btn1{
+
+          border-radius: 28px;
+          color: white;
+
+          padding-left: 580px;
+      }
+
+      input{
+          border-radius: 5px;
+          height: 39px;
 
 
-
-
-    }
-
-
-
-
+      }
 
 
 

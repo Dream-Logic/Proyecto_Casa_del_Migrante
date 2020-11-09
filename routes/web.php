@@ -72,6 +72,7 @@ Route::delete('/proyectos/{id}/borrar','ProyectoController@destroy')
 
 
 
+
 //Aqui van todas las rutas de director
 //Ruta para acceso del direcctor//
     Route::get('/dire','paginaPrincipal_controller@principaldirec')
@@ -81,6 +82,15 @@ Route::delete('/proyectos/{id}/borrar','ProyectoController@destroy')
     /*ruta que dirige a la vista gestor de usuario*/
     Route::get('/gestorDirec', 'GestorUsuarioController@indexDirec')
         ->name('gestor.direc');
+
+    //ROUTES LISTADO DIRECTOR
+    Route::get('/proyectos/listadoDirector','ProyectoController@director')
+        ->name('listado.director');
+
+    Route::get('/proyectos/{id}','ProyectoController@show')
+        ->name('detalles.mostrar')
+        ->where('id','[0-9]+');
+
 });
 Auth::routes();
 
