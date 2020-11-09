@@ -119,7 +119,7 @@
                         <img src="images/salud.svg" class="svg" alt="">
                         <div class="hero_box_content">
                             <h2 class="hero_box_title">Salud</h2>
-                            <a href="" class="hero_box_link">Ver</a>
+                            <a href="{{ route('salud.salu') }}" class="hero_box_link">Ver</a>
                         </div>
                     </div>
                     </a>

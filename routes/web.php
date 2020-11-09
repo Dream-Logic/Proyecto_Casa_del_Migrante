@@ -78,6 +78,8 @@ Route::delete('/proyectos/{id}/borrar','ProyectoController@destroy')
     Route::get('/dire','paginaPrincipal_controller@principaldirec')
         ->name('dire.access');
 
+    Route::get('/salud','paginaPrincipal_controller@paginasalud')
+        ->name('salud.salu');
     Route::get('/home', 'HomeController@index')->name('home');
     /*ruta que dirige a la vista gestor de usuario*/
     Route::get('/gestorDirec', 'GestorUsuarioController@indexDirec')

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Proyecto;
 use Illuminate\Http\Request;
 
 class paginaPrincipal_controller extends Controller
@@ -75,6 +76,14 @@ class paginaPrincipal_controller extends Controller
         return view('director');
 
     }
+    public function paginasalud()
+    {
 
+
+        $listados = Proyecto::where('enfermedad',"!=", null)->get();
+
+        return view('salud')->with('listados', $listados);
+
+    }
 
 }

@@ -71,9 +71,10 @@
             </div>
         </div>
     </nav>
+    <div class="milestones_background" style=" background-image:url(imagenes/fondo9.jpg)"></div>
 </div>
 
-<div class="milestones_background" style=" background-image:url(imagenes/fondo9.jpg)"></div>
+
 
 <br>
 <br>
