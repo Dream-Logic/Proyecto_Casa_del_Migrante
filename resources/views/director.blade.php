@@ -36,7 +36,7 @@
             <div class="hero_slide_background"  style="background-image:url(images/fondo2.jpeg)"></div>
             <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
                 <div class="hero_slide_content text-center" style="height:400px ">
-                    <h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut"> Proyecto  <span> Casa Del</span> Migrante</h1>
+                    <p style="font-size: 70px; color: #f8f9fb"> Proyecto   Casa Del  Migrante</p>
                 </div>
             </div>
         </div>
@@ -50,7 +50,7 @@
                             <div class="hero_box d-flex  align-items-center justify-content-start ">
                                 <img src="images/lista1.svg"  class="svg" alt="">
                                 <div class="hero_box_content">
-                                    <h1 class="hero_box_title">Listado de Huesdpedes</h1>
+                                    <h6 class="hero_box_title">Listado de Huesdpedes</h6>
                                     <a href="{{route('listado.director')}}" class="hero_box_link">Ver</a>
                                 </div>
                             </div>
@@ -62,7 +62,7 @@
                             <div class="hero_box d-flex flex-row align-items-center justify-content-start col offset-4">
                                 <img src="images/estadistica1.svg" class="svg" alt="">
                                 <div class="hero_box_content">
-                                    <h2 class="hero_box_title">Estadisticas</h2>
+                                    <h6 class="hero_box_title">Estadisticas</h6>
                                     <a href="" class="hero_box_link">Ver</a>
                                 </div>
                             </div>
@@ -75,7 +75,7 @@
                                 <div class="hero_box d-flex flex-row align-items-center justify-content-start  col offset-9 ">
                                     <img src="images/salud2.svg" class="svg" alt="">
                                     <div class="hero_box_content">
-                                        <h2 class="hero_box_title">Salud</h2>
+                                        <h6 class="hero_box_title">Salud</h6>
                                         <a href="" class="hero_box_link">Ver</a>
                                     </div>
                                 </div>
