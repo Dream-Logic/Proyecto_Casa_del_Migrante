@@ -96,5 +96,10 @@ Route::get('/estadisticas','GraficoController@index')
         ->where('id','[0-9]+');
 
 });
+Route::get('/passwordreset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name("password.request1");
+Route::post('/passwordemail', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name("password.email1");
+Route::get('/passwordreset{token}', 'Auth\ResetPasswordController@showResetForm')->name("password.reset1");
+Route::post('/passwordreset', 'Auth\ResetPasswordController@reset');
+
 Auth::routes();
 
