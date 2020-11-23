@@ -53,8 +53,8 @@
                             <li><a href="{{route('index.index')}}" class="nav-link"><strong>Inicio</strong></a></li>
                             <li><a href="{{route('hola.ho')}}" class="nav-link"><strong>Ficha de Ingreso</strong></a></li>
                             <li><a href="{{ route('listado.index') }}" class="nav-link"><strong>Listado de Huspedes</strong></a></li>
-                            <li><a href="" class="nav-link">Estadísticas</a></li>
-                            <li><a href="" class="nav-link">Salud</a></li>
+                            <li><a href="{{ route('estadisticas.admin')}}" class="nav-link">Estadísticas</a></li>
+                            <li><a href="{{ route('salud.salu') }}" class="nav-link">Salud</a></li>
 
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
