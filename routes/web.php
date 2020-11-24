@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 Route::group(["middleware"=>"auth"],function () {//director
 
-    Route::group(['middleware' => 'admin'], function () {
+Route::group(['middleware' => 'admin'], function () {
 //aquitodo lo del administrador
 /*Rutas de las vistas gestor de usuario*/
 Route::get('/gestor', 'GestorUsuarioController@indexAdmin')
@@ -28,7 +28,6 @@ Route::get('/principal','paginaPrincipal_controller@index')
     ->name('index.index');
 
 /*Rutas de vista redireccionadora de FORMULARIOS*/
-
 Route::get('/principalformulario','paginaPrincipal_controller@principalformulario')
     ->name('hola.ho');
 Route::get('/Btn_atras','paginaPrincipal_controller@atras')
@@ -37,7 +36,6 @@ Route::get('/Btn_regresar','paginaPrincipal_controller@regreso')
     ->name('regresar.volv');
 
 /*Ruta para el formulario*/
-
 
 /*RUTAS PARA EL LISTADO*/
 Route::get('/proyectos/listado','ProyectoController@index')
@@ -53,8 +51,6 @@ Route::get('/proyectos/{id}','ProyectoController@show')
     ->where('id','[0-9]+');
 
 //RUTAS PARA EDITAR
-
-
 Route::get('/proyectos/{id}/editar','ProyectoController@edit')
     ->name('listado.edit')
     ->where('id','[0-9]+');
@@ -64,16 +60,21 @@ Route::put('/proyectos/{id}/editar','ProyectoController@update')
     ->where('id','[0-9]+');
 
 //RUTA PARA BORRAR
-
 Route::delete('/proyectos/{id}/borrar','ProyectoController@destroy')
     ->name('listado.borrar')
     ->where('id','[0-9]+');
     });
 
 //RUTA QUE DIRIGE A LAS ESTADISTICAS//
-Route::get('/estadisticas','GraficoController@index')
+Route::get('/estadisticas','EstadisticaController@index')
         ->name('estadisticas.admin');
-
+//Rutas que redirigen a cada uno de los gráficos//
+Route::get('/paridadGenero', 'EstadisticaController@paridad')
+    ->name('grafico.paridadGenero');
+Route::get('/indiceDesercion', 'EstadisticaController@desercion')
+        ->name('grafico.desercion');
+Route::get('/indiceVulnerabilidad', 'EstadisticaController@vulnerabilidad')
+        ->name('grafico.vulnerabilidad');
 
 //Aqui van todas las rutas de director
 //Ruta para acceso del direcctor//
