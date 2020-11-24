@@ -9,34 +9,22 @@
     @endif
 
 
-    <!--BUSCADOR-->
+        <h2>Listado de Huéspedes</h2>
 
 
-    <form  action="" method="get" onsubmit="return showLoad()">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-
-       <div>
-        <a  class="btn btn-primary" href="{{route('ficha.create')}}">Nuevo Húesped</a>
-       </div>
-        <div class="btn1">
-            <input type="text" name="nombres" class="caja"
-                   placeholder="Busca el nombre del húesped" required="required">
-
-
-       <button type="submit" class="btn btn-success">buscar</button>
-        <a href="{{url('/proyectos/listado')}}" class="btn btn-warning">Restaurar</a>
-
-        </div>
-    </form>
-    <br>
-
-    <!--FIN BUSCADOR-->
-
-
-
-
-<div>
-
+        <a  class="btn btn-success" href="{{route('ficha.create')}}">Nuevo Húesped</a>
+        <a class="navbar-brand" href="#"></a>
+        <a  class="btn btn-primary"  href="{{route('index.index')}}">Regresar</a>
+        <a class="navbar-brand" href="#"></a>
+        <form class="form-inline my-2 my-lg-0 ml-auto">
+            <input class="form-control mr-sm-2" name="nombres" type="search" placeholder="Buscar" aria-label="Search">
+            <button class="btn btn-success" type="submit">Buscar</button>
+            <a class="navbar-brand" href="#"></a>
+            <a href="{{url('/proyectos/listado')}}" class="btn btn-warning">Restaurar</a>
+        </form>
+    </nav>
 
     <table class="table">
         <thead>
@@ -78,15 +66,10 @@
             </tr>
         @endforelse
 
-        </tbody>
-
-
-    {{ $listados->links()}}
-    @endsection
-
 
     </table>
 
 
-    </div>
-    </div>
+    </tbody>
+    {{ $listados->links()}}
+@endsection

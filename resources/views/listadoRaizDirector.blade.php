@@ -11,25 +11,17 @@
 
     <!--BUSCADOR-->
 
-
-    <form  action="" method="get" onsubmit="return showLoad()">
-        <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
-        <div class="form-row">
-
-
-            <div class="btn1">
-                <input type="text" name="nombres" class="caja"
-                       placeholder="Busca el nombre del húesped" required="required">
-
-
-                <button type="submit" class="btn btn-success">buscar</button>
-                <a href="{{url('/proyectos/listadoDirector')}}" class="btn btn-warning">Restaurar</a>
-
-            </div>
-        </div>
-    </form>
-    <br>
-
+    <h2>Listado de Huéspedes</h2>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a  class="btn btn-primary"  href="{{route('dire.access')}}">Regresar</a>
+        <a class="navbar-brand" href="#"></a>
+        <form class="form-inline my-2 my-lg-0 ml-auto">
+            <input class="form-control mr-sm-2" name="nombres" type="search" placeholder="Buscar" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+            <a class="navbar-brand" href="#"></a>
+            <a href="{{url('/proyectos/listadoDirector')}}" class="btn btn-warning">Restaurar</a>
+        </form>
+    </nav>
 
     <!--FIN BUSCADOR-->
 
@@ -73,12 +65,10 @@
         </tbody>
 
 
-        {{ $listados->links()}}
-        @endsection
 
 
     </table>
+    {{ $listados->links()}}
+@endsection
 
 
-    </div>
-    </div>

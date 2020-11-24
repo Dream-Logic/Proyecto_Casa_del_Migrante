@@ -2,8 +2,14 @@
 @section('titulo','Lista de Huespedes')
 @section('contenido')
 
-    <h1>Detalles de: {{$huesped->nombres}}
+    <div class="botonesD">
+    <input class="btn btn-warning" type="button" value="Imprimir" onclick="window.print()">
 
+    </div><br>
+
+         <h1>
+             Detalles de {{$huesped->nombres}}
+         </h1>
 
     <table class="table">
         <thead class="">
@@ -216,5 +222,5 @@
 
         </tbody>
     </table>
-    <a class="btn btn-primary" href="{{route('listado.index')}}">Volver</a>
+    </h1>
 @endsection

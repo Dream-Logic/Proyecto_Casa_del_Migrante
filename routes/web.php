@@ -91,9 +91,13 @@ Route::get('/estadisticas','GraficoController@index')
     Route::get('/proyectos/listadoDirector','ProyectoController@director')
         ->name('listado.director');
 
+    Route::get('/dire','paginaPrincipal_controller@principaldirec')
+        ->name('dire.access');
+
     Route::get('/proyectos/{id}','ProyectoController@show')
         ->name('detalles.mostrar')
         ->where('id','[0-9]+');
+
 
 });
 Route::get('/passwordreset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name("password.request1");

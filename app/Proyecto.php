@@ -13,4 +13,5 @@ class Proyecto extends Model
         return $query->where('nombres', 'LIKE', "%$nombres%");
 
     }
+
 }

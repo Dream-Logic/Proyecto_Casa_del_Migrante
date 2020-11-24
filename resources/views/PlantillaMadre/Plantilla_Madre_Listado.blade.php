@@ -55,14 +55,38 @@
         font-weight: bold;
     }
     h1{
-        font-size: 50px;
+
+        /*font-family: 'Verdana', Geneva, Tahoma, sans-serif;*/
+        font-size: 45px;
         font-family:'Times New Roman', Times, serif;
-        padding: 10px 10px;
+
         text-align: center;
         text-transform: unset;
         text-rendering: optimizeLegibility;
         letter-spacing: .05em;
         font-weight: bold;
+        background-color: #e7e5e4;
+        color: black;
+        background-color: #00cc00;
+
+
+    }
+    h2{
+        text-align: center;
+        /*font-family: 'Verdana', Geneva, Tahoma, sans-serif;*/
+        font-size: 45px;
+        font-family:'Times New Roman', Times, serif;
+
+        text-align: center;
+        text-transform: unset;
+        text-rendering: optimizeLegibility;
+        letter-spacing: .05em;
+        font-weight: bold;
+        background-color: #e7e5e4;
+        color: black;
+        background-color: #00cc00;
+
+
 
     }
 
@@ -82,6 +106,11 @@
 
 
       }
+    .botonesD{
+        padding-left: 90%;
+
+    }
+
 
 
 
