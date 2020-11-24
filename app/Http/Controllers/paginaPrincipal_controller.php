@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\PaginaPrincipal;
 use App\Proyecto;
 use Illuminate\Http\Request;
 
@@ -65,7 +66,6 @@ class paginaPrincipal_controller extends Controller
     public function index()
     {
 
-
         return view('index');
 
     }
@@ -79,10 +79,43 @@ class paginaPrincipal_controller extends Controller
     public function paginasalud()
     {
 
+        $listados = Proyecto::where('enfermedad',"!=", null)->get();
+
+        return view('salud')->with('listados', $listados);
+
+
+    }
+    public function salud(Request $request)
+    {
+
+
+        //$listados = Proyecto::paginate(10);
+
+        $listados= Proyecto::search($request->nombres)->paginate(5);
+
+        return view('salud')->with('listados', $listados);
+
+
+    }
+    public function SaludDire()
+    {
 
         $listados = Proyecto::where('enfermedad',"!=", null)->get();
 
         return view('salud')->with('listados', $listados);
+
+
+    }
+    public function SDire(Request $request)
+    {
+
+
+        //$listados = Proyecto::paginate(10);
+
+        $listados= Proyecto::search($request->nombres)->paginate(5);
+
+        return view('SaludDirect')->with('listados', $listados);
+
 
     }
 

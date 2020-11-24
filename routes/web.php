@@ -79,9 +79,16 @@ Route::get('/estadisticas','GraficoController@index')
 //Ruta para acceso del direcctor//
     Route::get('/dire','paginaPrincipal_controller@principaldirec')
         ->name('dire.access');
-
+      //Rutas de listados de salud//
     Route::get('/salud','paginaPrincipal_controller@paginasalud')
         ->name('salud.salu');
+    Route::get('/sal','paginaPrincipal_controller@salud')
+        ->name('salud1.sa');
+    Route::get('/saludDi','paginaPrincipal_controller@SaludDire')
+        ->name('saludDire.salu');
+    Route::get('/saludD','paginaPrincipal_controller@SDire')
+        ->name('saludDire.sal');
+
     Route::get('/home', 'HomeController@index')->name('home');
     /*ruta que dirige a la vista gestor de usuario*/
     Route::get('/gestorDirec', 'GestorUsuarioController@indexDirec')

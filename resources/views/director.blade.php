@@ -70,13 +70,13 @@
                     </div>
 
                     <div class="col-lg-3 hero_box_col col-lg-auto " >
-                        <a href="">
+                        <a href="{{route('saludDire.salu')}}">
                             <div class="mx-auto">
                                 <div class="hero_box d-flex flex-row align-items-center justify-content-start  col offset-9 ">
                                     <img src="images/salud2.svg" class="svg" alt="">
                                     <div class="hero_box_content">
                                         <h6 class="hero_box_title">Salud</h6>
-                                        <a href="" class="hero_box_link">Ver</a>
+                                        <a href="{{route('saludDire.salu')}}" class="hero_box_link">Ver</a>
                                     </div>
                                 </div>
                         </a>
