@@ -37,11 +37,11 @@
                         ],
                     }],
                     labels : [
-                        "Entre 5 a 10",
-                        "Entre 10 a 15",
-                        "Entre 15 a 20",
-                        "Entre 20 a 25",
-                        "Mayor de 25 ",
+                        "Entre 5% a 10%",
+                        "Entre 10% a 15%",
+                        "Entre 15% a 20%",
+                        "Entre 20% a 25%",
+                        "Mayor de 25% ",
                     ]
                 },
                 options : {
@@ -69,7 +69,7 @@
 
                 window.pie.update();
 
-            }, 8000);
+            }, 20000);
 
 
 
