@@ -11,8 +11,6 @@ class ProyectoSeeder extends Seeder
      */
     public function run()
     {
-        //
         factory(\App\Proyecto::class, 15)->create();
-
     }
 }
