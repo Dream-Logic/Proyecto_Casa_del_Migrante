@@ -68,9 +68,9 @@
                 </div>
 
                 <div class="col-lg-3 hero_box_col">
-                    <a href="{{ route('salud.salu') }}" >
+                    <a href="{{ route('salud.salu')}}" >
                     <div class="hero_box d-flex flex-row align-items-center justify-content-start">
-                        <img src="images/salud.svg" class="svg" alt="">
+                        <img src="images/salud.svg" href="{{ route('salud.salu')}}" class="svg" alt="">
                         <div class="hero_box_content">
                             <h6 class="hero_box_title">Salud</h6>
                             <a href="{{ route('salud.salu') }}" class="hero_box_link">Ver</a>
