@@ -13,83 +13,42 @@
         <link rel="stylesheet" type="text/css" href="styles/responsive.css">
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <script type="text/javascript" src="Chart/jquery-1.12.0.min.js"></script>
-        <script type="text/javascript" src="Chart/dist/Chart.bundle.min.js"></script>
-        <script type="text/javascript">
-            $(document).ready(function(){
-                var datos = {
-                    type: "doughnut",
-                    data : {
-                        datasets :[{
-                            data : [
-                                5,
-                                10,
-                                40,
-                                12,
-                                23,
-                            ],
-                            backgroundColor: [
-                                "#F7464A",
-                                "#46BFBD",
-                                "#FDB45C",
-                                "#949FB1",
-                                "#fed525",
-                            ],
-                        }],
-                        labels : [
-                            "Entre 5 a 10",
-                            "Entre 10 a 15",
-                            "Entre 15 a 20",
-                            "Entre 20 a 25",
-                            "Mayor de 25 ",
-                        ]
-                    },
-                    options : {
-                        responsive : true,
-                    }
-                };
 
-                var canvas = document.getElementById('chart').getContext('2d');
-                window.pie = new Chart(canvas, datos);
-
-                setInterval(function(){
-                    datos.data.datasets.splice(0);
-                    var newData = {
-                        backgroundColor : [
-                            "#F7464A",
-                            "#46BFBD",
-                            "#FDB45C",
-                            "#949FB1",
-                            "#fed525",
-                        ],
-                        data : [getRandom(), getRandom(), getRandom(), getRandom(), getRandom()]
-                    };
-
-                    datos.data.datasets.push(newData);
-
-                    window.pie.update();
-
-                }, 20000);
-
-
-
-                function getRandom(){
-                    return Math.round(Math.random() * 100);
-                }
-
-
-            });
-        </script>
     </head>
     <body>
-    <span style="color: #0b0b0b; font-size: 25px;">Estadística de índice de edades</span>
-    <div id="canvas-container" style="width:50%;">
-        <canvas id="chart" width="500" height="350"></canvas>
+    <div class="container-fluid ml-2 mr-2 ">
+        <div class="">
+            <div class="row">
+                <div class="col">
+
+                    <span style="color: #0b0b0b; font-size: 25px;">Estadística de índice de edades</span>
+                    <div style="width:50%;">
+
+                        {!! $edadChart->container() !!}
+
+                        {!! $edadChart->script() !!}
+                    </div>
+                </div>
+                <div class="col">
+
+                    <span style="color: #0b0b0b; font-size: 25px;">Estadística de índice de géneros</span>
+                    <div style="width:50%;">
+
+                        {!! $generosChart->container() !!}
+
+                        {!! $generosChart->script() !!}
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="styles/bootstrap4/popper.js"></script>
-    <script src="styles/bootstrap4/bootstrap.min.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/styles/bootstrap4/popper.js"></script>
+    <script src="/styles/bootstrap4/bootstrap.min.js"></script>
+    <script src="/js/custom.js"></script>
+    <script type="text/javascript" src="Chart/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="Chart/dist/Chart.bundle.min.js"></script>
+
     </body>
 @endsection
 

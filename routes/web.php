@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Auth::routes();
 Route::get('/', function () {
     return view('bienvenido');
 });
@@ -21,11 +22,11 @@ Route::group(["middleware"=>"auth"],function () {//director
 Route::group(['middleware' => 'admin'], function () {
 //aquitodo lo del administrador
 /*Rutas de las vistas gestor de usuario*/
-Route::get('/gestor', 'GestorUsuarioController@indexAdmin')
-    ->name('gestor.usuario');
 
 Route::get('/principal','paginaPrincipal_controller@index')
     ->name('index.index');
+    Route::get('/gestor', 'GestorUsuarioController@indexAdmin')
+        ->name('gestor.usuario');
 
 /*Rutas de vista redireccionadora de FORMULARIOS*/
 Route::get('/principalformulario','paginaPrincipal_controller@principalformulario')
@@ -132,5 +133,4 @@ Route::post('/passwordemail', 'Auth\ForgotPasswordController@sendResetLinkEmail'
 Route::get('/passwordreset{token}', 'Auth\ResetPasswordController@showResetForm')->name("password.reset1");
 Route::post('/passwordreset', 'Auth\ResetPasswordController@reset');
 
-Auth::routes();
 
