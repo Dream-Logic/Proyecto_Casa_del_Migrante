@@ -28,17 +28,17 @@
 
 <div class="site-blocks-cover overlay" style="background-image: url(imagenes/fondo9.jpg);" data-aos="fade" id="home-section">
 
-<div class="hero_slide_content text-center text-dark">
+<div class="hero_slide_background text-center text-dark">
     <br>
     <br>
     <br>
     <br>
     <br>
 
-    <p style="font-size: 75px;"><span>Bienvenido al </span></p>
+    <p style="font-size: 50px; color: #0b0b0b"> <span>Bienvenido al </span></p>
 </div>
-<div class="hero_slide_content text-center text-dark">
-    <p style="font-size: 74px;"> Registro<span> del</span> Huesped</p>
+<div class="hero_slide_background text-center text-dark">
+    <p style="font-size: 50px; color: #0b0b0b"> Registro<span> del</span> Huesped!</p>
 </div>
 <div class="milestones_container">
     <div class="container">
@@ -46,7 +46,7 @@
             <div class="col-lg-3 milestone_col align-content-center">
                 <div class="milestone icon-font-awesome text-info text-md-right h-75">
                     <div>
-                        <h3 href="{{route('ficha.create')}}" class="milestones_background text-dark  ">Datos del Huesped</h3>
+                        <h3 href="{{route('ficha.create')}}" class="milestones_background text-dark" >Datos del Huesped</h3>
                     </div>
                     <a href="{{route('ficha.create')}}" class="milestones_background w-50 "><img src=" imagenes/icon6.svg"  alt="https://www.flaticon.com/authors/zlatko-najdenovski"></div>
             </div>
