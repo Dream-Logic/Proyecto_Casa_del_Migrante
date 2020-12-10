@@ -46,7 +46,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 hero_box_col col-lg-auto" >
-                        <a href="#" >
+                        <a href="{{route('listado.director')}}" >
                             <div class="hero_box d-flex  align-items-center justify-content-start ">
                                 <img src="images/lista1.svg"  class="svg" alt="">
                                 <div class="hero_box_content">

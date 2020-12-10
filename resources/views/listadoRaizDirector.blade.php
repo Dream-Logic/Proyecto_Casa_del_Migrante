@@ -1,5 +1,4 @@
-@extends('PlantillaMadre.Plantilla_Madre_Listado')
-@section('titulo','Lista de Huespedes')
+@extends ('PlantillaMadre.menu_inicio')
 @section('contenido')
 
     @if(session('mensaje'))
@@ -19,7 +18,7 @@
             <input class="form-control mr-sm-2" name="nombres" type="search" placeholder="Buscar" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
             <a class="navbar-brand" href="#"></a>
-            <a href="{{url('/proyectos/listadoDirector')}}" class="btn btn-warning">Restaurar</a>
+            <a href="{{url('/huesped/listadoDirector')}}" class="btn btn-warning">Restaurar</a>
         </form>
     </nav>
 
@@ -53,7 +52,7 @@
                 <td>{{ $huesped->nombres}} </td>
                 <td> {{ $huesped->apellidos }}</td>
                 <td>{{ $huesped->fnacimiento }}</td>
-                <td><a class="btn btn-info" href="{{route('detalles.mostrar',['id' =>$huesped->id])}}">Ver</a></td>
+                <td><a class="btn btn-info" href="{{route('huesped.mostrar',['id' =>$huesped->id])}}">Ver</a></td>
 
             </tr>
         @empty

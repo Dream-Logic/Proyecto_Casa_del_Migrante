@@ -1,6 +1,6 @@
-@extends('PlantillaMadre.Plantilla_Madre_Listado')
-@section('titulo','Lista de Huespedes')
+@extends ('PlantillaMadre.menu_inicio')
 @section('contenido')
+
 
     <div class="botonesD">
     <input class="btn btn-warning" type="button" value="Imprimir" onclick="window.print()">
@@ -23,7 +23,7 @@
             <th scope="row">Nombres</th>
             <td>{{ $huesped->nombres}}</td>
         </tr>
-        <tr>
+        <tr>.0
             <th scope="row">Apellidos</th>
             <td>{{ $huesped->apellidos}}</td>
         </tr>

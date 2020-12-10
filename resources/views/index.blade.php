@@ -45,12 +45,12 @@
             <div class="row" >
 
                 <div class="col-lg-3 hero_box_col"   >
-                    <a href="{{route('hola.ho')}}" >
+                    <a href="{{route('huesped.nuevo')}}" >
                     <div class="hero_box d-flex flex-row align-items-center justify-content-start" >
                         <img src="images/registro.svg"  class="svg" alt="">
                         <div class="hero_box_content" >
                             <h6 class="hero_box_title" >Ficha de Ingreso</h6>
-                            <a href="{{route('hola.ho')}}" class="hero_box_link">Registro</a>
+                            <a href="{{route('huesped.nuevo')}}" class="hero_box_link">Registro</a>
                         </div>
                     </div>
                     </a>
@@ -61,7 +61,7 @@
                             <img src="images/bueno.svg" class="svg" alt="">
                             <div class="hero_box_content">
                                 <h6 class="hero_box_title">Listado  de Huespedes</h6>
-                                <a href="" class="hero_box_link">ver</a>
+                                <a href="{{ route('listado.index') }}" class="hero_box_link">ver</a>
                             </div>
                         </div>
                     </a>

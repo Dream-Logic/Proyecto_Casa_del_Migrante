@@ -1,5 +1,4 @@
-@extends('PlantillaMadre.Plantilla_Madre_Listado')
-@section('titulo','Lista de Huespedes')
+@extends ('PlantillaMadre.menu_inicio')
 @section('contenido')
 
     @if(session('mensaje'))
@@ -12,9 +11,15 @@
         <h2>Listado de Huéspedes</h2>
 
 
+    @if(session("exito"))
+        <div class="alert alert-info">
+            {{session("exito")}}
+        </div>
+    @endif
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-        <a  class="btn btn-success" href="{{route('ficha.create')}}">Nuevo Húesped</a>
+        <a  class="btn btn-success" href="{{route('huesped.nuevo')}}">Nuevo Húesped</a>
         <a class="navbar-brand" href="#"></a>
         <a  class="btn btn-primary"  href="{{route('index.index')}}">Regresar</a>
         <a class="navbar-brand" href="#"></a>
@@ -49,11 +54,11 @@
                 <td>{{ $huesped->nombres}} </td>
                 <td> {{ $huesped->apellidos }}</td>
                 <td>{{ $huesped->fnacimiento }}</td>
-                <td><a class="btn btn-info" href="{{route('detalles.mostrar',['id' =>$huesped->id])}}">Ver</a></td>
-                <td><a class="btn btn-warning" href="{{route('listado.edit',['id' =>$huesped->id])}}">Editar</a></td>
+                <td><a class="btn btn-info" href="{{route('huesped.mostrar',['id' =>$huesped->id])}}">Ver</a></td>
+                <td><a class="btn btn-warning" href="{{route('huesped.edit',['id' =>$huesped->id])}}">Editar</a></td>
 
                 <td>
-                    <form method="post" action="{{route('listado.borrar',['id'=>$huesped->id])}}">
+                    <form method="post" action="{{route('huesped.borrar',['id'=>$huesped->id])}}">
                         @csrf
                         @method('delete')
                         <input type="submit" value="Eliminar" class="btn btn-danger">

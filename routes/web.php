@@ -38,30 +38,30 @@ Route::get('/Btn_regresar','paginaPrincipal_controller@regreso')
 /*Ruta para el formulario*/
 
 /*RUTAS PARA EL LISTADO*/
-Route::get('/proyectos/listado','ProyectoController@index')
-    ->name('listado.index');
+Route::get('/proyectos/listado','HuespedController@index')
+        ->name('listado.index');
 /*rutas de crear */
 Route::get('/proyectos/crear', 'ProyectoController@create')
     ->name('ficha.create');
 Route::post('/proyectos/crear', 'ProyectoController@store')
     ->name('listado.guardar');
 /*Rutas para mostrar listado*/
-Route::get('/proyectos/{id}','ProyectoController@show')
-    ->name('detalles.mostrar')
+Route::get('/huesped/{id}','HuespedController@show')
+    ->name('huesped.mostrar')
     ->where('id','[0-9]+');
 
 //RUTAS PARA EDITAR
-Route::get('/proyectos/{id}/editar','ProyectoController@edit')
-    ->name('listado.edit')
+Route::get('/huesped/{id}/editar','HuespedController@edit')
+    ->name('huesped.edit')
     ->where('id','[0-9]+');
 
-Route::put('/proyectos/{id}/editar','ProyectoController@update')
-    ->name('listado.update')
+Route::put('/huesped/{id}/editar','HuespedController@update')
+    ->name('huesped.update')
     ->where('id','[0-9]+');
 
 //RUTA PARA BORRAR
-Route::delete('/proyectos/{id}/borrar','ProyectoController@destroy')
-    ->name('listado.borrar')
+Route::delete('/huesped/{id}/borrar','HuespedController@destroy')
+    ->name('huesped.borrar')
     ->where('id','[0-9]+');
     });
 
@@ -97,15 +97,33 @@ Route::get('/indiceVulnerabilidad', 'EstadisticaController@vulnerabilidad')
         ->name('gestor.direc');
 
     //ROUTES LISTADO DIRECTOR
-    Route::get('/proyectos/listadoDirector','ProyectoController@director')
+    Route::get('/huesped/listadoDirector','HuespedController@director')
         ->name('listado.director');
 
     Route::get('/dire','paginaPrincipal_controller@principaldirec')
         ->name('dire.access');
 
-    Route::get('/proyectos/{id}','ProyectoController@show')
-        ->name('detalles.mostrar')
+    Route::get('/huesped/{id}','HuespedController@show')
+        ->name('huesped.mostrar')
         ->where('id','[0-9]+');
+
+
+
+    //NUEVAS RUTAS DEL FORMULARIO HUESPED
+
+     Route::get('/huesped/crear', 'HuespedController@nuevo')
+     ->name('huesped.nuevo');
+
+     Route::post("/huesped/store","HuespedController@store")
+         ->name("huesped.store");
+     Route::get('/responsable/{id}/crear', 'ResponsableController@nuevo')
+         ->name('responsable.nuevo');
+    Route::post("/responsable/{id}/store","ResponsableController@store")
+        ->name("responsable.store");
+    Route::get('/narracion/{id}/nuevo', 'NarracionController@create')
+        ->name('narracion.nuevo');
+    Route::post('/narracion/{id}/store', 'NarracionController@store')
+        ->name('narracion.store');
 
 
 });
