@@ -8,11 +8,14 @@
     @endif
 
 
-    <!--BUSCADOR-->
 
-    <h2>Listado de Huéspedes</h2>
+    <!--BUSCADOR-->
+    <div class="card-header">
+        <label class="card-title">Listado de Huéspedes</label>
+    </div>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a  class="btn btn-primary"  href="{{route('dire.access')}}">Regresar</a>
+        <a class="btn btn-primary" href="{{route('dire.access')}}">Regresar</a>
         <a class="navbar-brand" href="#"></a>
         <form class="form-inline my-2 my-lg-0 ml-auto">
             <input class="form-control mr-sm-2" name="nombres" type="search" placeholder="Buscar" aria-label="Search">
@@ -40,8 +43,6 @@
             <th scope="col">Ver</th>
 
 
-
-
         </tr>
 
         </thead>
@@ -62,8 +63,6 @@
         @endforelse
 
         </tbody>
-
-
 
 
     </table>

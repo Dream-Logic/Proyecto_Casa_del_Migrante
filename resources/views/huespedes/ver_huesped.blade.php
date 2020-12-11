@@ -1,35 +1,37 @@
 @extends ('PlantillaMadre.menu_inicio')
 @section('contenido')
 
-    <div class="card ">
 
-        <div class="card-header">
-            <label class="card-title">Datos Personales del Niño, Niña o Adolescente</label>
+
+    <div class="card-header">
+        <label class="card-title">Datos Personales del Niño, Niña o Adolescente</label>
+
+    </div>
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
         </div>
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
-        <div class="botonesD">
-            <input class="btn btn-warning" type="button" value="Imprimir" onclick="window.print()">
+    @endif
 
-        </div>
-        <br>
+    <div class="card-header">
 
-        <h1>
-            Detalles de {{$huesped->nombres}}
-        </h1>
+        <label class="" style="color: #0d95e8"> Detalles de {{$huesped->nombres}}</label>
+        <input class="btn btn-warning" type="button" value="Imprimir" onclick="window.print()"
+               style="margin-left: 850px">
+    </div>
 
+
+
+    <div class="ver">
         <table class="table">
             <thead class="">
             <tr>
-                <th scope="col"><h3>Campo</h3></th>
-                <th scope="col"><h3>Valor</h3></th>
+                <th scope="col"><h6 style="color: #0d95e8">Campo</h6></th>
+                <th scope="col"><h6 style="color: #0d95e8">Valor</h6></th>
             </tr>
             </thead>
             <tbody>
@@ -100,7 +102,7 @@
 
             @foreach($responsables as $responsable)
                 <tr>
-                    <th><h3>Datos Personales de la Madre, Padre y/o Resposable Legal</h3></th>
+                    <th><h6 style="color: #0d95e8">Datos Personales de la Madre, Padre y/o Resposable Legal</h6></th>
                     <th></th>
                 </tr>
 
@@ -159,7 +161,7 @@
 
             @foreach($narracion as $narra)
                 <tr>
-                    <th><h3>Narración de los Hechos</h3></th>
+                    <th><h6 style="color: #0d95e8">Narración de los Hechos</h6></th>
                     <th></th>
                 </tr>
 

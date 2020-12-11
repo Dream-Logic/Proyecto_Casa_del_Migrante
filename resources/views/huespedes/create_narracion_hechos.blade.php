@@ -35,8 +35,9 @@
 
                   name="vulneracion"
                   placeholder="Describa la vulneración de derechos del niño, niña o adolescente"
-                  rows="3" > {{old('vulneracion')}}</textarea><br>
-                        </span></div><br>
+                  rows="3"> {{old('vulneracion')}}</textarea><br>
+                        </span></div>
+                <br>
 
 
                 <div class="col-11">
@@ -44,14 +45,16 @@
                     <span class="col-md-5 col-md-offset-10 text-center">
         <textarea class="form-control" id="proteccion" name="proteccion"
                   placeholder="Describa las medidas de protección del niño, niña o adolescente"
-                  rows="3" >{{old('proteccion')}}</textarea><br>
-                        </span></div><br>
-
+                  rows="3">{{old('proteccion')}}</textarea><br>
+                        </span></div>
+                <br>
 
 
             </div>
-            <button type="submit" class="btn btn-sm btn-success"><i class="fas fa-save"></i> Guardar</button>
+            <div class="botones">
+                <button type="submit" class="btn btn-sm btn-success"><i class="fas fa-save"></i> Guardar</button>
+            </div>
         </form>
 
     </div>
-                @endsection
+@endsection

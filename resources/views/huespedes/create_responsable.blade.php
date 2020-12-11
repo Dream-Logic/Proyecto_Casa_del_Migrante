@@ -81,7 +81,7 @@
                         <select class="form-control"
 
                                 name="trabaja">
-                            <option value="Si"  @if(old('trabaja') === "Si") selected='selected' @endif>Si</option>
+                            <option value="Si" @if(old('trabaja') === "Si") selected='selected' @endif>Si</option>
                             <option value="No" @if(old('trabaja')=== "No") selected='selected' @endif>No</option>
                         </select><br>
                     </div>
@@ -120,13 +120,26 @@
                     <div class="col-5">
                         <label for="civil">Estado Civil</label><br>
                         <select class="form-control" name="civil">
-                            <option value="Soltero/a"  @if(old('civil') === "Soltero/a") selected='selected' @endif>Soltero/a</option>
-                            <option value="Comprometido/a" @if(old('civil') === "Comprometido/a") selected='selected' @endif>Comprometido/a</option>
-                            <option value="Casado/a" @if(old('civil')=== "Casado/a") selected='selected' @endif>Casado/a</option>
-                            <option value="Unión libre" @if(old('civil') === "Unión libre") selected='selected' @endif>Unión libre</option>
-                            <option value="Separado/a" @if(old('civil') === "Separado/a") selected='selected' @endif>Separado/a</option>
-                            <option value="Divorciado/a" @if(old('civil')=== "Divorciado/a") selected='selected' @endif>Divorciado/a</option>
-                            <option value="Viudo/a" @if(old('civil')=== "Viudo/a") selected='selected' @endif>Viudo/a</option>
+                            <option value="Soltero/a" @if(old('civil') === "Soltero/a") selected='selected' @endif>
+                                Soltero/a
+                            </option>
+                            <option value="Comprometido/a"
+                                    @if(old('civil') === "Comprometido/a") selected='selected' @endif>Comprometido/a
+                            </option>
+                            <option value="Casado/a" @if(old('civil')=== "Casado/a") selected='selected' @endif>
+                                Casado/a
+                            </option>
+                            <option value="Unión libre" @if(old('civil') === "Unión libre") selected='selected' @endif>
+                                Unión libre
+                            </option>
+                            <option value="Separado/a" @if(old('civil') === "Separado/a") selected='selected' @endif>
+                                Separado/a
+                            </option>
+                            <option value="Divorciado/a" @if(old('civil')=== "Divorciado/a") selected='selected' @endif>
+                                Divorciado/a
+                            </option>
+                            <option value="Viudo/a" @if(old('civil')=== "Viudo/a") selected='selected' @endif>Viudo/a
+                            </option>
                         </select><br>
                     </div>
 
@@ -139,9 +152,11 @@
 
 
                 </div>
-                <button type="submit" class="btn btn-sm btn-success"><i class="fas fa-save"></i> Guardar</button>
-                <a class="btn btn-primary" href="{{route('narracion.nuevo', ['id'=>$id])}}">Siguiente</a>
 
+                <div class="">
+                    <a class="btn btn-primary" href="{{route('narracion.nuevo', ['id'=>$id])}}">Siguiente</a>
+                    <button type="submit" class="btn btn-sm btn-success"><i class="fas fa-save"></i> Guardar</button>
+                </div>
             </div>
         </form>
     </div>

@@ -7,6 +7,30 @@
         }
 
 
+        .col-5 {
+            margin-left: 55px;
+            margin-right: 30px;
+
+        }
+
+        .col-11 {
+            margin-left: 50px;
+        }
+
+        label {
+            font: xx-large;
+            font-family: Arial;
+            font-weight: bold;
+        }
+
+        .botones {
+
+            padding-bottom: 30px;
+            padding-left: 85%;
+            font-family: 'Verdana', Geneva, Tahoma, sans-serif;
+        }
+
+
     </style>
     <title>Casa del Migrante</title>
     <meta charset="utf-8">

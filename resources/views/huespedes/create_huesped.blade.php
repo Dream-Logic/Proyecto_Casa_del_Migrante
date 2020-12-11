@@ -22,12 +22,13 @@
                 {{session("exito")}}
             </div>
         @endif
-        <div class="card-body">
-            <form method="post" action="{{route('huesped.store')}}">
 
-                @csrf
+        <form method="post" action="{{route('huesped.store')}}">
 
-                <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+            @csrf
+            <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+            <div class="abs-center">
+
                 <div class="form-row">
 
                     <div class="col-5"><br>
@@ -175,12 +176,15 @@
                     <br>
 
                 </div>
-
+                <div class="botones">
                 <button type="submit" class="btn btn-sm btn-success"><i class="fas fa-save"></i> Guardar</button>
-
-            </form>
-
-        </div>
+                    </div>
+                <br>
+            </div>
+        </form>
+        <br>
+    </div>
+    </div>
     </div>
 
 

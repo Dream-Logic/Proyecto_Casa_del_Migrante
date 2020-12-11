@@ -6,16 +6,18 @@
     <title>
         @yield('titulo')
     </title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
 <style>
 
 
-    h1{text-align: center;
+    h1 {
+        text-align: center;
         /*font-family: 'Verdana', Geneva, Tahoma, sans-serif;*/
         font-size: 55px;
-        font-family:'Times New Roman', Times, serif;
+        font-family: 'Times New Roman', Times, serif;
         padding: 10px 10px;
         text-align: center;
         text-transform: unset;
@@ -28,12 +30,12 @@
         fill: transparent;
 
 
-
     }
-    .titulouno{
+
+    .titulouno {
         /*font-family: 'Verdana', Geneva, Tahoma, sans-serif;*/
         font-size: 20px;
-        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         /*font-size: 92px;*/
         padding: 3px 3px;
         text-align: center;
@@ -52,7 +54,7 @@
         /*fill: transparent;*/
     }
 
-    .titulodos{
+    .titulodos {
         font-size: 20px;
         /*font-family: "Avant Garde", Avantgarde, "Century Gothic",
         CenturyGothic, "AppleGothic", sans-serif;*/
@@ -69,13 +71,13 @@
            4px 4px 0px #d5d5d5,
            7px 7px 0px rgba(0, 0, 0, 0.2);
            color: #131313;*/
-        background-color: #e7e5e4 ;
+        background-color: #e7e5e4;
         color: #FFFFFF;
-        background-color:  #0080ff;
+        background-color: #0080ff;
         /*fill: transparent;*/
     }
 
-    label{
+    label {
         font: xx-large;
         font-family: 'Times New Roman', Times, serif;
         font-weight: bold;
@@ -87,43 +89,34 @@
         font-family: 'Cambria', Cochin, Georgia, Times, Times New Roman, serif;
         font-size: 20px;
         /*color: MediumSeaGreen;*/
-        background-color:  #80ffd4;
+        background-color: #80ffd4;
 
 
     }
-    .col-5{
+
+    .col-5 {
         margin-left: 50px;
         margin-right: 30px;
 
     }
-    .col-11{
+
+    .col-11 {
         margin-left: 50px;
     }
 
-    .botones{
-        margin-top: 50px;
-        padding-bottom: 50px ;
-        padding-left: 750px;
-        font-family:'Verdana', Geneva, Tahoma, sans-serif;
+    .botones {
+          margin-top: 50px;
+          padding-bottom: 50px;
+          padding-left: 750px;
+          font-family: 'Verdana', Geneva, Tahoma, sans-serif;
 
 
-    }
-
-
-    .tres{
-        top: 0%;
-        width:100%;
-        height:100%;
-        background-repeat: no-repeat;
-        background-size: cover
-    }
+      }
 
 
 
 
 </style>
-
-
 
 
 <header>
@@ -138,7 +131,8 @@
                 <a class="nav-link" href="#">Link</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
                     Dropdown
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -165,13 +159,17 @@
     </main>
 
 
-
-
 </header>
 
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
 
 
 </body>

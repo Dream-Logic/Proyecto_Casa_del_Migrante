@@ -19,9 +19,6 @@ class NarracionController extends Controller
     }
 
 
-
-
-
     /**
      * Show the form for creating a new resource.
      *
@@ -53,13 +50,11 @@ class NarracionController extends Controller
         //hechos
         $newHuesped->vulneracion = $request->input('vulneracion');
         $newHuesped->proteccion = $request->input('proteccion');
-        $newHuesped->id_huesped =$id;
+        $newHuesped->id_huesped = $id;
         $newHuesped->save();
 
         return redirect()->route("listado.index")
-            ->with("exito","Se creo exitosamente la narracion de los hechos");
-
-
+            ->with("exito", "Se creo exitosamente la narracion de los hechos");
 
 
     }
@@ -73,7 +68,6 @@ class NarracionController extends Controller
     public function show($id)
     {
         //
-
 
 
     }
