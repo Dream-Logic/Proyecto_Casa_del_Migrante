@@ -22,7 +22,6 @@ Route::group(["middleware" => "auth"], function () {//director
     Route::group(['middleware' => 'admin'], function () {
 //aquitodo lo del administrador
         /*Rutas de las vistas gestor de usuario*/
-
         Route::get('/principal', 'paginaPrincipal_controller@index')
             ->name('index.index');
         Route::get('/gestor', 'GestorUsuarioController@indexAdmin')
@@ -37,7 +36,6 @@ Route::group(["middleware" => "auth"], function () {//director
             ->name('regresar.volv');
 
         /*Ruta para el formulario*/
-
         /*RUTAS PARA EL LISTADO*/
         Route::get('/proyectos/listado', 'HuespedController@index')
             ->name('listado.index');
@@ -52,17 +50,10 @@ Route::group(["middleware" => "auth"], function () {//director
 
 //RUTAS PARA EDITAR
 
-
 //RUTA QUE DIRIGE A LAS ESTADISTICAS//
         Route::get('/estadisticas', 'EstadisticaController@index')
             ->name('estadisticas.admin');
-//Rutas que redirigen a cada uno de los gráficos//
-        Route::get('/paridadGenero', 'EstadisticaController@paridad')
-            ->name('grafico.paridadGenero');
-        Route::get('/indiceDesercion', 'EstadisticaController@desercion')
-            ->name('grafico.desercion');
-        Route::get('/indiceVulnerabilidad', 'EstadisticaController@vulnerabilidad')
-            ->name('grafico.vulnerabilidad');
+
         //NUEVAS RUTAS DEL FORMULARIO HUESPED
 
         Route::get('/huesped/crear', 'HuespedController@nuevo')

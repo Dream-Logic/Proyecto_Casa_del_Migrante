@@ -1,10 +1,10 @@
 @extends('PlantillaMadre.menu_inicio')
+@section('titulo', 'Principal Proyecto Casa del Migrante')
 @section('contenido')
 <!-- <!DOCTYPE html>
 <html lang="en"> -->
 
 <head>
-    <title>Principal Proyecto Casa del Migrante</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Course Project">

@@ -9,9 +9,7 @@ use Illuminate\Support\Facades\DB;
 
 class EstadisticaController extends Controller
 {
-    //mostrar el registro de la grafica por cada imc,rufier y grasa de cada cliente
     public function index(){
-
         $borderColors = [
             "rgba(255, 99, 132, 1.0)",
             "rgba(22,160,133, 1.0)",
@@ -47,43 +45,27 @@ class EstadisticaController extends Controller
             ->groupBy('sexo')
             ->get();
 
+        //muestra el grafico paridad de género//
         $edadChart  = new EdadChart();
         $edadChart->minimalist(true);
         $edadChart->title("Huespedes por edad");
 
         $edadChart->labels($huespedes->pluck("rango"));
-        $edadChart->dataset("Huespedes por edad","doughnut",$huespedes->pluck("numero_de_huespedes"))
+        $edadChart->dataset("Huespedes por edad","pie",$huespedes->pluck("numero_de_huespedes"))
             ->color($borderColors)->backgroundcolor($fillColors);
         $edadChart->options=["fill"=>true];
 
-
+        //muestra el grafico paridad de género//
         $generoChart = new EdadChart();
         $generoChart->minimalist(true);
         $generoChart->title("Huespedes por género");
 
         $generoChart->labels($generos->pluck("sexo"));
-        $generoChart->dataset("Huespedes por género","doughnut",$generos->pluck("numero_generos"))
+        $generoChart->dataset("Huespedes por género","pie",$generos->pluck("numero_generos"))
             ->color($borderColors)->backgroundcolor($fillColors);
 
         $generoChart->options=["fill"=>true,"beginAtZero"=>true];
 
         return view('Estadistica',["edadChart"=>$edadChart,"generosChart"=>$generoChart]);
-    }
-    //muestra la vista grafico paridad de género//
-    public function paridad(){
-        return view('paridadGenero');
-    }
-    public function desercion(){
-        return view('indiceDesercion');
-    }
-    public function vulnerabilidad(){
-        return view('indiceVulnerabilidad');
-    }
-    public function edades(){
-        $huespedes = DB::table('huespeds')
-            ->select(DB::raw('concat(10*floor(edad/10), \'-\', 10*floor(edad/10) + 9) as `rango`, count(*) as `numero_de_huespedes`'))
-            ->groupBy('rango')
-            ->get();
-        return response()->json(["huespedes"=>$huespedes]);
     }
 }
