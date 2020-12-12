@@ -1,4 +1,5 @@
 @extends('PlantillaMadre.Plantilla_menu_director')
+@section('titulo','Principal Director')
 @section('contenido')
 <!-- <!DOCTYPE html>
 <html lang="en"> -->
