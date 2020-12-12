@@ -1,5 +1,4 @@
-@extends('PlantillaMadre.Plantilla_Madre_Listado')
-@section('titulo','Listado de niños enfermos')
+@extends ('PlantillaMadre.menu_inicio')
 @section('contenido')
 
     @if(session('mensaje'))

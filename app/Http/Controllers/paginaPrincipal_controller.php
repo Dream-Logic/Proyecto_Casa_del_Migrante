@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Huesped;
 use App\PaginaPrincipal;
 use App\Proyecto;
 use Illuminate\Http\Request;
@@ -82,7 +83,7 @@ class paginaPrincipal_controller extends Controller
     public function paginasalud()
     {
 
-        $listados = Proyecto::where('enfermedad', "!=", null)->get();
+        $listados = Huesped::where('enfermedad', "!=", null)->get();
 
         return view('salud')->with('listados', $listados);
 
@@ -95,7 +96,7 @@ class paginaPrincipal_controller extends Controller
 
         //$listados = Proyecto::paginate(10);
 
-        $listados = Proyecto::search($request->nombres)->paginate(5);
+        $listados = Huesped::search($request->nombres)->paginate(5);
 
         return view('salud')->with('listados', $listados);
 
@@ -105,7 +106,7 @@ class paginaPrincipal_controller extends Controller
     public function SaludDire()
     {
 
-        $listados = Proyecto::where('enfermedad', "!=", null)->get();
+        $listados = Huesped::where('enfermedad', "!=", null)->get();
 
         return view('salud')->with('listados', $listados);
 
@@ -118,7 +119,7 @@ class paginaPrincipal_controller extends Controller
 
         //$listados = Proyecto::paginate(10);
 
-        $listados = Proyecto::search($request->nombres)->paginate(5);
+        $listados = Huesped::search($request->nombres)->paginate(5);
 
         return view('SaludDirect')->with('listados', $listados);
 

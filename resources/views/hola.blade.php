@@ -35,7 +35,7 @@
             <br>
             <br>
 
-            <p style="font-size: 50px; color: #0b0b0b"><span>Bienvenido al </span></p>
+            <p style="font-size: 50px; color: #0b0b0b"><span>¡Bienvenido al </span></p>
         </div>
         <div class="hero_slide_background text-center text-dark">
             <p style="font-size: 50px; color: #0b0b0b"> Registro<span> del</span> Huesped!</p>
@@ -44,10 +44,10 @@
             <div class="container">
                 <div class="row ">
                     <div class="col-lg-3 milestone_col align-content-center">
-                        <div class="milestone icon-font-awesome text-info text-md-right h-75">
+                        <div class="milestone  text-info text-md-right h-75">
                             <div>
-                                <h3 href="{{route('huesped.nuevo')}}" class="milestones_background text-dark">Datos del
-                                    Huesped</h3>
+                                <p style="font-size: 25px ; font-family: Arial "  href="{{route('huesped.nuevo')}}" class="milestones_background  text-dark">Datos del
+                                    Huesped</p>
                             </div>
                             <a href="{{route('huesped.nuevo')}}" class="milestones_background w-50 "><img
                                         src=" imagenes/icon6.svg"

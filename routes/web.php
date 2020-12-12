@@ -42,6 +42,13 @@ Route::group(["middleware" => "auth"], function () {//director
         Route::get('/proyectos/listado', 'HuespedController@index')
             ->name('listado.index');
 
+        /*Rutas de la pagina salud administrador*/
+        Route::get('/salud', 'paginaPrincipal_controller@paginasalud')
+            ->name('salud.salu');
+
+        Route::get('/salud', 'paginaPrincipal_controller@salud')
+            ->name('salud.salu');
+
 
 //RUTAS PARA EDITAR
 
@@ -86,34 +93,27 @@ Route::group(["middleware" => "auth"], function () {//director
 
 //Aqui van todas las rutas de director
 //Ruta para acceso del direcctor//
-        Route::get('/dire', 'paginaPrincipal_controller@principaldirec')
-            ->name('dire.access');
-        //Rutas de listados de salud//
-        Route::get('/salud', 'paginaPrincipal_controller@paginasalud')
-            ->name('salud.salu');
+    Route::get('/dire', 'paginaPrincipal_controller@principaldirec')
+        ->name('dire.access');
+    //Rutas de listados de salud//
+    Route::get('/saludDi', 'paginaPrincipal_controller@SaludDire')
+        ->name('saludDire.salu');
+    Route::get('/saludDi', 'paginaPrincipal_controller@SDire')
+        ->name('saludDire.salu');
 
-        Route::get('/salud', 'paginaPrincipal_controller@salud')
-            ->name('salud.salu');
-        Route::get('/saludDi', 'paginaPrincipal_controller@SaludDire')
-            ->name('saludDire.salu');
-        Route::get('/saludDi', 'paginaPrincipal_controller@SDire')
-            ->name('saludDire.salu');
+    Route::get('/home', 'HomeController@index')->name('home');
+    /*ruta que dirige a la vista gestor de usuario*/
+    Route::get('/gestorDirec', 'GestorUsuarioController@indexDirec')
+        ->name('gestor.direc');
 
-        Route::get('/home', 'HomeController@index')->name('home');
-        /*ruta que dirige a la vista gestor de usuario*/
-        Route::get('/gestorDirec', 'GestorUsuarioController@indexDirec')
-            ->name('gestor.direc');
-
-        //ROUTES LISTADO DIRECTOR
-        Route::get('/huesped/listadoDirector', 'HuespedController@director')
-            ->name('listado.director');
-        Route::get('/dire', 'paginaPrincipal_controller@principaldirec')
-            ->name('dire.access');
-        Route::get('/huesped/{id}', 'HuespedController@show')
-            ->name('huesped.mostrar')
-            ->where('id', '[0-9]+');
-
-
+    //ROUTES LISTADO DIRECTOR
+    Route::get('/huesped/listadoDirector', 'HuespedController@director')
+        ->name('listado.director');
+    Route::get('/dire', 'paginaPrincipal_controller@principaldirec')
+        ->name('dire.access');
+    Route::get('/huesped/{id}', 'HuespedController@show')
+        ->name('huesped.mostrar')
+        ->where('id', '[0-9]+');
 
 
 });
