@@ -20,7 +20,7 @@
         <div >
             <div class="row mr-2 ml-4">
                 <div class="col ml-5"><br><br>
-                    <span style="color: #0b0b0b; font-size: 25px;">Estadística de índice de edades</span>
+                    <span style="color: #0b0b0b; font-size: 25px;">Estadística índice de edades</span>
                     <div style="width:50%;">
 
                         {!! $edadChart->container() !!}
@@ -30,7 +30,7 @@
                 </div>
 
                 <div class="col"><br><br>
-                    <span style="color: #0b0b0b; font-size: 25px;">Estadística de índice de géneros</span>
+                    <span style="color: #0b0b0b; font-size: 25px;">Estadística índice de géneros</span>
                     <div style="width:50%;">
 
                         {!! $generosChart->container() !!}
