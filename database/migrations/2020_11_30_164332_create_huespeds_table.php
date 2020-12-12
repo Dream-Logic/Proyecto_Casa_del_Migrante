@@ -15,6 +15,7 @@ class CreateHuespedsTable extends Migration
     {
         Schema::create('huespeds', function (Blueprint $table) {
             $table->id();
+            $table->string('imagen')->nullable();
             $table->string('nombres');
             $table->string('apellidos');
             $table->date('fnacimiento');

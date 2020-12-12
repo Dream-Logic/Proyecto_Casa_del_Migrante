@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Huesped;
 use App\NarracionHecho;
+use Carbon\Carbon;
+
 use App\Proyecto;
 use App\Responsable;
 use Illuminate\Http\Request;
@@ -70,6 +72,13 @@ class HuespedController extends Controller
     public function store(Request $request)
     {
         //
+        if (($request->imagen) == null) {
+
+            if (($request->sexo) == "femenino") {
+                $imagen = "femenino.png";
+            } else {
+                $imagen = "masculino.png";
+            }
         //select de la fichas ninios
         $request->piel;
         $request->sexo;
@@ -113,14 +122,80 @@ class HuespedController extends Controller
         $newHuesped->direccion = $request->input('direccion');
         $newHuesped->signosFisicos = $request->input('signosFisicos');
         $newHuesped->enfermedad = $request->input('enfermedad');
-        $newHuesped->tratamiento = $request->input('tratamiento');
+            $newHuesped->imagen = $imagen;
+
+            $newHuesped->tratamiento = $request->input('tratamiento');
         $newHuesped->id_usuario = Auth::user()->getUserId();
         $newHuesped->save();
         //todo retornar la vista del formulario crear responsable
 
         return redirect()->route("responsable.nuevo", ["id" => $newHuesped->id])
             ->with("exito", "Se creo el huesped exitosamente");
+
+        }else {
+            $exploded = explode(',', $request->foto);
+            $decode = base64_decode($exploded[0]);
+            if (str_contains($exploded[0], 'jpeg'))
+                $extension = 'jpg';
+            else
+                $extension = 'png';
+            $imagen = Carbon::now()->toDateString() . "_" . $request->input("nombres") . '_imagen.' . $extension;
+            $path = public_path() . "/foto/" . $imagen;
+            file_put_contents($path, $decode);
+            $request->piel;
+            $request->sexo;
+            $request->cabello;
+            $request->ojos;
+
+            //VALIDAR
+            $request->validate([
+                'nombres' => 'required',
+                'apellidos' => 'required',
+                'fnacimiento' => 'required',
+                'edad' => 'required',
+                'sexo' => 'required',
+                'cabello' => 'required',
+                'ojos' => 'required',
+                'piel' => 'required',
+                'identidad' => 'required',
+                'nacionalidad' => 'required',
+                'pasaporte' => 'nullable',
+                'nacimiento' => 'required',
+                'direccion' => 'required',
+                'signosFisicos' => 'required',
+                'enfermedad' => 'nullable',
+                'tratamiento' => 'nullable']);
+
+            $newHuesped = new Huesped();
+
+            //Datos Obtenidos del Formulario
+            $newHuesped->nombres = $request->input('nombres');
+            $newHuesped->apellidos = $request->input('apellidos');
+            $newHuesped->fnacimiento = $request->input('fnacimiento');
+            $newHuesped->edad = $request->input('edad');
+            $newHuesped->sexo = $request->input('sexo');
+            $newHuesped->cabello = $request->input('cabello');
+            $newHuesped->ojos = $request->input('ojos');
+            $newHuesped->piel = $request->input('piel');
+            $newHuesped->identidad = $request->input('identidad');
+            $newHuesped->nacionalidad = $request->input('nacionalidad');
+            $newHuesped->pasaporte = $request->input('pasaporte');
+            $newHuesped->nacimiento = $request->input('nacimiento');
+            $newHuesped->direccion = $request->input('direccion');
+            $newHuesped->imagen = $imagen;
+
+            $newHuesped->signosFisicos = $request->input('signosFisicos');
+            $newHuesped->enfermedad = $request->input('enfermedad');
+            $newHuesped->tratamiento = $request->input('tratamiento');
+            $newHuesped->id_usuario = Auth::user()->getUserId();
+            $newHuesped->save();
+            //todo retornar la vista del formulario crear responsable
+
+            return redirect()->route("responsable.nuevo", ["id" => $newHuesped->id])
+                ->with("exito", "Se creo el huesped exitosamente");
     }
+    }
+
 
     /**
      * Display the specified resource.
