@@ -50,7 +50,7 @@
                             <div class="hero_box d-flex  align-items-center justify-content-start ">
                                 <img src="images/lista1.svg"  class="svg" alt="">
                                 <div class="hero_box_content">
-                                    <h6 class="hero_box_title">Listado de Huesdpedes</h6>
+                                    <h6 class="hero_box_title">Listado de Huespedes</h6>
                                     <a href="{{route('listado.director')}}" class="hero_box_link">Ver</a>
                                 </div>
                             </div>
@@ -58,12 +58,12 @@
                     </div>
 
                     <div class="col-lg-3.5hero_box_col">
-                        <a href="" >
+                        <a href="{{route('estadisticas.direc')}}" >
                             <div class="hero_box d-flex flex-row align-items-center justify-content-start col offset-4">
                                 <img src="images/estadistica1.svg" class="svg" alt="">
                                 <div class="hero_box_content">
                                     <h6 class="hero_box_title">Estadisticas</h6>
-                                    <a href="" class="hero_box_link">Ver</a>
+                                    <a href="{{route('estadisticas.direc')}}" class="hero_box_link">Ver</a>
                                 </div>
                             </div>
                         </a>

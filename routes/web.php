@@ -20,6 +20,7 @@ Route::get('/', function () {
 Route::group(["middleware" => "auth"], function () {//director
 
     Route::group(['middleware' => 'admin'], function () {
+
 //aquitodo lo del administrador
         /*Rutas de las vistas gestor de usuario*/
         Route::get('/principal', 'paginaPrincipal_controller@index')
@@ -47,13 +48,9 @@ Route::group(["middleware" => "auth"], function () {//director
         Route::get('/salud', 'paginaPrincipal_controller@salud')
             ->name('salud.salu');
 
-
-//RUTAS PARA EDITAR
-
-//RUTA QUE DIRIGE A LAS ESTADISTICAS//
+        //RUTA QUE DIRIGE A LAS ESTADISTICAS//
         Route::get('/estadisticas', 'EstadisticaController@index')
             ->name('estadisticas.admin');
-
         //NUEVAS RUTAS DEL FORMULARIO HUESPED
 
         Route::get('/huesped/crear', 'HuespedController@nuevo')
@@ -105,6 +102,9 @@ Route::group(["middleware" => "auth"], function () {//director
     Route::get('/huesped/{id}', 'HuespedController@show')
         ->name('huesped.mostrar')
         ->where('id', '[0-9]+');
+    //Ruta de las estadisticas del director//
+    Route::get('/estadisticasDirec', 'EstadisticaController@direc')
+        ->name('estadisticas.direc');
 
 
 });
