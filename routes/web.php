@@ -56,6 +56,33 @@ Route::group(["middleware" => "auth"], function () {//director
             ->name('grafico.desercion');
         Route::get('/indiceVulnerabilidad', 'EstadisticaController@vulnerabilidad')
             ->name('grafico.vulnerabilidad');
+        //NUEVAS RUTAS DEL FORMULARIO HUESPED
+
+        Route::get('/huesped/crear', 'HuespedController@nuevo')
+            ->name('huesped.nuevo');
+        Route::post("/huesped/store", "HuespedController@store")
+            ->name("huesped.store");
+        Route::get('/responsable/{id}/crear', 'ResponsableController@nuevo')
+            ->name('responsable.nuevo');
+        Route::post("/responsable/{id}/store", "ResponsableController@store")
+            ->name("responsable.store");
+        Route::get('/narracion/{id}/nuevo', 'NarracionController@create')
+            ->name('narracion.nuevo');
+        Route::post('/narracion/{id}/store', 'NarracionController@store')
+            ->name('narracion.store');
+        Route::get('/huesped/{id}/editar', 'HuespedController@edit')
+            ->name('huesped.edit')
+            ->where('id', '[0-9]+');
+        Route::put('/huesped/{id}/editar', 'HuespedController@update')
+            ->name('huesped.update')
+            ->where('id', '[0-9]+');
+        Route::delete('/huesped/{id}/borrar', 'HuespedController@destroy')
+            ->name('huesped.borrar')
+            ->where('id', '[0-9]+');
+        Route::get('/huesped/{id}', 'HuespedController@show')
+            ->name('huesped.mostrar')
+            ->where('id', '[0-9]+');
+    });
 
 //Aqui van todas las rutas de director
 //Ruta para acceso del direcctor//
@@ -86,35 +113,11 @@ Route::group(["middleware" => "auth"], function () {//director
             ->name('huesped.mostrar')
             ->where('id', '[0-9]+');
 
-        //NUEVAS RUTAS DEL FORMULARIO HUESPED
 
-        Route::get('/huesped/crear', 'HuespedController@nuevo')
-            ->name('huesped.nuevo');
-        Route::post("/huesped/store", "HuespedController@store")
-            ->name("huesped.store");
-        Route::get('/responsable/{id}/crear', 'ResponsableController@nuevo')
-            ->name('responsable.nuevo');
-        Route::post("/responsable/{id}/store", "ResponsableController@store")
-            ->name("responsable.store");
-        Route::get('/narracion/{id}/nuevo', 'NarracionController@create')
-            ->name('narracion.nuevo');
-        Route::post('/narracion/{id}/store', 'NarracionController@store')
-            ->name('narracion.store');
-        Route::get('/huesped/{id}/editar', 'HuespedController@edit')
-            ->name('huesped.edit')
-            ->where('id', '[0-9]+');
-        Route::put('/huesped/{id}/editar', 'HuespedController@update')
-            ->name('huesped.update')
-            ->where('id', '[0-9]+');
-        Route::delete('/huesped/{id}/borrar', 'HuespedController@destroy')
-            ->name('huesped.borrar')
-            ->where('id', '[0-9]+');
-        Route::get('/huesped/{id}', 'HuespedController@show')
-            ->name('huesped.mostrar')
-            ->where('id', '[0-9]+');
-    });
+
 
 });
+
 Route::get('/passwordreset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name("password.request1");
 Route::post('/passwordemail', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name("password.email1");
 Route::get('/passwordreset{token}', 'Auth\ResetPasswordController@showResetForm')->name("password.reset1");
