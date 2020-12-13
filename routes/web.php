@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Auth::routes();
+
 Route::get('/', function () {
     return view('bienvenido');
 });
@@ -51,6 +52,7 @@ Route::group(["middleware" => "auth"], function () {//director
         //RUTA QUE DIRIGE A LAS ESTADISTICAS//
         Route::get('/estadisticas', 'EstadisticaController@index')
             ->name('estadisticas.admin');
+
         //NUEVAS RUTAS DEL FORMULARIO HUESPED
 
         Route::get('/huesped/crear', 'HuespedController@nuevo')
@@ -113,5 +115,4 @@ Route::get('/passwordreset', 'Auth\ForgotPasswordController@showLinkRequestForm'
 Route::post('/passwordemail', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name("password.email1");
 Route::get('/passwordreset{token}', 'Auth\ResetPasswordController@showResetForm')->name("password.reset1");
 Route::post('/passwordreset', 'Auth\ResetPasswordController@reset');
-
 
