@@ -61,14 +61,15 @@
         </div>
     </header>
 
-    <div class="site-blocks-cover overlay" style="background-image: url(images/niña.jpg);" data-aos="fade" id="home-section">
+    <div class="site-blocks-cover overlay" style="background-image: url(images/bienvenido/niña.jpg);" data-aos="fade" id="home-section">
 
         <div class="container">
-            <div class="row align-items-center justify-content-center">
+            <div class="row align-items-center justify-content-center"><br>
 
                 <div class="col-md-8 mt-lg-5 text-center">
-                    <h6 class="text-uppercase" data-aos="fade-up" style=" font-size: 50px; font-family: cursive; color: white">BIENVENIDOS</h6>
-                    <p class="mb-5 desc"  data-aos="fade-up" data-aos-delay="100"><b style="color: #e0a800; font-size: 25px; font-family: cursive"><strong>Fundación Alivio del Sufrimiento</strong></b></p>
+                    <h6 class="text-uppercase" data-aos="fade-up" style=" font-size: 50px; font-family: cursive; color: white">BIENVENIDO(A)</h6>
+                    <h6 class="mb-5 desc"  data-aos="fade-up" data-aos-delay="100"><b style="color: #e0a800; font-size: 25px; font-family: cursive"><strong>FUNDACIÓN ALIVIO DEL SUFRIMIENTO</strong></b></h6>
+                    <br>
                     <div data-aos="fade-up" data-aos-delay="100">
                         <a href="{{route('gestor.usuario')}}" class="btn smoothscroll btn-primary mr-2 mb-2">Acceder</a>
                     </div>
@@ -94,7 +95,7 @@
             <div class="row">
                 <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
                     <figure class="circle-bg">
-                        <img src="images/Logo.jpg" alt="Image" class="img-fluid">
+                        <img src="images/bienvenido/Logo.jpg" alt="Image" class="img-fluid">
                     </figure>
                 </div>
                 <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
@@ -206,7 +207,7 @@
             <div class="row">
                 <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="h-entry">
-                        <a href="single.html"><img src="images/casa.jpg" alt="Image" class="img-fluid"></a>
+                        <a href="single.html"><img src="images/1.jpg" alt="Image" class="img-fluid"></a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
@@ -216,7 +217,7 @@
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="h-entry">
-                        <a href="single.html"><img src="images/casa12.jpg" alt="Image" class="img-fluid"></a>
+                        <a href="single.html"><img src="images/casa8.jpg" alt="Image" class="img-fluid"></a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
@@ -295,8 +296,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <h6 class="footer-heading mb-6">Acerca de</h6>
-                            <p>Hasta la fecha, el sistema educativo no permite la incorporación de alumnos una vez iniciado
-                                el curso escolar y las oportunidades de empleo y emprendimiento son escasas.</p>
+                            <p>Sistema web realizado por alumnas de la Universidad Nacional Autónoma de Honduras Tecnológica Danlí</p>
                         </div>
                         <div class="col-md-2">
                             <h6 class="footer-heading mb-4">Enlaces</h6>
