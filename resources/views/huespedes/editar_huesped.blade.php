@@ -1,6 +1,8 @@
 @extends ('PlantillaMadre.menu_inicio')
+@section('titulo', 'Editar datos del huésped')
 @section('contenido')
 
+    <br><br><br>
     <div class="card ">
 
         <div class="card-header">
@@ -208,8 +210,7 @@
             </form>
         </div>
     </div>
-
-    </div>
+    <script src="/js/jquery-3.2.1.min.js"></script>
     </div>
 
 

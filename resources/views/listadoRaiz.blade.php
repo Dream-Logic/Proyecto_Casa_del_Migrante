@@ -1,4 +1,5 @@
 @extends ('PlantillaMadre.menu_inicio')
+@section('titulo', 'Listado Huéspedes')
 @section('contenido')
 
     @if(session('mensaje'))
@@ -6,7 +7,9 @@
             {{session('mensaje')}}
         </div>
     @endif
-
+    <br>
+    <br>
+    <br>
     <div class="card-header">
         <label class="card-title">Listado de Huéspedes</label>
     </div>
@@ -66,6 +69,7 @@
                             @method('delete')
                             <input type="submit" value="Eliminar" class="btn btn-danger">
                         </form>
+                    </td>
 
                 </tr>
             @empty
@@ -81,4 +85,6 @@
 
     </tbody>
     {{ $listados->links()}}
+    <script src="/js/jquery-3.2.1.min.js"></script>
+
 @endsection

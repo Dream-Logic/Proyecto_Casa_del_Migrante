@@ -1,7 +1,9 @@
 @extends ('PlantillaMadre.menu_inicio')
+@section('titulo', 'Datos del huésped')
 @section('contenido')
-
-
+    <br>
+    <br>
+    <br>
 
     <div class="card-header">
         <label class="card-title">Datos Personales del Niño, Niña o Adolescente</label>
@@ -75,7 +77,7 @@
                 <th scope="row">Nacionalidad</th>
                 <td>{{ $huesped->nacionalidad }}</td>
             </tr>
-
+            <tr>
             <th scope="row">Pasaporte</th>
             <td>{{ $huesped->pasaporte }}</td>
             </tr>
@@ -83,7 +85,7 @@
                 <th scope="row">Lugar de Nacimiento</th>
                 <td>{{ $huesped->nacimiento}}</td>
             </tr>
-
+            <tr>
             <th scope="row">Dirección</th>
             <td>{{ $huesped->direccion }}</td>
             </tr>
@@ -91,6 +93,7 @@
                 <th scope="row">Signos Físicos</th>
                 <td>{{ $huesped->signosFisicos }}</td>
             </tr>
+            <tr>
             <th scope="row">Enfermedad o Padecimiento</th>
             <td>{{ $huesped->enfermedad }}</td>
             </tr>
@@ -181,5 +184,6 @@
 
             </tbody>
         </table>
+        <script src="/js/jquery-3.2.1.min.js"></script>
     </div>
 @endsection

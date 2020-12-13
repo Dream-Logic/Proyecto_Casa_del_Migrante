@@ -1,12 +1,20 @@
 @extends ('PlantillaMadre.menu_inicio')
+@section('titulo', 'Listado Salud')
 @section('contenido')
 
     @if(session('mensaje'))
         <div class="alert alert-success">
             {{session('mensaje')}}
         </div>
-
     @endif
+        <br>
+        <br>
+        <br>
+        <head>
+            <!-- CSRF Token -->
+            <meta name="csrf-token" content="{{ csrf_token() }}">
+        </head>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Listado de niños enfermos</a>
             <form class="form-inline my-2 my-lg-0 ml-auto">
@@ -48,12 +56,10 @@
 
         </tbody>
 
-
-
         @endsection
-
-
     </table>
+    <script src="/js/jquery-3.2.1.min.js"></script>
+
 
 
 

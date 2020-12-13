@@ -1,6 +1,8 @@
 @extends ('PlantillaMadre.menu_inicio')
+@section('titulo','Narración de hechos')
 @section('contenido')
 
+    <br><br>
     <div class="card ">
 
         <div class="card-header">
@@ -55,6 +57,6 @@
                 <button type="submit" class="btn btn-sm btn-success"><i class="fas fa-save"></i> Guardar</button>
             </div>
         </form>
-
+        <script src="/js/jquery-3.2.1.min.js"></script>
     </div>
 @endsection

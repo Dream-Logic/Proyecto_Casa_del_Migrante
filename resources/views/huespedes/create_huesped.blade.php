@@ -1,6 +1,14 @@
 @extends ('PlantillaMadre.menu_inicio')
+@section('titulo', 'Ficha de Ingreso')
 @section('contenido')
-
+    <br>
+    <br>
+    <br>
+    <head>
+        <!-- CSRF Token -->
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+    </head>
+    <body>
     <div class="card ">
 
         <div class="card-header">
@@ -230,13 +238,7 @@
         </form>
         <br>
     </div>
-    </div>
-    </div>
-
-
-
-
-
-
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    </body>
 
 @endsection

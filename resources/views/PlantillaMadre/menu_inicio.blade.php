@@ -76,7 +76,7 @@
                             <li><a href="{{route('hola.ho')}}" class="nav-link"><strong>Ficha de Ingreso</strong></a>
                             </li>
                             <li><a href="{{ route('listado.index') }}" class="nav-link"><strong>Listado de
-                                        Huspedes</strong></a></li>
+                                        Huéspedes</strong></a></li>
                             <li><a href="{{ route('estadisticas.admin')}}" class="nav-link"><strong>Estadísticas</strong></a></li>
                             <li><a href="{{ route('salud.salu') }}" class="nav-link"><strong>Salud</strong></a></li>
 

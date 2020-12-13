@@ -1,5 +1,5 @@
 @extends('PlantillaMadre.menu_inicio')
-@section('titulo', 'Principal Proyecto Casa del Migrante')
+@section('titulo', 'Página Principal')
 @section('contenido')
 <!-- <!DOCTYPE html>
 <html lang="en"> -->
@@ -60,7 +60,7 @@
                         <div class="hero_box d-flex flex-row align-items-center justify-content-start">
                             <img src="images/bueno.svg" class="svg" alt="">
                             <div class="hero_box_content">
-                                <h6 class="hero_box_title">Listado  de Huespedes</h6>
+                                <h6 class="hero_box_title">Listado  de Huéspedes</h6>
                                 <a href="{{ route('listado.index') }}" class="hero_box_link">ver</a>
                             </div>
                         </div>
