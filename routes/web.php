@@ -103,8 +103,8 @@ Route::group(["middleware" => "auth"], function () {//director
         ->name('huesped.mostrar')
         ->where('id', '[0-9]+');
     //Ruta de las estadisticas del director//
-    /*/Route::get('/estadisticasDirec', 'EstadisticaController@direc')
-        ->name('estadisticas.direc');*/
+    Route::get('/estadisticasDirec', 'EstadisticaController@index')
+        ->name('estadisticas.direc');
 
 
 });

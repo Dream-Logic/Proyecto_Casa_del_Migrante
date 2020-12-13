@@ -40,9 +40,9 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="flex-row justify-content-center align-items-center">
-                    <span class="text-md-left" style="color: #e0a800; font-family: 'Arial Black'">Casa del Migrante</span>
+                    <span class="text-md-left" style="color: #e0a800; font-family: 'Arial Black'; font-size: 15px;">Fundación Alivio del Sufrimiento</span>
                 </div>
-                <div class="col-12 col-md-10 d-none d-xl-block">
+                <div class="col-12 col-md-8 d-none d-xl-block">
                     <nav class="site-navigation position-relative text-right" role="navigation">
 
                         <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
@@ -64,14 +64,14 @@
     <div class="site-blocks-cover overlay" style="background-image: url(images/bienvenido/niña.jpg);" data-aos="fade" id="home-section">
 
         <div class="container">
-            <div class="row align-items-center justify-content-center"><br>
+            <div class="row align-items-center justify-content-center">
 
                 <div class="col-md-8 mt-lg-5 text-center">
-                    <h6 class="text-uppercase" data-aos="fade-up" style=" font-size: 50px; font-family: cursive; color: white">BIENVENIDO(A)</h6>
-                    <h6 class="mb-5 desc"  data-aos="fade-up" data-aos-delay="100"><b style="color: #e0a800; font-size: 25px; font-family: cursive"><strong>FUNDACIÓN ALIVIO DEL SUFRIMIENTO</strong></b></h6>
+                    <h6 class="text-uppercase" data-aos="fade-up" style=" font-size: 50px; font-family: cursive; color: white">BIENVENIDO(A) A </h6>
+                    <h6 class="mb-5 desc"  data-aos="fade-up" data-aos-delay="100"><b style="color: #e0a800; font-size: 30px; font-family: cursive"><strong>CASA DEL MIGRANTE</strong></b></h6>
                     <br>
-                    <div data-aos="fade-up" data-aos-delay="100">
-                        <a href="{{route('gestor.usuario')}}" class="btn smoothscroll btn-primary mr-2 mb-2">Acceder</a>
+                    <div data-aos="fade-up">
+                        <a href="{{route('gestor.usuario')}}" class="btn btn-primary mr-2 mb-2">Acceder</a>
                     </div>
                 </div>
 
