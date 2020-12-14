@@ -1,4 +1,4 @@
-@extends ('PlantillaMadre.menu_inicio')
+@extends ('PlantillaMadre.Plantilla_menu_director')
 @section('titulo', 'Listado Salud Director')
 @section('contenido')
 
