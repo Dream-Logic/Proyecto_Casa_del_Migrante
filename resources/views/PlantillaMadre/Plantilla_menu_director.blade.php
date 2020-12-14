@@ -50,10 +50,10 @@
                     <nav class="site-navigation position-relative text-right" role="navigation">
 
                         <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                            <li><a href="{{route('index.index')}}" class="nav-link"><strong>Inicio</strong></a></li>
-                            <li><a href="{{ route('listado.index') }}" class="nav-link"><strong>Listado de Huspedes</strong></a></li>
+                            <li><a href="{{route('dire.access')}}" class="nav-link"><strong>Inicio</strong></a></li>
+                            <li><a href="{{ route('listado.director') }}" class="nav-link"><strong>Listado de Huspedes</strong></a></li>
                             <li><a href="{{route('estadisticas.direc')}}" class="nav-link"><strong>Estadísticas</strong></a></li>
-                            <li><a href="" class="nav-link"><strong>Salud</strong></a></li>
+                            <li><a href="{{route('saludDire.salu')}}" class="nav-link"><strong>Salud</strong></a></li>
 
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

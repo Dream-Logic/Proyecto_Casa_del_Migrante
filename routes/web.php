@@ -83,8 +83,6 @@ Route::group(["middleware" => "auth"], function () {//director
 
 //Aqui van todas las rutas de director
 //Ruta para acceso del direcctor//
-    Route::get('/dire', 'paginaPrincipal_controller@principaldirec')
-        ->name('dire.access');
     //Rutas de listados de salud//
     Route::get('/saludDi', 'paginaPrincipal_controller@SaludDire')
         ->name('saludDire.salu');

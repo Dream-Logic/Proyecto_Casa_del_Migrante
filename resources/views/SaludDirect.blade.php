@@ -1,6 +1,8 @@
 @extends ('PlantillaMadre.menu_inicio')
+@section('titulo', 'Listado Salud Director')
 @section('contenido')
 
+    <br><br><br>
     @if(session('mensaje'))
         <div class="alert alert-success">
             {{session('mensaje')}}
@@ -45,12 +47,7 @@
                 <td colspan="4">No hay Registros</td>
             </tr>
         @endforelse
-
         </tbody>
-
-
-
         @endsection
-
-
     </table>
+    <script src="/js/jquery-3.2.1.min.js"></script>

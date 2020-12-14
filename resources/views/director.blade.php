@@ -80,6 +80,7 @@
                                         <a href="{{route('saludDire.salu')}}" class="hero_box_link">Ver</a>
                                     </div>
                                 </div>
+                            </div>
                         </a>
                     </div>
                 </div>
@@ -106,7 +107,7 @@
     <script src="plugins/easing/easing.js"></script>
     <script src="js/custom.js"></script>
 
-
+</div>
 </body>
 @endsection
 

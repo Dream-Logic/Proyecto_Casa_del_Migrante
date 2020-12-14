@@ -1,5 +1,8 @@
 @extends ('PlantillaMadre.menu_inicio')
+@section('titulo', 'Listado Huéspedes Director')
 @section('contenido')
+
+    <br><br><br>
 
     @if(session('mensaje'))
         <div class="alert alert-success">
@@ -67,6 +70,7 @@
 
     </table>
     {{ $listados->links()}}
+    <script src="/js/jquery-3.2.1.min.js"></script>
 @endsection
 
 
