@@ -131,7 +131,7 @@
             <div class="row align-items-stretch">
                 <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
                     <div class="unit-4">
-                        <img src="images/comida-y-bebida (1).svg" class="svg" width="60">
+                        <img src="images/bienvenido/iconos/comida-y-bebida (1).svg" class="svg" width="60">
                         <div>
                             <h6 style="color: black; font-size: 1.3em;">Alimentación gratuita</h6>
                             <p>La alimentación es un elemento importante en la buena salud, influye la calidad de
@@ -142,7 +142,7 @@
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="unit-4">
-                        <img src="images/kit-de-primeros-auxilios.svg" class="svg" width="50">
+                        <img src="images/bienvenido/iconos/kit-de-primeros-auxilios.svg" class="svg" width="50">
                         <div>
                             <h6 style="color: black; font-size: 1.3em;">Atención médica</h6>
                             <p>La buena atención médica es el tipo de medicina que practican y enseñan los líderes
@@ -152,7 +152,7 @@
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="unit-4">
-                        <img src="images/ropa-limpia.svg" class="svg" width="50">
+                        <img src="images/bienvenido/iconos/ropa-limpia.svg" class="svg" width="50">
                         <div>
                             <h6 style="color: black; font-size: 1.3em;">Vestuario</h6>
                             <p>Conjunto de prendas de vestir para los niños, niñas y jóvenes</p>
@@ -163,7 +163,7 @@
 
                 <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="">
                     <div class="unit-4">
-                        <img src="images/casa.svg" class="svg" width="50">
+                        <img src="images/bienvenido/iconos/casa.svg" class="svg" width="50">
                         <div>
                             <h6 style="color: black; font-size: 1.3em;">Alojamiento</h6>
                             <p>Garantizar el alojamiento de los migrantes y sus familias. Sector de la población
@@ -173,7 +173,7 @@
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="unit-4">
-                        <img src="images/llamada-telefonica.svg" class="svg" width="50">
+                        <img src="images/bienvenido/iconos/llamada-telefonica.svg" class="svg" width="50">
                         <div>
                             <h6 style="color: black; font-size: 1.3em;">Llamada telefónica</h6>
                             <p>Una llamada telefónica es la operación en la que se comunican generalmente 2 personas,
@@ -183,7 +183,7 @@
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="unit-4">
-                        <img src="images/psicologia.svg" class="svg" width="50">
+                        <img src="images/bienvenido/iconos/psicologia.svg" class="svg" width="50">
                         <div>
                             <h6 style="color: black; font-size: 1.3em;">Atención psicológica</h6>
                             <p>Como parte de la atención integral se cuenta con el servicio de atención psicológica al menor.
@@ -207,47 +207,47 @@
             <div class="row">
                 <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="h-entry">
-                        <a href="single.html"><img src="images/1.jpg" alt="Image" class="img-fluid"></a>
+                        <a href="single.html"><img src="images/bienvenido/galeria/1.jpg" alt="Image" class="img-fluid"></a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="h-entry">
-                        <a href="single.html"><img src="images/casa1.jpg" alt="Image" class="img-fluid"></a>
+                        <a href="single.html"><img src="images/bienvenido/galeria/casa1.jpg" alt="Image" class="img-fluid"></a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="h-entry">
-                        <a href="single.html"><img src="images/casa8.jpg" alt="Image" class="img-fluid"></a>
+                        <a href="single.html"><img src="images/bienvenido/galeria/casa8.jpg" alt="Image" class="img-fluid"></a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="h-entry">
-                        <a href="single.html"><img src="images/casa4.jpg" alt="Image" class="img-fluid"></a>
+                        <a href="single.html"><img src="images/bienvenido/galeria/casa4.jpg" alt="Image" class="img-fluid"></a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="h-entry">
-                        <a href="single.html"><img src="images/2.jpg" alt="Image" class="img-fluid"></a>
+                        <a href="single.html"><img src="images/bienvenido/galeria/2.jpg" alt="Image" class="img-fluid"></a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="h-entry">
-                        <a href="single.html"><img src="images/casa7.jpg" alt="Image" class="img-fluid"></a>
+                        <a href="single.html"><img src="images/bienvenido/galeria/casa7.jpg" alt="Image" class="img-fluid"></a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="210">
                     <div class="h-entry">
-                        <a href="single.html"><img src="images/casa10.jpg" alt="Image" class="img-fluid"></a>
+                        <a href="single.html"><img src="images/bienvenido/galeria/casa10.jpg" alt="Image" class="img-fluid"></a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="h-entry">
-                        <a href="single.html"><img src="images/casa11.jpg" alt="Image" class="img-fluid"></a>
+                        <a href="single.html"><img src="images/bienvenido/galeria/casa11.jpg" alt="Image" class="img-fluid"></a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="h-entry">
-                        <a href="single.html"><img src="images/casa12.jpg" alt="Image" class="img-fluid"></a>
+                        <a href="single.html"><img src="images/bienvenido/galeria/casa12.jpg" alt="Image" class="img-fluid"></a>
                     </div>
                 </div>
             </div>
