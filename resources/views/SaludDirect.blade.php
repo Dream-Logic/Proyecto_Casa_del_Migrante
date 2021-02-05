@@ -12,7 +12,16 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Listado de niños enfermos</a>
         <form class="form-inline my-2 my-lg-0 ml-auto">
-            <input class="form-control mr-sm-2" name="nombres" type="search" placeholder="Buscar" aria-label="Search">
+            <div class="">
+                <label class="card-title">Buscar por tipo </label>
+            </div>
+            <select name="tipo" class="form-control mr-sm-2" placeholder="Buscar" id="exampleFormControlSelect1">
+                <option>nombres</option>
+                <option>apellidos</option>
+                <option>direccion</option>
+                <option>identidad</option>
+            </select>
+            <input class="form-control mr-sm-2" name="buscarpor" type="search" placeholder="Buscar" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
         </form>
     </nav>
@@ -26,7 +35,6 @@
             <th scope="col">Tratamiento</th>
 
 
-
         </tr>
 
         </thead>
@@ -38,7 +46,6 @@
                 <td> {{ $huesped->apellidos }}</td>
                 <td>{{ $huesped->enfermedad }}</td>
                 <td>{{ $huesped->tratamiento}}</td>
-
 
 
             </tr>

@@ -28,7 +28,19 @@
         <a class="btn btn-primary" href="{{route('index.index')}}">Regresar</a>
         <a class="navbar-brand" href="#"></a>
         <form class="form-inline my-2 my-lg-0 ml-auto">
-            <input class="form-control mr-sm-2" name="nombres" type="search" placeholder="Buscar" aria-label="Search">
+
+            <div class="">
+                <label class="card-title">Buscar por tipo </label>
+            </div>
+
+            <select name="tipo" class="form-control mr-sm-2" id="exampleFormControlSelect1">
+                <option>nombres</option>
+                <option>apellidos</option>
+                <option>direccion</option>
+                <option>identidad</option>
+
+            </select>
+            <input class="form-control mr-sm-2" name="buscarpor" type="search" placeholder="Buscar" aria-label="Search">
             <button class="btn btn-success" type="submit">Buscar</button>
             <a class="navbar-brand" href="#"></a>
             <a href="{{url('/proyectos/listado')}}" class="btn btn-warning">Restaurar</a>

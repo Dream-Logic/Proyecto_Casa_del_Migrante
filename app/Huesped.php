@@ -29,8 +29,13 @@ class Huesped extends Model
 
 
 
-    public  function scopeSearch($query, $nombres){
-        return $query->where('nombres', 'LIKE', "%$nombres%");
+    //public  function scopeSearch($query, $nombres){
+      //  return( $query->where('nombres', 'LIKE', "%$nombres%" ));
+
+    public function scopeBuscarpor($query, $tipo, $buscar) {
+        if ( ($tipo) && ($buscar) ) {
+            return $query->where($tipo,'like',"%$buscar%");
+        }
 
     }
 }

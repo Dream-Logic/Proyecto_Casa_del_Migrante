@@ -24,7 +24,13 @@ class HuespedController extends Controller
 
         //$listados = Proyecto::paginate(10);
 
-        $listados = Huesped::search($request->nombres)->paginate(5);
+        //$listados = Huesped::search($request->nombres)->paginate(5);
+
+        $buscar = $request->get('buscarpor');
+
+        $tipo = $request->get('tipo');
+
+        $listados = Huesped::buscarpor($tipo, $buscar)->paginate(5);
 
         return view('listadoRaiz')->with('listados', $listados);
 
@@ -36,9 +42,14 @@ class HuespedController extends Controller
 
 
         //$listados = Proyecto::paginate(10);
+      // $listados = Huesped::search($request->nombres)->paginate(5);
 
-        $listados = Huesped::search($request->nombres)->paginate(5);
 
+        $buscar = $request->get('buscarpor');
+
+        $tipo = $request->get('tipo');
+
+        $listados = Huesped::buscarpor($tipo, $buscar)->paginate(5);
         return view('listadoRaizDirector')->with('listados', $listados);
 
 
