@@ -18,6 +18,7 @@
         }
 
         label {
+            font: xx-large;
             font-family: Arial;
             font-weight: bold;
         }
@@ -31,7 +32,7 @@
 
 
     </style>
-    <title>@yield('titulo')</title>
+    <title>Casa del Migrante</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
@@ -73,9 +74,9 @@
                             <li><a href="{{route('huesped.nuevo')}}" class="nav-link"><strong>Ficha de Ingreso</strong></a>
                             </li>
                             <li><a href="{{ route('listado.index') }}" class="nav-link"><strong>Listado de
-                                        Huéspedes</strong></a></li>
-                            <li><a href="{{ route('estadisticas.admin')}}" class="nav-link"><strong>Estadísticas</strong></a></li>
-                            <li><a href="{{ route('salud.salu') }}" class="nav-link"><strong>Salud</strong></a></li>
+                                        Huspedes</strong></a></li>
+                            <li><a href="{{ route('estadisticas.admin')}}" class="nav-link">Estadísticas</a></li>
+                            <li><a href="{{ route('salud.salu') }}" class="nav-link">Salud</a></li>
 
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"

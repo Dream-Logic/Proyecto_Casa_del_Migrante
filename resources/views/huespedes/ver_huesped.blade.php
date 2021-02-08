@@ -26,6 +26,33 @@
                style="margin-left: 850px">
     </div>
 
+    <center>
+        <div class="col-5" ><br>
+            <div class="row" >
+                <div class="form-group {{ $errors->has('imagen') ? ' has-error' : '' }}"style="width: 90%">
+                    <img width="200px"  id="previewImagen" style="max-height:250px"
+                         src="{{"/foto/".$huesped->imagen}}"
+                         />
+
+                    <label id="labelImagen" for="imagen" class="btn btn-large" ><span style="font-size: 60px">
+                                                    </span></label>
+                    <input type="file" accept="image/*"
+                           onchange="loadFile(event)"
+                           @if($errors->has("imagen"))
+                           style="display: none"
+                           required
+                           @endif
+                           class="form-control"
+                           style="opacity: 0" id="imagen"
+                           name="imagen"/>
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </center>
 
 
     <div class="ver">
@@ -36,6 +63,7 @@
                 <th scope="col"><h6 style="color: #0d95e8">Valor</h6></th>
             </tr>
             </thead>
+
             <tbody>
             <tr>
                 <th scope="row">Nombres</th>

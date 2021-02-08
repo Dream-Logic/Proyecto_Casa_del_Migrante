@@ -250,51 +250,132 @@ class HuespedController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
-        $request->validate([
-            'nombres' => 'required',
-            'apellidos' => 'required',
-            'fnacimiento' => 'required',
-            'edad' => 'required',
-            'sexo' => 'required',
-            'cabello' => 'required',
-            'ojos' => 'required',
-            'piel' => 'required',
-            'identidad' => 'required',
-            'nacionalidad' => 'required',
-            'pasaporte' => 'nullable',
-            'nacimiento' => 'required',
-            'direccion' => 'required',
-            'signosFisicos' => 'required',
-            'enfermedad' => 'nullable',
-            'tratamiento' => 'nullable',]);
-
-        $huesped = Huesped::findOrFail($id);
 
 
-        //Datos Obtenidos del Formulario
-        $huesped->nombres = $request->input('nombres');
-        $huesped->apellidos = $request->input('apellidos');
-        $huesped->fnacimiento = $request->input('fnacimiento');
-        $huesped->edad = $request->input('edad');
-        $huesped->sexo = $request->input('sexo');
-        $huesped->cabello = $request->input('cabello');
-        $huesped->ojos = $request->input('ojos');
-        $huesped->piel = $request->input('piel');
-        $huesped->identidad = $request->input('identidad');
-        $huesped->nacionalidad = $request->input('nacionalidad');
-        $huesped->pasaporte = $request->input('pasaporte');
-        $huesped->nacimiento = $request->input('nacimiento');
-        $huesped->direccion = $request->input('direccion');
-        $huesped->signosFisicos = $request->input('signosFisicos');
-        $huesped->enfermedad = $request->input('enfermedad');
-        $huesped->tratamiento = $request->input('tratamiento');
-        $huesped->save();
+        if (($request->imagen) == null) {
 
-        return redirect()->route("listado.index")
-            ->with("exito", "Se edito correctamente el huesped");
+            if (($request->sexo) == "femenino") {
+                $imagen = "femenino.png";
+            } else {
+                $imagen = "masculino.png";
+            }
+            //select de la fichas ninios
+            $request->piel;
+            $request->sexo;
+            $request->cabello;
+            $request->ojos;
+
+            //VALIDAR
+            $request->validate([
+                'nombres' => 'required',
+                'apellidos' => 'required',
+                'fnacimiento' => 'required',
+                'edad' => 'required',
+                'sexo' => 'required',
+                'cabello' => 'required',
+                'ojos' => 'required',
+                'piel' => 'required',
+                'identidad' => 'required',
+                'nacionalidad' => 'required',
+                'pasaporte' => 'nullable',
+                'nacimiento' => 'required',
+                'direccion' => 'required',
+                'signosFisicos' => 'required',
+                'enfermedad' => 'nullable',
+                'tratamiento' => 'nullable',]);
+
+            $huesped = Huesped::findOrFail($id);
 
 
+            //Datos Obtenidos del Formulario
+            $huesped->nombres = $request->input('nombres');
+            $huesped->apellidos = $request->input('apellidos');
+            $huesped->fnacimiento = $request->input('fnacimiento');
+            $huesped->edad = $request->input('edad');
+            $huesped->sexo = $request->input('sexo');
+            $huesped->cabello = $request->input('cabello');
+            $huesped->ojos = $request->input('ojos');
+            $huesped->piel = $request->input('piel');
+            $huesped->identidad = $request->input('identidad');
+            $huesped->nacionalidad = $request->input('nacionalidad');
+            $huesped->pasaporte = $request->input('pasaporte');
+            $huesped->nacimiento = $request->input('nacimiento');
+            $huesped->direccion = $request->input('direccion');
+            $huesped->signosFisicos = $request->input('signosFisicos');
+            $huesped->enfermedad = $request->input('enfermedad');
+            $huesped->tratamiento = $request->input('tratamiento');
+            $huesped->imagen = $imagen;
+            $huesped->save();
+            //todo retornar la vista del formulario crear responsable
+
+
+            return redirect()->route("listado.index")
+                ->with("exito", "Se edito correctamente el huesped");
+
+        }else {
+            $exploded = explode(',', $request->foto);
+            $decode = base64_decode($exploded[0]);
+            if (str_contains($exploded[0], 'jpeg'))
+                $extension = 'jpg';
+            else
+                $extension = 'png';
+            $imagen = Carbon::now()->toDateString() . "_" . $request->input("nombres") . '_imagen.' . $extension;
+            $path = public_path() . "/foto/" . $imagen;
+            file_put_contents($path, $decode);
+            $request->piel;
+            $request->sexo;
+            $request->cabello;
+            $request->ojos;
+
+            //VALIDAR
+            //
+            $request->validate([
+                'nombres' => 'required',
+                'apellidos' => 'required',
+                'fnacimiento' => 'required',
+                'edad' => 'required',
+                'sexo' => 'required',
+                'cabello' => 'required',
+                'ojos' => 'required',
+                'piel' => 'required',
+                'identidad' => 'required',
+                'nacionalidad' => 'required',
+                'pasaporte' => 'nullable',
+                'nacimiento' => 'required',
+                'direccion' => 'required',
+                'signosFisicos' => 'required',
+                'enfermedad' => 'nullable',
+                'tratamiento' => 'nullable',]);
+
+            $huesped = Huesped::findOrFail($id);
+
+
+            //Datos Obtenidos del Formulario
+            $huesped->nombres = $request->input('nombres');
+            $huesped->apellidos = $request->input('apellidos');
+            $huesped->fnacimiento = $request->input('fnacimiento');
+            $huesped->edad = $request->input('edad');
+            $huesped->sexo = $request->input('sexo');
+            $huesped->cabello = $request->input('cabello');
+            $huesped->ojos = $request->input('ojos');
+            $huesped->piel = $request->input('piel');
+            $huesped->identidad = $request->input('identidad');
+            $huesped->nacionalidad = $request->input('nacionalidad');
+            $huesped->pasaporte = $request->input('pasaporte');
+            $huesped->nacimiento = $request->input('nacimiento');
+            $huesped->direccion = $request->input('direccion');
+            $huesped->signosFisicos = $request->input('signosFisicos');
+            $huesped->enfermedad = $request->input('enfermedad');
+            $huesped->tratamiento = $request->input('tratamiento');
+            $huesped->imagen = $imagen;
+            $huesped->save();
+
+            //todo retornar la vista del formulario crear responsable
+
+
+            return redirect()->route("listado.index")
+                ->with("exito", "Se edito correctamente el huesped");
+    }
     }
 
     /**

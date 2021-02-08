@@ -28,6 +28,50 @@
             <form method="post" action="{{route('huesped.update',["id"=>$huesped->id])}}">
                 @method('PUT')
                 @csrf
+                <center>
+                    <div class="col-5" ><br>
+                        <div class="row" >
+                            <div class="form-group {{ $errors->has('imagen') ? ' has-error' : '' }}"style="width: 90%">
+                                <h6 style="text-align: start">Imagen  (Opcional)</h6>
+                                <img width="200px"  id="previewImagen" style="max-height:250px"
+                                     src="{{"/foto/".$huesped->imagen}}"
+                                     onclick="seleccionarImagen(event)"/>
+
+                                <label id="labelImagen" for="imagen" class="btn btn-large" ><span style="font-size: 60px">
+                                                    </span></label>
+                                <input type="file" accept="image/*"
+                                       onchange="loadFile(event)"
+                                @if($errors->has("imagen"))
+                                       style="display: none"
+                                       required
+                                       @endif
+                                       class="form-control"
+                                       style="opacity: 0" id="imagen"
+                                       name="imagen"/>
+
+                            </div>
+
+                            <script>
+
+                                var loadFile = function (event) {
+                                    var image = document.getElementById('previewImagen');
+                                    image.src = URL.createObjectURL(event.target.files[0]);
+                                    document.getElementById("imagen").style.display = "none";
+                                    document.getElementById("labelImagen").style.display="none";
+                                };
+                                var seleccionarImagen = function (event) {
+                                    var element = document.getElementById("imagen");
+                                    element.click();
+                                }
+                            </script>
+                        </div>
+
+                    </div>
+                </center>
+
+
+
+
 
                 <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
                 <div class="form-row">
