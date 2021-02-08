@@ -9,10 +9,9 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
     <body>
-    <div class="card ">
-
-        <div class="card-header">
-            <label class="card-title">Datos Personales del Niño, Niña o Adolescente</label>
+    <div class="card">
+        <div class="card-header" style="background-color: #f9d6d5">
+            <label class="card-title" style="color: black;">Datos Personales del Niño, Niña o Adolescente</label>
         </div>
         @if ($errors->any())
             <div class="alert alert-danger">
@@ -237,7 +236,7 @@
             </div>
         </form>
         <br>
-    </div>
+    </div class="card">
     <script src="/js/jquery-3.2.1.min.js"></script>
     </body>
 

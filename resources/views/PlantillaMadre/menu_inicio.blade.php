@@ -3,10 +3,8 @@
 <head>
     <style>
         .site-navbar {
-            background-color: rgb(0,0,0.1);
+            background-image: url(/images/fondoOscuro.jpg)
         }
-
-
         .col-5 {
             margin-left: 50px;
             margin-right: 30px;
@@ -59,7 +57,7 @@
         </div>
         <div class="site-mobile-menu-body"></div>
     </div>
-    <header class="site-navbar py-4 js-sticky-header site-navbar-target " role="banner">
+    <header class="site-navbar py-4 js-sticky-header " role="banner">
         <div class="container">
             <div class="row align-items-center">
                 <div class="flex-row justify-content-center align-items-center">
@@ -75,8 +73,8 @@
                             </li>
                             <li><a href="{{ route('listado.index') }}" class="nav-link"><strong>Listado de
                                         Huspedes</strong></a></li>
-                            <li><a href="{{ route('estadisticas.admin')}}" class="nav-link">Estadísticas</a></li>
-                            <li><a href="{{ route('salud.salu') }}" class="nav-link">Salud</a></li>
+                            <li><a href="{{ route('estadisticas.admin')}}" class="nav-link"><strong>Estadísticas</strong></a></li>
+                            <li><a href="{{ route('salud.salu') }}" class="nav-link"><strong>Salud</strong></a></li>
 
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
@@ -127,10 +125,9 @@
 <script src="/js/jquery.easing.1.3.js"></script>
 <script src="/js/aos.js"></script>
 <script src="/js/jquery.fancybox.min.js"></script>
+<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
 <script src="/js/jquery.sticky.js"></script>
 <script src="/js/isotope.pkgd.min.js"></script>
-
-
 <script src="/js/main.js"></script>
 
 </body>
