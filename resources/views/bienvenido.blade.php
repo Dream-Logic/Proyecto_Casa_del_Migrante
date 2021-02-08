@@ -71,7 +71,7 @@
                     <h6 class="mb-5 desc"  data-aos="fade-up" data-aos-delay="100"><b style="color: #e0a800; font-size: 30px; font-family: cursive"><strong>CASA DEL MIGRANTE</strong></b></h6>
                     <br>
                     <div data-aos="fade-up">
-                        <a href="{{route('gestor.usuario')}}" class="btn btn-primary mr-2 mb-2">Acceder</a>
+                        <a href="{{route('index.index')}}" class="btn btn-primary mr-2 mb-2">Acceder</a>
                     </div>
                 </div>
 

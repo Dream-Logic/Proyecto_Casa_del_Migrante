@@ -3,12 +3,12 @@
 <head>
     <style>
         .site-navbar {
-            background-color: rgba(0, 0, 0, 0.2)
+            background-color: rgb(0,0,0.1);
         }
 
 
         .col-5 {
-            margin-left: 55px;
+            margin-left: 50px;
             margin-right: 30px;
 
         }
@@ -38,15 +38,12 @@
     <link rel="stylesheet" href="/fonts/icomoon/style.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/jquery-ui.css">
-    <link rel="stylesheet" href="/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="/css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="/css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="/fonts/flaticon/font/flaticon.css">
     <link rel="stylesheet" href="/css/aos.css">
     <link rel="stylesheet" href="/css/style.css">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="50">
@@ -73,7 +70,7 @@
 
                         <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                             <li><a href="{{route('index.index')}}" class="nav-link"><strong>Inicio</strong></a></li>
-                            <li><a href="{{route('hola.ho')}}" class="nav-link"><strong>Ficha de Ingreso</strong></a>
+                            <li><a href="{{route('huesped.nuevo')}}" class="nav-link"><strong>Ficha de Ingreso</strong></a>
                             </li>
                             <li><a href="{{ route('listado.index') }}" class="nav-link"><strong>Listado de
                                         Huéspedes</strong></a></li>
