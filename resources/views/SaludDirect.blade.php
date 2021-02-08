@@ -7,7 +7,6 @@
         <div class="alert alert-success">
             {{session('mensaje')}}
         </div>
-
     @endif
     <a class="btn btn-success" href="{{route('index.index')}}">Regresar</a>
     <nav class="navbar navbar-expand-lg navbar-light bg-light ">

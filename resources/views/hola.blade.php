@@ -25,9 +25,8 @@
     <body>
 
 
-    <div class="site-blocks-cover overlay" style="background-image: url(imagenes/fondo9.jpg);" data-aos="fade"
+    <div class="site-blocks-cover overlay" style="background-image: url(images/fondoP.jpg);" data-aos="fade"
          id="home-section">
-
         <div class="hero_slide_background text-center text-dark">
             <br>
             <br>
