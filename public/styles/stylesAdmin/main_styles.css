@@ -679,7 +679,7 @@ section
 }
 .hero_slide_content
 {
-	max-width: 80%;
+	max-width: 100%;
 	-webkit-transform: translateY(30px);
 	-moz-transform: translateY(30px);
 	-ms-transform: translateY(30px);

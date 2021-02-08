@@ -15,73 +15,67 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
+/*RUTA DE QUE DIRIGE A LA VISTA DE BIENVENIDOS*/
 Route::get('/', function () {
     return view('bienvenido');
 });
-Route::group(["middleware" => "auth"], function () {//director
+/*DIRECTOR*/
+Route::group(["middleware" => "auth"], function () {
 
-    Route::group(['middleware' => 'admin'], function () {
+/*ADMINISTRADOR*/
+Route::group(['middleware' => 'admin'], function () {
+    /*RUTAS DEL ADMINISTRADOR*/
+    /*RUTA QUE DIRIGE A LA VISTA PRINCIPAL DEL ADMINISTRADOR*/
+    Route::get('/principal', 'paginaPrincipal_controller@index')
+        ->name('index.index');
 
-//aquitodo lo del administrador
-        /*Rutas de las vistas gestor de usuario*/
-        Route::get('/principal', 'paginaPrincipal_controller@index')
-            ->name('index.index');
-        Route::get('/gestor', 'GestorUsuarioController@indexAdmin')
-            ->name('gestor.usuario');
+    /*RUTAS QUE DIRIGE A LOS FORMULARIOS*/
+    /*Route::get('/principalformulario', 'paginaPrincipal_controller@principalformulario')
+        ->name('huesped.nuevo');*/
+    Route::get('/Btn_atras', 'paginaPrincipal_controller@atras')
+        ->name('atras.regre');
+    Route::get('/Btn_regresar', 'paginaPrincipal_controller@regreso')
+        ->name('regresar.volv');
 
-        /*Rutas de vista redireccionadora de FORMULARIOS*/
-        Route::get('/principalformulario', 'paginaPrincipal_controller@principalformulario')
-            ->name('hola.ho');
-        Route::get('/Btn_atras', 'paginaPrincipal_controller@atras')
-            ->name('atras.regre');
-        Route::get('/Btn_regresar', 'paginaPrincipal_controller@regreso')
-            ->name('regresar.volv');
+    /*RUTAS PARA EL LISTADO DEL ADMINISTRADOR*/
+    Route::get('/proyectos/listado', 'HuespedController@index')
+        ->name('listado.index');
 
-        /*Ruta para el formulario*/
-        /*RUTAS PARA EL LISTADO*/
-        Route::get('/proyectos/listado', 'HuespedController@index')
-            ->name('listado.index');
+    /*RUTAS PARA LA VISTA SALUD DEL ADMINISTRADOR*/
+    Route::get('/salud', 'paginaPrincipal_controller@salud')
+        ->name('salud.salu');
+    Route::get('/saludAdmin', 'paginaPrincipal_controller@saludAdmin')
+        ->name('Admin.salud');
 
-        /*Rutas de la pagina salud administrador*/
-        Route::get('/salud', 'paginaPrincipal_controller@salud')
-            ->name('salud.salu');
-        Route::get('/saludAdmin', 'paginaPrincipal_controller@saludAdmin')
-            ->name('Admin.salud');
-        //RUTA QUE DIRIGE A LAS ESTADISTICAS//
-        Route::get('/estadisticas', 'EstadisticaController@index')
-            ->name('estadisticas.admin');
+    //RUTA QUE DIRIGE A LAS ESTADISTICAS//
+    Route::get('/estadisticas', 'EstadisticaController@index')
+        ->name('estadisticas.admin');
 
-        //NUEVAS RUTAS DEL FORMULARIO HUESPED
-
-        Route::get('/huesped/crear', 'HuespedController@nuevo')
-            ->name('huesped.nuevo');
-        Route::post("/huesped/store", "HuespedController@store")
-            ->name("huesped.store");
-        Route::get('/responsable/{id}/crear', 'ResponsableController@nuevo')
-            ->name('responsable.nuevo');
-        Route::post("/responsable/{id}/store", "ResponsableController@store")
-            ->name("responsable.store");
-        Route::get('/narracion/{id}/nuevo', 'NarracionController@create')
-            ->name('narracion.nuevo');
-        Route::post('/narracion/{id}/store', 'NarracionController@store')
-            ->name('narracion.store');
-        Route::get('/huesped/{id}/editar', 'HuespedController@edit')
-            ->name('huesped.edit')
-            ->where('id', '[0-9]+');
-        Route::put('/huesped/{id}/editar', 'HuespedController@update')
-            ->name('huesped.update')
-            ->where('id', '[0-9]+');
-        Route::delete('/huesped/{id}/borrar', 'HuespedController@destroy')
-            ->name('huesped.borrar')
-            ->where('id', '[0-9]+');
-        Route::get('/huesped/{id}', 'HuespedController@show')
-            ->name('huesped.mostrar')
-            ->where('id', '[0-9]+');
+    //RUTAS DEL FORMULARIO HUESPED
+    Route::get('/huesped/crear', 'HuespedController@nuevo')
+        ->name('huesped.nuevo');
+    Route::post("/huesped/store", "HuespedController@store")
+        ->name("huesped.store");
+    Route::get('/responsable/{id}/crear', 'ResponsableController@nuevo')
+        ->name('responsable.nuevo');
+    Route::post("/responsable/{id}/store", "ResponsableController@store")
+        ->name("responsable.store");
+    Route::get('/narracion/{id}/nuevo', 'NarracionController@create')
+        ->name('narracion.nuevo');
+    Route::post('/narracion/{id}/store', 'NarracionController@store')
+        ->name('narracion.store');
+    Route::get('/huesped/{id}/editar', 'HuespedController@edit')
+        ->name('huesped.edit')->where('id', '[0-9]+');
+    Route::put('/huesped/{id}/editar', 'HuespedController@update')
+        ->name('huesped.update')->where('id', '[0-9]+');
+    Route::delete('/huesped/{id}/borrar', 'HuespedController@destroy')
+        ->name('huesped.borrar')->where('id', '[0-9]+');
+    Route::get('/huesped/{id}', 'HuespedController@show')
+        ->name('huesped.mostrar')->where('id', '[0-9]+');
     });
 
-//Aqui van todas las rutas de director
-//Ruta para acceso del direcctor//
-    //Rutas de listados de salud//
+/*RUTAS DEL DIRECTOR*/
+    /*RUTAS DE LOS LISTADOS PARA EL DIRECTOR*/
     Route::get('/saludDi', 'paginaPrincipal_controller@SaDire')
         ->name('saludDire.salu');
     Route::get('/saludD', 'paginaPrincipal_controller@SDire')
@@ -89,11 +83,8 @@ Route::group(["middleware" => "auth"], function () {//director
     Route::get('/directorSalud', 'paginaPrincipal_contrller@buscador')
         ->name('Listado.buscador');
     Route::get('/home', 'HomeController@index')->name('home');
-    /*ruta que dirige a la vista gestor de usuario*/
-    Route::get('/gestorDirec', 'GestorUsuarioController@indexDirec')
-        ->name('gestor.direc');
 
-    //ROUTES LISTADO DIRECTOR
+    /*RUTAS LISTADO DIRECTOR*/
     Route::get('/huesped/listadoDirector', 'HuespedController@director')
         ->name('listado.director');
     Route::get('/dire', 'paginaPrincipal_controller@principaldirec')
@@ -101,11 +92,10 @@ Route::group(["middleware" => "auth"], function () {//director
     Route::get('/huesped/{id}', 'HuespedController@show')
         ->name('huesped.mostrar')
         ->where('id', '[0-9]+');
-    //Ruta de las estadisticas del director//
+
+    /*RUTA PARA LAS ESTADISTICAS*/
     Route::get('/estadisticasDirec', 'EstadisticaDirectorController@index')
         ->name('estadisticas.direc');
-
-
 });
 
 Route::get('/passwordreset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name("password.request1");
