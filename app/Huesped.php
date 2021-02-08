@@ -37,5 +37,6 @@ class Huesped extends Model
             return $query->where($tipo,'like',"%$buscar%");
         }
 
+
     }
 }

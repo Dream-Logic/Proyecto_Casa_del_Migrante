@@ -43,12 +43,10 @@ Route::group(["middleware" => "auth"], function () {//director
             ->name('listado.index');
 
         /*Rutas de la pagina salud administrador*/
-        Route::get('/salud', 'paginaPrincipal_controller@paginasalud')
-            ->name('salud.salu');
-
         Route::get('/salud', 'paginaPrincipal_controller@salud')
             ->name('salud.salu');
-
+        Route::get('/saludAdmin', 'paginaPrincipal_controller@saludAdmin')
+            ->name('Admin.salud');
         //RUTA QUE DIRIGE A LAS ESTADISTICAS//
         Route::get('/estadisticas', 'EstadisticaController@index')
             ->name('estadisticas.admin');
@@ -84,11 +82,12 @@ Route::group(["middleware" => "auth"], function () {//director
 //Aqui van todas las rutas de director
 //Ruta para acceso del direcctor//
     //Rutas de listados de salud//
-    Route::get('/saludDi', 'paginaPrincipal_controller@SaludDire')
+    Route::get('/saludDi', 'paginaPrincipal_controller@SaDire')
         ->name('saludDire.salu');
-    Route::get('/saludDi', 'paginaPrincipal_controller@SDire')
-        ->name('saludDire.salu');
-
+    Route::get('/saludD', 'paginaPrincipal_controller@SDire')
+        ->name('saludDire.sal');
+    Route::get('/directorSalud', 'paginaPrincipal_contrller@buscador')
+        ->name('Listado.buscador');
     Route::get('/home', 'HomeController@index')->name('home');
     /*ruta que dirige a la vista gestor de usuario*/
     Route::get('/gestorDirec', 'GestorUsuarioController@indexDirec')
