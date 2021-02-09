@@ -8,9 +8,9 @@
             {{session('mensaje')}}
         </div>
     @endif
-    <a class="btn btn-success" href="{{route('index.index')}}">Regresar</a>
+    <a class="btn btn-success btn-warning" href="{{route('index.index')}}">Regresar</a>
     <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-        <a class="navbar-brand " href="#">LISTADO DE NIÑOS ENFERMOS</a>
+        <a class="navbar-brand text-warning" href="#">LISTADO DE NIÑOS ENFERMOS</a>
         <form class="form-inline my-2   my-lg-0 ml-auto">
             <div class="">
                 <label class="card-title">Buscar por tipo </label>
@@ -28,11 +28,11 @@
     <table class="table">
         <thead>
         <tr class="w3-hover-green">
-            <th class="bg-warning" scope="col">Id</th>
-            <th class="bg-warning" scope="col">Nombres</th>
-            <th class="bg-warning"  scope="col">Apellidos</th>
-            <th class="bg-warning"  scope="col">Enfermedad</th>
-            <th class="bg-warning"  scope="col">Tratamiento</th>
+            <th class="bg-dark text-white" style="font-family: 'Times New Roman'" scope="col">Id</th>
+            <th class="bg-dark text-white"style="font-family: 'Times New Roman'"  scope="col">Nombres</th>
+            <th class="bg-dark text-white" style="font-family: 'Times New Roman'"  scope="col">Apellidos</th>
+            <th class="bg-dark text-white"style="font-family: 'Times New Roman'"   scope="col">Enfermedad</th>
+            <th class="bg-dark text-white" style="font-family: 'Times New Roman'"  scope="col">Tratamiento</th>
 
 
 

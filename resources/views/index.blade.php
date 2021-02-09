@@ -18,7 +18,6 @@
 
 </head>
 <body style="background-image: url(images/fondoOscuro.jpg)">
-
 <div class="site-blocks overlay" data-aos="fade" >
 <div class="hero_slider_container">
     <!-- Hero Slide -->
@@ -27,7 +26,7 @@
         <div class="hero_slide_background"></div>
         <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
             <div class="hero_slide_content text-center" style="height:350px ">
-                <p style="font-size: 70px; color: #ffffff"> Proyecto   Casa Del  Migrante</p>
+                <p style="font-size: 70px; color: #58883f"> Proyecto   Casa Del  Migrante</p>
             </div>
         </div>
     </div>
