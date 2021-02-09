@@ -5,9 +5,6 @@
 <html lang="en"> -->
 
 <head>
-    <title>Director Casa del Migrante</title>
-
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Course Project">
@@ -19,18 +16,16 @@
     <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
     <link rel="stylesheet" type="text/css" href="styles/stylesDirector/main_styles.css">
     <link rel="stylesheet" type="text/css" href="styles/responsive.css">
-
 </head>
-<body>
-
+<body style="background-image: url(images/fondoOscuro.jpg)">
 <div class="hero_slider_container">
     <!-- Hero Slide -->
     <div class="hero_slider_container">
         <!-- Hero Slide -->
         <div class="hero_slide">
-            <div class="hero_slide_background"  style="background-image:url(images/fondo2.jpeg)"></div>
+            <div class="hero_slide_background" ></div>
             <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
-                <div class="hero_slide_content text-center" style="height:400px ">
+                <div class="hero_slide_content text-center" style="height:350px ">
                     <p style="font-size: 70px; color: #f8f9fb"> Proyecto   Casa Del  Migrante</p>
                 </div>
             </div>

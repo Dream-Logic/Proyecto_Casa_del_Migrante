@@ -15,9 +15,9 @@
         </div>
     @endif
 
-    <div class="card-header" style="color: #0d95e8">
+    <div class="card-header">
         <label class="card-title"  style="color: black;"> Detalles de {{$huesped->nombres}}</label>
-        <img src="/imagenes/iconos/imprimir.svg" class="svg  btn btn-warning" width="25" type="button" value="Imprimir" onclick="window.print()"
+        <input class="  btn btn-warning" width="25" type="button" value="Imprimir" onclick="window.print()"
                style="margin-left: 850px">
     </div>
     <center>
@@ -47,7 +47,7 @@
     <div class="ver">
         <table class="table">
             <thead class="mx-4">
-            <tr>
+            <tr class="mx-4">
                 <th scope="col"><h6 style="color: #0d95e8">Campo</h6></th>
                 <th scope="col"><h6 style="color: #0d95e8">Valor</h6></th>
             </tr>

@@ -3,10 +3,8 @@
 <head>
     <style>
         .site-navbar {
-            background-color: rgba(0, 0, 0, 0.2)
+            background-image: url(/images/fondoOscuro.jpg)
         }
-
-
         .col-5 {
             margin-left: 55px;
             margin-right: 30px;
@@ -64,7 +62,7 @@
             <div class="row align-items-center">
                 <div class="flex-row justify-content-center align-items-center">
                     <span class="text-md-left"
-                          style="color: #ffffff; font-family: 'Arial Black'">Casa del Migrante</span>
+                          style="color: #e0a800; font-family: 'Arial Black'">Casa del Migrante</span>
                 </div>
                 <div class="col-12 col-md-10 d-none d-xl-block">
                     <nav class="site-navigation position-relative text-right" role="navigation">
