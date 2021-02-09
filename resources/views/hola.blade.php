@@ -25,9 +25,8 @@
     <body>
 
 
-    <div class="site-blocks-cover overlay" style="background-image: url(imagenes/fondo9.jpg);" data-aos="fade"
+    <div class="site-blocks-cover overlay " style="background-image: url(images/fo2.jpg);" data-aos="fade"
          id="home-section">
-
         <div class="hero_slide_background text-center text-dark">
             <br>
             <br>
@@ -35,10 +34,10 @@
             <br>
             <br>
 
-            <p style="font-size: 50px; color: #0b0b0b"><span>¡Bienvenido al </span></p>
+            <p style="font-size: 50px; color: #7eae25"><span>¡Bienvenido al </span></p>
         </div>
-        <div class="hero_slide_background text-center text-dark">
-            <p style="font-size: 50px; color: #0b0b0b"> Registro<span> del</span> Huesped!</p>
+        <div class="hero_slide_background text-center text-warning">
+            <p style="font-size: 50px; color: #7eae25"> Registro<span> del</span> Huesped!</p>
         </div>
         <div class="milestones_container">
             <div class="container">
@@ -46,8 +45,7 @@
                     <div class="col-lg-3 milestone_col align-content-center">
                         <div class="milestone  text-info text-md-right h-75">
                             <div>
-                                <p style="font-size: 25px ; font-family: Arial "  href="{{route('huesped.nuevo')}}" class="milestones_background  text-dark">Datos del
-                                    Huesped</p>
+                                <p style="font-size: 25px ; font-family: 'Arial'  ; color: #7eae25" href="{{route('huesped.nuevo')}}" class="milestones_background"> Ingreso los datos</p>
                             </div>
                             <a href="{{route('huesped.nuevo')}}" class="milestones_background w-50 "><img
                                         src=" imagenes/icon6.svg"
