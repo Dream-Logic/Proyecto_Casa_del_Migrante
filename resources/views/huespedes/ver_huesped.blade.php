@@ -5,10 +5,6 @@
     <br>
     <br>
 
-    <div class="card-header">
-        <label class="card-title">Datos Personales del Niño, Niña o Adolescente</label>
-
-    </div>
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -19,13 +15,11 @@
         </div>
     @endif
 
-    <div class="card-header">
-
-        <label class="" style="color: #0d95e8"> Detalles de {{$huesped->nombres}}</label>
-        <input class="btn btn-warning" type="button" value="Imprimir" onclick="window.print()"
+    <div class="card-header" style="color: #0d95e8">
+        <label class="card-title"  style="color: black;"> Detalles de {{$huesped->nombres}}</label>
+        <img src="/imagenes/iconos/imprimir.svg" class="svg  btn btn-warning" width="25" type="button" value="Imprimir" onclick="window.print()"
                style="margin-left: 850px">
     </div>
-
     <center>
         <div class="col-5" ><br>
             <div class="row" >
@@ -44,26 +38,20 @@
                            @endif
                            class="form-control"
                            style="opacity: 0" id="imagen"
-                           name="imagen"/>
-
+                           name="imagen"
+                    />
                 </div>
-
-
             </div>
-
         </div>
     </center>
-
-
     <div class="ver">
         <table class="table">
-            <thead class="">
+            <thead class="mx-4">
             <tr>
                 <th scope="col"><h6 style="color: #0d95e8">Campo</h6></th>
                 <th scope="col"><h6 style="color: #0d95e8">Valor</h6></th>
             </tr>
             </thead>
-
             <tbody>
             <tr>
                 <th scope="row">Nombres</th>
@@ -130,7 +118,6 @@
                 <td>{{ $huesped->tratamiento }}</td>
             </tr>
 
-
             @foreach($responsables as $responsable)
                 <tr>
                     <th><h6 style="color: #0d95e8">Datos Personales de la Madre, Padre y/o Resposable Legal</h6></th>
@@ -192,7 +179,8 @@
 
             @foreach($narracion as $narra)
                 <tr>
-                    <th><h6 style="color: #0d95e8">Narración de los Hechos</h6></th>
+                    <th align="center"><h6 style="color: #0d95e8">Narración de los Hechos</h6></th>
+
                     <th></th>
                 </tr>
 

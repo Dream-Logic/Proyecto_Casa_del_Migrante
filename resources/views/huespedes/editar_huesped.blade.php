@@ -6,7 +6,7 @@
     <div class="card ">
 
         <div class="card-header">
-            <label class="card-title">Datos Personales del Niño, Niña o Adolescente</label>
+            <label class="card-title">Editar Datos Personales del Niño, Niña o Adolescente</label>
         </div>
         @if ($errors->any())
             <div class="alert alert-danger">

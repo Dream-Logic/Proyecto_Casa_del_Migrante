@@ -30,7 +30,7 @@
 
 
     </style>
-    <title>Casa del Migrante</title>
+    <title>@yield('titulo')</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
@@ -62,17 +62,17 @@
             <div class="row align-items-center">
                 <div class="flex-row justify-content-center align-items-center">
                     <span class="text-md-left"
-                          style="color: #ffffff; font-family: 'Arial Black'">Casa del Migrante</span>
+                          style="color: #e0a800; font-family: 'Arial Black'">Casa del Migrante</span>
                 </div>
                 <div class="col-12 col-md-10 d-none d-xl-block">
                     <nav class="site-navigation position-relative text-right" role="navigation">
 
                         <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                             <li><a href="{{route('index.index')}}" class="nav-link"><strong>Inicio</strong></a></li>
-                            <li><a href="{{route('huesped.nuevo')}}" class="nav-link"><strong>Ficha de Ingreso</strong></a>
+                            <li><a href="{{route('hola.hola')}}" class="nav-link"><strong>Ficha de Ingreso</strong></a>
                             </li>
                             <li><a href="{{ route('listado.index') }}" class="nav-link"><strong>Listado de
-                                        Huspedes</strong></a></li>
+                                        Huespedes</strong></a></li>
                             <li><a href="{{ route('estadisticas.admin')}}" class="nav-link"><strong>Estadísticas</strong></a></li>
                             <li><a href="{{ route('salud.salu') }}" class="nav-link"><strong>Salud</strong></a></li>
 

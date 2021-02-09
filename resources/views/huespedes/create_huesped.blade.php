@@ -9,8 +9,8 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
     <body>
-    <div class="card">
-        <div class="card-header" style="background-color: #f9d6d5">
+    <div class="card" >
+        <div class="card-header" style="background-color: #4dc0b5">
             <label class="card-title" style="color: black;">Datos Personales del Niño, Niña o Adolescente</label>
         </div>
         @if ($errors->any())
@@ -38,7 +38,7 @@
                 <center>
                     <div class="col-5" ><br>
                         <div class="row" >
-                            <div class="form-group {{ $errors->has('imagen') ? ' has-error' : '' }}"style="width: 90%">
+                            <div class="form-group {{ $errors->has('imagen') ? ' has-error' : '' }}"style="width: 70%">
                                 <h6 style="text-align: start">Imagen  (Opcional)</h6>
                                 <img width="200px"  id="previewImagen" style="max-height:250px"
                                      src="/images/add.png"
@@ -85,14 +85,14 @@
                 <div class="form-row">
 
                     <div class="col-5"><br>
-                        <label for="nombre">Nombres</label><br>
+                        <label for="nombre" style="color: #000000">Nombres</label><br>
                         <input type="text" class="form-control" name="nombres"
                                id="nombres" placeholder="Nombres"><br>
                     </div>
                     <br>
 
                     <div class="col-5"><br>
-                        <label for="apellido">Apellidos</label><br>
+                        <label for="apellido" style="color: #000000">Apellidos</label><br>
                         <input type="text" class="form-control" name="apellidos"
                                id="apellidos" placeholder="Apellidos">
                     </div>
@@ -100,20 +100,20 @@
 
 
                     <div class="col-5">
-                        <label for="FechaNac">Fecha de Nacimiento</label><br>
+                        <label for="FechaNac" style="color: #000000">Fecha de Nacimiento</label><br>
                         <input type="date" class="form-control" name="fnacimiento"
                                id="fnacimiento"><br>
                     </div>
 
 
                     <div class="col-5">
-                        <label for="edad">Edad</label><br>
+                        <label for="edad" style="color: #000000">Edad</label><br>
                         <input type="number" class="form-control" name="edad"
                                id="edad" placeholder="Edad"><br>
                     </div>
 
                     <div class="col-5">
-                        <label for="sexo">sexo</label><br>
+                        <label for="sexo" style="color: #000000">Sexo</label><br>
                         <select class="form-control" name="sexo">
                             <option value="femenino">Femenino</option>
                             <option value="masculino">Masculino</option>
@@ -123,7 +123,7 @@
 
 
                     <div class="col-5">
-                        <label for="cabello">Color de cabello</label><br>
+                        <label for="cabello" style="color: #000000">Color de cabello</label><br>
                         <select class="form-control" name="cabello">
                             <option value="negro">Negro</option>
                             <option value="castaño">Castaño</option>
@@ -137,7 +137,7 @@
 
 
                     <div class="col-5">
-                        <label for="OjosSelec">Color de ojos</label><br>
+                        <label for="OjosSelec" style="color: #000000">Color de ojos</label><br>
                         <select class="form-control" name="ojos">
                             <option value="negros">Negros</option>
                             <option value="azules">Azules</option>
@@ -149,7 +149,7 @@
 
 
                     <div class="col-5">
-                        <label for="pielSelct">Color de piel</label><br>
+                        <label for="pielSelct" style="color: #000000">Color de piel</label><br>
                         <select class="form-control" name="piel">
 
                             <option value="blanca">Blanca</option>
@@ -163,7 +163,7 @@
 
 
                     <div class="col-5">
-                        <label for="identidad">Identidad </label><br>
+                        <label for="identidad" style="color: #000000">Identidad </label><br>
                         <input type="text" class="form-control" name="identidad"
                                id="identidad" placeholder="0000-0000-00000"><br>
                     </div>
@@ -171,7 +171,7 @@
 
 
                     <div class="col-5">
-                        <label for="nacionalidad">Nacionalidad</label>
+                        <label for="nacionalidad" style="color: #000000">Nacionalidad</label>
                         <input type="text" class="form-control" name="nacionalidad"
                                id="nacionalidad" placeholder="Nacionalidad">
                     </div>
@@ -179,7 +179,7 @@
 
 
                     <div class="col-5">
-                        <label for="pasaporte">Pasaporte</label><br>
+                        <label for="pasaporte" style="color: #000000">Pasaporte</label><br>
                         <input type="text" class="form-control" name="pasaporte"
                                id="pasaporte" placeholder="Numero de pasaporte">
                     </div>
@@ -187,14 +187,14 @@
 
 
                     <div class="col-5">
-                        <label for="nacimiento">Lugar de nacimiento</label><br>
+                        <label for="nacimiento" style="color: #000000">Lugar de nacimiento</label><br>
                         <input type="text" class="form-control" name="nacimiento"
                                id="nacimiento" placeholder="Lugar de nacimiento"><br>
                     </div>
 
 
                     <div class="col-11">
-                        <label for="direccionProcede">Dirección</label>
+                        <label for="direccionProcede" style="color: #000000">Dirección</label>
                         <span class="col-md-5 col-md-offset-10 text-center">
         <textarea class="form-control" id="direccion" name="direccion"
                   placeholder="Dirección de dónde procede" rows="2"></textarea><br>
@@ -203,7 +203,7 @@
 
 
                     <div class="col-11">
-                        <label for="signos">Signos Fisicos</label>
+                        <label for="signos" style="color: #000000">Signos Fisicos</label>
                         <span class="col-md-5 col-md-offset-10 text-center">
         <textarea class="form-control" id="signosFisicos" name="signosFisicos"
                   placeholder="Lunares, cicatrices y otros. Describir" rows="2"></textarea><br>
@@ -212,7 +212,7 @@
 
 
                     <div class="col-11">
-                        <label for="enfermedad">Enfermedad o padecimiento </label>
+                        <label for="enfermedad" style="color: #000000">Enfermedad o padecimiento </label>
                         <span class="col-md-5 col-md-offset-10 text-center">
         <textarea class="form-control" id="enfermedad" name="enfermedad"
                   placeholder="Describa la enfermedad o padecimiento" rows="2"></textarea><br>
@@ -221,7 +221,7 @@
 
 
                     <div class="col-11">
-                        <label for="tratamiento">Tratamiento</label>
+                        <label for="tratamiento" style="color: #000000">Tratamiento</label>
                         <span class="col-md-5 col-md-offset-10 text-center">
         <textarea class="form-control" id="tratamiento" name="tratamiento"
                   placeholder="Describa el tratamiento que necesita" rows="2"></textarea><br>

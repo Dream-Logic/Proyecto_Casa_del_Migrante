@@ -3,9 +3,9 @@
 @section('contenido')
 
     <br><br><br>
-    <div class="card ">
+    <div class="card">
 
-        <div class="card-header">
+        <div class="card-header" style="color: black; background-color: #4dc0b5">
             <label class="card-title">Datos Personales de la Madre y/o Resposable Legal</label>
         </div>
         @if ($errors->any())
@@ -34,7 +34,7 @@
 
 
                     <div class="col-5">
-                        <label for="parentesco">Parentesco</label>
+                        <label for="parentesco" style="color: black;">Parentesco</label>
                         <select class="form-control" name="parentesco">
                             <option value="Madre">Madre</option>
                             <option value="Padre">Padre</option>
@@ -42,7 +42,7 @@
                         </select>
                     </div>
                     <div class="col-5">
-                        <label for="nombre">Nombres </label>
+                        <label for="nombre" style="color: black;">Nombres </label>
                         <input type="text" class="form-control"
                                value="{{old('nombres')}}"
                                name="nombres"
@@ -51,7 +51,7 @@
                     <br>
 
                     <div class="col-5">
-                        <label for="apellido">Apellidos </label><br>
+                        <label for="apellido" style="color: black;">Apellidos </label><br>
                         <input type="text" class="form-control"
                                value="{{old('apellidos')}}"
                                name="apellidos"
@@ -60,7 +60,7 @@
                     <br>
 
                     <div class="col-5">
-                        <label for="FechaNac">Fecha de Nacimiento</label><br>
+                        <label for="FechaNac" style="color: black;">Fecha de Nacimiento</label><br>
                         <input type="date" class="form-control"
                                value="{{old('fnacimiento')}}"
                                name="fnacimiento"
@@ -69,7 +69,7 @@
 
 
                     <div class="col-5">
-                        <label for="direccion">Dirección</label>
+                        <label for="direccion" style="color: black;">Dirección</label>
                         <input type="text" class="form-control"
                                value="{{old('direccion')}}"
                                name="direccion"
@@ -79,7 +79,7 @@
 
 
                     <div class="col-5">
-                        <label for="trabaja">Trabaja</label><br>
+                        <label for="trabaja" style="color: black;">Trabaja</label><br>
                         <select class="form-control"
 
                                 name="trabaja">
@@ -90,7 +90,7 @@
                     <br>
 
                     <div class="col-5">
-                        <label for="profesionOficio">Profesión u oficio</label><br>
+                        <label for="profesionOficio" style="color: black;">Profesión u oficio</label><br>
                         <input type="text" class="form-control"
                                value="{{old('profesionOficio')}}"
                                name="profesionOficio"
@@ -100,7 +100,7 @@
 
 
                     <div class="col-5">
-                        <label for="identidad">Identidad</label><br>
+                        <label for="identidad" style="color: black;">Identidad</label><br>
                         <input type="text" class="form-control"
                                value="{{old('identidad')}}"
                                name="identidad"
@@ -110,7 +110,7 @@
 
 
                     <div class="col-5">
-                        <label for="pasaporte">Pasaporte</label><br>
+                        <label for="pasaporte" style="color: black;">Pasaporte</label><br>
                         <input type="text" class="form-control"
                                value="{{old('pasaporte')}}"
                                name="pasaporte"
@@ -120,7 +120,7 @@
 
 
                     <div class="col-5">
-                        <label for="civil">Estado Civil</label><br>
+                        <label for="civil" style="color: black;">Estado Civil</label><br>
                         <select class="form-control" name="civil">
                             <option value="Soltero/a" @if(old('civil') === "Soltero/a") selected='selected' @endif>
                                 Soltero/a
@@ -146,7 +146,7 @@
                     </div>
 
                     <div class="col-5">
-                        <label for="telefono">Teléfono</label><br>
+                        <label for="telefono" style="color: black;">Teléfono</label><br>
                         <input type="text" class="form-control" name="telefono"
                                id="telefono" placeholder="Número de teléfono"><br>
                     </div>

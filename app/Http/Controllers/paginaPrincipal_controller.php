@@ -15,7 +15,7 @@ class paginaPrincipal_controller extends Controller
 
     {
         //
-        return view('create_huesped');
+        return view('hola');
     }
 
     public function index()
