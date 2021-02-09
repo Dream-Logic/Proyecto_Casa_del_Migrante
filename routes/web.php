@@ -15,23 +15,23 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-/*RUTA DE QUE DIRIGE A LA VISTA DE BIENVENIDOS*/
+//RUTA DE QUE DIRIGE A LA VISTA DE BIENVENIDOS
 Route::get('/', function () {
     return view('bienvenido');
 });
-/*DIRECTOR*/
+//DIRECTOR
 Route::group(["middleware" => "auth"], function () {
 
-/*ADMINISTRADOR*/
+//ADMINISTRADOR
 Route::group(['middleware' => 'admin'], function () {
     /*RUTAS DEL ADMINISTRADOR*/
-    /*RUTA QUE DIRIGE A LA VISTA PRINCIPAL DEL ADMINISTRADOR*/
+    //RUTA QUE DIRIGE A LA VISTA PRINCIPAL DEL ADMINISTRADOR
     Route::get('/principal', 'paginaPrincipal_controller@index')
         ->name('index.index');
 
     /*RUTAS QUE DIRIGE A LOS FORMULARIOS*/
-    /*Route::get('/principalformulario', 'paginaPrincipal_controller@principalformulario')
-        ->name('huesped.nuevo');*/
+    Route::get('/principalformulario', 'paginaPrincipal_controller@principalformulario')
+        ->name('hola.hola');
     Route::get('/Btn_atras', 'paginaPrincipal_controller@atras')
         ->name('atras.regre');
     Route::get('/Btn_regresar', 'paginaPrincipal_controller@regreso')
@@ -42,40 +42,45 @@ Route::group(['middleware' => 'admin'], function () {
         ->name('listado.index');
 
     /*RUTAS PARA LA VISTA SALUD DEL ADMINISTRADOR*/
-    Route::get('/salud', 'paginaPrincipal_controller@salud')
-        ->name('salud.salu');
-    Route::get('/saludAdmin', 'paginaPrincipal_controller@saludAdmin')
-        ->name('Admin.salud');
+        Route::get('/salud', 'paginaPrincipal_controller@salud')
+            ->name('salud.salu');
+        Route::get('/saludAdmin', 'paginaPrincipal_controller@saludAdmin')
+            ->name('Admin.salud');
+        //RUTA QUE DIRIGE A LAS ESTADISTICAS//
+        Route::get('/estadisticas', 'EstadisticaController@index')
+            ->name('estadisticas.admin');
 
-    //RUTA QUE DIRIGE A LAS ESTADISTICAS//
-    Route::get('/estadisticas', 'EstadisticaController@index')
-        ->name('estadisticas.admin');
+        //NUEVAS RUTAS DEL FORMULARIO HUESPED
 
-    //RUTAS DEL FORMULARIO HUESPED
-    Route::get('/huesped/crear', 'HuespedController@nuevo')
-        ->name('huesped.nuevo');
-    Route::post("/huesped/store", "HuespedController@store")
-        ->name("huesped.store");
-    Route::get('/responsable/{id}/crear', 'ResponsableController@nuevo')
-        ->name('responsable.nuevo');
-    Route::post("/responsable/{id}/store", "ResponsableController@store")
-        ->name("responsable.store");
-    Route::get('/narracion/{id}/nuevo', 'NarracionController@create')
-        ->name('narracion.nuevo');
-    Route::post('/narracion/{id}/store', 'NarracionController@store')
-        ->name('narracion.store');
-    Route::get('/huesped/{id}/editar', 'HuespedController@edit')
-        ->name('huesped.edit')->where('id', '[0-9]+');
-    Route::put('/huesped/{id}/editar', 'HuespedController@update')
-        ->name('huesped.update')->where('id', '[0-9]+');
-    Route::delete('/huesped/{id}/borrar', 'HuespedController@destroy')
-        ->name('huesped.borrar')->where('id', '[0-9]+');
-    Route::get('/huesped/{id}', 'HuespedController@show')
-        ->name('huesped.mostrar')->where('id', '[0-9]+');
+        Route::get('/huesped/crear', 'HuespedController@nuevo')
+            ->name('huesped.nuevo');
+        Route::post("/huesped/store", "HuespedController@store")
+            ->name("huesped.store");
+        Route::get('/responsable/{id}/crear', 'ResponsableController@nuevo')
+            ->name('responsable.nuevo');
+        Route::post("/responsable/{id}/store", "ResponsableController@store")
+            ->name("responsable.store");
+        Route::get('/narracion/{id}/nuevo', 'NarracionController@create')
+            ->name('narracion.nuevo');
+        Route::post('/narracion/{id}/store', 'NarracionController@store')
+            ->name('narracion.store');
+        Route::get('/huesped/{id}/editar', 'HuespedController@edit')
+            ->name('huesped.edit')
+            ->where('id', '[0-9]+');
+        Route::put('/huesped/{id}/editar', 'HuespedController@update')
+            ->name('huesped.update')
+            ->where('id', '[0-9]+');
+        Route::delete('/huesped/{id}/borrar', 'HuespedController@destroy')
+            ->name('huesped.borrar')
+            ->where('id', '[0-9]+');
+        Route::get('/huesped/{id}', 'HuespedController@show')
+            ->name('huesped.mostrar')
+            ->where('id', '[0-9]+');
     });
 
-/*RUTAS DEL DIRECTOR*/
-    /*RUTAS DE LOS LISTADOS PARA EL DIRECTOR*/
+//Aqui van todas las rutas de director
+//Ruta para acceso del direcctor//
+    //Rutas de listados de salud//
     Route::get('/saludDi', 'paginaPrincipal_controller@SaDire')
         ->name('saludDire.salu');
     Route::get('/saludD', 'paginaPrincipal_controller@SDire')
@@ -84,7 +89,7 @@ Route::group(['middleware' => 'admin'], function () {
         ->name('Listado.buscador');
     Route::get('/home', 'HomeController@index')->name('home');
 
-    /*RUTAS LISTADO DIRECTOR*/
+    //ROUTES LISTADO DIRECTOR
     Route::get('/huesped/listadoDirector', 'HuespedController@director')
         ->name('listado.director');
     Route::get('/dire', 'paginaPrincipal_controller@principaldirec')
@@ -92,8 +97,7 @@ Route::group(['middleware' => 'admin'], function () {
     Route::get('/huesped/{id}', 'HuespedController@show')
         ->name('huesped.mostrar')
         ->where('id', '[0-9]+');
-
-    /*RUTA PARA LAS ESTADISTICAS*/
+    //Ruta de las estadisticas del director//
     Route::get('/estadisticasDirec', 'EstadisticaDirectorController@index')
         ->name('estadisticas.direc');
 });

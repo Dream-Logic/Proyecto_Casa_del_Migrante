@@ -5,8 +5,8 @@
     <br><br><br>
     <div class="card ">
 
-        <div class="card-header">
-            <label class="card-title">Narración de los Hechos</label>
+        <div class="card-header" style="color: black; background-color: #4dc0b5">
+            <label class="card-title" >Narración de los Hechos</label>
         </div>
         @if ($errors->any())
             <div class="alert alert-danger">
@@ -31,26 +31,22 @@
 
                 @csrf
                 <div class="col-11">
-                    <label for="vulneracion">Vulneración de derechos</label>
+                    <label for="vulneracion" style="color: black;">Vulneración de derechos</label>
                     <span class="col-md-5 col-md-offset-10 text-center">
-        <textarea class="form-control" id="vulneracion"
-
-                  name="vulneracion"
+        <textarea class="form-control" id="vulneracion" name="vulneracion"
                   placeholder="Describa la vulneración de derechos del niño, niña o adolescente"
                   rows="3"> {{old('vulneracion')}}</textarea><br>
                         </span></div>
                 <br>
 
-
                 <div class="col-11">
-                    <label for="proteccion">Medidas de protección </label>
+                    <label for="proteccion" style="color: black;">Medidas de protección </label>
                     <span class="col-md-5 col-md-offset-10 text-center">
         <textarea class="form-control" id="proteccion" name="proteccion"
                   placeholder="Describa las medidas de protección del niño, niña o adolescente"
                   rows="3">{{old('proteccion')}}</textarea><br>
                         </span></div>
                 <br>
-
 
             </div>
             <div class="botones">
