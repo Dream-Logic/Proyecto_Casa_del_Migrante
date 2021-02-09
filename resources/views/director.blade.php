@@ -28,10 +28,10 @@
     <div class="hero_slider_container">
         <!-- Hero Slide -->
         <div class="hero_slide">
-            <body style="background-image: url(images/fondoOscuro.jpg)">
+            <div class="hero_slide_background"  style="background-image:url(images/fondo2.jpeg)"></div>
             <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
                 <div class="hero_slide_content text-center" style="height:400px ">
-                    <p style="font-size: 70px; color: #58883f"> Proyecto   Casa Del  Migrante</p>
+                    <p style="font-size: 70px; color: #f8f9fb"> Proyecto   Casa Del  Migrante</p>
                 </div>
             </div>
         </div>
