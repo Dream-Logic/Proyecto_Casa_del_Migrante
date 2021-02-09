@@ -46,10 +46,10 @@
     </center>
     <div class="ver">
         <table class="table">
-            <thead class="mx-4">
+            <thead class="mx-4" style="background-color: #8ab4f8">
             <tr class="mx-4">
-                <th scope="col"><h6 style="color: #0d95e8">Campo</h6></th>
-                <th scope="col"><h6 style="color: #0d95e8">Valor</h6></th>
+                <th scope="col"><h6>Campo</h6></th>
+                <th scope="col"><h6>Valor</h6></th>
             </tr>
             </thead>
             <tbody>
@@ -119,8 +119,8 @@
             </tr>
 
             @foreach($responsables as $responsable)
-                <tr>
-                    <th><h6 style="color: #0d95e8">Datos Personales de la Madre, Padre y/o Resposable Legal</h6></th>
+                <tr style="background-color: #8ab4f8">
+                    <th><h6>Datos Personales de la Madre, Padre y/o Resposable Legal</h6></th>
                     <th></th>
                 </tr>
 
@@ -178,8 +178,8 @@
 
 
             @foreach($narracion as $narra)
-                <tr>
-                    <th align="center"><h6 style="color: #0d95e8">Narración de los Hechos</h6></th>
+                <tr style="background-color: #8ab4f8">
+                    <th align="center"><h6 >Narración de los Hechos</h6></th>
 
                     <th></th>
                 </tr>

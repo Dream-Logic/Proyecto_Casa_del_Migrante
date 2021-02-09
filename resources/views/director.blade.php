@@ -25,8 +25,8 @@
         <div class="hero_slide">
             <div class="hero_slide_background" ></div>
             <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
-                <div class="hero_slide_content text-center" style="height:350px ">
-                    <p style="font-size: 70px; color: #f8f9fb"> Proyecto   Casa Del  Migrante</p>
+                <div class="hero_slide_content text-center" style="height:400px ">
+                    <h6 style="color: white; font-size: 25px">Bienvenido Director a:</h6><p style="font-size: 70px; color: #f8f9fb"> Proyecto   Casa Del  Migrante</p>
                 </div>
             </div>
         </div>

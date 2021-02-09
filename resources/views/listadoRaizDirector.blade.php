@@ -2,63 +2,54 @@
 @section('titulo', 'Listado Huéspedes Director')
 @section('contenido')
 
-    <br><br><br>
-
-    @if(session('mensaje'))
+   @if(session('mensaje'))
         <div class="alert alert-success">
             {{session('mensaje')}}
         </div>
     @endif
-
-
-
-    <!--BUSCADOR-->
-    <div class="card-header">
-        <label class="card-title">Listado de Huéspedes</label>
+    <br>
+    <br>
+    <br>
+    <head>
+        <!-- CSRF Token -->
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+    </head>
+    <div class="w3-container w3-teal mx-4" style="font-family: 'Raleway', sans-serif;">
+        <h6 class="mt-3" style="font-size: 30px; color: black;"><b>Listado de Huéspedes</b></h6>
     </div>
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="btn btn-primary" href="{{route('dire.access')}}">Regresar</a>
-        <a class="navbar-brand" href="#"></a>
-        <form class="form-inline my-2 my-lg-0 ml-auto">
-
-            <div class="">
-                <label class="card-title">Buscar por tipo </label>
-            </div>
-            <select name="tipo" class="form-control mr-sm-2" placeholder="Buscar" id="exampleFormControlSelect1">
-                <option>nombres</option>
-                <option>apellidos</option>
-                <option>direccion</option>
-                <option>identidad</option>
-
-            </select>
-            <input class="form-control mr-sm-2" name="buscarpor" type="search" placeholder="Buscar" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-            <a class="navbar-brand" href="#"></a>
-            <a href="{{url('/huesped/listadoDirector')}}" class="btn btn-warning">Restaurar</a>
-        </form>
-    </nav>
-
+   <form class="form-inline my-2 my-lg-0 ml-auto">
+       <div class="mx-4">
+           <label class="card-title">Buscar por tipo</label>
+       </div>
+       <select name="tipo" class="form-control mr-sm-2" id="exampleFormControlSelect1">
+           <option>nombres</option>
+           <option>apellidos</option>
+           <option>direccion</option>
+           <option>identidad</option>
+       </select>
+       <input class="form-control mr-sm-2" name="buscarpor" type="search" aria-label="Search" placeholder="Buscar">
+       <button class="btn btn-success" type="submit">
+           <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
+       </button>
+       <a href="{{url('/huesped/listadoDirector')}}" class="btn btn-warning">
+           <img src="/imagenes/iconos/restaurar.svg" class="svg" width="25">
+       </a>
+   </form>
+   <br>
     <!--FIN BUSCADOR-->
-
-
-
-
-
-
-
-    <table class="table">
-        <thead>
-        <tr class="w3-hover-green">
-            <th scope="col">Id</th>
-            <th scope="col">Nombres</th>
-            <th scope="col">Apellidos</th>
-            <th scope="col">Fecha de Nacimiento</th>
-            <th scope="col">Ver</th>
-
-
-        </tr>
-
+   <div class="table-responsive" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
+    box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);">
+       <table class="table ruler-vertical table-hover mx-sm-0 ">
+           <thead class="thead-dark">
+           <tr>
+               <th scope="col">N°</th>
+               <th scope="col">Nombres</th>
+               <th scope="col">Apellidos</th>
+               <th scope="col">Identidad</th>
+               <th scope="col">Fecha de Nacimiento</th>
+               <th scope="col">Dirección</th>
+               <th scope="col">Acciones</th>
+           </tr>
         </thead>
         <tbody>
         @forelse($listados as $huesped)
@@ -66,8 +57,13 @@
                 <th scope="row">{{ $huesped->id }}</th>
                 <td>{{ $huesped->nombres}} </td>
                 <td> {{ $huesped->apellidos }}</td>
+                <td>{{ $huesped->identidad}}</td>
                 <td>{{ $huesped->fnacimiento }}</td>
-                <td><a class="btn btn-info" href="{{route('huesped.mostrar',['id' =>$huesped->id])}}">Ver</a></td>
+                <td>{{ $huesped->direccion}}</td>
+                <td><a class="btn btn-info" href="{{route('huesped.mostrar',['id' =>$huesped->id])}}">
+                        <img src="/imagenes/iconos/ver.svg" width="25" >
+                    </a>
+                </td>
 
             </tr>
         @empty
