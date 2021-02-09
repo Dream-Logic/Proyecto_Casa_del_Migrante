@@ -3,10 +3,8 @@
 <head>
     <style>
         .site-navbar {
-            background-color: rgb(0,0,0.1);
+            background-image: url(/images/fondoOscuro.jpg)
         }
-
-
         .col-5 {
             margin-left: 50px;
             margin-right: 30px;
@@ -18,6 +16,7 @@
         }
 
         label {
+            font: xx-large;
             font-family: Arial;
             font-weight: bold;
         }
@@ -31,7 +30,7 @@
 
 
     </style>
-    <title>@yield('titulo')</title>
+    <title>Casa del Migrante</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
@@ -58,7 +57,7 @@
         </div>
         <div class="site-mobile-menu-body"></div>
     </div>
-    <header class="site-navbar py-4 js-sticky-header site-navbar-target " role="banner">
+    <header class="site-navbar py-4 js-sticky-header " role="banner">
         <div class="container">
             <div class="row align-items-center">
                 <div class="flex-row justify-content-center align-items-center">
@@ -73,7 +72,7 @@
                             <li><a href="{{route('huesped.nuevo')}}" class="nav-link"><strong>Ficha de Ingreso</strong></a>
                             </li>
                             <li><a href="{{ route('listado.index') }}" class="nav-link"><strong>Listado de
-                                        Huéspedes</strong></a></li>
+                                        Huspedes</strong></a></li>
                             <li><a href="{{ route('estadisticas.admin')}}" class="nav-link"><strong>Estadísticas</strong></a></li>
                             <li><a href="{{ route('salud.salu') }}" class="nav-link"><strong>Salud</strong></a></li>
 
@@ -126,10 +125,9 @@
 <script src="/js/jquery.easing.1.3.js"></script>
 <script src="/js/aos.js"></script>
 <script src="/js/jquery.fancybox.min.js"></script>
+<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
 <script src="/js/jquery.sticky.js"></script>
 <script src="/js/isotope.pkgd.min.js"></script>
-
-
 <script src="/js/main.js"></script>
 
 </body>

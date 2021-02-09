@@ -5,7 +5,6 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Course Project">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
     <link href="plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
@@ -18,14 +17,14 @@
 
 
 </head>
-<body>
+<body style="background-image: url(images/fondoOscuro.jpg)">
 
-<div class="site-blocks-cover overlay" style="background-image: url(images/fondo2.jpeg);" data-aos="fade" >
+<div class="site-blocks overlay" data-aos="fade" >
 <div class="hero_slider_container">
     <!-- Hero Slide -->
     <div class="hero_slide">
         <div >
-        <div class="hero_slide_background"  ></div>
+        <div class="hero_slide_background"></div>
         <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
             <div class="hero_slide_content text-center" style="height:350px ">
                 <p style="font-size: 70px; color: #ffffff"> Proyecto   Casa Del  Migrante</p>
@@ -38,15 +37,14 @@
 
 <div class="hero_boxes"  >
     <div class="hero_boxes_inner"  >
-        <div class="container" >
+        <div>
             <div class="row" >
-
-                <div class="col-lg-3 hero_box_col"   >
+                <div class="col-lg-3 hero_box_col">
                     <a href="{{route('huesped.nuevo')}}" >
                     <div class="hero_box d-flex flex-row align-items-center justify-content-start" >
                         <img src="images/registro.svg"  class="svg" alt="">
                         <div class="hero_box_content" >
-                            <h6 class="hero_box_title" >Ficha de Ingreso</h6>
+                            <h6 class="hero_box_title">Ficha de Ingreso</h6>
                             <a href="{{route('huesped.nuevo')}}" class="hero_box_link">Registro</a>
                         </div>
                     </div>
@@ -102,12 +100,8 @@
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="styles/bootstrap4/popper.js"></script>
 <script src="styles/bootstrap4/bootstrap.min.js"></script>
-<script src="plugins/greensock/TweenMax.min.js"></script>
-<script src="plugins/greensock/TimelineMax.min.js"></script>
 <script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
-<script src="plugins/greensock/animation.gsap.min.js"></script>
 <script src="plugins/greensock/ScrollToPlugin.min.js"></script>
-<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
 <script src="plugins/scrollTo/jquery.scrollTo.min.js"></script>
 <script src="plugins/easing/easing.js"></script>
 <script src="js/custom.js"></script>
