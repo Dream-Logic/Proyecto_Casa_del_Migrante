@@ -34,6 +34,7 @@
 
 
                     <div class="col-5">
+                        <img src="/imagenes/iconos_formulario/personas.svg" class="svg" width="25" height="35"   >
                         <label for="parentesco" style="color: black;">Parentesco</label>
                         <select class="form-control" name="parentesco">
                             <option value="Madre">Madre</option>
@@ -42,6 +43,7 @@
                         </select>
                     </div>
                     <div class="col-5">
+                        <img src="/imagenes/iconos_formulario/usuario.svg" class="svg" width="25" height="35"   >
                         <label for="nombre" style="color: black;">Nombres </label>
                         <input type="text" class="form-control"
                                value="{{old('nombres')}}"
@@ -51,6 +53,7 @@
                     <br>
 
                     <div class="col-5">
+                        <img src="/imagenes/iconos_formulario/usuario.svg" class="svg" width="25" height="35"   >
                         <label for="apellido" style="color: black;">Apellidos </label><br>
                         <input type="text" class="form-control"
                                value="{{old('apellidos')}}"
@@ -60,6 +63,7 @@
                     <br>
 
                     <div class="col-5">
+                        <img src="/imagenes/iconos_formulario/calendario.svg" class="svg" width="50" height="35"  >
                         <label for="FechaNac" style="color: black;">Fecha de Nacimiento</label><br>
                         <input type="date" class="form-control"
                                value="{{old('fnacimiento')}}"
@@ -69,6 +73,7 @@
 
 
                     <div class="col-5">
+                        <img src="/imagenes/iconos_formulario/ubicacion.svg" class="svg" width="50" height="35"  >
                         <label for="direccion" style="color: black;">Dirección</label>
                         <input type="text" class="form-control"
                                value="{{old('direccion')}}"
@@ -79,6 +84,7 @@
 
 
                     <div class="col-5">
+                        <img src="/imagenes/iconos_formulario/empresario.svg" class="svg" width="50" height="35"  >
                         <label for="trabaja" style="color: black;">Trabaja</label><br>
                         <select class="form-control"
 
@@ -90,6 +96,7 @@
                     <br>
 
                     <div class="col-5">
+                        <img src="/imagenes/iconos_formulario/empresarios.svg" class="svg" width="50" height="35"  >
                         <label for="profesionOficio" style="color: black;">Profesión u oficio</label><br>
                         <input type="text" class="form-control"
                                value="{{old('profesionOficio')}}"
@@ -100,6 +107,7 @@
 
 
                     <div class="col-5">
+                        <img src="/imagenes/iconos_formulario/tarjeta-de-identificacion.svg" class="svg" width="50" height="35"  >
                         <label for="identidad" style="color: black;">Identidad</label><br>
                         <input type="text" class="form-control"
                                value="{{old('identidad')}}"
@@ -110,6 +118,7 @@
 
 
                     <div class="col-5">
+                        <img src="/imagenes/iconos_formulario/pasaporte.svg" class="svg" width="50" height="35"  >
                         <label for="pasaporte" style="color: black;">Pasaporte</label><br>
                         <input type="text" class="form-control"
                                value="{{old('pasaporte')}}"
@@ -120,6 +129,7 @@
 
 
                     <div class="col-5">
+                        <img src="/imagenes/iconos_formulario/anillos-de-boda.svg" class="svg" width="50" height="35"  >
                         <label for="civil" style="color: black;">Estado Civil</label><br>
                         <select class="form-control" name="civil">
                             <option value="Soltero/a" @if(old('civil') === "Soltero/a") selected='selected' @endif>
@@ -146,6 +156,7 @@
                     </div>
 
                     <div class="col-5">
+                        <img src="/imagenes/iconos_formulario/telefono.svg" class="svg" width="50" height="35"  >
                         <label for="telefono" style="color: black;">Teléfono</label><br>
                         <input type="text" class="form-control" name="telefono"
                                id="telefono" placeholder="Número de teléfono"><br>
@@ -162,6 +173,7 @@
             </div>
         </form>
         <script src="/js/jquery-3.2.1.min.js"></script>
+        <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
     </div>
 
 

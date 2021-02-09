@@ -31,6 +31,7 @@
 
                 @csrf
                 <div class="col-11">
+                    <img src="/imagenes/iconos_formulario/viviendo-con-ninos.svg" class="svg" width="50" height="35"  >
                     <label for="vulneracion" style="color: black;">Vulneración de derechos</label>
                     <span class="col-md-5 col-md-offset-10 text-center">
         <textarea class="form-control" id="vulneracion" name="vulneracion"
@@ -40,6 +41,7 @@
                 <br>
 
                 <div class="col-11">
+                    <img src="/imagenes/iconos_formulario/proteger.svg" class="svg" width="50" height="35"  >
                     <label for="proteccion" style="color: black;">Medidas de protección </label>
                     <span class="col-md-5 col-md-offset-10 text-center">
         <textarea class="form-control" id="proteccion" name="proteccion"
@@ -54,5 +56,6 @@
             </div>
         </form>
         <script src="/js/jquery-3.2.1.min.js"></script>
+        <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
     </div>
 @endsection
