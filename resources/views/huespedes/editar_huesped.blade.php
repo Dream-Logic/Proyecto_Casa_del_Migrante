@@ -29,19 +29,20 @@
                 @method('PUT')
                 @csrf
                 <center>
-                    <div class="col-5" ><br>
-                        <div class="row" >
-                            <div class="form-group {{ $errors->has('imagen') ? ' has-error' : '' }}"style="width: 90%">
-                                <h6 style="text-align: start">Imagen  (Opcional)</h6>
-                                <img width="200px"  id="previewImagen" style="max-height:250px"
+                    <div class="col-5"><br>
+                        <div class="row">
+                            <div class="form-group {{ $errors->has('imagen') ? ' has-error' : '' }}" style="width: 90%">
+                                <h6 style="text-align: start">Imagen (Opcional)</h6>
+                                <img width="200px" id="previewImagen" style="max-height:250px"
                                      src="{{"/foto/".$huesped->imagen}}"
                                      onclick="seleccionarImagen(event)"/>
 
-                                <label id="labelImagen" for="imagen" class="btn btn-large" ><span style="font-size: 60px">
+                                <label id="labelImagen" for="imagen" class="btn btn-large"><span
+                                        style="font-size: 60px">
                                                     </span></label>
                                 <input type="file" accept="image/*"
                                        onchange="loadFile(event)"
-                                @if($errors->has("imagen"))
+                                       @if($errors->has("imagen"))
                                        style="display: none"
                                        required
                                        @endif
@@ -57,7 +58,7 @@
                                     var image = document.getElementById('previewImagen');
                                     image.src = URL.createObjectURL(event.target.files[0]);
                                     document.getElementById("imagen").style.display = "none";
-                                    document.getElementById("labelImagen").style.display="none";
+                                    document.getElementById("labelImagen").style.display = "none";
                                 };
                                 var seleccionarImagen = function (event) {
                                     var element = document.getElementById("imagen");
@@ -70,14 +71,11 @@
                 </center>
 
 
-
-
-
                 <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
                 <div class="form-row">
 
                     <div class="col-5"><br>
-                        <img src="/imagenes/iconos_formulario/usuario.svg" class="svg" width="25" height="35"  >
+                        <img src="/imagenes/iconos_formulario/usuario.svg" class="svg" width="25" height="35">
                         <label for="nombre">Nombres</label><br>
                         <input type="text" class="form-control" name="nombres"
                                id="nombres" placeholder="Nombres" value="{{$huesped->nombres}}"><br>
@@ -85,7 +83,7 @@
                     <br>
 
                     <div class="col-5"><br>
-                        <img src="/imagenes/iconos_formulario/usuario.svg" class="svg" width="25" height="35"  >
+                        <img src="/imagenes/iconos_formulario/usuario.svg" class="svg" width="25" height="35">
                         <label for="apellido">Apellidos</label><br>
                         <input type="text" class="form-control" name="apellidos"
                                id="apellidos" placeholder="Apellidos" value="{{$huesped->apellidos}}">
@@ -94,7 +92,7 @@
 
 
                     <div class="col-5">
-                        <img src="/imagenes/iconos_formulario/calendario.svg" class="svg" width="50" height="35"  >
+                        <img src="/imagenes/iconos_formulario/calendario.svg" class="svg" width="50" height="35">
                         <label for="FechaNac">Fecha de Nacimiento</label><br>
                         <input type="date" class="form-control" name="fnacimiento"
                                id="fnacimiento" value="{{$huesped->fnacimiento}}"><br>
@@ -102,14 +100,28 @@
 
 
                     <div class="col-5">
-                        <img src="/imagenes/iconos_formulario/grupo-de-edad.svg" class="svg" width="50" height="35"  >
+                        <img src="/imagenes/iconos_formulario/grupo-de-edad.svg" class="svg" width="50" height="35">
                         <label for="edad">Edad</label><br>
                         <input type="number" class="form-control" name="edad"
                                id="edad" placeholder="Edad" value="{{$huesped->edad}}"><br>
                     </div>
 
                     <div class="col-5">
-                        <img src="/imagenes/iconos_formulario/sexo.svg" class="svg" width="50" height="35"  >
+                        <img src="/imagenes/iconos_formulario/calendario.svg" class="svg" width="50" height="35">
+                        <label style="color: #000000" for="ingreso">Fecha de Ingreso</label><br>
+                        <input type="date" class="form-control" name="ingreso"
+                               id="ingreso" value="{{$huesped->ingreso}}"><br>
+                    </div>
+
+                    <div class="col-5">
+                        <img src="/imagenes/iconos_formulario/calendario.svg" class="svg" width="50" height="35">
+                        <label style="color: #000000" for="egreso">Fecha de Egreso</label><br>
+                        <input type="date" class="form-control" name="egreso"
+                               id="egreso" value="{{$huesped->egreso}}"><br>
+                    </div>
+
+                    <div class="col-5">
+                        <img src="/imagenes/iconos_formulario/sexo.svg" class="svg" width="50" height="35">
                         <label for="sexo">sexo</label><br>
                         <select class="form-control" name="sexo">
                             <option value="femenina" @if($huesped->sexo === "femenino") selected='selected' @endif>
@@ -124,7 +136,8 @@
 
 
                     <div class="col-5">
-                        <img src="/imagenes/iconos_formulario/muestra-de-color-de-cabello.svg" class="svg" width="50" height="35"  >
+                        <img src="/imagenes/iconos_formulario/muestra-de-color-de-cabello.svg" class="svg" width="50"
+                             height="35">
                         <label for="cabello">Color de cabello</label><br>
                         <select class="form-control" name="cabello">
                             <option value="negro" @if($huesped->cabello === "negro") selected='selected' @endif >Negro
@@ -150,7 +163,7 @@
 
 
                     <div class="col-5">
-                        <img src="/imagenes/iconos_formulario/observacion.svg" class="svg" width="50" height="35"  >
+                        <img src="/imagenes/iconos_formulario/observacion.svg" class="svg" width="50" height="35">
                         <label for="OjosSelec">Color de ojos</label><br>
                         <select class="form-control" name="ojos">
                             <option value="negros" @if($huesped->ojos === "negros") selected='selected' @endif>Negros
@@ -168,7 +181,7 @@
 
 
                     <div class="col-5">
-                        <img src="/imagenes/iconos_formulario/levantar-la-mano.svg" class="svg" width="50" height="35"  >
+                        <img src="/imagenes/iconos_formulario/levantar-la-mano.svg" class="svg" width="50" height="35">
                         <label for="pielSelct">Color de piel</label><br>
                         <select class="form-control" name="piel">
 
@@ -189,7 +202,8 @@
 
 
                     <div class="col-5">
-                        <img src="/imagenes/iconos_formulario/tarjeta-de-identificacion.svg" class="svg" width="50" height="35"  >
+                        <img src="/imagenes/iconos_formulario/tarjeta-de-identificacion.svg" class="svg" width="50"
+                             height="35">
                         <label for="identidad">Identidad </label><br>
                         <input type="text" class="form-control" name="identidad" value="{{$huesped->identidad}}"
                                id="identidad" placeholder="0000-0000-00000"><br>
@@ -198,7 +212,7 @@
 
 
                     <div class="col-5">
-                        <img src="/imagenes/iconos_formulario/nacionalidad.svg" class="svg" width="50" height="35"  >
+                        <img src="/imagenes/iconos_formulario/nacionalidad.svg" class="svg" width="50" height="35">
                         <label for="nacionalidad">Nacionalidad</label>
                         <input type="text" class="form-control" name="nacionalidad" value="{{$huesped->nacionalidad}}"
                                id="nacionalidad" placeholder="Nacionalidad">
@@ -207,7 +221,7 @@
 
 
                     <div class="col-5">
-                        <img src="/imagenes/iconos_formulario/pasaporte.svg" class="svg" width="50" height="35"  >
+                        <img src="/imagenes/iconos_formulario/pasaporte.svg" class="svg" width="50" height="35">
                         <label for="pasaporte">Pasaporte</label><br>
                         <input type="text" class="form-control" name="pasaporte" value="{{$huesped->pasaporte}}"
                                id="pasaporte" placeholder="Numero de pasaporte">
@@ -216,7 +230,7 @@
 
 
                     <div class="col-5">
-                        <img src="/imagenes/iconos_formulario/lugar.svg" class="svg" width="50" height="35"  >
+                        <img src="/imagenes/iconos_formulario/lugar.svg" class="svg" width="50" height="35">
                         <label for="nacimiento">Lugar de nacimiento</label><br>
                         <input type="text" class="form-control" name="nacimiento"
                                id="nacimiento" placeholder="Lugar de nacimiento" value="{{$huesped->nacimiento}}"><br>
@@ -224,7 +238,7 @@
 
 
                     <div class="col-11">
-                        <img src="/imagenes/iconos_formulario/ubicacion.svg" class="svg" width="50" height="35"  >
+                        <img src="/imagenes/iconos_formulario/ubicacion.svg" class="svg" width="50" height="35">
                         <label for="direccionProcede">Dirección</label>
                         <span class="col-md-5 col-md-offset-10 text-center">
         <textarea class="form-control" id="direccion" name="direccion"
@@ -232,9 +246,19 @@
                 </span></div>
                     <br>
 
+                    <div class="col-11">
+                        <img src="/imagenes/iconos_formulario/material-escolar.svg" class="svg" width="50" height="35">
+                        <label for="signos" style="color: #000000">Grado Escolar</label>
+                        <span class="col-md-5 col-md-offset-10 text-center">
+        <textarea class="form-control" id="gradoEscolar" name="gradoEscolar"
+                  placeholder="Describa el grado escolar del niño, niña o adolescente"
+                  rows="2">{{$huesped->gradoEscolar}}</textarea><br>
+                    </span></div>
+                    <br>
+
 
                     <div class="col-11">
-                        <img src="/imagenes/iconos_formulario/fisico.svg" class="svg" width="50" height="35"  >
+                        <img src="/imagenes/iconos_formulario/fisico.svg" class="svg" width="50" height="35">
                         <label for="signos">Signos Fisicos</label>
                         <span class="col-md-5 col-md-offset-10 text-center">
         <textarea class="form-control" id="signosFisicos" name="signosFisicos"
@@ -245,7 +269,7 @@
 
 
                     <div class="col-11">
-                        <img src="/imagenes/iconos_formulario/fiebre.svg" class="svg" width="50" height="35"  >
+                        <img src="/imagenes/iconos_formulario/fiebre.svg" class="svg" width="50" height="35">
                         <label for="enfermedad">Enfermedad o padecimiento </label>
                         <span class="col-md-5 col-md-offset-10 text-center">
         <textarea class="form-control" id="enfermedad" name="enfermedad"
@@ -255,7 +279,7 @@
 
 
                     <div class="col-11">
-                        <img src="/imagenes/iconos_formulario/medicamento.svg" class="svg" width="50" height="35"  >
+                        <img src="/imagenes/iconos_formulario/medicamento.svg" class="svg" width="50" height="35">
                         <label for="tratamiento">Tratamiento</label>
                         <span class="col-md-5 col-md-offset-10 text-center">
         <textarea class="form-control" id="tratamiento" name="tratamiento"
@@ -273,6 +297,7 @@
     <script src="/js/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
     </div>
+
 
 
 

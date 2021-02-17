@@ -48,6 +48,8 @@
                <th scope="col">Identidad</th>
                <th scope="col">Fecha de Nacimiento</th>
                <th scope="col">Dirección</th>
+               <th scope="col">Fecha de Ingreso</th>
+               <th scope="col">Fecha de Ingreso</th>
                <th scope="col">Acciones</th>
            </tr>
         </thead>
@@ -60,6 +62,8 @@
                 <td>{{ $huesped->identidad}}</td>
                 <td>{{ $huesped->fnacimiento }}</td>
                 <td>{{ $huesped->direccion}}</td>
+                <td>{{ $huesped->ingreso}}</td>
+                <td>{{ $huesped->egreso}}</td>
                 <td><a class="btn btn-info" href="{{route('huesped.mostrar',['id' =>$huesped->id])}}">
                         <img src="/imagenes/iconos/ver.svg" width="25" >
                     </a>

@@ -70,6 +70,14 @@
                 <td>{{ $huesped->edad }}</td>
             </tr>
             <tr>
+                <th scope="row">Fecha de Ingreso</th>
+                <td>{{ $huesped->ingreso }}</td>
+            </tr>
+            <tr>
+                <th scope="row">Fecha de Egreso</th>
+                <td>{{ $huesped->egreso }}</td>
+            </tr>
+            <tr>
                 <th scope="row">Sexo</th>
                 <td>{{ $huesped->sexo }}</td>
             </tr>

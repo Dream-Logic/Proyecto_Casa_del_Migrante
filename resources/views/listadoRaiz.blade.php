@@ -39,6 +39,7 @@
         <a href="{{url('/proyectos/listado')}}" class="btn btn-warning">
             <img src="/imagenes/iconos/restaurar.svg" class="svg" width="25">
         </a>
+
     </form>
     <br>
 
@@ -53,6 +54,8 @@
                 <th scope="col">Identidad</th>
                 <th scope="col">Fecha de Nacimiento</th>
                 <th scope="col">Dirección</th>
+                <th scope="col">Fecha de ingreso</th>
+                <th scope="col">Fecha de egreso</th>
                 <th scope="col"></th>
                 <th scope="col">Acciones</th>
                 <th scope="col"></th>
@@ -67,6 +70,8 @@
                     <td>{{ $huesped->identidad}}</td>
                     <td>{{ $huesped->fnacimiento }}</td>
                     <td>{{ $huesped->direccion}}</td>
+                    <td>{{ $huesped->ingreso}}</td>
+                    <td>{{ $huesped->egreso}}</td>
                     <td><a class="btn btn-outline-info" href="{{route('huesped.mostrar',['id' =>$huesped->id])}}">
                             <img src="/imagenes/iconos/ver.svg" width="25" >
                         </a></td>

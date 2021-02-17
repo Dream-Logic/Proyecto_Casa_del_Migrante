@@ -20,6 +20,8 @@ class CreateHuespedsTable extends Migration
             $table->string('apellidos');
             $table->date('fnacimiento');
             $table->integer('edad');
+            $table->date('ingreso');
+            $table->date('egreso')->nullable();
             $table->string('sexo');
             $table->string('cabello');
             $table->string('ojos');
@@ -29,6 +31,7 @@ class CreateHuespedsTable extends Migration
             $table->string('pasaporte')->nullable();
             $table->string('nacimiento');
             $table->string('direccion');
+            $table->string('gradoEscolar');
             $table->string('signosFisicos');
             $table->string('enfermedad')->nullable();
             $table->string('tratamiento')->nullable();

@@ -115,6 +115,20 @@
                         <input type="number" class="form-control" name="edad"
                                id="edad" placeholder="Edad"><br>
                     </div>
+                    <div class="col-5">
+                        <img src="/imagenes/iconos_formulario/fecha.svg" class="svg" width="50" height="35"  >
+                        <label   style="color: #000000" for="ingreso">Fecha de Ingreso</label><br>
+                        <input type="date" class="form-control" name="ingreso">
+                               <br>
+                    </div>
+
+
+                    <div class="col-5">
+                        <img src="/imagenes/iconos_formulario/fechaEgreso.svg" class="svg" width="50" height="35"  >
+                        <label  style="color: #000000" for="egreso">Fecha de Egreso</label><br>
+                        <input type="date" class="form-control" name="egreso">
+                               <br>
+                    </div>
 
                     <div class="col-5">
                         <img src="/imagenes/iconos_formulario/sexo.svg" class="svg" width="50" height="35"  >
@@ -215,6 +229,16 @@
 
 
                     <div class="col-11">
+                        <img src="/imagenes/iconos_formulario/material-escolar.svg" class="svg" width="50" height="35"  >
+                        <label for="signos" style="color: #000000">Grado Escolar</label>
+                        <span class="col-md-5 col-md-offset-10 text-center">
+        <textarea class="form-control" id="gradoEscolar" name="gradoEscolar"
+                  placeholder="Describa el grado escolar del niño, niña o adolescente" rows="2"></textarea><br>
+                    </span></div>
+                    <br>
+
+
+                    <div class="col-11">
                         <img src="/imagenes/iconos_formulario/fisico.svg" class="svg" width="50" height="35"  >
                         <label for="signos" style="color: #000000">Signos Fisicos</label>
                         <span class="col-md-5 col-md-offset-10 text-center">
@@ -254,6 +278,7 @@
     </div class="card">
     <script src="/js/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
     </body>
 
 @endsection
