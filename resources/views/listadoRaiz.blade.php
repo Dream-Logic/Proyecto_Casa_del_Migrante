@@ -80,12 +80,14 @@
                         </a>
                     </td>
                     <td>
+                        <a href="#" onclick="return confirm('Estás seguro que deseas eliminar el registro?');">
                         <form method="post" action="{{route('huesped.borrar',['id'=>$huesped->id])}}">
                             @csrf
                             @method('delete')
                             <img src="/imagenes/iconos/eliminar.svg" >
                             <input type="submit" value="Eliminar" class="btn btn-outline-danger">
                         </form>
+                        </a>
                     </td>
                 </tr>
             @empty
