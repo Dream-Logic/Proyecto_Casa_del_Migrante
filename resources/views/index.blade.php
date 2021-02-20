@@ -26,8 +26,8 @@
         <div >
         <div class="hero_slide_background"></div>
         <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
-            <div class="hero_slide_content text-center" style="height:400px ">
-                <h6 style="color: white; font-size: 25px;">Bienvenido Administrador a:</h6><p style="font-size: 70px; color: #ffffff"> Proyecto   Casa Del  Migrante</p>
+            <div class="hero_slide_content text-center" style="height:500px ">
+                <h6 style="color: white; font-size: 20px;">Bienvenido Administrador :</h6>  <p style="font-size: 25px; color: #ffffff"> Proyecto   Casa Del  Migrante</p>
             </div>
         </div>
     </div>
@@ -86,6 +86,56 @@
                     </a>
                 </div>
 
+
+                <div class="col-lg-3 hero_box_col">
+                    <br>
+                    <a href="" >
+                        <div class="hero_box d-flex flex-row align-items-center justify-content-start">
+                            <img src="images/personal.svg" class="svg" alt="">
+                            <div class="hero_box_content">
+                                <h6 class="hero_box_title"> Ficha del Personal</h6>
+                                <a href="" class="hero_box_link">Ver</a>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 hero_box_col">
+                    <br>
+                    <a href="" >
+                        <div class="hero_box d-flex flex-row align-items-center justify-content-start">
+                            <img src="images/personal.svg" class="svg" alt="">
+                            <div class="hero_box_content">
+                                <h6 class="hero_box_title">Listado de Personal</h6>
+                                <a href="" class="hero_box_link">Ver</a>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 hero_box_col">
+                    <br>
+                    <a href="" >
+                        <div class="hero_box d-flex flex-row align-items-center justify-content-start">
+                            <img src="images/actividades.svg" class="svg" alt="">
+                            <div class="hero_box_content">
+                                <h6 class="hero_box_title">Actividades</h6>
+                                <a href="" class="hero_box_link">Ver</a>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 hero_box_col">
+                    <br>
+                    <a href="" >
+                        <div class="hero_box d-flex flex-row align-items-center justify-content-start">
+                            <img src="images/calendario.svg" class="svg" alt="">
+                            <div class="hero_box_content">
+                                <h6 class="hero_box_title">Calendario</h6>
+                                <a href="" class="hero_box_link">Ver</a>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>

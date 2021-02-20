@@ -776,16 +776,25 @@ modificar los cuadro negros
 .hero_boxes_inner
 {
 	position: absolute;
-	top: -300px;
+    /*********************************
+mover los cuadros negros hacia arriba o abajo
+*********************************/
+	top: -450px;
 	left: 0;
+    /*********************************
+mover los cuadros negros hacia el lado
+*********************************/
 	width: 100%;
 }
 .hero_box
 {
+    /*********************************
+mas grande y pequeño el cuadro negro
+*********************************/
 	width: 100%;
 	height: 161px;
 	background: #1a1a1a;
-	padding-left: 50px;
+	padding-left: 100px;
 	cursor: pointer;
 
 }
@@ -801,7 +810,7 @@ modificar los cuadro negros
 }
 .svg path
 {
-	fill: #2090F3
+	fill: #ffb606
 }
 .hero_box svg
 {
