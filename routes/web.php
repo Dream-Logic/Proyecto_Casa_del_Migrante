@@ -106,5 +106,5 @@ Route::post('/passwordemail', 'Auth\ForgotPasswordController@sendResetLinkEmail'
 Route::get('/passwordreset{token}', 'Auth\ResetPasswordController@showResetForm')->name("password.reset1");
 Route::post('/passwordreset', 'Auth\ResetPasswordController@reset');
 
-/*Route::get('/personal', 'paginaPrincipal_controller@Personal')
-    ->name('personal.personal');*/
+Route::get('/personal', 'paginaPrincipal_controller@Personal')
+    ->name('personal.personal');

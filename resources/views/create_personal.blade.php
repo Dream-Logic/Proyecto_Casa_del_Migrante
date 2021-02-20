@@ -87,39 +87,39 @@
 
                     <div class="col-5"><br>
                         <img src="/imagenes/iconos_formulario/usuario.svg" class="svg" width="25" height="35"   >
-                        <label for="nombre" style="color: #000000">Nombres</label><br>
-                        <input type="text" class="form-control" name="nombres"
-                               id="nombres" placeholder="Nombres"><br>
+                        <label for="nombre_personal" style="color: #000000">Nombres</label><br>
+                        <input type="text" class="form-control" name="nombres_personal"
+                               id="nombres_personal" placeholder="Nombres"><br>
                     </div>
                     <br>
 
                     <div class="col-5"><br>
                         <img src="/imagenes/iconos_formulario/usuario.svg" class="svg" width="25" height="35"  >
-                        <label for="apellido" style="color: #000000">Apellidos</label><br>
-                        <input type="text" class="form-control" name="apellidos"
-                               id="apellidos" placeholder="Apellidos">
+                        <label for="apellido_personal" style="color: #000000">Apellidos</label><br>
+                        <input type="text" class="form-control" name="apellidos_personal"
+                               id="apellidos_personal" placeholder="Apellidos">
                     </div>
                     <br>
 
 
                     <div class="col-5">
                         <img src="/imagenes/iconos_formulario/calendario.svg" class="svg" width="50" height="35"  >
-                        <label for="FechaNac" style="color: #000000">Fecha de Nacimiento</label><br>
-                        <input type="date" class="form-control" name="fnacimiento"
-                               id="fnacimiento"><br>
+                        <label for="FechaNac_personal" style="color: #000000">Fecha de Nacimiento</label><br>
+                        <input type="date" class="form-control" name="fnacimiento_personal"
+                               id="fnacimiento_personal"><br>
                     </div>
 
 
                     <div class="col-5">
                         <img src="/imagenes/iconos_formulario/grupo-de-edad.svg" class="svg" width="50" height="35"  >
-                        <label for="edad" style="color: #000000">Edad</label><br>
-                        <input type="number" class="form-control" name="edad"
-                               id="edad" placeholder="Edad"><br>
+                        <label for="edad_personal" style="color: #000000">Edad</label><br>
+                        <input type="number" class="form-control" name="edad_personal"
+                               id="edad_personal" placeholder="Edad"><br>
                     </div>
                     <div class="col-5">
                         <img src="/imagenes/iconos_formulario/sexo.svg" class="svg" width="50" height="35"  >
-                        <label for="sexo" style="color: #000000">Sexo</label><br>
-                        <select class="form-control" name="sexo">
+                        <label for="sexo_personal" style="color: #000000">Sexo</label><br>
+                        <select class="form-control" name="sexo_personal">
                             <option value="femenino">Femenino</option>
                             <option value="masculino">Masculino</option>
                         </select><br>
@@ -128,16 +128,16 @@
 
                     <div class="col-5">
                         <img src="/imagenes/iconos_formulario/tarjeta-de-identificacion.svg" class="svg" width="50" height="35"  >
-                        <label for="identidad" style="color: #000000">Identidad </label><br>
-                        <input type="text" class="form-control" name="identidad"
-                               id="identidad" placeholder="0000-0000-00000"><br>
+                        <label for="identidad_personal" style="color: #000000">Identidad </label><br>
+                        <input type="text" class="form-control" name="identidad_personal"
+                               id="identidad_personal" placeholder="0000-0000-00000"><br>
                     </div>
 
                     <div class="col-11">
                         <img src="/imagenes/iconos_formulario/ubicacion.svg" class="svg" width="50" height="35"  >
-                        <label for="direccionProcede" style="color: #000000">Dirección</label>
+                        <label for="direccion_personal" style="color: #000000">Dirección</label>
                         <span class="col-md-5 col-md-offset-10 text-center">
-        <textarea class="form-control" id="direccion" name="direccion"
+        <textarea class="form-control" id="direccion_personal" name="direccion_personal"
                   placeholder="Dirección" rows="2"></textarea><br>
                     </span></div>
                     <br>
@@ -157,7 +157,7 @@
                         <img src="/imagenes/iconos_formulario/cargo.svg" class="svg" width="50" height="35"  >
                         <label for="cargo" style="color: #000000">Cargo</label>
                         <span class="col-md-5 col-md-offset-10 text-center">
-        <textarea class="form-control" id="cargo" name="cargo"
+                       <textarea class="form-control" id="cargo" name="cargo"
                   placeholder="Cargo que desempeñará" rows="2"></textarea><br>
                     </span></div>
                     <br>
@@ -177,9 +177,9 @@
 
                 <div class="col-11">
                     <img src="/imagenes/iconos_formulario/telefono.svg" class="svg" width="50" height="35"  >
-                    <label for="telefono" style="color: #000000">Telefono</label>
+                    <label for="telefono_personal" style="color: #000000">Telefono</label>
                     <span class="col-md-5 col-md-offset-10 text-center">
-        <textarea class="form-control" id="telefono" name="telefono"
+        <textarea class="form-control" id="telefono_personal" name="telefono_personal"
                   placeholder="Numero de telefono" rows="2"></textarea><br>
                     </span></div>
                 <br>
