@@ -29,8 +29,9 @@
             <option>direccion</option>
             <option>identidad</option>
         </select>
-        <input class="form-control mr-sm-2" name="buscarpor" type="search" aria-label="Search" placeholder="Buscar">
-        <button class="btn btn-outline-success" type="submit">Buscar</button>
+        <button class="btn btn-success" type="submit">
+            <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
+        </button>
     </form>
     </nav>
     <table class="table" >
@@ -41,6 +42,7 @@
             <th class="bg-dark text-white" style="font-family: 'Times New Roman'"  scope="col">Apellidos</th>
             <th class="bg-dark text-white"style="font-family: 'Times New Roman'"   scope="col">Enfermedad</th>
             <th class="bg-dark text-white" style="font-family: 'Times New Roman'"  scope="col">Tratamiento</th>
+            <th class="bg-dark text-white"style="font-family: 'Times New Roman'"   scope="col">Acciones</th>
         </tr>
             </thead>
             <tbody>
@@ -51,6 +53,9 @@
                 <td> {{ $huesped->apellidos }}</td>
                 <td>{{ $huesped->enfermedad }}</td>
                 <td>{{ $huesped->tratamiento}}</td>
+                <td><a class="btn btn-outline-info" href="{{route('huesped.mostrar',['id' =>$huesped->id])}}">
+                        <img src="/imagenes/iconos/ver.svg" width="25" >
+                    </a></td>
       </tr>
         @empty
             <tr>

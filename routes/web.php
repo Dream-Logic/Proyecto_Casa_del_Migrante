@@ -28,7 +28,6 @@ Route::group(['middleware' => 'admin'], function () {
     //RUTA QUE DIRIGE A LA VISTA PRINCIPAL DEL ADMINISTRADOR
     Route::get('/principal', 'paginaPrincipal_controller@index')
         ->name('index.index');
-
     /*RUTAS QUE DIRIGE A LOS FORMULARIOS*/
     Route::get('/principalformulario', 'paginaPrincipal_controller@principalformulario')
         ->name('hola.hola');
@@ -107,3 +106,5 @@ Route::post('/passwordemail', 'Auth\ForgotPasswordController@sendResetLinkEmail'
 Route::get('/passwordreset{token}', 'Auth\ResetPasswordController@showResetForm')->name("password.reset1");
 Route::post('/passwordreset', 'Auth\ResetPasswordController@reset');
 
+/*Route::get('/personal', 'paginaPrincipal_controller@Personal')
+    ->name('personal.personal');*/

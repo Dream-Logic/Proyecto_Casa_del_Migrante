@@ -23,10 +23,7 @@
 
     </head>
     <body>
-
-
-    <div class="site-blocks-cover overlay " style="background-image: url(images/fo2.jpg);" data-aos="fade"
-         id="home-section">
+    <div class="site-blocks-cover overlay " style="background-image: url(images/fo2.jpg)" data-aos="fade" id="home-section">
         <div class="hero_slide_background text-center text-dark">
             <br>
             <br>
