@@ -48,6 +48,8 @@ Route::group(['middleware' => 'admin'], function () {
         //RUTA QUE DIRIGE A LAS ESTADISTICAS//
         Route::get('/estadisticas', 'EstadisticaController@index')
             ->name('estadisticas.admin');
+    Route::get('/personal', 'paginaPrincipal_controller@Personal')
+        ->name('personal.personal');
 
         //NUEVAS RUTAS DEL FORMULARIO HUESPED
 
@@ -106,5 +108,4 @@ Route::post('/passwordemail', 'Auth\ForgotPasswordController@sendResetLinkEmail'
 Route::get('/passwordreset{token}', 'Auth\ResetPasswordController@showResetForm')->name("password.reset1");
 Route::post('/passwordreset', 'Auth\ResetPasswordController@reset');
 
-Route::get('/personal', 'paginaPrincipal_controller@Personal')
-    ->name('personal.personal');
+
