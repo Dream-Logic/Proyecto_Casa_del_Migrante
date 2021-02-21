@@ -57,14 +57,14 @@
         </div>
         <div class="site-mobile-menu-body"></div>
     </div>
-    <header class="site-navbar py-4 js-sticky-header " role="banner">
+    <header class="site-navbar py-xl-2 js-sticky-header " role="banner">
         <div class="container">
             <div class="row align-items-center">
                 <div class="flex-row justify-content-center align-items-center">
                     <span class="text-md-left"
-                          style="color: #e0a800; font-family: 'Arial Black'">Casa del Migrante</span>
+                          style="color: #e0a800;  font-family: 'Arial Black'">Casa del Migrante</span>
                 </div>
-                <div class="col-12 col-md-10 d-none d-xl-block">
+                <div class="col-10 col-md-10 d-none d-xl-block">
                     <nav class="site-navigation position-relative text-right" role="navigation">
 
                         <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
@@ -75,6 +75,9 @@
                                         Huespedes</strong></a></li>
                             <li><a href="{{ route('estadisticas.admin')}}" class="nav-link"><strong>Estadísticas</strong></a></li>
                             <li><a href="{{ route('salud.salu') }}" class="nav-link"><strong>Salud</strong></a></li>
+
+                            <li><a href="{{ route('personal.personal') }}" class="nav-link"><strong>Ficha Personal</strong></a></li>
+                            <li><a href="{{ route('listadoEmpleado.index') }}" class="nav-link"><strong>Listado Personal</strong></a></li>
 
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"

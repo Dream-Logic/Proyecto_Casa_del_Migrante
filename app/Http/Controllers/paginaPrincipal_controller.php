@@ -24,12 +24,7 @@ class paginaPrincipal_controller extends Controller
         return view('index');
 
     }
-    public function Personal()
-    {
 
-        return view('create_personal');
-
-    }
     public function principaldirec()
     {
 

@@ -10,12 +10,15 @@
     <br>
     <br>
     <br>
+    <br>
     <head>
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
     <a class="btn btn-success btn-warning" href="{{route('index.index')}}">Regresar</a>
+    <br>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
 
         <a class="navbar-brand text-warning" href="#">LISTADO DE NIÑOS ENFERMOS</a>
         <form class="form-inline my-2 my-lg-0 ml-auto">
