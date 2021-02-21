@@ -69,15 +69,26 @@
 
                         <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                             <li><a href="{{route('index.index')}}" class="nav-link"><strong>Inicio</strong></a></li>
-                            <li><a href="{{route('hola.hola')}}" class="nav-link"><strong>Ficha de Ingreso</strong></a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle"  id="navbardrop" data-toggle="dropdown">
+                                    <strong>Fichas de Ingreso</strong>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="{{route('hola.hola')}}">Huésped</a>
+                                    <a class="dropdown-item" href="{{ route('personal.personal') }}">Personal</a>
+                                </div>
                             </li>
-                            <li><a href="{{ route('listado.index') }}" class="nav-link"><strong>Listado de
-                                        Huespedes</strong></a></li>
+                            <li class="nav-item dropdown nav-link">
+                                <a class="nav-link dropdown-toggle"  id="navbardrop" data-toggle="dropdown">
+                                    <strong>Listados</strong>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="{{route('listado.index')}}">Huésped</a>
+                                    <a class="dropdown-item" href="{{ route('listadoEmpleado.index') }}">Personal</a>
+                                </div>
+                            </li>
                             <li><a href="{{ route('estadisticas.admin')}}" class="nav-link"><strong>Estadísticas</strong></a></li>
                             <li><a href="{{ route('salud.salu') }}" class="nav-link"><strong>Salud</strong></a></li>
-
-                            <li><a href="{{ route('personal.personal') }}" class="nav-link"><strong>Ficha Personal</strong></a></li>
-                            <li><a href="{{ route('listadoEmpleado.index') }}" class="nav-link"><strong>Listado Personal</strong></a></li>
 
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
@@ -96,19 +107,12 @@
                                     </form>
                                 </div>
                             </li>
-
-
                         </ul>
-
                     </nav>
-
-
                 </div>
-
                 <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a
                             href="#" class="site-menu-toggle js-menu-toggle float-right"><span
                                 class="icon-menu h3"></span></a></div>
-
             </div>
         </div>
     </header>

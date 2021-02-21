@@ -23,24 +23,24 @@ Route::get('/', function () {
 Route::group(["middleware" => "auth"], function () {
 
 //ADMINISTRADOR
-    Route::group(['middleware' => 'admin'], function () {
-        /*RUTAS DEL ADMINISTRADOR*/
-        //RUTA QUE DIRIGE A LA VISTA PRINCIPAL DEL ADMINISTRADOR
-        Route::get('/principal', 'paginaPrincipal_controller@index')
-            ->name('index.index');
-        /*RUTAS QUE DIRIGE A LOS FORMULARIOS*/
-        Route::get('/principalformulario', 'paginaPrincipal_controller@principalformulario')
-            ->name('hola.hola');
-        Route::get('/Btn_atras', 'paginaPrincipal_controller@atras')
-            ->name('atras.regre');
-        Route::get('/Btn_regresar', 'paginaPrincipal_controller@regreso')
-            ->name('regresar.volv');
+Route::group(['middleware' => 'admin'], function () {
+    /*RUTAS DEL ADMINISTRADOR*/
+    //RUTA QUE DIRIGE A LA VISTA PRINCIPAL DEL ADMINISTRADOR
+    Route::get('/principal', 'paginaPrincipal_controller@index')
+        ->name('index.index');
+    /*RUTAS QUE DIRIGE A LOS FORMULARIOS*/
+    Route::get('/principalformulario', 'paginaPrincipal_controller@principalformulario')
+        ->name('hola.hola');
+    Route::get('/Btn_atras', 'paginaPrincipal_controller@atras')
+        ->name('atras.regre');
+    Route::get('/Btn_regresar', 'paginaPrincipal_controller@regreso')
+        ->name('regresar.volv');
 
-        /*RUTAS PARA EL LISTADO DEL ADMINISTRADOR*/
-        Route::get('/proyectos/listado', 'HuespedController@index')
-            ->name('listado.index');
+    /*RUTAS PARA EL LISTADO DEL ADMINISTRADOR*/
+    Route::get('/proyectos/listado', 'HuespedController@index')
+        ->name('listado.index');
 
-        /*RUTAS PARA LA VISTA SALUD DEL ADMINISTRADOR*/
+    /*RUTAS PARA LA VISTA SALUD DEL ADMINISTRADOR*/
         Route::get('/salud', 'paginaPrincipal_controller@salud')
             ->name('salud.salu');
         Route::get('/saludAdmin', 'paginaPrincipal_controller@saludAdmin')
@@ -48,7 +48,9 @@ Route::group(["middleware" => "auth"], function () {
         //RUTA QUE DIRIGE A LAS ESTADISTICAS//
         Route::get('/estadisticas', 'EstadisticaController@index')
             ->name('estadisticas.admin');
-
+        //RUTA QUE DIRIGE A LA VISTA DE ACTIVIDADES//
+        Route::get('/actividades', 'ActividadController@activities')
+            ->name('actividades.admin');
 
         //NUEVAS RUTAS DEL FORMULARIO HUESPED
 
@@ -77,7 +79,6 @@ Route::group(["middleware" => "auth"], function () {
             ->name('huesped.mostrar')
             ->where('id', '[0-9]+');
 
-
         /*NUEVASSSS*/
         /*  RUTAS PARA EL LISTADO EMPLEADOS ADMINISTRADOR*/
         /*Ruta para el forulario del personal*/
@@ -88,8 +89,8 @@ Route::group(["middleware" => "auth"], function () {
             ->name('listadoEmpleado.index');
 
 
-    });
 
+    });
 
 //Aqui van todas las rutas de director
 //Ruta para acceso del direcctor//
@@ -113,12 +114,6 @@ Route::group(["middleware" => "auth"], function () {
     //Ruta de las estadisticas del director//
     Route::get('/estadisticasDirec', 'EstadisticaDirectorController@index')
         ->name('estadisticas.direc');
-
-    /*RUTAS NUEVAS EMPLEADOS DIRECTOR*/
-
-    /*  Rutas para el listado del personal*/
-    Route::get('/empleados/listadoDirector', 'EmpleadoController@ListaEdirector')
-        ->name('listadoEmpleadoDirector.ListaEdirector');
 });
 
 Route::get('/passwordreset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name("password.request1");
