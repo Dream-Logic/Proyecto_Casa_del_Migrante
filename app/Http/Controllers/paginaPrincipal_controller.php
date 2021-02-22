@@ -17,6 +17,13 @@ class paginaPrincipal_controller extends Controller
         //
         return view('hola');
     }
+    public function calendario()
+
+    {
+        //
+        return view('views\calendario\evento');
+    }
+
 
     public function index()
     {

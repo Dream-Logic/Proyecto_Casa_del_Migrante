@@ -88,6 +88,10 @@ Route::group(['middleware' => 'admin'], function () {
         Route::get('/empleados/listado', 'EmpleadoController@index')
             ->name('listadoEmpleado.index');
 
+    /*  Rutas para el Calendario de eventos*/
+    Route::get('Evento/index','ControllerEvent@index');
+    Route::get('Evento/index/{month}','ControllerEvent@index_month');
+
 
 
     });
@@ -120,5 +124,4 @@ Route::get('/passwordreset', 'Auth\ForgotPasswordController@showLinkRequestForm'
 Route::post('/passwordemail', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name("password.email1");
 Route::get('/passwordreset{token}', 'Auth\ResetPasswordController@showResetForm')->name("password.reset1");
 Route::post('/passwordreset', 'Auth\ResetPasswordController@reset');
-
 
