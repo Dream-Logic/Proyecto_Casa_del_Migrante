@@ -72,10 +72,7 @@
     <!-- Footer -->
 <footer class="page-footer font-small blue pt-4">
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">
-    Developed by Artyom from
-    <a href="https://www.tutofox.com/">  < tutofox/></a>
-  </div>
+
   <!-- Copyright -->
 </footer>
 <!-- Footer -->
