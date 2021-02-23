@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Actividades Administrador</title>
     <link rel="stylesheet" type="text/css" href="styles/responsive.css">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -107,7 +108,7 @@
             <a>
                 <h2>Actividad #1</h2>
                 <p>Clases de Escritura</p>
-                <img src="images/galeria/casa10.jpg" width="50px">
+                <img src="images/bienvenido/galeria/casa7.jpg" width="50px" height="50" align="right">
             </a>
         </li>
         <li>
