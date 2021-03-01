@@ -20,15 +20,9 @@
         <a class="navbar-brand text-warning" href="#">LISTADO DE NIÑOS ENFERMOS</a>
     <form class="form-inline my-2 my-lg-0 ml-auto">
 
-        <div class="">
-            <label class="card-title">Buscar por tipo</label>
-        </div>
-        <select name="tipo" class="form-control mr-sm-2" id="exampleFormControlSelect1">
-            <option>nombres</option>
-            <option>apellidos</option>
-            <option>direccion</option>
-            <option>identidad</option>
-        </select>
+
+        <input class="form-control mr-sm-2" name="name"
+               type="search" aria-label="Search" placeholder="Buscar">
         <button class="btn btn-success" type="submit">
             <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
         </button>

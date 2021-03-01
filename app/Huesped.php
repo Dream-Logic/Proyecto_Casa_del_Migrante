@@ -32,14 +32,15 @@ class Huesped extends Model
 
 
 
-    //public  function scopeSearch($query, $nombres){
-      //  return( $query->where('nombres', 'LIKE', "%$nombres%" ));
 
-    public function scopeBuscarpor($query, $tipo, $buscar) {
-        if ( ($tipo) && ($buscar) ) {
-            return $query->where($tipo,'like',"%$buscar%");
+    Public function scopeName($query , $name)
+    {
+
+        if (trim($name) != "") {
+
+
+            $query->where(\DB::raw("CONCAT(nombres, '' , apellidos, identidad, direccion)"),
+                'LIKE', "%$name%");
         }
-
-
     }
 }

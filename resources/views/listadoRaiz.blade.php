@@ -23,16 +23,9 @@
         </a>
     </div>
     <form class="form-inline my-2  my-lg-0 ml-auto">
-        <div class="mx-4">
-            <label class="card-title">Buscar por tipo</label>
-        </div>
-        <select name="tipo" class="form-control mr-sm-2" id="exampleFormControlSelect1">
-            <option>nombres</option>
-            <option>apellidos</option>
-            <option>direccion</option>
-            <option>identidad</option>
-        </select>
-        <input class="form-control mr-sm-2" name="buscarpor" type="search" placeholder="Buscar" aria-label="Search">
+
+        <input class="form-control mr-sm-2 " name="name"
+               type="search" placeholder="Buscar" aria-label="Search">
         <button class="btn btn-success" type="submit">
             <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
         </button>
@@ -101,6 +94,7 @@
     {{ $listados->links()}}
     <script src="/js/jquery-3.2.1.min.js"></script>
     <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/main.js"></script>
     <script src="styles/bootstrap4/popper.js"></script>
     <script src="styles/bootstrap4/bootstrap.min.js"></script>
     <script src="plugins/greensock/TweenMax.min.js"></script>

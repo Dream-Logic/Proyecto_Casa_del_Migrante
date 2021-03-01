@@ -46,15 +46,8 @@ class paginaPrincipal_controller extends Controller
     {
 
 
+        $listados = Huesped::name($request->get('name'))->orderBy('id', 'DESC')->paginate(5);
 
-        //$listados = Proyecto::paginate(10);
-
-        //$listados = Huesped::search($request->nombres)->paginate(5);
-
-        $buscar = $request->get('buscarpor');
-
-        $tipo = $request->get('tipo');
-        $listados = Huesped::buscarpor($tipo, $buscar)->paginate(5);
         return view('salud')->with('listados', $listados);
 
     }
@@ -65,17 +58,9 @@ class paginaPrincipal_controller extends Controller
     {
 
 
-        //$listados = Proyecto::paginate(10);
+        $listados = Huesped::name($request->get('name'))->orderBy('id', 'DESC')->paginate(5);
 
-        //$listados = Huesped::search($request->nombres)->paginate(5);
-
-        $buscar = $request->get('buscarpor');
-
-        $tipo = $request->get('tipo');
-
-        $listados = Huesped::buscarpor($tipo, $buscar)->paginate(5);
-
-        return view('SaludDirect')->with( 'listados', $listados);
+        return view('SaludDirect')->with('listados', $listados);
 
 
     }
