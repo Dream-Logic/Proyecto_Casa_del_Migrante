@@ -25,8 +25,8 @@
         <div class="hero_slide">
             <div class="hero_slide_background" ></div>
             <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
-                <div class="hero_slide_content text-center" style="height:400px ">
-                    <h6 style="color: white; font-size: 25px">Bienvenido Director a:</h6><p style="font-size: 70px; color: #f8f9fb"> Proyecto   Casa Del  Migrante</p>
+                <div class="hero_slide_content text-center" style="height:600px ">
+                    <n1 style="color: white; font-size: 25px">Bienvenido Director a:</n1><p style="font-size: 25px; color: #f8f9fb"> Proyecto   Casa Del  Migrante</p>
                 </div>
             </div>
         </div>
@@ -37,7 +37,7 @@
                 <div class="row">
                     <div class="col-lg-3 hero_box_col col-lg-auto" >
                         <a href="{{route('listado.director')}}" >
-                            <div class="hero_box d-flex  align-items-center justify-content-start ">
+                            <div class="hero_box d-flex  align-items-center justify-content-start">
                                 <img src="images/lista1.svg"  class="svg" alt="">
                                 <div class="hero_box_content">
                                     <h6 class="hero_box_title">Listado de Huespedes</h6>
@@ -68,6 +68,46 @@
                                         <h6 class="hero_box_title">Salud</h6>
                                         <a href="{{route('saludDire.salu')}}" class="hero_box_link">Ver</a>
                                     </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="hero_boxes_inner">
+                    <div class="container">
+                        <div class="row">
+                    <div class="col-lg-3 hero_box_col">
+                        <br>
+                        <a href="{{route('listadoEmpleado.index')}}" >
+                            <div class="hero_box d-flex flex-row align-items-center justify-content-start">
+                                <img src="images/personal.svg" class="svg" alt="">
+                                <div class="hero_box_content">
+                                    <h6 class="hero_box_title">Listado de Personal</h6>
+                                    <a href="{{route('listadoEmpleado.index')}}" class="hero_box_link">Ver</a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 hero_box_col">
+                        <br>
+                        <a href="{{ route('actividades.admin')}}" >
+                            <div class="hero_box d-flex flex-row align-items-center justify-content-start col offset-4">
+                                <img src="images/actividades.svg" class="svg" alt="">
+                                <div class="hero_box_content">
+                                    <h6 class="hero_box_title">Actividades</h6>
+                                    <a href="{{ route('actividades.admin')}}" class="hero_box_link">Ver</a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 hero_box_col">
+                        <br>
+                        <a href="{{ asset('/Evento/index/') }}">
+                            <div class="hero_box d-flex flex-row align-items-center justify-content-start col offset-8">
+                                <img src="images/calendario.svg" class="svg" alt="">
+                                <div class="hero_box_content">
+                                    <h6 class="hero_box_title">Calendario</h6>
+                                    <a href="{{ asset('/Evento/index/') }}" class="hero_box_link">Ver</a>
                                 </div>
                             </div>
                         </a>

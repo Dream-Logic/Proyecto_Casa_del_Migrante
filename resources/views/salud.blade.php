@@ -20,7 +20,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
 
-        <a class="navbar-brand text-warning" href="#">LISTADO DE NIÑOS ENFERMOS</a>
+        <a class="navbar-brand text-black" href="#">LISTADO DE NIÑOS ENFERMOS</a>
         <form class="form-inline my-2 my-lg-0 ml-auto">
             <input class="form-control mr-sm-2" name="name" type="search" aria-label="Search" placeholder="Buscar">
             <button class="btn btn-success" type="submit">
@@ -31,12 +31,18 @@
     <table class="table" >
         <thead>
         <tr class="w3-hover-green">
-            <th class="bg-dark text-white" style="font-family: 'Times New Roman'" scope="col">Id</th>
-            <th class="bg-dark text-white"style="font-family: 'Times New Roman'"  scope="col">Nombres</th>
-            <th class="bg-dark text-white" style="font-family: 'Times New Roman'"  scope="col">Apellidos</th>
-            <th class="bg-dark text-white"style="font-family: 'Times New Roman'"   scope="col">Enfermedad</th>
-            <th class="bg-dark text-white" style="font-family: 'Times New Roman'"  scope="col">Tratamiento</th>
-            <th class="bg-dark text-white"style="font-family: 'Times New Roman'"   scope="col">Acciones</th>
+            <th class="bg-dark text-white" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
+    box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);" scope="col">Id</th>
+            <th class="bg-dark text-white"style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
+    box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);" scope="col">Nombres</th>
+            <th class="bg-dark text-white" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
+    box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);"  scope="col">Apellidos</th>
+            <th class="bg-dark text-white"style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
+    box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);"  scope="col">Enfermedad</th>
+            <th class="bg-dark text-white"style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
+    box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);"  scope="col">Tratamiento</th>
+            <th class="bg-dark text-white"style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
+    box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);"  scope="col">Acciones</th>
 
         </tr>
 
