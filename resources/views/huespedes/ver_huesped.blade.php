@@ -14,17 +14,15 @@
             </ul>
         </div>
     @endif
-
-    <div class="card-header">
-        <label class="card-title"  style="color: black;"> Detalles de {{$huesped->nombres}}</label>
-        <input class="  btn btn-warning" width="25" type="button" value="Imprimir" onclick="window.print()"
-               style="margin-left: 850px">
-    </div>
+        <label class="card-title" style="color: black; height: 75px">Detalles de {{$huesped->nombres}} {{$huesped->apellidos}} </label>
+        <input  class="btn btn-warning "  width="25" type="button" value="Imprimir" onclick="window.print()"
+               style="margin-left: 850px" >
+    <img src="/imagenes/iconos_formulario/imprimir.svg" class="svg"  style="margin-left: 1010px;border: 25px;height: 40px ;margin-top: -176px" >
     <center>
         <div class="col-5" ><br>
             <div class="row" >
                 <div class="form-group {{ $errors->has('imagen') ? ' has-error' : '' }}"style="width: 90%">
-                    <img width="200px"  id="previewImagen" style="max-height:250px"
+                    <img width="200px"  id="previewImagen" style="max-height:200px"
                          src="{{"/foto/".$huesped->imagen}}"
                          />
 
@@ -46,10 +44,11 @@
     </center>
     <div class="ver">
         <table class="table">
-            <thead class="mx-4" style="background-color: #8ab4f8">
+            <thead class="mx-4" style="background-color: #90bf23">
             <tr class="mx-4">
-                <th scope="col"><h6>Campo</h6></th>
-                <th scope="col"><h6>Valor</h6></th>
+                <th scope="col"><h6>Datos personales del huesped</h6></th>
+                <th scope="col"><h6></h6></th>
+
             </tr>
             </thead>
             <tbody>
