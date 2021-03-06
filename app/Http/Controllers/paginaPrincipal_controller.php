@@ -23,7 +23,12 @@ class paginaPrincipal_controller extends Controller
         //
         return view('views\calendario\evento');
     }
+    public function formPersonal()
 
+    {
+        //
+        return view('views\form\evento');
+    }
 
     public function index()
     {
@@ -64,5 +69,6 @@ class paginaPrincipal_controller extends Controller
 
 
     }
+
 
 }
