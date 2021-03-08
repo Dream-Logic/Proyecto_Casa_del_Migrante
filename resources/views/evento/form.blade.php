@@ -13,7 +13,7 @@
         <img src="/imagenes/iconos/restaurar.svg" class="svg" width="25">
     </a>
     <div class="card" >
-        <div class="card-header" style="background-color: #ccde2e">
+        <div class="card-header" style="background-color: #759d3d">
             <label class="card-title" style="color: black;">Registro del evento</label>
         </div>
         @if ($errors->any())
