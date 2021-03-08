@@ -9,8 +9,11 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
     <body>
+    <a href="{{url('/proyectos/listado')}}" class="btn btn-warning">
+        <img src="/imagenes/iconos/restaurar.svg" class="svg" width="25">
+    </a>
     <div class="card" >
-        <div class="card-header" style="background-color: #debb2e">
+        <div class="card-header" style="background-color: #ccde2e">
             <label class="card-title" style="color: black;">Registro del evento</label>
         </div>
         @if ($errors->any())
