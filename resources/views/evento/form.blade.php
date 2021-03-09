@@ -35,7 +35,9 @@
 <div class="container">
     <div style="height:50px"></div>
     <p class="lead">
-
+        <a href="{{ asset('/Evento/index') }}" class="btn btn-warning">
+            <img src="/imagenes/iconos/restaurar.svg" class="svg" width="25">
+        </a>
             <div class="card-header" style="background-color: #ccde2e">
                 <label class="card-title" style="color: black;">Registro del evento</label>
             </div>
@@ -91,9 +93,6 @@
                         </span></div>
             <br>
             <input type="submit" class="btn btn-info" value="Guardar">
-            <a href="{{ asset('/Evento/index') }}" class="btn btn-warning">
-                <img src="/imagenes/iconos/restaurar.svg" class="svg" width="25">
-            </a>
             <br>
         </form>
     </div>
