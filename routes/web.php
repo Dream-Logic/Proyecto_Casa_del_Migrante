@@ -92,7 +92,11 @@ Route::group(['middleware' => 'admin'], function () {
     Route::get('Evento/index','ControllerEvent@index');
     Route::get('Evento/index/{month}','ControllerEvent@index_month');
 
-
+    // formulario
+Route::get('Evento/form','ControllerEvent@form');
+Route::post('Evento/create','ControllerEvent@create');
+// Detalles de evento
+Route::get('Evento/details/{id}','ControllerEvent@details');
 
     });
 

@@ -45,7 +45,7 @@
     <a class="btn btn-default"  href="{{ asset('/Evento/form') }}">Crear un evento
         <img src="/images\eventocalendario.svg" class="svg" width="40" ></a>
 </div>
-
+        <a class="btn btn-success btn-warning" href="{{route('index.index')}}">Regresar</a>
 <hr>
 
 

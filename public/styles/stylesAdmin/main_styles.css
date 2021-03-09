@@ -798,6 +798,9 @@ mas grande y pequeño el cuadro negro
 	cursor: pointer;
 
 }
+/*********************************
+al pasar el cursor cambiar color
+*********************************/
 .hero_box:hover
 {
 	background: #ffb606;
@@ -808,6 +811,9 @@ mas grande y pequeño el cuadro negro
 	height: auto;
 	margin-top: -6px;
 }
+/*********************************
+iconos del mismo color
+*********************************/
 .svg path
 {
 	fill: #ffb606

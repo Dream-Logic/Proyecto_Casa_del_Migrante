@@ -35,31 +35,38 @@
 
     <div class="container">
       <div style="height:50px"></div>
-      <h1>< tutofox /> <small>Oh my code!</small></h1>
-      <p class="lead">
-      <h3>Evento</h3>
-      <p>Detalles de evento</p>
-      <a class="btn btn-default"  href="{{ asset('/Evento/index') }}">Atras</a>
-      <hr>
 
+      <p class="lead">
+        <div class="card-header" style="background-color: #ccde2e">
+            <label class="card-title" style="color: black;">Detalle del evento</label>
+        </div>
+
+      <hr>
 
 
       <div class="col-md-6">
         <form action="{{ asset('/Evento/create/') }}" method="post">
+
           <div class="fomr-group">
-            <h4>Titulo</h4>
+
+            <h4><strong>Título</strong></h4>
             {{ $event->titulo }}
           </div>
+
           <div class="fomr-group">
-            <h4>Descripcion del Evento</h4>
+            <h4><strong>Descripción del Evento</strong></h4>
             {{ $event->descripcion }}
           </div>
           <div class="fomr-group">
-            <h4>Fecha</h4>
+            <h4><strong>Fecha</strong></h4>
             {{ $event->fecha }}
           </div>
           <br>
-          <input type="submit" class="btn btn-info" value="Guardar">
+            <!-- <input type="submit" class="btn btn-info" value="Guardar"> -->
+
+            <a href="{{ asset('/Evento/index') }}" class="btn btn-warning">
+                <img src="/imagenes/iconos/restaurar.svg" class="svg" width="25">
+            </a>
         </form>
       </div>
 
