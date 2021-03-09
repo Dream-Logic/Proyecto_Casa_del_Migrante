@@ -74,7 +74,7 @@
                                     <strong>Fichas de Ingreso</strong>
                                 </a>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="{{route('hola.hola')}}">Huésped</a>
+                                    <a class="dropdown-item" href="{{route('huesped.nuevo')}}">Huésped</a>
                                     <a class="dropdown-item" href="{{ route('personal.personal') }}">Personal</a>
                                 </div>
                             </li>
@@ -85,10 +85,10 @@
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="{{route('listado.index')}}">Huésped</a>
                                     <a class="dropdown-item" href="{{ route('listadoEmpleado.index') }}">Personal</a>
+                                    <a class="dropdown-item" href="{{ route('salud.salu') }}" class="nav-link">Salud</a>
                                 </div>
                             </li>
                             <li><a href="{{ route('estadisticas.admin')}}" class="nav-link"><strong>Estadísticas</strong></a></li>
-                            <li><a href="{{ route('salud.salu') }}" class="nav-link"><strong>Salud</strong></a></li>
 
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"

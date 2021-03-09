@@ -29,8 +29,6 @@ Route::group(["middleware" => "auth"], function () {
         Route::get('/principal', 'paginaPrincipal_controller@index')
             ->name('index.index');
         /*RUTAS QUE DIRIGE A LOS FORMULARIOS*/
-        Route::get('/principalformulario', 'paginaPrincipal_controller@principalformulario')
-            ->name('hola.hola');
         Route::get('/Btn_atras', 'paginaPrincipal_controller@atras')
             ->name('atras.regre');
         Route::get('/Btn_regresar', 'paginaPrincipal_controller@regreso')
