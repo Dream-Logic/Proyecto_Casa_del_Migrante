@@ -49,7 +49,6 @@
                             <li><a href="#home-section" class="nav-link">Inicio</a></li>
                             <li><a href="#about-section" class="nav-link">Acerca de</a></li>
                             <li><a href="#services-section" class="nav-link">Servicios</a></li>
-                            <li><a href="#blog-section" class="nav-link">Galeria</a></li>
                             <li><a href="#contact-section" class="nav-link">Contáctanos</a></li>
                         </ul>
                     </nav>
@@ -196,63 +195,7 @@
             </div>
         </div>
     </section>
-    <section class="site-section" id="blog-section">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-12 text-center" data-aos="fade">
-                    <h6 class="section-title mb-3">Nuestra Galeria</h6>
-                </div>
-            </div>
 
-            <div class="row">
-                <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="h-entry">
-                        <a href="single.html"><img src="images/bienvenido/galeria/1.jpg" alt="Image" class="img-fluid"></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="h-entry">
-                        <a href="single.html"><img src="images/bienvenido/galeria/casa1.jpg" alt="Image" class="img-fluid"></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="h-entry">
-                        <a href="single.html"><img src="images/bienvenido/galeria/casa8.jpg" alt="Image" class="img-fluid"></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="h-entry">
-                        <a href="single.html"><img src="images/bienvenido/galeria/casa4.jpg" alt="Image" class="img-fluid"></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="h-entry">
-                        <a href="single.html"><img src="images/bienvenido/galeria/2.jpg" alt="Image" class="img-fluid"></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="h-entry">
-                        <a href="single.html"><img src="images/bienvenido/galeria/casa7.jpg" alt="Image" class="img-fluid"></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="210">
-                    <div class="h-entry">
-                        <a href="single.html"><img src="images/bienvenido/galeria/casa10.jpg" alt="Image" class="img-fluid"></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="h-entry">
-                        <a href="single.html"><img src="images/bienvenido/galeria/casa11.jpg" alt="Image" class="img-fluid"></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="h-entry">
-                        <a href="single.html"><img src="images/bienvenido/galeria/casa12.jpg" alt="Image" class="img-fluid"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <section class="site-section bg-light" id="contact-section" data-aos="fade">
         <div class="container">
             <div class="row mb-5">
