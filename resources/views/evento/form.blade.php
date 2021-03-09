@@ -58,6 +58,7 @@
                         <label for="fecha" style="color: #000000">Fecha</label><br>
                         <input type="date" class="form-control" name="fecha"
                                id="fecha"><br>
+
                     </div>
 
                 <div class="col-11">
@@ -68,9 +69,8 @@
                                placeholder="Descripción del evento"></textarea>
                         </span></div>
                 <br>
-                <div class="botones">
-                    <button type="submit" class="btn btn-sm btn-success"><i class="fas fa-save"></i> Guardar</button>
-                </div>
+                <input type="submit" class="btn btn-info" value="Guardar">
+            </div>
                 <br>
             </div>
 
