@@ -22,12 +22,11 @@ class HuespedController extends Controller
     {
 
 
-       //dd($request->get('name'));
+        //dd($request->get('name'));
 
-      $listados = Huesped::name($request->get('name'))->orderBy('id', 'DESC')->paginate(5);
+        $listados = Huesped::name($request->get('name'))->orderBy('id', 'DESC')->paginate(5);
 
         return view('listadoRaiz')->with('listados', $listados);
-
 
 
     }
@@ -38,7 +37,7 @@ class HuespedController extends Controller
 
         $listados = Huesped::name($request->get('name'))->orderBy('id', 'DESC')->paginate(5);
 
-        return view('listadoRaiz')->with('listados', $listados);
+        return view('listadoRaizDirector')->with('listados', $listados);
 
 
     }
@@ -78,65 +77,65 @@ class HuespedController extends Controller
             } else {
                 $imagen = "masculino.png";
             }
-        //select de la fichas ninios
-        $request->piel;
-        $request->sexo;
-        $request->cabello;
-        $request->ojos;
+            //select de la fichas ninios
+            $request->piel;
+            $request->sexo;
+            $request->cabello;
+            $request->ojos;
 
-        //VALIDAR
-        $request->validate([
-            'nombres' => 'required',
-            'apellidos' => 'required',
-            'fnacimiento' => 'required',
-            'edad' => 'required',
-            'ingreso'=>'required',
-            'egreso'=>'nullable',
-            'sexo' => 'required',
-            'cabello' => 'required',
-            'ojos' => 'required',
-            'piel' => 'required',
-            'identidad' => 'required',
-            'nacionalidad' => 'required',
-            'pasaporte' => 'nullable',
-            'nacimiento' => 'required',
-            'direccion' => 'required',
-            'gradoEscolar' => 'required',
-            'signosFisicos' => 'required',
-            'enfermedad' => 'nullable',
-            'tratamiento' => 'nullable']);
+            //VALIDAR
+            $request->validate([
+                'nombres' => 'required',
+                'apellidos' => 'required',
+                'fnacimiento' => 'required',
+                'edad' => 'required',
+                'ingreso' => 'required',
+                'egreso' => 'nullable',
+                'sexo' => 'required',
+                'cabello' => 'required',
+                'ojos' => 'required',
+                'piel' => 'required',
+                'identidad' => 'required',
+                'nacionalidad' => 'required',
+                'pasaporte' => 'nullable',
+                'nacimiento' => 'required',
+                'direccion' => 'required',
+                'gradoEscolar' => 'required',
+                'signosFisicos' => 'required',
+                'enfermedad' => 'nullable',
+                'tratamiento' => 'nullable']);
 
-        $newHuesped = new Huesped();
+            $newHuesped = new Huesped();
 
-        //Datos Obtenidos del Formulario
-        $newHuesped->nombres = $request->input('nombres');
-        $newHuesped->apellidos = $request->input('apellidos');
-        $newHuesped->fnacimiento = $request->input('fnacimiento');
-        $newHuesped->edad = $request->input('edad');
-        $newHuesped->ingreso = $request->input('ingreso');
-        $newHuesped->egreso = $request->input('egreso');
-        $newHuesped->sexo = $request->input('sexo');
-        $newHuesped->cabello = $request->input('cabello');
-        $newHuesped->ojos = $request->input('ojos');
-        $newHuesped->piel = $request->input('piel');
-        $newHuesped->identidad = $request->input('identidad');
-        $newHuesped->nacionalidad = $request->input('nacionalidad');
-        $newHuesped->pasaporte = $request->input('pasaporte');
-        $newHuesped->nacimiento = $request->input('nacimiento');
-        $newHuesped->direccion = $request->input('direccion');
-        $newHuesped->gradoEscolar= $request->input('gradoEscolar');
-        $newHuesped->signosFisicos = $request->input('signosFisicos');
-        $newHuesped->enfermedad = $request->input('enfermedad');
+            //Datos Obtenidos del Formulario
+            $newHuesped->nombres = $request->input('nombres');
+            $newHuesped->apellidos = $request->input('apellidos');
+            $newHuesped->fnacimiento = $request->input('fnacimiento');
+            $newHuesped->edad = $request->input('edad');
+            $newHuesped->ingreso = $request->input('ingreso');
+            $newHuesped->egreso = $request->input('egreso');
+            $newHuesped->sexo = $request->input('sexo');
+            $newHuesped->cabello = $request->input('cabello');
+            $newHuesped->ojos = $request->input('ojos');
+            $newHuesped->piel = $request->input('piel');
+            $newHuesped->identidad = $request->input('identidad');
+            $newHuesped->nacionalidad = $request->input('nacionalidad');
+            $newHuesped->pasaporte = $request->input('pasaporte');
+            $newHuesped->nacimiento = $request->input('nacimiento');
+            $newHuesped->direccion = $request->input('direccion');
+            $newHuesped->gradoEscolar = $request->input('gradoEscolar');
+            $newHuesped->signosFisicos = $request->input('signosFisicos');
+            $newHuesped->enfermedad = $request->input('enfermedad');
             $newHuesped->imagen = $imagen;
             $newHuesped->tratamiento = $request->input('tratamiento');
-        $newHuesped->id_usuario = Auth::user()->getUserId();
-        $newHuesped->save();
-        //todo retornar la vista del formulario crear responsable
+            $newHuesped->id_usuario = Auth::user()->getUserId();
+            $newHuesped->save();
+            //todo retornar la vista del formulario crear responsable
 
-        return redirect()->route("responsable.nuevo", ["id" => $newHuesped->id])
-            ->with("exito", "Se creo el huesped exitosamente");
+            return redirect()->route("responsable.nuevo", ["id" => $newHuesped->id])
+                ->with("exito", "Se creo el huesped exitosamente");
 
-        }else {
+        } else {
             $exploded = explode(',', $request->foto);
             $decode = base64_decode($exploded[0]);
             if (str_contains($exploded[0], 'jpeg'))
@@ -157,8 +156,8 @@ class HuespedController extends Controller
                 'apellidos' => 'required',
                 'fnacimiento' => 'required',
                 'edad' => 'required',
-                'ingreso'=>'required',
-                'egreso'=>'nullable',
+                'ingreso' => 'required',
+                'egreso' => 'nullable',
                 'sexo' => 'required',
                 'cabello' => 'required',
                 'ojos' => 'required',
@@ -168,7 +167,7 @@ class HuespedController extends Controller
                 'pasaporte' => 'nullable',
                 'nacimiento' => 'required',
                 'direccion' => 'required',
-                'gradoEscolar'=> 'required',
+                'gradoEscolar' => 'required',
                 'signosFisicos' => 'required',
                 'enfermedad' => 'nullable',
                 'tratamiento' => 'nullable']);
@@ -180,8 +179,8 @@ class HuespedController extends Controller
             $newHuesped->apellidos = $request->input('apellidos');
             $newHuesped->fnacimiento = $request->input('fnacimiento');
             $newHuesped->edad = $request->input('edad');
-            $newHuesped->ingreso =$request->input('ingreso');
-            $newHuesped->egreso =$request->input('egreso');
+            $newHuesped->ingreso = $request->input('ingreso');
+            $newHuesped->egreso = $request->input('egreso');
             $newHuesped->sexo = $request->input('sexo');
             $newHuesped->cabello = $request->input('cabello');
             $newHuesped->ojos = $request->input('ojos');
@@ -202,7 +201,7 @@ class HuespedController extends Controller
 
             return redirect()->route("responsable.nuevo", ["id" => $newHuesped->id])
                 ->with("exito", "Se creo el huesped exitosamente");
-    }
+        }
     }
 
 
@@ -269,8 +268,8 @@ class HuespedController extends Controller
                 'apellidos' => 'required',
                 'fnacimiento' => 'required',
                 'edad' => 'required',
-                'ingreso'=> 'nullable',
-                'egreso'=> 'nullable',
+                'ingreso' => 'nullable',
+                'egreso' => 'nullable',
                 'sexo' => 'required',
                 'cabello' => 'required',
                 'ojos' => 'required',
@@ -280,7 +279,7 @@ class HuespedController extends Controller
                 'pasaporte' => 'nullable',
                 'nacimiento' => 'required',
                 'direccion' => 'required',
-                'gradoEscolar'=> 'required',
+                'gradoEscolar' => 'required',
                 'signosFisicos' => 'required',
                 'enfermedad' => 'nullable',
                 'tratamiento' => 'nullable',]);
@@ -293,8 +292,8 @@ class HuespedController extends Controller
             $huesped->apellidos = $request->input('apellidos');
             $huesped->fnacimiento = $request->input('fnacimiento');
             $huesped->edad = $request->input('edad');
-            $huesped->ingreso =$request->input('ingreso');
-            $huesped->egreso =$request->input('egreso');
+            $huesped->ingreso = $request->input('ingreso');
+            $huesped->egreso = $request->input('egreso');
             $huesped->sexo = $request->input('sexo');
             $huesped->cabello = $request->input('cabello');
             $huesped->ojos = $request->input('ojos');
@@ -316,7 +315,7 @@ class HuespedController extends Controller
             return redirect()->route("listado.index")
                 ->with("exito", "Se edito correctamente el huesped");
 
-        }else {
+        } else {
             $exploded = explode(',', $request->foto);
             $decode = base64_decode($exploded[0]);
             if (str_contains($exploded[0], 'jpeg'))
@@ -339,8 +338,8 @@ class HuespedController extends Controller
                 'apellidos' => 'required',
                 'fnacimiento' => 'required',
                 'edad' => 'required',
-                'ingreso'=> 'required',
-                'egreso'=> 'nullable',
+                'ingreso' => 'required',
+                'egreso' => 'nullable',
                 'sexo' => 'required',
                 'cabello' => 'required',
                 'ojos' => 'required',
@@ -350,7 +349,7 @@ class HuespedController extends Controller
                 'pasaporte' => 'nullable',
                 'nacimiento' => 'required',
                 'direccion' => 'required',
-                'gradoEscolar'=>'required',
+                'gradoEscolar' => 'required',
                 'signosFisicos' => 'required',
                 'enfermedad' => 'nullable',
                 'tratamiento' => 'nullable',]);
@@ -363,8 +362,8 @@ class HuespedController extends Controller
             $huesped->apellidos = $request->input('apellidos');
             $huesped->fnacimiento = $request->input('fnacimiento');
             $huesped->edad = $request->input('edad');
-            $huesped->ingreso =$request->input('ingreso');
-            $huesped->egreso =$request->input('egreso');
+            $huesped->ingreso = $request->input('ingreso');
+            $huesped->egreso = $request->input('egreso');
             $huesped->sexo = $request->input('sexo');
             $huesped->cabello = $request->input('cabello');
             $huesped->ojos = $request->input('ojos');
@@ -386,7 +385,7 @@ class HuespedController extends Controller
 
             return redirect()->route("listado.index")
                 ->with("exito", "Se edito correctamente el huesped");
-    }
+        }
     }
 
     /**

@@ -77,12 +77,12 @@
                         <div class="row">
                     <div class="col-lg-3 hero_box_col">
                         <br>
-                        <a href="{{route('listadoEmpleado.index')}}" >
+                        <a href="{{route('listaEmpleado.director')}}" >
                             <div class="hero_box d-flex flex-row align-items-center justify-content-start">
                                 <img src="images/personal.svg" class="svg" alt="">
                                 <div class="hero_box_content">
                                     <h6 class="hero_box_title">Listado de Personal</h6>
-                                    <a href="{{route('listadoEmpleado.index')}}" class="hero_box_link">Ver</a>
+                                    <a href="{{route('listaEmpleado.director')}}" class="hero_box_link">Ver</a>
                                 </div>
                             </div>
                         </a>

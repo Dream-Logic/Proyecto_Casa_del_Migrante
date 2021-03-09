@@ -1,6 +1,5 @@
 @extends ('PlantillaMadre.Plantilla_menu_director')
-
-@section('titulo', 'Listado Huéspedes Director')
+@section('titulo', 'Principal Director')
 @section('contenido')
 
     @if(session('mensaje'))
@@ -17,12 +16,11 @@
     </head>
     <div class="w3-container w3-teal mx-4" style="font-family: 'Raleway', sans-serif;">
         <br>
-        <h6 class="mt-3" style="font-size: 30px; color: black;"><b>Listado de Huéspedes</b></h6>
+        <h6 class="mt-3" style="font-size: 30px; color: black;"><b>Listado del Personal</b></h6>
     </div>
-    <br>
-    <form class="form-inline my-2 my-lg-0 ml-auto">
+    <form class="form-inline my-2  my-lg-0 ml-auto">
 
-        <input class="form-control mr-sm-2" name="name"  type="search" aria-label="Search" placeholder="Buscar">
+        <input class="form-control mr-sm-2" name="name" type="search" aria-label="Search" placeholder="Buscar">
         <button class="btn btn-success" type="submit">
             <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
         </button>
@@ -36,30 +34,31 @@
     box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);">
         <table class="table ruler-vertical table-hover mx-sm-0 table-bordered">
             <thead class="thead-dark">
-            <tr >
+            <tr>
                 <th scope="col">N°</th>
                 <th scope="col">Nombres</th>
                 <th scope="col">Apellidos</th>
-                <th scope="col">Identidad</th>
-                <th scope="col">Fecha de Nacimiento</th>
-                <th scope="col">Dirección</th>
-                <th scope="col">Fecha de Ingreso</th>
-                <th scope="col">Fecha de Egreso</th>
+                <th scope="col">Profesión u Oficio</th>
+                <th scope="col">Cargo</th>
+                <th scope="col">Email</th>
+                <th scope="col">Teléfono</th>
+
                 <th scope="col">Acciones</th>
+
+
             </tr>
             </thead>
             <tbody>
-            @forelse($listados as $huesped)
-                <tr >
-                    <th scope="row">{{ $huesped->id }}</th>
-                    <td>{{ $huesped->nombres}} </td>
-                    <td> {{ $huesped->apellidos }}</td>
-                    <td>{{ $huesped->identidad}}</td>
-                    <td>{{ $huesped->fnacimiento }}</td>
-                    <td>{{ $huesped->direccion}}</td>
-                    <td>{{ $huesped->ingreso}}</td>
-                    <td>{{ $huesped->egreso}}</td>
-                    <td><a class="btn btn-info" href="{{route('huesped.mostrar',['id' =>$huesped->id])}}">
+            @forelse($listas as $personal)
+                <tr>
+                    <th scope="row">{{ $personal->id }}</th>
+                    <td>{{ $personal->nombres_personal}} </td>
+                    <td> {{$personal->apellidos_personal}}</td>
+                    <td>{{ $personal->profesionPersonal}}</td>
+                    <td>{{ $personal->cargo}}</td>
+                    <td>{{ $personal->email}}</td>
+                    <td>{{ $personal->telefono_personal}}</td>
+                    <td><a class="btn btn-info" href="">
                             <img src="/imagenes/iconos/ver.svg" width="25">
                         </a>
                     </td>
@@ -75,7 +74,7 @@
 
 
         </table>
-        {{ $listados->links()}}
+        {{ $listas->links()}}
         <script src="/js/jquery-3.2.1.min.js"></script>
 @endsection
 

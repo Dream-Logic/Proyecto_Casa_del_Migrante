@@ -6,6 +6,7 @@ use App\Huesped;
 use App\PaginaPrincipal;
 use App\Proyecto;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class paginaPrincipal_controller extends Controller
 {
@@ -17,6 +18,7 @@ class paginaPrincipal_controller extends Controller
         //
         return view('hola');
     }
+
     public function calendario()
 
     {
@@ -44,26 +46,30 @@ class paginaPrincipal_controller extends Controller
         return view('director');
 
 
-
     }
 
     public function salud(Request $request)
     {
 
+        $enfermedad=$request->get("name");
 
-        $listados = Huesped::name($request->get('name'))->orderBy('id', 'DESC')->paginate(5);
+        $listados= Huesped::where(\DB::raw("CONCAT(nombres, '' , apellidos, identidad, direccion)"),'LIKE', "%$enfermedad%")
+            ->where("enfermedad", "!=", "")->Paginate(20);
 
-        return view('salud')->with('listados', $listados);
+
+
+          return view('salud')->with('listados', $listados);
 
     }
-
 
 
     public function SaDire(Request $request)
     {
 
 
-        $listados = Huesped::name($request->get('name'))->orderBy('id', 'DESC')->paginate(5);
+        $enfermedad=$request->get("name");
+
+        $listados= Huesped::where(\DB::raw("CONCAT(nombres, '' , apellidos, identidad, direccion)"), 'LIKE', "%$enfermedad%")->where("enfermedad", "!=", "")->Paginate(20);
 
         return view('SaludDirect')->with('listados', $listados);
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Empleado;
 use Illuminate\Http\Request;
 
 class EmpleadoController extends Controller
@@ -11,26 +12,33 @@ class EmpleadoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //
+       // $listas = Empleado::paginate(5);
+        $listas = Empleado::name($request->get('name'))->orderBy('id', 'DESC')->paginate(5);
 
-        return view('empleados\listadoRaiz_empleados');
+      return view('empleados\listadoRaiz_empleados')->with('listas', $listas);
+
     }
 
     public function Personal()
     {
 
-        return view('create_personal');
+        //return view('create_personal');
+        $listas = Empleado::paginate(10);
+
+        return view('create_personal')->with('listas', $listas);
+
 
     }
-
-    public function ListaEdirector()
-    {
-
-        return view('empleados\listadoRaizDirectorEmpleado');
-
+    public function director(Request $request){
+      //  $listas =Empleado::paginate(50);
+        $listas = Empleado::name($request->get('name'))->orderBy('id', 'DESC')->paginate(5);
+        return view('empleados\listadoEmpleado')->with('listas', $listas);
     }
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -51,7 +59,88 @@ class EmpleadoController extends Controller
     public function store(Request $request)
     {
         //
-    }
+
+        //select de la fichas ninios
+        $request->sexo_personal;
+
+
+        //VALIDAR
+        $request->validate([
+            'nombres_personal' => 'required',
+            'apellidos_personal' => 'required',
+            'fnacimiento_personal' => 'required',
+            'edad_personal' => 'required',
+            'sexo_personal' => 'required',
+            'identidad_personal' => 'required',
+            'direccion_personal' => 'required',
+            'profesionPersonal' => 'required',
+            'cargo' => 'required',
+            'email' => 'nullable',
+            'telefono_personal' => 'required']);
+
+        $newEmpleado = new Empleado();
+
+        //Datos Obtenidos del Formulario
+        $newEmpleado->nombres_personal = $request->input('nombres_personal');
+        $newEmpleado->apellidos_personal = $request->input('apellidos_personal');
+        $newEmpleado->fnacimiento_personal = $request->input('fnacimiento_personal');
+        $newEmpleado->edad_personal = $request->input('edad_personal');
+        $newEmpleado->sexo_personal = $request->input('sexo_personal');
+        $newEmpleado->identidad_personal = $request->input('identidad_personal');
+        $newEmpleado->direccion_personal = $request->input('direccion_personal');
+        $newEmpleado->profesionPersonal = $request->input('profesionPersonal');
+        $newEmpleado->cargo = $request->input('cargo');
+        $newEmpleado->email = $request->input('email');
+        $newEmpleado->telefono_personal = $request->input('telefono_personal');
+        $newEmpleado->save();
+        //todo retornar la vista del formulario crear responsable
+
+        return redirect()->route("listadoEmpleado.index", ["id" => $newEmpleado->id])
+            ->with("exito", "Se creo el huesped exitosamente");
+
+
+        //select de la fichas ninios
+        $request->sexo_personal;
+        //VALIDAR
+        $request->validate([
+            'nombres_personal' => 'required',
+            'apellidos_personal' => 'required',
+            'fnacimiento_personal' => 'required',
+            'edad_personal' => 'required',
+            'sexo_personal' => 'required',
+            'identidad_personal' => 'required',
+            'direccion_personal' => 'required',
+            'profesionPersonal' => 'required',
+            'cargo' => 'required',
+            'email' => 'nullable',
+            'telefono_personal' => 'required']);
+
+
+            $newEmpleado = new Empleado();
+
+            //Datos Obtenidos del Formulario
+            $newEmpleado->nombres_personal = $request->input('nombres_personal');
+            $newEmpleado->apellidos_personal = $request->input('apellidos_personal');
+            $newEmpleado->fnacimiento_personal = $request->input('fnacimiento_personal');
+            $newEmpleado->edad_personal = $request->input('edad_personal');
+            $newEmpleado->sexo_personal = $request->input('sexo_personal');
+            $newEmpleado->identidad_personal = $request->input('identidad_personal');
+            $newEmpleado->direccion_personal = $request->input('direccion_personal');
+            $newEmpleado->profesionPersonal = $request->input('profesionPersonal');
+            $newEmpleado->cargo = $request->input('cargo');
+            $newEmpleado->email = $request->input('email');
+            $newEmpleado->telefono_personal = $request->input('telefono_personal');
+            $newEmpleado->save();
+
+
+
+
+            //todo retornar la vista del formulario crear responsable
+
+            return redirect()->route("listadoEmpleado.index", ["id" => $newEmpleado->id])
+                ->with("exito", "Se creo el huesped exitosamente");
+        }
+
 
     /**
      * Display the specified resource.
@@ -62,6 +151,7 @@ class EmpleadoController extends Controller
     public function show($id)
     {
         //
+
     }
 
     /**
@@ -73,6 +163,10 @@ class EmpleadoController extends Controller
     public function edit($id)
     {
         //
+        $personal = Empleado::findOrFail($id);
+
+        return view('empleados\editarEmpleado')
+            ->with('personal', $personal);
     }
 
     /**
@@ -85,6 +179,42 @@ class EmpleadoController extends Controller
     public function update(Request $request, $id)
     {
         //
+        //select de la fichas ninios
+        $request->sexo_personal;
+
+
+        //VALIDAR
+        $request->validate([
+            'nombres_personal' => 'required',
+            'apellidos_personal' => 'required',
+            'fnacimiento_personal' => 'required',
+            'edad_personal' => 'required',
+            'sexo_personal' => 'required',
+            'identidad_personal' => 'required',
+            'direccion_personal' => 'required',
+            'profesionPersonal' => 'required',
+            'cargo' => 'required',
+            'email' => 'nullable',
+            'telefono_personal' => 'required']);
+
+        $personal = Empleado::findOrFail($id);
+
+
+        $personal->nombres_personal = $request->input('nombres_personal');
+        $personal->apellidos_personal = $request->input('apellidos_personal');
+        $personal->fnacimiento_personal = $request->input('fnacimiento_personal');
+        $personal->edad_personal = $request->input('edad_personal');
+        $personal->sexo_personal = $request->input('sexo_personal');
+        $personal->identidad_personal = $request->input('identidad_personal');
+        $personal->direccion_personal = $request->input('direccion_personal');
+        $personal->profesionPersonal = $request->input('profesionPersonal');
+        $personal->cargo = $request->input('cargo');
+        $personal->email = $request->input('email');
+        $personal->telefono_personal = $request->input('telefono_personal');
+        $personal->save();
+
+        return redirect()->route("listadoEmpleado.index")
+            ->with("exito", "Se edito correctamente el empleado");
     }
 
     /**
@@ -96,5 +226,11 @@ class EmpleadoController extends Controller
     public function destroy($id)
     {
         //
+
+        $personal = Empleado::findOrFail($id);
+        $personal->delete();
+
+        return redirect()->route('listadoEmpleado.index')
+            ->with('mensaje', 'El empleado y todos sus datos fueron borrados completamente');
     }
 }

@@ -28,7 +28,7 @@
             </button>
         </form>
     </nav>
-    <table class="table" >
+    <table class="table ruler-vertical table-hover mx-sm-0 table-bordered" >
         <thead>
         <tr class="w3-hover-green">
             <th class="bg-dark text-white" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);

@@ -9,7 +9,7 @@
     @endif
     <br>
     <br>
-    <br>
+
     <head>
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -19,20 +19,12 @@
         <h6 class="mt-3" style="font-size: 30px; color: black;"><b>Listado del Personal</b></h6>
     </div>
     <div class="unit-4 mx-4" style="float: right">
-        <a class="btn btn-outline-warning "href="{{route('personal.personal')}}">
-            <img src="/imagenes/iconos/agregarUsuario.svg" class="svg" width="25" >
+        <a class="btn btn-outline-warning " href="{{route('personal.personal')}}">
+            <img src="/imagenes/iconos/agregarUsuario.svg" class="svg" width="25">
         </a>
     </div>
     <form class="form-inline my-2  my-lg-0 ml-auto">
-        <div class="mx-4">
-            <label class="card-title">Buscar por tipo</label>
-        </div>
-        <select name="tipo" class="form-control mr-sm-2" id="exampleFormControlSelect1">
-            <option>nombres</option>
-            <option>apellidos</option>
-            <option>direccion</option>
-            <option>identidad</option>
-        </select>
+
         <input class="form-control mr-sm-2" name="buscarpor" type="search" placeholder="Buscar" aria-label="Search">
         <button class="btn btn-success" type="submit">
             <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
@@ -46,7 +38,7 @@
 
     <div class="table-responsive" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
     box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);">
-        <table class="table ruler-vertical table-hover mx-sm-0 ">
+        <table class="table ruler-vertical table-hover mx-sm-0 table-bordered">
             <thead class="thead-dark">
             <tr>
                 <th scope="col">N°</th>
@@ -55,25 +47,52 @@
                 <th scope="col">Profesión u Oficio</th>
                 <th scope="col">Cargo</th>
                 <th scope="col">Email</th>
+                <th scope="col">Teléfono</th>
                 <th scope="col"></th>
                 <th scope="col">Acciones</th>
                 <th scope="col"></th>
             </tr>
             </thead>
             <tbody>
-
+            @forelse($listas as $personal)
                 <tr>
-                    <th scope="row"></th>
-                    <td></td>
-                    <td> </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <th scope="row">{{ $personal->id }}</th>
+                    <td>{{ $personal->nombres_personal}} </td>
+                    <td> {{$personal->apellidos_personal}}</td>
+                    <td>{{ $personal->profesionPersonal}}</td>
+                    <td>{{ $personal->cargo}}</td>
+                    <td>{{ $personal->email}}</td>
+                    <td>{{ $personal->telefono_personal}}</td>
+                    <td><a class="btn btn-outline-info" href="">
+                            <img src="/imagenes/iconos/ver.svg" width="25">
+                        </a></td>
+                    <td><a class="btn btn-outline-warning" href="{{route('personal.edit',['id' =>$personal->id])}}" >
+                            <img src="/imagenes/iconos/editar.svg" class="svg" width="25" >
+                        </a>
+                    </td>
+                    <td>
+                        <a href="#" onclick="return confirm('Estás seguro que deseas eliminar el registro?');">
+                            <form method="post" action="{{route('personal.borrar',['id'=>$personal->id])}}">
+                                @csrf
+                                @method('delete')
+                                <img src="/imagenes/iconos/eliminar.svg">
+                                <input type="submit" value="Eliminar" class="btn btn-outline-danger">
+                            </form>
+                        </a>
+                    </td>
                 </tr>
+            @empty
+                <tr>
+                    <td colspan="4">No hay Registros</td>
+                </tr>
+            @endforelse
+            </tbody>
+        </table>
+    </div>
+    {{ $listas->links()}}
     <script src="/js/jquery-3.2.1.min.js"></script>
     <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/main.js"></script>
     <script src="styles/bootstrap4/popper.js"></script>
     <script src="styles/bootstrap4/bootstrap.min.js"></script>
     <script src="plugins/greensock/TweenMax.min.js"></script>

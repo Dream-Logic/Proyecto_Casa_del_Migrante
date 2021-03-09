@@ -23,26 +23,28 @@ Route::get('/', function () {
 Route::group(["middleware" => "auth"], function () {
 
 //ADMINISTRADOR
-Route::group(['middleware' => 'admin'], function () {
-    /*RUTAS DEL ADMINISTRADOR*/
-    //RUTA QUE DIRIGE A LA VISTA PRINCIPAL DEL ADMINISTRADOR
-    Route::get('/principal', 'paginaPrincipal_controller@index')
-        ->name('index.index');
-    /*RUTAS QUE DIRIGE A LOS FORMULARIOS*/
-    Route::get('/principalformulario', 'paginaPrincipal_controller@principalformulario')
-        ->name('hola.hola');
-    Route::get('/Btn_atras', 'paginaPrincipal_controller@atras')
-        ->name('atras.regre');
-    Route::get('/Btn_regresar', 'paginaPrincipal_controller@regreso')
-        ->name('regresar.volv');
+    Route::group(['middleware' => 'admin'], function () {
+        /*RUTAS DEL ADMINISTRADOR*/
+        //RUTA QUE DIRIGE A LA VISTA PRINCIPAL DEL ADMINISTRADOR
+        Route::get('/principal', 'paginaPrincipal_controller@index')
+            ->name('index.index');
+        /*RUTAS QUE DIRIGE A LOS FORMULARIOS*/
+        Route::get('/principalformulario', 'paginaPrincipal_controller@principalformulario')
+            ->name('hola.hola');
+        Route::get('/Btn_atras', 'paginaPrincipal_controller@atras')
+            ->name('atras.regre');
+        Route::get('/Btn_regresar', 'paginaPrincipal_controller@regreso')
+            ->name('regresar.volv');
 
-    /*RUTAS PARA EL LISTADO DEL ADMINISTRADOR*/
-    Route::get('/proyectos/listado', 'HuespedController@index')
-        ->name('listado.index');
+        /*RUTAS PARA EL LISTADO DEL ADMINISTRADOR*/
+        Route::get('/proyectos/listado', 'HuespedController@index')
+            ->name('listado.index');
 
-    /*RUTAS PARA LA VISTA SALUD DEL ADMINISTRADOR*/
+        /*RUTAS PARA LA VISTA SALUD DEL ADMINISTRADOR*/
         Route::get('/salud', 'paginaPrincipal_controller@salud')
             ->name('salud.salu');
+
+
         Route::get('/saludAdmin', 'paginaPrincipal_controller@saludAdmin')
             ->name('Admin.salud');
         //RUTA QUE DIRIGE A LAS ESTADISTICAS//
@@ -82,15 +84,28 @@ Route::group(['middleware' => 'admin'], function () {
         /*NUEVASSSS*/
         /*  RUTAS PARA EL LISTADO EMPLEADOS ADMINISTRADOR*/
         /*Ruta para el forulario del personal*/
-        Route::get('/personal', 'EmpleadoController@Personal')
+        Route::get('/personal', 'EmpleadoController@personal')
             ->name('personal.personal');
         /*  Rutas para el listado del personal*/
         Route::get('/empleados/listado', 'EmpleadoController@index')
             ->name('listadoEmpleado.index');
+        /*Ruta para el store*/
+        Route::post("/personal/store", "EmpleadoController@store")
+            ->name("personal.store");
+        /*Ruta para editar*/
+        Route::get('/personal/{id}/editar', 'EmpleadoController@edit')
+            ->name('personal.edit');
+        /*Ruta update*/
+        Route::put('/empleado/{id}/editar', 'EmpleadoController@update')
+            ->name('personal.update');
+        /*Ruta para eliminar*/
+        Route::delete('/personal/{id}/borrar', 'EmpleadoController@destroy')
+            ->name('personal.borrar')
+            ->where('id', '[0-9]+');
 
-    /*  Rutas para el Calendario de eventos*/
-    Route::get('Evento/index','ControllerEvent@index');
-    Route::get('Evento/index/{month}','ControllerEvent@index_month');
+        /*  Rutas para el Calendario de eventos*/
+        Route::get('Evento/index', 'ControllerEvent@index');
+        Route::get('Evento/index/{month}', 'ControllerEvent@index_month');
 
     // formulario
 Route::get('Evento/form','ControllerEvent@form');
@@ -122,6 +137,11 @@ Route::get('Evento/details/{id}','ControllerEvent@details');
     //Ruta de las estadisticas del director//
     Route::get('/estadisticasDirec', 'EstadisticaDirectorController@index')
         ->name('estadisticas.direc');
+    /*Empleado director lista*/
+    Route::get('/empleado/lista', 'EmpleadoController@director')
+        ->name('listaEmpleado.director');
+
+
 });
 
 Route::get('/passwordreset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name("password.request1");

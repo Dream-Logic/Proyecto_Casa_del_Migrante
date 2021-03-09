@@ -32,7 +32,6 @@ class Huesped extends Model
 
 
 
-
     Public function scopeName($query , $name)
     {
 
@@ -43,4 +42,5 @@ class Huesped extends Model
                 'LIKE', "%$name%");
         }
     }
-}
+
+    }

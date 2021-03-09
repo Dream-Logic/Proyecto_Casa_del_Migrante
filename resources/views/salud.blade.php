@@ -22,13 +22,15 @@
 
         <a class="navbar-brand text-black" href="#">LISTADO DE NIÑOS ENFERMOS</a>
         <form class="form-inline my-2 my-lg-0 ml-auto">
+
+
             <input class="form-control mr-sm-2" name="name" type="search" aria-label="Search" placeholder="Buscar">
             <button class="btn btn-success" type="submit">
                 <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
             </button>
         </form>
     </nav>
-    <table class="table" >
+    <table class="table ruler-vertical table-hover mx-sm-0 table-bordered" >
         <thead>
         <tr class="w3-hover-green">
             <th class="bg-dark text-white" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
@@ -49,6 +51,8 @@
         </thead>
         <tbody>
         @forelse($listados as $huesped)
+
+
             <tr>
                 <th scope="row">{{ $huesped->id }}</th>
                 <td>{{ $huesped->nombres}} </td>

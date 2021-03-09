@@ -1,18 +1,12 @@
 @extends ('PlantillaMadre.menu_inicio')
-@section('titulo', 'Ficha de Ingreso')
+@section('titulo', 'Editar datos del huésped')
 @section('contenido')
-    <br>
-    <br>
-    <br>
-    <head>
-        <!-- CSRF Token -->
-        <meta name="csrf-token" content="{{ csrf_token() }}">
-    </head>
-    <body>
 
-    <div class="card">
-        <div class="card-header" style="background-color: #4dc0b5">
-            <label class="card-title" style="color: black;">Datos del Personal</label>
+    <br><br><br>
+    <div class="card ">
+
+        <div class="card-header">
+            <label class="card-title">Editar Datos del Personal</label>
         </div>
         @if ($errors->any())
             <div class="alert alert-danger">
@@ -30,21 +24,18 @@
                 {{session("exito")}}
             </div>
         @endif
-
-        <form method="post" action="{{route('personal.store')}}">
-
-            @csrf
-            <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
-            <div class="abs-center">
+        <div class="card-body">
+            <form method="post" action="{{route('personal.update',["id"=>$personal->id])}}">
+                @method('PUT')
+                @csrf
                 <center>
                     <div class="col-5"><br>
                         <div class="row">
-                            <div class="form-group {{ $errors->has('imagen') ? ' has-error' : '' }}" style="width: 70%">
+                            <div class="form-group {{ $errors->has('imagen') ? ' has-error' : '' }}" style="width: 90%">
                                 <h6 style="text-align: start">Imagen (Opcional)</h6>
                                 <img width="200px" id="previewImagen" style="max-height:250px"
-                                     src="/imagenes/iconos_formulario/anadir-imagen.svg"
-                                     @if($errors->has("imagen"))  src="/imagenes/iconos_formulario/anadir-imagen.svg"
-                                     @endif onclick="seleccionarImagen(event)"/>
+                                     src="{{"/foto/".$personal->imagen}}"
+                                     onclick="seleccionarImagen(event)"/>
 
                                 <label id="labelImagen" for="imagen" class="btn btn-large"><span
                                         style="font-size: 60px">
@@ -58,11 +49,7 @@
                                        class="form-control"
                                        style="opacity: 0" id="imagen"
                                        name="imagen"/>
-                                @if ($errors->has('imagen'))
-                                    <span class="help-block" style="color: red">
-                                        <h6> <strong>{{ $errors->first('imagen') }}</strong></h6>
-                                    </span>
-                                @endif
+
                             </div>
 
                             <script>
@@ -84,120 +71,126 @@
                 </center>
 
 
+                <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
                 <div class="form-row">
 
                     <div class="col-5"><br>
                         <img src="/imagenes/iconos_formulario/usuario.svg" class="svg" width="25" height="35">
-                        <label for="nombre_personal" style="color: #000000">Nombres</label><br>
+                        <label for="nombre">Nombres</label><br>
                         <input type="text" class="form-control" name="nombres_personal"
-                               id="nombres_personal" placeholder="Nombres"><br>
+                               id="nombres" placeholder="Nombres" value="{{$personal->nombres_personal}}"><br>
                     </div>
                     <br>
 
                     <div class="col-5"><br>
                         <img src="/imagenes/iconos_formulario/usuario.svg" class="svg" width="25" height="35">
-                        <label for="apellido_personal" style="color: #000000">Apellidos</label><br>
+                        <label for="apellido">Apellidos</label><br>
                         <input type="text" class="form-control" name="apellidos_personal"
-                               id="apellidos_personal" placeholder="Apellidos">
+                               id="apellidos" placeholder="Apellidos" value="{{$personal->apellidos_personal}}">
                     </div>
                     <br>
 
 
                     <div class="col-5">
                         <img src="/imagenes/iconos_formulario/calendario.svg" class="svg" width="50" height="35">
-                        <label for="FechaNac_personal" style="color: #000000">Fecha de Nacimiento</label><br>
+                        <label for="FechaNac">Fecha de Nacimiento</label><br>
                         <input type="date" class="form-control" name="fnacimiento_personal"
-                               id="fnacimiento_personal"><br>
+                               id="fnacimiento" value="{{$personal->fnacimiento_personal}}"><br>
                     </div>
 
 
                     <div class="col-5">
                         <img src="/imagenes/iconos_formulario/grupo-de-edad.svg" class="svg" width="50" height="35">
-                        <label for="edad_personal" style="color: #000000">Edad</label><br>
+                        <label for="edad">Edad</label><br>
                         <input type="number" class="form-control" name="edad_personal"
-                               id="edad_personal" placeholder="Edad"><br>
-                    </div>
-                    <div class="col-5">
-                        <img src="/imagenes/iconos_formulario/sexo.svg" class="svg" width="50" height="35">
-                        <label for="sexo_personal" style="color: #000000">Sexo</label><br>
-                        <select class="form-control" name="sexo_personal">
-                            <option value="femenino">Femenino</option>
-                            <option value="masculino">Masculino</option>
-                        </select><br>
+                               id="edad" placeholder="Edad" value="{{$personal->edad_personal}}"><br>
                     </div>
 
+
+
+                    <div class="col-5">
+                        <img src="/imagenes/iconos_formulario/sexo.svg" class="svg" width="50" height="35">
+                        <label for="sexo">sexo</label><br>
+                        <select class="form-control" name="sexo_personal">
+                            <option value="femenina" @if($personal->sexo_personal === "femenino") selected='selected' @endif>
+                                Femenino
+                            </option>
+                            <option value="masculino" @if($personal->sexo_personal === "masculino") selected='selected' @endif>
+                                Masculino
+                            </option>
+                        </select><br>
+                    </div>
+                    <br>
 
                     <div class="col-5">
                         <img src="/imagenes/iconos_formulario/tarjeta-de-identificacion.svg" class="svg" width="50"
                              height="35">
-                        <label for="identidad_personal" style="color: #000000">Identidad </label><br>
-                        <input type="text" class="form-control" name="identidad_personal"
-                               id="identidad_personal" placeholder="0000-0000-00000"><br>
+                        <label for="identidad">Identidad </label><br>
+                        <input type="text" class="form-control" name="identidad_personal" value="{{$personal->identidad_personal}}"
+                               id="identidad" placeholder="0000-0000-00000"><br>
                     </div>
+                    <br>
+
 
                     <div class="col-11">
                         <img src="/imagenes/iconos_formulario/ubicacion.svg" class="svg" width="50" height="35">
-                        <label for="direccion_personal" style="color: #000000">Dirección</label>
+                        <label for="direccionProcede">Dirección</label>
                         <span class="col-md-5 col-md-offset-10 text-center">
-        <textarea class="form-control" id="direccion_personal" name="direccion_personal"
-                  placeholder="Dirección" rows="2"></textarea><br>
+        <textarea class="form-control" id="direccion" name="direccion_personal"
+                  placeholder="Dirección de dónde procede" rows="2">{{$personal->direccion_personal}}</textarea><br>
+                </span></div>
+                    <br>
+
+                    <div class="col-11">
+                        <img src="/imagenes/iconos_formulario/material-escolar.svg" class="svg" width="50" height="35">
+                        <label for="signos" style="color: #000000">Profesion u Oficio</label>
+                        <span class="col-md-5 col-md-offset-10 text-center">
+        <textarea class="form-control" id="oficioprofesion" name="profesionPersonal"
+                  placeholder="Describa la profesion u oficio del empleado"
+                  rows="2">{{$personal->profesionPersonal}}</textarea><br>
                     </span></div>
                     <br>
 
 
                     <div class="col-11">
-                        <img src="/imagenes/iconos_formulario/profesion.svg" class="svg" width="50" height="35">
-                        <label for="profesion" style="color: #000000">Profesión u Oficio</label>
+                        <img src="/imagenes/iconos_formulario/fisico.svg" class="svg" width="50" height="35">
+                        <label for="signos">Cargo</label>
                         <span class="col-md-5 col-md-offset-10 text-center">
-        <textarea class="form-control" id="profesionPersonal" name="profesionPersonal"
-                  placeholder="Ingrese su profesión u oficio" rows="2"></textarea><br>
-                    </span></div>
+        <textarea class="form-control" id="cargo" name="cargo"
+                  placeholder="Describa el cargo que desempeña"
+                  rows="2">{{$personal->cargo}}</textarea><br>
+                </span></div>
                     <br>
 
-                    <br>
+
                     <div class="col-11">
-                        <img src="/imagenes/iconos_formulario/cargo.svg" class="svg" width="50" height="35">
-                        <label for="cargo" style="color: #000000">Cargo</label>
+                        <img src="/imagenes/iconos_formulario/fiebre.svg" class="svg" width="50" height="35">
+                        <label for="enfermedad"></label>
                         <span class="col-md-5 col-md-offset-10 text-center">
-                       <textarea class="form-control" id="cargo" name="cargo"
-                                 placeholder="Cargo que desempeñará" rows="2"></textarea><br>
-                    </span></div>
+        <textarea class="form-control" id="email" name="email"
+                  placeholder="Escriba su correo electronico (Opcional)" rows="2">{{$personal->email}}</textarea><br>
+                </span></div>
                     <br>
 
+
+                    <div class="col-11">
+                        <img src="/imagenes/iconos_formulario/medicamento.svg" class="svg" width="50" height="35">
+                        <label for="tratamiento">Tratamiento</label>
+                        <span class="col-md-5 col-md-offset-10 text-center">
+        <textarea class="form-control" id="telefono_personal" name="telefono_personal"
+                  placeholder="Escriba el número de Teléfono" rows="2">{{$personal->telefono_personal}}</textarea><br>
+                </span></div>
+                    <br>
+
+
+                    <button type="submit" class="btn btn-sm btn-success"><i class="fas fa-save"></i> Guardar</button>
 
                 </div>
-
-
-                <div class="col-11">
-                    <img src="/imagenes/iconos_formulario/email.svg" class="svg" width="50" height="35">
-                    <label for="email" style="color: #000000">Correo Electrónico </label>
-                    <span class="col-md-5 col-md-offset-10 text-center">
-        <textarea class="form-control" id="email" name="email"
-                  placeholder="Ingrese su correo electrónico" rows="2"></textarea><br>
-                    </span></div>
-
-
-                <div class="col-11">
-                    <img src="/imagenes/iconos_formulario/telefono.svg" class="svg" width="50" height="35">
-                    <label for="telefono_personal" style="color: #000000">Telefono</label>
-                    <span class="col-md-5 col-md-offset-10 text-center">
-        <textarea class="form-control" id="telefono_personal" name="telefono_personal"
-                  placeholder="Numero de telefono" rows="2"></textarea><br>
-                    </span></div>
-                <br>
-
-            </div>
-            <div class="botones">
-                <button type="submit" class="btn btn-sm btn-success"><i class="fas fa-save"></i> Guardar</button>
-            </div>
-            <br>
-        </form>
-        o
-        <br>
-    </div class="card">
+            </form>
+        </div>
+    </div>
     <script src="/js/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-
-    </body>
+    </div>
 
 @endsection

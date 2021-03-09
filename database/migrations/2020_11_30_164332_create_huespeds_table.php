@@ -39,9 +39,6 @@ class CreateHuespedsTable extends Migration
             $table->timestamps();
 
 
-
-
-
         });
     }
 

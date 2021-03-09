@@ -253,6 +253,7 @@
                         <label for="enfermedad" style="color: #000000">Enfermedad o padecimiento </label>
                         <span class="col-md-5 col-md-offset-10 text-center">
         <textarea class="form-control" id="enfermedad" name="enfermedad"
+
                   placeholder="Describa la enfermedad o padecimiento" rows="2"></textarea><br>
                     </span></div>
                     <br>
