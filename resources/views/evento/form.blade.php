@@ -90,7 +90,7 @@
                                placeholder="Descripción del evento"></textarea>
                         </span></div>
             <br>
-            <!-- <input type="submit" class="btn btn-info" value="Guardar"> -->
+             <input type="submit" class="btn btn-info" value="Guardar">
 
             <a href="{{ asset('/Evento/index') }}" class="btn btn-warning">
                 <img src="/imagenes/iconos/restaurar.svg" class="svg" width="25">
