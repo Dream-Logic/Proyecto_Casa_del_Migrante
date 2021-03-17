@@ -147,4 +147,4 @@ Route::post('/passwordemail', 'Auth\ForgotPasswordController@sendResetLinkEmail'
 Route::get('/passwordreset{token}', 'Auth\ResetPasswordController@showResetForm')->name("password.reset1");
 Route::post('/passwordreset', 'Auth\ResetPasswordController@reset');
 
-Route::get('evento/form','ControllerEvent@form');
+Route::get('estudiante/create_estudiante','EstudianteController@Expediente');
