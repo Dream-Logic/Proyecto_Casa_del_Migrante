@@ -785,7 +785,7 @@ section
 }
 .svg path
 {
-
+ fill: #ffb606;
 }
 .hero_box svg
 {
@@ -794,7 +794,7 @@ section
 }
 .hero_box:hover svg path
 {
-
+fill: #ffb606;
 }
 .hero_box_content
 {

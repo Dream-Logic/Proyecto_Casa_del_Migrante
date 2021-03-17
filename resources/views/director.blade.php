@@ -25,8 +25,8 @@
         <div class="hero_slide">
             <div class="hero_slide_background" ></div>
             <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
-                <div class="hero_slide_content text-center" style="height:600px ">
-                    <n1 style="color: white; font-size: 25px">Bienvenido Director a:</n1><p style="font-size: 25px; color: #f8f9fb"> Proyecto   Casa Del  Migrante</p>
+                <div class="hero_slide_content text-center" style="height:540px ">
+                    <n1 style="color: white; font-size: 20px">Bienvenido Director a:</n1><p style="font-size: 20px; color: #f8f9fb"> Proyecto   Casa Del  Migrante</p>
                 </div>
             </div>
         </div>
@@ -37,9 +37,9 @@
                 <div class="row">
                     <div class="col-lg-3 hero_box_col col-lg-auto" >
                         <a href="{{route('listado.director')}}" >
-                            <div class="hero_box d-flex  align-items-center justify-content-start">
-                                <img src="images/lista1.svg"  class="svg" alt="">
-                                <div class="hero_box_content">
+                            <div class="hero_box d-flex  align-items-center justify-content-start ">
+                                <img src="images/Listado.svg"  class="svg" alt="">
+                                <div class="hero_box_content ">
                                     <h6 class="hero_box_title">Listado de Huespedes</h6>
                                     <a href="{{route('listado.director')}}" class="hero_box_link">Ver</a>
                                 </div>
@@ -50,7 +50,7 @@
                     <div class="col-lg-3.5hero_box_col">
                         <a href="{{route('estadisticas.direc')}}" >
                             <div class="hero_box d-flex flex-row align-items-center justify-content-start col offset-4">
-                                <img src="images/estadistica1.svg" class="svg" alt="">
+                                <img src="images/Estadistica.svg" class="svg" alt="">
                                 <div class="hero_box_content">
                                     <h6 class="hero_box_title">Estadisticas</h6>
                                     <a href="{{route('estadisticas.direc')}}" class="hero_box_link">Ver</a>
@@ -63,7 +63,7 @@
                         <a href="{{route('saludDire.salu')}}">
                             <div class="mx-auto">
                                 <div class="hero_box d-flex flex-row align-items-center justify-content-start  col offset-9 ">
-                                    <img src="images/salud2.svg" class="svg" alt="">
+                                    <img src="images/Salud.svg" class="svg" alt="">
                                     <div class="hero_box_content">
                                         <h6 class="hero_box_title">Salud</h6>
                                         <a href="{{route('saludDire.salu')}}" class="hero_box_link">Ver</a>
@@ -78,8 +78,8 @@
                     <div class="col-lg-3 hero_box_col">
                         <br>
                         <a href="{{route('listaEmpleado.director')}}" >
-                            <div class="hero_box d-flex flex-row align-items-center justify-content-start">
-                                <img src="images/personal.svg" class="svg" alt="">
+                            <div class="hero_box d-flex flex-row align-items-center justify-content-start ">
+                                <img src="images/personal.svg" class="svg"  alt="">
                                 <div class="hero_box_content">
                                     <h6 class="hero_box_title">Listado de Personal</h6>
                                     <a href="{{route('listaEmpleado.director')}}" class="hero_box_link">Ver</a>
