@@ -151,6 +151,12 @@ class EmpleadoController extends Controller
     public function show($id)
     {
         //
+        $personal = Empleado::findOrFail($id);
+        //$responsables = Responsable::where('id_huesped', "=", $id)->get();
+      //  $narracion = NarracionHecho::where('id_huesped', "=", $id)->get();
+
+        return view('empleados\ver_empleado')->with('personal', $personal);
+
 
     }
 

@@ -100,22 +100,26 @@ Route::group(["middleware" => "auth"], function () {
         Route::delete('/personal/{id}/borrar', 'EmpleadoController@destroy')
             ->name('personal.borrar')
             ->where('id', '[0-9]+');
+        /*RUtas para ver detalles del empleado*/
+        Route::get('/empleado/{id}', 'EmpleadoController@show')
+            ->name('empleado.mostrar')
+            ->where('id', '[0-9]+');
 
         /*  Rutas para el Calendario de eventos*/
         Route::get('Evento/index', 'ControllerEvent@index');
         Route::get('Evento/index/{month}', 'ControllerEvent@index_month');
 
-    // formulario
-Route::get('Evento/form','ControllerEvent@form');
-Route::post('Evento/create','ControllerEvent@create');
-// Detalles de evento
-Route::get('Evento/details/{id}','ControllerEvent@details');
+        // formulario
+        Route::get('Evento/form', 'ControllerEvent@form');
+        Route::post('Evento/create', 'ControllerEvent@create');
+        // Detalles de evento
+        Route::get('Evento/details/{id}', 'ControllerEvent@details');
 
     });
 
-//Aqui van todas las rutas de director
-//Ruta para acceso del direcctor//
-    //Rutas de listados de salud//
+        //Aqui van todas las rutas de director
+        //Ruta para acceso del direcctor//
+        //Rutas de listados de salud//
     Route::get('/saludDi', 'paginaPrincipal_controller@SaDire')
         ->name('saludDire.salu');
     Route::get('/saludD', 'paginaPrincipal_controller@SDire')
@@ -138,6 +142,10 @@ Route::get('Evento/details/{id}','ControllerEvent@details');
     /*Empleado director lista*/
     Route::get('/empleado/lista', 'EmpleadoController@director')
         ->name('listaEmpleado.director');
+    /*Empleado vista ver Director*/
+    Route::get('/empleado/{id}', 'EmpleadoController@show')
+        ->name('empleado.mostrar')
+        ->where('id', '[0-9]+');
 
 
 });

@@ -63,8 +63,8 @@
                     <td>{{ $personal->cargo}}</td>
                     <td>{{ $personal->email}}</td>
                     <td>{{ $personal->telefono_personal}}</td>
-                    <td><a class="btn btn-outline-info" href="">
-                            <img src="/imagenes/iconos/ver.svg" width="25">
+                    <td><a class="btn btn-outline-info" href="{{route('empleado.mostrar',['id' =>$personal->id])}}">
+                            <img src="/imagenes/iconos/ver.svg" width="25" >
                         </a></td>
                     <td><a class="btn btn-outline-warning" href="{{route('personal.edit',['id' =>$personal->id])}}" >
                             <img src="/imagenes/iconos/editar.svg" class="svg" width="25" >

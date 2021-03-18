@@ -58,7 +58,7 @@
                     <td>{{ $personal->cargo}}</td>
                     <td>{{ $personal->email}}</td>
                     <td>{{ $personal->telefono_personal}}</td>
-                    <td><a class="btn btn-info" href="">
+                    <td><a class="btn btn-info" href="{{route('empleado.mostrar',['id' =>$personal->id])}}">
                             <img src="/imagenes/iconos/ver.svg" width="25">
                         </a>
                     </td>
