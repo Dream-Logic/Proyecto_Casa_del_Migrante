@@ -775,11 +775,11 @@ modificar los cuadro negros
 
 .hero_boxes_inner
 {
-	position: absolute;
+	position: center;
     /*********************************
 mover los cuadros negros hacia arriba o abajo
 *********************************/
-	top: -450px;
+	top: -530px;
 	left: 0;
     /*********************************
 mover los cuadros negros hacia el lado
@@ -791,8 +791,8 @@ mover los cuadros negros hacia el lado
     /*********************************
 mas grande y pequeño el cuadro negro
 *********************************/
-	width: 100%;
-	height: 161px;
+	width: 95%;
+	height: 151px;
 	background: #1a1a1a;
 	padding-left: 100px;
 	cursor: pointer;
@@ -834,14 +834,15 @@ iconos del mismo color
 	margin-top: -6px;
 }
 /*********************************
-Cambiar tama;o  a las letras de los cuadritoa
+Cambiar tamaño  a las letras de los cuadritoa
 *********************************/
 .hero_box_title
 {
 	font-size: 24px;
 	font-weight: 500;
 	color: #FFF;
-	margin-bottom: 7px;
+	margin-bottom: 2px;
+
 }
 .hero_box_link
 {

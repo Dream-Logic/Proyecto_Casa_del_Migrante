@@ -62,7 +62,7 @@
             <div class="row align-items-center">
                 <div class="flex-row justify-content-center align-items-center">
                     <span class="text-md-left"
-                          style="color: #e0a800;  font-family: 'Arial Black'">Casa del Migrante</span>
+                          style="color: #e0a800;  font-family: 'Arial Black'">Casa del Gran Árbol</span>
                 </div>
                 <div class="col-10 col-md-10 d-none d-xl-block">
                     <nav class="site-navigation position-relative text-right" role="navigation">

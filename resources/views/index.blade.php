@@ -26,8 +26,8 @@
         <div >
         <div class="hero_slide_background"></div>
         <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
-            <div class="hero_slide_content text-center" style="height:500px ">
-                <h6 style="color: white; font-size: 20px;">Bienvenido Administrador :</h6>  <p style="font-size: 25px; color: #ffffff"> Proyecto   Casa Del  Migrante</p>
+            <div class="hero_slide_content text-center" style="height:560px ">
+                <h6 style="color: white; font-size: 15px;">Bienvenido Administrador(a) :</h6>
             </div>
         </div>
     </div>
@@ -87,7 +87,7 @@
                 </div>
 
 
-                <div class="col-lg-3 hero_box_col">
+                <div class="col-3 hero_box_col">
                     <br>
                     <a href="{{ route('personal.personal') }}" >
                         <div class="hero_box d-flex flex-row align-items-center justify-content-start">
@@ -132,6 +132,54 @@
                             <div class="hero_box_content">
                                 <h6 class="hero_box_title">Calendario</h6>
                                 <a href="{{ asset('/Evento/index/') }}" class="hero_box_link">Ver</a>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 hero_box_col">
+                    <br>
+                    <a href="">
+                        <div class="hero_box d-flex flex-row align-items-center justify-content-start">
+                            <img src="images/egresados.svg" class="svg" alt="">
+                            <div class="hero_box_content">
+                                <h6 class="hero_box_title">Lista de Egresados</h6>
+                                <a href="" class="hero_box_link">Ver</a>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 hero_box_col">
+                    <br>
+                    <a href="">
+                        <div class="hero_box d-flex flex-row align-items-center justify-content-start">
+                            <img src="images/carpeta.svg" class="svg" alt="">
+                            <div class="hero_box_content">
+                                <h6 class="hero_box_title">Expedientes</h6>
+                                <a href="" class="hero_box_link">Ver</a>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 hero_box_col">
+                    <br>
+                    <a href="">
+                        <div class="hero_box d-flex flex-row align-items-center justify-content-start">
+                            <img src="images/graduacion.svg" class="svg" alt="">
+                            <div class="hero_box_content">
+                                <h6 class="hero_box_title">Escolaridad</h6>
+                                <a href="" class="hero_box_link">Ver</a>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 hero_box_col">
+                    <br>
+                    <a href="">
+                        <div class="hero_box d-flex flex-row align-items-center justify-content-start">
+                            <img src="images/informe-medico.svg" class="svg" alt="">
+                            <div class="hero_box_content">
+                                <h6 class="hero_box_title">Ficha Médica</h6>
+                                <a href="" class="hero_box_link">Ver</a>
                             </div>
                         </div>
                     </a>
