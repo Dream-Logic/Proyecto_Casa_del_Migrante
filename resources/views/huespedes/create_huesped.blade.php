@@ -30,7 +30,7 @@
             </div>
         @endif
 
-        <form method="post" action="{{route('huesped.store')}}">
+        <form method="post" action="{{route('huesped.store')}}" enctype="multipart/form-data">
 
             @csrf
             <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>

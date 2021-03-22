@@ -114,6 +114,11 @@ Route::group(["middleware" => "auth"], function () {
         Route::post('Evento/create', 'ControllerEvent@create');
         // Detalles de evento
         Route::get('Evento/details/{id}', 'ControllerEvent@details');
+        Route::get('evento/form','ControllerEvent@form');
+        // EPORTAR A PDF Y A EXCEL
+        Route::get('/huesped/export','ExportHuespedController@export');
+        Route::get('/pdfH/pdf','ExportHuespedController@pdf');
+        Route::get('/pruebas/pdf','ExportHuespedController@prueba');
 
     });
 
@@ -146,6 +151,10 @@ Route::group(["middleware" => "auth"], function () {
     Route::get('/empleado/{id}', 'EmpleadoController@show')
         ->name('empleado.mostrar')
         ->where('id', '[0-9]+');
+    // EPORTAR A PDF Y A EXCEL
+    Route::get('/huesped/export','ExportHuespedController@export');
+    Route::get('/pdfH/pdf','ExportHuespedController@pdf');
+    Route::get('/pruebas/pdf','ExportHuespedController@prueba');
 
 
 });
@@ -155,4 +164,4 @@ Route::post('/passwordemail', 'Auth\ForgotPasswordController@sendResetLinkEmail'
 Route::get('/passwordreset{token}', 'Auth\ResetPasswordController@showResetForm')->name("password.reset1");
 Route::post('/passwordreset', 'Auth\ResetPasswordController@reset');
 
-Route::get('estudiante/create_estudiante','EstudianteController@Expediente');
+

@@ -21,6 +21,14 @@
         <a class="btn btn-outline-warning "href="{{route('huesped.nuevo')}}">
             <img src="/imagenes/iconos/agregarUsuario.svg" class="svg" width="25" >
         </a>
+        <a href="{{ asset('/huesped/export') }}"class="btn btn-success" style="color: white"> Descargar en Excel
+
+        </a>
+
+        <a href="{{ asset('/pruebas/pdf') }}"class="btn btn-danger"> Descargar en PDF
+
+        </a>
+
     </div>
     <form class="form-inline my-2  my-lg-0 ml-auto">
 
@@ -32,7 +40,6 @@
         <a href="{{url('/proyectos/listado')}}" class="btn btn-warning">
             <img src="/imagenes/iconos/restaurar.svg" class="svg" width="25">
         </a>
-
     </form>
     <br>
 

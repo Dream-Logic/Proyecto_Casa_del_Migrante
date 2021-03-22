@@ -10,7 +10,7 @@ use App\Proyecto;
 use App\Responsable;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use Image;
 class HuespedController extends Controller
 {
     /**
@@ -136,15 +136,15 @@ class HuespedController extends Controller
                 ->with("exito", "Se creo el huesped exitosamente");
 
         } else {
-            $exploded = explode(',', $request->foto);
-            $decode = base64_decode($exploded[0]);
-            if (str_contains($exploded[0], 'jpeg'))
-                $extension = 'jpg';
-            else
-                $extension = 'png';
-            $imagen = Carbon::now()->toDateString() . "_" . $request->input("nombres") . '_imagen.' . $extension;
-            $path = public_path() . "/foto/" . $imagen;
-            file_put_contents($path, $decode);
+            $image_resize = Image::make($request->imagen->getRealPath());
+            $image_resize->resize(800, null, function($constraint) {
+                $constraint->aspectRatio();
+                $constraint->upsize();
+            });
+            $image_resize->orientate();
+            $nombre_archivo = time() . "." . $request->imagen->extension();
+
+            $image_resize->save(public_path('foto/' . $nombre_archivo));
             $request->piel;
             $request->sexo;
             $request->cabello;
@@ -190,7 +190,7 @@ class HuespedController extends Controller
             $newHuesped->pasaporte = $request->input('pasaporte');
             $newHuesped->nacimiento = $request->input('nacimiento');
             $newHuesped->direccion = $request->input('direccion');
-            $newHuesped->imagen = $imagen;
+            $newHuesped->imagen = $nombre_archivo;
             $newHuesped->gradoEscolar = $request->input('gradoEscolar');
             $newHuesped->signosFisicos = $request->input('signosFisicos');
             $newHuesped->enfermedad = $request->input('enfermedad');
@@ -316,15 +316,15 @@ class HuespedController extends Controller
                 ->with("exito", "Se edito correctamente el huesped");
 
         } else {
-            $exploded = explode(',', $request->foto);
-            $decode = base64_decode($exploded[0]);
-            if (str_contains($exploded[0], 'jpeg'))
-                $extension = 'jpg';
-            else
-                $extension = 'png';
-            $imagen = Carbon::now()->toDateString() . "_" . $request->input("nombres") . '_imagen.' . $extension;
-            $path = public_path() . "/foto/" . $imagen;
-            file_put_contents($path, $decode);
+            $image_resize = Image::make($request->imagen->getRealPath());
+            $image_resize->resize(800, null, function($constraint) {
+                $constraint->aspectRatio();
+                $constraint->upsize();
+            });
+            $image_resize->orientate();
+            $nombre_archivo =time() . "." . $request->imagen->extension();
+
+            $image_resize->save(public_path('foto/' . $nombre_archivo));
 
             $request->piel;
             $request->sexo;
@@ -377,7 +377,7 @@ class HuespedController extends Controller
             $huesped->signosFisicos = $request->input('signosFisicos');
             $huesped->enfermedad = $request->input('enfermedad');
             $huesped->tratamiento = $request->input('tratamiento');
-            $huesped->imagen = $imagen;
+            $huesped->imagen = $nombre_archivo;
             $huesped->save();
 
             //todo retornar la vista del formulario crear responsable
