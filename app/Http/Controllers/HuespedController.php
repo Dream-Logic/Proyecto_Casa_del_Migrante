@@ -24,7 +24,14 @@ class HuespedController extends Controller
 
         //dd($request->get('name'));
 
-        $listados = Huesped::name($request->get('name'))->orderBy('id', 'DESC')->paginate(5);
+        //$listados = Huesped::name($request->get('name'))->orderBy('id', 'DESC')->paginate(15);
+
+      //  return view('listadoRaiz')->with('listados', $listados);
+
+        $egreso=$request->get("name");
+
+        $listados= Huesped::where(\DB::raw("CONCAT(nombres, '' , apellidos, identidad, direccion)"),
+            'LIKE', "%$egreso%")->where("egreso")->Paginate(15);
 
         return view('listadoRaiz')->with('listados', $listados);
 
@@ -35,7 +42,7 @@ class HuespedController extends Controller
     {
 
 
-        $listados = Huesped::name($request->get('name'))->orderBy('id', 'DESC')->paginate(5);
+        $listados = Huesped::name($request->get('name'))->orderBy('id', 'DESC')->paginate(15);
 
         return view('listadoRaizDirector')->with('listados', $listados);
 

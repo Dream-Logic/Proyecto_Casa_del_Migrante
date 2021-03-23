@@ -79,6 +79,10 @@ Route::group(["middleware" => "auth"], function () {
             ->name('huesped.mostrar')
             ->where('id', '[0-9]+');
 
+        /*Ruta para el listado de egresados*/
+
+        Route::get('/egresos', 'paginaPrincipal_controller@egreso')
+            ->name('lista.egreso');
         /*NUEVASSSS*/
         /*  RUTAS PARA EL LISTADO EMPLEADOS ADMINISTRADOR*/
         /*Ruta para el forulario del personal*/

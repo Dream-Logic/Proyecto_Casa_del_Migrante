@@ -17,13 +17,13 @@
     </head>
     <div class="w3-container w3-teal mx-4" style="font-family: 'Raleway', sans-serif;">
         <br>
-        <h6 class="mt-3" style="font-size: 30px; color: black;"><b>Listado de Huéspedes</b></h6>
+        <h6 class="mt-3" style="font-size: 30px; color: black; text-align: center"><b>Listado de Huéspedes</b></h6>
     </div>
     <br>
     <form class="form-inline my-2 my-lg-0 ml-auto">
 
-        <input class="form-control mr-sm-2" name="name"  type="search" aria-label="Search" placeholder="Buscar">
-        <button class="btn btn-success" type="submit">
+        <input class="form-control mr-sm-2 col-3" name="name"  type="search" aria-label="Search" placeholder="Buscar">
+        <button class="  mr-sm-2btn btn-success" type="submit">
             <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
         </button>
         <a href="{{url('/huesped/listadoDirector')}}" class="btn btn-warning">
@@ -36,7 +36,7 @@
     box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);">
         <table class="table ruler-vertical table-hover mx-sm-0 table-bordered">
             <thead class="thead-dark">
-            <tr >
+            <tr>
                 <th scope="col">N°</th>
                 <th scope="col">Nombres</th>
                 <th scope="col">Apellidos</th>
@@ -59,7 +59,7 @@
                     <td>{{ $huesped->direccion}}</td>
                     <td>{{ $huesped->ingreso}}</td>
                     <td>{{ $huesped->egreso}}</td>
-                    <td><a class="btn btn-info" href="{{route('huesped.mostrar',['id' =>$huesped->id])}}">
+                    <td align="center"><a class="btn btn-info" href="{{route('huesped.mostrar',['id' =>$huesped->id])}}">
                             <img src="/imagenes/iconos/ver.svg" width="25">
                         </a>
                     </td>

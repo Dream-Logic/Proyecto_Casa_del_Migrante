@@ -48,7 +48,7 @@ class paginaPrincipal_controller extends Controller
 
         $listados= Huesped::where(\DB::raw("CONCAT(nombres, '' , apellidos, identidad, direccion)"),
             'LIKE', "%$enfermedad%")
-            ->where("enfermedad", "!=", "")->Paginate(20);
+            ->where("enfermedad", "!=", "")->Paginate(15);
 
 
 
@@ -63,10 +63,25 @@ class paginaPrincipal_controller extends Controller
 
         $enfermedad=$request->get("name");
 
-        $listados= Huesped::where(\DB::raw("CONCAT(nombres, '' , apellidos, identidad, direccion)"), 'LIKE', "%$enfermedad%")->where("enfermedad", "!=", "")->Paginate(20);
+        $listados= Huesped::where(\DB::raw("CONCAT(nombres, '' , apellidos, identidad, direccion)"),
+            'LIKE', "%$enfermedad%")->where("enfermedad", "!=", "")->Paginate(15);
 
         return view('SaludDirect')->with('listados', $listados);
 
+
+    }
+    public function egreso(Request $request)
+    {
+
+        $egreso=$request->get("name");
+
+        $listados= Huesped::where(\DB::raw("CONCAT(nombres, '' , apellidos, identidad, direccion)"),
+            'LIKE', "%$egreso%")
+            ->where("egreso", "!=", "")->Paginate(15);
+
+
+
+        return view('empleados\expediente_egreso')->with('listados', $listados);
 
     }
 

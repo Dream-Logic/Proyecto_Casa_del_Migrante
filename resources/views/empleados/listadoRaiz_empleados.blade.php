@@ -1,5 +1,5 @@
 @extends ('PlantillaMadre.menu_inicio')
-@section('titulo', 'Listado Huéspedes')
+@section('titulo', 'Listado del Personal')
 @section('contenido')
 
     @if(session('mensaje'))
@@ -14,10 +14,12 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
-    <div class="w3-container w3-teal mx-4" style="font-family: 'Raleway', sans-serif;">
+    <div class="w3-container w3-teal mx-4" style="font-family: 'Raleway', sans-serif; text-align: center">
         <br>
         <h6 class="mt-3" style="font-size: 30px; color: black;"><b>Listado del Personal</b></h6>
     </div>
+    <br>
+    <br>
     <div class="unit-4 mx-4" style="float: right">
         <a class="btn btn-outline-warning " href="{{route('personal.personal')}}">
             <img src="/imagenes/iconos/agregarUsuario.svg" class="svg" width="25">
@@ -25,8 +27,8 @@
     </div>
     <form class="form-inline my-2  my-lg-0 ml-auto">
 
-        <input class="form-control mr-sm-2" name="buscarpor" type="search" placeholder="Buscar" aria-label="Search">
-        <button class="btn btn-success" type="submit">
+        <input class="form-control mr-sm-2 col-3" name="name" type="search" placeholder="Buscar" aria-label="Search">
+        <button class="  mr-sm-2 btn btn-success" type="submit">
             <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
         </button>
         <a href="{{route('listadoEmpleado.index')}}" class="btn btn-warning">
@@ -46,7 +48,6 @@
                 <th scope="col">Apellidos</th>
                 <th scope="col">Profesión u Oficio</th>
                 <th scope="col">Cargo</th>
-                <th scope="col">Email</th>
                 <th scope="col">Teléfono</th>
                 <th scope="col"></th>
                 <th scope="col">Acciones</th>
@@ -61,9 +62,8 @@
                     <td> {{$personal->apellidos_personal}}</td>
                     <td>{{ $personal->profesionPersonal}}</td>
                     <td>{{ $personal->cargo}}</td>
-                    <td>{{ $personal->email}}</td>
                     <td>{{ $personal->telefono_personal}}</td>
-                    <td><a class="btn btn-outline-info" href="{{route('empleado.mostrar',['id' =>$personal->id])}}">
+                    <td align="center"><a class="btn btn-outline-info" href="{{route('empleado.mostrar',['id' =>$personal->id])}}">
                             <img src="/imagenes/iconos/ver.svg" width="25" >
                         </a></td>
                     <td><a class="btn btn-outline-warning" href="{{route('personal.edit',['id' =>$personal->id])}}" >
@@ -88,7 +88,10 @@
             @endforelse
             </tbody>
         </table>
+
     </div>
+    <br>
+    <br>
     {{ $listas->links()}}
     <script src="/js/jquery-3.2.1.min.js"></script>
     <script src="js/jquery-3.2.1.min.js"></script>

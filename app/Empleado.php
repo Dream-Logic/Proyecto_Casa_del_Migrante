@@ -24,14 +24,16 @@ class Empleado extends Model
         'telefono_personal'];
 
 
+
     Public function scopeName($query , $name)
     {
 
         if (trim($name) != "") {
 
 
-            $query->where(\DB::raw("CONCAT(nombres_personal, '' , apellidos_personal, identidad_personal,cargo)"),
+            $query->where(\DB::raw("CONCAT(nombres_personal, '' , apellidos_personal, cargo, direccion_personal)"),
                 'LIKE', "%$name%");
         }
     }
+
 }

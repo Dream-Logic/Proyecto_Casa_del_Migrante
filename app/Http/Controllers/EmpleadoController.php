@@ -15,10 +15,12 @@ class EmpleadoController extends Controller
     public function index(Request $request)
     {
         //
-       // $listas = Empleado::paginate(5);
-        $listas = Empleado::name($request->get('name'))->orderBy('id', 'DESC')->paginate(5);
+        //  $listas =Empleado::paginate(50);
+      //  $listas = Empleado::name($request->get('name'))->orderBy('id', 'ASC')->paginate(15);
+        //return view('empleados\listadoRaiz_empleados')->with('listas', $listas);
 
-      return view('empleados\listadoRaiz_empleados')->with('listas', $listas);
+        $listas = Empleado::name($request->get('name'))->orderBy('id', 'ASC')->paginate(15);
+        return view('empleados\listadoRaiz_empleados')->with('listas', $listas);
 
     }
 
@@ -26,7 +28,7 @@ class EmpleadoController extends Controller
     {
 
         //return view('create_personal');
-        $listas = Empleado::paginate(10);
+        $listas = Empleado::paginate(15);
 
         return view('create_personal')->with('listas', $listas);
 
@@ -34,7 +36,7 @@ class EmpleadoController extends Controller
     }
     public function director(Request $request){
       //  $listas =Empleado::paginate(50);
-        $listas = Empleado::name($request->get('name'))->orderBy('id', 'DESC')->paginate(5);
+        $listas = Empleado::name($request->get('name'))->orderBy('id', 'ASC')->paginate(15);
         return view('empleados\listadoEmpleado')->with('listas', $listas);
     }
 
