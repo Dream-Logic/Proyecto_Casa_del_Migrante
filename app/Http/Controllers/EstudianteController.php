@@ -13,9 +13,9 @@ class EstudianteController extends Controller
      */   //
 
 
-    public function Expediente(Request $request)
+    public function Escolaridad(Request $request)
     {
-        //  $listas =Empleado::paginate(50);
+
         return view('estudiante/create_estudiante');
     }
 

@@ -132,7 +132,8 @@ Route::group(["middleware" => "auth"], function () {
     Route::get('/directorSalud', 'paginaPrincipal_contrller@buscador')
         ->name('Listado.buscador');
     Route::get('/home', 'HomeController@index')->name('home');
-
+    //ROUTES Escolaridad
+    Route::get('/estudiante/create_estudiante', 'EstudianteController@Escolaridad');
     //ROUTES LISTADO DIRECTOR
     Route::get('/huesped/listadoDirector', 'HuespedController@director')
         ->name('listado.director');
@@ -163,5 +164,7 @@ Route::get('/passwordreset', 'Auth\ForgotPasswordController@showLinkRequestForm'
 Route::post('/passwordemail', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name("password.email1");
 Route::get('/passwordreset{token}', 'Auth\ResetPasswordController@showResetForm')->name("password.reset1");
 Route::post('/passwordreset', 'Auth\ResetPasswordController@reset');
+
+
 
 

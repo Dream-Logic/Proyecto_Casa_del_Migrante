@@ -86,186 +86,92 @@
 
                     <div class="col-5"><br>
                         <img src="/imagenes/iconos_formulario/usuario.svg" class="svg" width="25" height="35"   >
-                        <label for="nombre" style="color: #000000">Nombres</label><br>
-                        <input type="text" class="form-control" name="nombres"
-                               id="nombres" placeholder="Nombres"><br>
+                        <label for="nombre_alumno" style="color: #000000">Nombres</label><br>
+                        <input type="text" class="form-control" name="nombres_alumno"
+                               id="nombres_alumno" placeholder="Nombres"><br>
                     </div>
                     <br>
 
                     <div class="col-5"><br>
                         <img src="/imagenes/iconos_formulario/usuario.svg" class="svg" width="25" height="35"  >
-                        <label for="apellido" style="color: #000000">Apellidos</label><br>
-                        <input type="text" class="form-control" name="apellidos"
-                               id="apellidos" placeholder="Apellidos">
+                        <label for="apellido_alumno" style="color: #000000">Apellidos</label><br>
+                        <input type="text" class="form-control" name="apellidos_alumno"
+                               id="apellidos_alumno" placeholder="Apellidos">
+                    </div>
+                    <br>
+                    <br>
+
+                    <div class="col-5"><br>
+                        <img src="/imagenes/iconos_formulario/Grado.svg" class="svg" width="25" height="35"  >
+                        <label for="grado" style="color: #000000">Grado</label><br>
+                        <input type="text" class="form-control" name="grado"
+                               id="grado" placeholder="Grado">
+                    </div>
+                    <br>
+                    <br>
+
+                    <div class="col-5"><br>
+                        <img src="/imagenes/iconos_formulario/Ca1.svg" class="svg" width="25" height="35"  >
+                        <label for="carrera" style="color: #000000">Carrera</label><br>
+                        <input type="text" class="form-control" name="carrera"
+                               id="carrera" placeholder="Carrera">
                     </div>
                     <br>
 
 
                     <div class="col-5">
-                        <img src="/imagenes/iconos_formulario/calendario.svg" class="svg" width="50" height="35"  >
-                        <label for="FechaNac" style="color: #000000">Fecha de Nacimiento</label><br>
-                        <input type="date" class="form-control" name="fnacimiento"
-                               id="fnacimiento"><br>
-                    </div>
-
-
-                    <div class="col-5">
-                        <img src="/imagenes/iconos_formulario/grupo-de-edad.svg" class="svg" width="50" height="35"  >
-                        <label for="edad" style="color: #000000">Edad</label><br>
-                        <input type="number" class="form-control" name="edad"
-                               id="edad" placeholder="Edad"><br>
-                    </div>
-                    <div class="col-5">
-                        <img src="/imagenes/iconos_formulario/fecha.svg" class="svg" width="50" height="35"  >
-                        <label   style="color: #000000" for="ingreso">Fecha de Ingreso</label><br>
-                        <input type="date" class="form-control" name="ingreso">
-                        <br>
-                    </div>
-
-
-                    <div class="col-5">
-                        <img src="/imagenes/iconos_formulario/fechaEgreso.svg" class="svg" width="50" height="35"  >
-                        <label  style="color: #000000" for="egreso">Fecha de Egreso</label><br>
-                        <input type="date" class="form-control" name="egreso">
-                        <br>
-                    </div>
-
-                    <div class="col-5">
-                        <img src="/imagenes/iconos_formulario/sexo.svg" class="svg" width="50" height="35"  >
-                        <label for="sexo" style="color: #000000">Sexo</label><br>
-                        <select class="form-control" name="sexo">
-                            <option value="femenino">Femenino</option>
-                            <option value="masculino">Masculino</option>
+                        <img src="/imagenes/iconos_formulario/Escritura.svg" class="svg" width="50" height="35"  >
+                        <label for="escritura" style="color: #000000">Nivel de escritura</label><br>
+                        <select class="form-control" name="escritura">
+                            <option value="ninguno">Ninguno</option>
+                            <option value="bajo">Bajo</option>
+                            <option value="medio">Medio</option>
+                            <option value="alto">Alto</option>
                         </select><br>
                     </div>
                     <br>
 
 
                     <div class="col-5">
-                        <img src="/imagenes/iconos_formulario/muestra-de-color-de-cabello.svg" class="svg" width="50" height="35"  >
-                        <label for="cabello" style="color: #000000">Color de cabello</label><br>
-                        <select class="form-control" name="cabello">
-                            <option value="negro">Negro</option>
-                            <option value="castaño">Castaño</option>
-                            <option value="pelirojo">Pelirrojo</option>
-                            <option value="rubio">Rubio</option>
-                            <option value="canoso">Canoso</option>
-                            <option value="blanco">Blanco</option>
-                            <option value="otro">Otro</option>
+                        <img src="/imagenes/iconos_formulario/Reed.svg" class="svg" width="50" height="35"  >
+                        <label for="lectura" style="color: #000000">Nivel de Lectura</label><br>
+                        <select class="form-control" name="lectura">
+                            <option value="ninguno">Ninguno</option>
+                            <option value="bajo">Bajo</option>
+                            <option value="medio">Medio</option>
+                            <option value="alto">Alto</option>
                         </select><br>
                     </div>
 
 
                     <div class="col-5">
-                        <img src="/imagenes/iconos_formulario/observacion.svg" class="svg" width="50" height="35"  >
-                        <label for="OjosSelec" style="color: #000000">Color de ojos</label><br>
-                        <select class="form-control" name="ojos">
-                            <option value="negros">Negros</option>
-                            <option value="azules">Azules</option>
-                            <option value="cafes">Cafés</option>
-                            <option value="verdes">Verdes</option>
-                            <option value="grises">Grises</option>
+                        <img src="/imagenes/iconos_formulario/Arte.svg" class="svg" width="50" height="35"  >
+                        <label for="habilidades" style="color: #000000">Habilidades Artisticas</label><br>
+                        <select class="form-control" name="habilidaes">
+                            <option value="arte">Arte</option>
+                            <option value="canto">Canto</option>
+                            <option value="baile">Baile</option>
+                            <option value="dibujo">Dibujo</option>
+                            <option value="ejecucion">Ejecion de instrumento</option>
                         </select><br>
                     </div>
 
 
                     <div class="col-5">
-                        <img src="/imagenes/iconos_formulario/levantar-la-mano.svg" class="svg" width="50" height="35"  >
-                        <label for="pielSelct" style="color: #000000">Color de piel</label><br>
-                        <select class="form-control" name="piel">
-                            <option value="blanca">Blanca</option>
-                            <option value="trigueña">Trigueña</option>
-                            <option value="morena">Morena</option>
-                            <option value="negra">Negra</option>
+                        <img src="/imagenes/iconos_formulario/Musica.svg" class="svg" width="50" height="35"  >
+                        <label for="instrumento" style="color: #000000">Ejecuta algun instrumento</label><br>
+                        <select class="form-control" name="instrumento">
+                            <option value="ninguno">Ninguno</option>
+                            <option value="guitarra">Guitarra</option>
+                            <option value="violin">Violin</option>
+                            <option value="ukele">Ukelele</option>
+                            <option value="saxofon">Saxofon</option>
+                            <option value="teclado">Teclado</option>
                             <option value="otros">Otros</option>
 
                         </select>
                     </div>
 
-
-                    <div class="col-5">
-                        <img src="/imagenes/iconos_formulario/tarjeta-de-identificacion.svg" class="svg" width="50" height="35"  >
-                        <label for="identidad" style="color: #000000">Identidad </label><br>
-                        <input type="text" class="form-control" name="identidad"
-                               id="identidad" placeholder="0000-0000-00000"><br>
-                    </div>
-                    <br>
-
-
-                    <div class="col-5">
-                        <img src="/imagenes/iconos_formulario/nacionalidad.svg" class="svg" width="50" height="35"  >
-                        <label for="nacionalidad" style="color: #000000">Nacionalidad</label>
-                        <input type="text" class="form-control" name="nacionalidad"
-                               id="nacionalidad" placeholder="Nacionalidad">
-                    </div>
-                    <br>
-
-
-                    <div class="col-5">
-                        <img src="/imagenes/iconos_formulario/pasaporte.svg" class="svg" width="50" height="35"  >
-                        <label for="pasaporte" style="color: #000000">Pasaporte</label><br>
-                        <input type="text" class="form-control" name="pasaporte"
-                               id="pasaporte" placeholder="Numero de pasaporte">
-                    </div>
-                    <br>
-
-
-                    <div class="col-5">
-                        <img src="/imagenes/iconos_formulario/lugar.svg" class="svg" width="50" height="35"  >
-                        <label for="nacimiento" style="color: #000000">Lugar de nacimiento</label><br>
-                        <input type="text" class="form-control" name="nacimiento"
-                               id="nacimiento" placeholder="Lugar de nacimiento"><br>
-                    </div>
-
-
-                    <div class="col-11">
-                        <img src="/imagenes/iconos_formulario/ubicacion.svg" class="svg" width="50" height="35"  >
-                        <label for="direccionProcede" style="color: #000000">Dirección</label>
-                        <span class="col-md-5 col-md-offset-10 text-center">
-        <textarea class="form-control" id="direccion" name="direccion"
-                  placeholder="Dirección de dónde procede" rows="2"></textarea><br>
-                    </span></div>
-                    <br>
-
-
-                    <div class="col-11">
-                        <img src="/imagenes/iconos_formulario/material-escolar.svg" class="svg" width="50" height="35"  >
-                        <label for="signos" style="color: #000000">Grado Escolar</label>
-                        <span class="col-md-5 col-md-offset-10 text-center">
-        <textarea class="form-control" id="gradoEscolar" name="gradoEscolar"
-                  placeholder="Describa el grado escolar del niño, niña o adolescente" rows="2"></textarea><br>
-                    </span></div>
-                    <br>
-
-
-                    <div class="col-11">
-                        <img src="/imagenes/iconos_formulario/fisico.svg" class="svg" width="50" height="35"  >
-                        <label for="signos" style="color: #000000">Signos Fisicos</label>
-                        <span class="col-md-5 col-md-offset-10 text-center">
-        <textarea class="form-control" id="signosFisicos" name="signosFisicos"
-                  placeholder="Lunares, cicatrices y otros. Describir" rows="2"></textarea><br>
-                    </span></div>
-                    <br>
-
-
-                    <div class="col-11">
-                        <img src="/imagenes/iconos_formulario/fiebre.svg" class="svg" width="50" height="35"  >
-                        <label for="enfermedad" style="color: #000000">Enfermedad o padecimiento </label>
-                        <span class="col-md-5 col-md-offset-10 text-center">
-        <textarea class="form-control" id="enfermedad" name="enfermedad"
-
-                  placeholder="Describa la enfermedad o padecimiento" rows="2"></textarea><br>
-                    </span></div>
-                    <br>
-
-
-                    <div class="col-11">
-                        <img src="/imagenes/iconos_formulario/medicamento.svg" class="svg" width="50" height="35"  >
-                        <label for="tratamiento" style="color: #000000">Tratamiento</label>
-                        <span class="col-md-5 col-md-offset-10 text-center">
-        <textarea class="form-control" id="tratamiento" name="tratamiento"
-                  placeholder="Describa el tratamiento que necesita" rows="2"></textarea><br>
-                    </span></div>
                     <br>
 
                 </div>

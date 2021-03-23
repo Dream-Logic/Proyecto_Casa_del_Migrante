@@ -167,7 +167,7 @@
                             <img src="images/graduacion.svg" class="svg" alt="">
                             <div class="hero_box_content">
                                 <h6 class="hero_box_title">Escolaridad</h6>
-                                <a href="" class="hero_box_link">Ver</a>
+                                <a href="{{('/estudiante/create_estudiante') }}" class="hero_box_link">Ver</a>
                             </div>
                         </div>
                     </a>
