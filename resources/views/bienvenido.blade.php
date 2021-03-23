@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
     <title>Casa del Migrante</title>
     <meta charset="utf-8">
@@ -68,7 +68,7 @@
 
                 <div class="col-md-8 mt-lg-5 text-center">
                     <h6 class="text-uppercase" data-aos="fade-up" style=" font-size: 50px; font-family: cursive; color: white">BIENVENIDO(A) A </h6>
-                    <h6 class="mb3- desc"  data-aos="fade-up" data-aos-delay="100"><b style="color: #e0a800; font-size: 30px; font-family: cursive"><strong>CASA EL GRAN ÁRBOL</strong></b></h6>
+                    <h6 class="mb3- desc"  data-aos="fade-up" data-aos-delay="100"><b style="color: #e0a800; font-size: 30px; font-family: cursive"><strong>CASA DEL GRAN ÁRBOL</strong></b></h6>
                     <br>
                     <div data-aos="fade-up">
                         <a href="{{route('index.index')}}" class="btn btn-primary mr-2 mb-2">Acceder</a>
@@ -100,16 +100,14 @@
                 </div>
                 <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
                     <div class="mb-4">
-                        <h6 class= "section-title mb-3"><b>Casa el Gran Árbol</b></h6>
-                        <p>LA FUNDACIÓN CASA EL GRAN ÁRBOL, es una entidad sin ánimo de lucro,
-                            que desde su fundación en el 2013 y bajo la dirección de Taliana Vargas,
-                            ha desarrollado proyectos enfocados en transformar comunidades y promover la
-                            construcción de tejido social especialmente con niños, niñas, adolescentes (NNAs) y
-                            mujeres de sectores vulnerables. Este propósito se cumple por medio de programas
-                            que fomentan la capacitación e inclusión laboral, la generación de ingresos para
-                            sus familias, el mejoramiento en la calidad y nivel de educación, lúdica, deporte y
-                            acompañamiento psicosocial, que a su vez generan espacios de productividad y transformación
-                            hacia la paz y la sana convivencia en su propio entorno.</p>
+                        <h6 class= "section-title mb-3"><b>Casa del Gran Árbol</b></h6>
+                        <p>Es una entidad sin ánimo de lucro, que se ha destacado por enfocarse en servir,
+                            formar y desarrollar niños y niñas en riesgo social, permitiendo así ofrecer
+                            oportunidades a los mismos y brindar a la sociedad individuos con un ímpetu de creación.</p>
+                        <p>El objetivo que tiene Casa del Gran Árbol es generar un modelo que facilite la inclusión de los jóvenes
+                            migrantes retornados y jóvenes desplazados internos, para que tengan alternativas a la
+                            migración, a través de la creación de un Centro que les brinde lo necesario para ellos poder crecer
+                            siendo personas prosperas, educadas y de provecho para la sociedad.</p>
                     </div>
                 </div>
             </div>
@@ -131,7 +129,7 @@
                 </div>
                 <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
                     <div class="mb-4">
-                        <h6 class= "section-title mb-3"><b>Sobre Nosotros</b></h6>
+                        <h6 class= "section-title mb-3" align="center"><b>Proyecto Casa del</b></h6><h6 class= "section-title mb-3" align="center"><b>Migrante</b></h6>
                         <p>El principal problema que el proyecto propuesto quiere abordar es la necesidad de
                             un modelo integral que atienda las necesidades de seguridad y acceso a formación
                             de calidad para reincorporarse al sistema educativo o mercado laboral. No existen
