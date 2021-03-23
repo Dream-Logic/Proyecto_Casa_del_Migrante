@@ -150,7 +150,86 @@
             </div>
         </div>
     </div>
+    <!--seccion acerca de-->
+    <div class="site-section cta-big-image" id="about-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center" data-aos="fade">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+                    <figure class="circle-bg">
+                        <img src="images/bienvenido/Ferdinando.jpg" alt="Image" class="img-fluid">
+                    </figure>
+                </div>
+                <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mb-4">
+                        <h6 class= "section-title mb-3" align="center"><b>Don Ferdinando Castriotti</b></h6>
+                        <p>Don Fernando Castriotti nacido en Venosa, de Potenza Provincia, 3 de marzo de 1969.
+                            Realiza los estudios clásicos en el Instituto de Horacio Flaco.
+                            Licenciatura en Filosofía y Teología en la Universidad de Santo Tomás de Nápoles
+                            Especialista en Dogmática y Moral de la Universidad de Roma
+                            Doctor en Bioética de la Universidad Alfonso en Roma.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!--seccion acerca de-->
+    <div class="site-section cta-big-image" id="about-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center" data-aos="fade">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+                    <figure class="circle-bg">
+                        <img src="images/bienvenido/sacerdote.jpg" alt="Image" class="img-fluid">
+                    </figure>
+                </div>
+                <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mb-4">
+                        <h6 class= "section-title mb-3" align="center"><b>Camino de fe</b></h6>
+                        <p>Entró en el seminario a la edad de 18 años
+                            Ordenado sacerdote el 06 de marzo 1993
+                            Encargado de la Pastoral de Trabajo Social de la Conferencia Episcopal Italiana hasta el año 2002
+                            Parroco de Melfi, Lavello, Rapolla
+                            Profesor de religión en la Escuela Superior de Federico II de Melfi
+                            Profesor de Bioética en la Universidad de Regensburg, en Jerusalén, en 2007.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--seccion acerca de-->
+    <div class="site-section cta-big-image" id="about-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center" data-aos="fade">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+                    <figure class="circle-bg">
+                        <img src="images/bienvenido/misionero.jfif" alt="Image" class="img-fluid">
+                    </figure>
+                </div>
+                <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mb-4">
+                        <h6 class= "section-title mb-3" align="center"><b>Misionero</b></h6>
+                        <p>10 años de misión en Baibokum misión franciscana en el Chad
+                            Comenzó su trabajo como misionero diocesano, "don de la fe" en territorio hondureño. Publicado por San Juan.
+                            Bautista de la parroquia de El Paraíso, en el departamento homónimo al este de Honduras.
+                            Es un cercano colaborador de Su Eminencia el Cardenal Oscar Andrés Rodríguez Maradiaga,
+                            así como un intenso trabajo de evangelización, se dedica a lograr obras concretas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!--seccion nuestros servicios-->
     <section class="site-section border-bottom bg-light" id="services-section">
         <div class="container">
