@@ -15,9 +15,9 @@
         </div>
     @endif
         <label class="card-title" style="color: black; height: 75px">Detalles de {{$huesped->nombres}} {{$huesped->apellidos}} </label>
-        <input  class="btn btn-warning "  width="25" type="button" value="Imprimir" onclick="window.print()"
+        <input  class="btn btn-warning mr-sm-2 "  width="25" type="button" value="Imprimir" onclick="window.print()"
                style="margin-left: 850px" >
-    <img src="/imagenes/iconos_formulario/imprimir.svg" class="svg"  style="margin-left: 1010px;border: 25px;height: 40px ;margin-top: -176px" >
+    <img src="/imagenes/iconos_formulario/imprimir.svg" class="mr-sm-2  svg"  style="margin-left: 1010px;border: 25px;height: 40px ;margin-top: -176px" >
     <center>
         <div class="col-5" ><br>
             <div class="row" >
@@ -126,7 +126,7 @@
             </tr>
 
             @foreach($responsables as $responsable)
-                <tr style="background-color: #8ab4f8">
+                <tr style="background-color: #90bf23">
                     <th><h6>Datos Personales de la Madre, Padre y/o Resposable Legal</h6></th>
                     <th></th>
                 </tr>
@@ -185,7 +185,7 @@
 
 
             @foreach($narracion as $narra)
-                <tr style="background-color: #8ab4f8">
+                <tr style="background-color: #90bf23">
                     <th align="center"><h6 >Narración de los Hechos</h6></th>
 
                     <th></th>

@@ -1,5 +1,5 @@
 @extends ('PlantillaMadre.menu_inicio')
-@section('titulo', 'Ficha de Ingreso')
+@section('titulo', 'Ficha de Ingreso Personal')
 @section('contenido')
     <br>
     <br>
@@ -186,13 +186,39 @@
                     </span></div>
                 <br>
 
+
+
+
+
+                <div class="modal" id="cambio"tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Guardar Cliente</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>¿Desea crear el cliente?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-primary " href="">
+                                    Guardar
+                                </button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <div class="botones">
-                <button type="submit" class="btn btn-sm btn-success"><i class="fas fa-save"></i> Guardar</button>
+                <button type="submit" class="btn btn-sm btn-success" data-toggle="model" data-target="#cambio><i class="fas fa-save" "></i> Guardar</button>
             </div>
             <br>
         </form>
-        o
+
         <br>
     </div class="card">
     <script src="/js/jquery-3.2.1.min.js"></script>

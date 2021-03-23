@@ -1,5 +1,5 @@
 @extends ('PlantillaMadre.menu_inicio')
-@section('titulo', 'Ficha de Ingreso')
+@section('titulo', 'Ficha de Ingreso Huésped')
 @section('contenido')
     <br>
     <br>

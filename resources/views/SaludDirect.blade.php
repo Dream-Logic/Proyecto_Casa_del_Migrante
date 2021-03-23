@@ -1,5 +1,5 @@
 @extends ('PlantillaMadre.menu_inicio')
-@section('titulo', 'Listado Salud')
+@section('titulo', 'Listado de Salud')
 @section('contenido')
 
     @if(session('mensaje'))
@@ -15,22 +15,27 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
-    <a class="btn btn-success btn-warning" href="{{route('index.index')}}">Regresar</a>
+
+    <h6 class="mt-3"  style="font-size: 30px; color: black; text-align: center;"><b>Listado de Salud</b></h6>
     <br>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
 
-        <a class="navbar-brand text-black" href="#">LISTADO DE NIÑOS ENFERMOS</a>
-        <form class="form-inline my-2 my-lg-0 ml-auto">
-            <input class="form-control mr-sm-2" name="name" type="search" aria-label="Search" placeholder="Buscar">
-            <button class="btn btn-success" type="submit">
+
+
+        <form class="form-inline my-2 my-lg-0 ">
+            <a class="mr-sm-auto btn btn-success btn-warning" href="{{route('index.index')}}">Regresar</a>
+
+            <input class="form-control mr-sm-2 col-3 " name="name" type="search" aria-label="Search" placeholder="Buscar">
+            <button class=" mr-sm-2 btn btn-success" type="submit">
                 <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
             </button>
         </form>
-    </nav>
+   <br>
+    <div class="table-responsive" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
+    box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);">
     <table class="table ruler-vertical table-hover mx-sm-0 table-bordered" >
         <thead>
-        <tr class="w3-hover-green">
+        <tr class="w3-hover-green" align="center">
             <th class="bg-dark text-white" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
     box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);" scope="col">Id</th>
             <th class="bg-dark text-white"style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
@@ -55,7 +60,7 @@
                 <td> {{ $huesped->apellidos }}</td>
                 <td>{{ $huesped->enfermedad }}</td>
                 <td>{{ $huesped->tratamiento}}</td>
-                <td><a class="btn btn-outline-info" href="{{route('huesped.mostrar',['id' =>$huesped->id])}}">
+                <td align="center"><a class="btn btn-outline-info" href="{{route('huesped.mostrar',['id' =>$huesped->id])}}">
                         <img src="/imagenes/iconos/ver.svg" width="25" >
                     </a></td>
 
@@ -67,10 +72,10 @@
         @endforelse
 
         </tbody>
-
-        @endsection
-
     </table>
+
+
+
     <script src="/js/jquery-3.2.1.min.js"></script>
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="styles/bootstrap4/popper.js"></script>
@@ -84,3 +89,4 @@
     <script src="plugins/scrollTo/jquery.scrollTo.min.js"></script>
     <script src="plugins/easing/easing.js"></script>
     <script src="js/custom.js"></script>
+@endsection
