@@ -30,7 +30,7 @@
             </div>
         @endif
 
-        <form method="post" action="{{route('huesped.store')}}">
+
 
             @csrf
             <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
@@ -180,7 +180,7 @@
                 </div>
                 <br>
             </div>
-        </form>
+
         <br>
     </div class="card">
     <script src="/js/jquery-3.2.1.min.js"></script>
