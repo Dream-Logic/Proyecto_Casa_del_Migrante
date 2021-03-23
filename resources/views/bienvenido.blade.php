@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <title>Casa del Migrante</title>
     <meta charset="utf-8">
@@ -41,6 +41,7 @@
             <div class="row align-items-center">
                 <div class="flex-row justify-content-center align-items-center">
                     <span class="text-md-left" style="color: #e0a800; font-family: 'Arial Black';  font-size: 15px;">Fundación Alivio del Sufrimiento</span>
+                    <h6 align="center" style="color: #e0a800; font-family: 'Arial Black';"><b>Casa del Migrante</b></h6>
                 </div>
                 <div class="col-12 col-md-8 d-none d-xl-block">
                     <nav class="site-navigation  position-relative text-right" role="navigation">
@@ -67,7 +68,7 @@
 
                 <div class="col-md-8 mt-lg-5 text-center">
                     <h6 class="text-uppercase" data-aos="fade-up" style=" font-size: 50px; font-family: cursive; color: white">BIENVENIDO(A) A </h6>
-                    <h6 class="mb-5 desc"  data-aos="fade-up" data-aos-delay="100"><b style="color: #e0a800; font-size: 30px; font-family: cursive"><strong>CASA DEL MIGRANTE</strong></b></h6>
+                    <h6 class="mb3- desc"  data-aos="fade-up" data-aos-delay="100"><b style="color: #e0a800; font-size: 30px; font-family: cursive"><strong>CASA EL GRAN ÁRBOL</strong></b></h6>
                     <br>
                     <div data-aos="fade-up">
                         <a href="{{route('index.index')}}" class="btn btn-primary mr-2 mb-2">Acceder</a>
@@ -84,7 +85,38 @@
         </a>
     </div>
 
+    <!--seccion casa del árbol-->
+    <div class="site-section cta-big-image" id="about-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center" data-aos="fade">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+                    <figure class="circle-bg">
+                        <img src="images/bienvenido/casaDelArbol.jpg" alt="Image" class="img-fluid">
+                    </figure>
+                </div>
+                <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mb-4">
+                        <h6 class= "section-title mb-3"><b>Casa el Gran Árbol</b></h6>
+                        <p>LA FUNDACIÓN CASA EL GRAN ÁRBOL, es una entidad sin ánimo de lucro,
+                            que desde su fundación en el 2013 y bajo la dirección de Taliana Vargas,
+                            ha desarrollado proyectos enfocados en transformar comunidades y promover la
+                            construcción de tejido social especialmente con niños, niñas, adolescentes (NNAs) y
+                            mujeres de sectores vulnerables. Este propósito se cumple por medio de programas
+                            que fomentan la capacitación e inclusión laboral, la generación de ingresos para
+                            sus familias, el mejoramiento en la calidad y nivel de educación, lúdica, deporte y
+                            acompañamiento psicosocial, que a su vez generan espacios de productividad y transformación
+                            hacia la paz y la sana convivencia en su propio entorno.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!--seccion acerca de-->
     <div class="site-section cta-big-image" id="about-section">
         <div class="container">
             <div class="row mb-5">
@@ -120,6 +152,8 @@
             </div>
         </div>
     </div>
+
+    <!--seccion nuestros servicios-->
     <section class="site-section border-bottom bg-light" id="services-section">
         <div class="container">
             <div class="row mb-5">
@@ -196,6 +230,7 @@
         </div>
     </section>
 
+    <!--seccion contactanos-->
     <section class="site-section bg-light" id="contact-section" data-aos="fade">
         <div class="container">
             <div class="row mb-5">
