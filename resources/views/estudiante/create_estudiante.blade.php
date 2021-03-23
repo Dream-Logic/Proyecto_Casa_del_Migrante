@@ -86,7 +86,7 @@
 
                     <div class="col-5"><br>
                         <img src="/imagenes/iconos_formulario/usuario.svg" class="svg" width="25" height="35"   >
-                        <label for="nombre_alumno" style="color: #000000">Nombres</label><br>
+                        <label for="nombres_alumno" style="color: #000000">Nombres</label><br>
                         <input type="text" class="form-control" name="nombres_alumno"
                                id="nombres_alumno" placeholder="Nombres"><br>
                     </div>
@@ -94,7 +94,7 @@
 
                     <div class="col-5"><br>
                         <img src="/imagenes/iconos_formulario/usuario.svg" class="svg" width="25" height="35"  >
-                        <label for="apellido_alumno" style="color: #000000">Apellidos</label><br>
+                        <label for="apellidos_alumno" style="color: #000000">Apellidos</label><br>
                         <input type="text" class="form-control" name="apellidos_alumno"
                                id="apellidos_alumno" placeholder="Apellidos">
                     </div>
@@ -147,12 +147,12 @@
                     <div class="col-5">
                         <img src="/imagenes/iconos_formulario/Arte.svg" class="svg" width="50" height="35"  >
                         <label for="habilidades" style="color: #000000">Habilidades Artisticas</label><br>
-                        <select class="form-control" name="habilidaes">
+                        <select class="form-control" name="habilidades">
                             <option value="arte">Arte</option>
                             <option value="canto">Canto</option>
                             <option value="baile">Baile</option>
                             <option value="dibujo">Dibujo</option>
-                            <option value="ejecucion">Ejecion de instrumento</option>
+                            <option value="ejecucion">Ejecución de instrumento</option>
                         </select><br>
                     </div>
 
