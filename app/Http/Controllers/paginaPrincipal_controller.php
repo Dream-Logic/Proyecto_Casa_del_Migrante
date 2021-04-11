@@ -48,7 +48,7 @@ class paginaPrincipal_controller extends Controller
 
         $listados= Huesped::where(\DB::raw("CONCAT(nombres, '' , apellidos, identidad, direccion)"),
             'LIKE', "%$enfermedad%")
-            ->where("enfermedad", "!=", "")->Paginate(15);
+            ->where("enfermedad", "!=", "")->where("egreso")->Paginate(15);
 
 
 

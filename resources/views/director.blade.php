@@ -135,7 +135,7 @@
     <script src="plugins/easing/easing.js"></script>
     <script src="js/custom.js"></script>
 
-</div>
-</body>
+
+        </body>
 @endsection
 

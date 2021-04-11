@@ -108,6 +108,31 @@ Route::group(["middleware" => "auth"], function () {
         Route::get('/empleado/{id}', 'EmpleadoController@show')
             ->name('empleado.mostrar')
             ->where('id', '[0-9]+');
+        /*TODAS RUTAS PARA FICHA MEDICA*/
+        /*Rutas para formulario del ficha*/
+        Route::get('/fichaMedica', 'FichaController@index')
+            ->name('ficha.index');
+        Route::post("/fichaMedica/store", "FichaController@store")
+            ->name("fichaMedica.store");
+        /*Rutas para el listado del expedinte medico*/
+        Route::get('/fichaMedica/listados', 'FichaController@listasFicha')
+            ->name('ficha.listasFicha');
+        /*Rutas para editar*/
+        Route::get('/ficha/{id}/editar', 'FichaController@edit')
+            ->name('ficha.edit')
+            ->where('id', '[0-9]+');
+        /*Rutas para la vista de actualizar */
+        Route::put('/ficha/{id}/editar', 'FichaController@update')
+            ->name('ficha.update');
+        /*Ruta para eliminar*/
+        Route::delete('/ficha/{id}/borrar', 'FichaController@destroy')
+            ->name('ficha.borrar');
+
+
+
+
+
+
 
         /*  Rutas para el Calendario de eventos*/
         Route::get('Evento/index', 'ControllerEvent@index');

@@ -5,8 +5,8 @@
     <br><br><br>
     <div class="card ">
 
-        <div class="card-header">
-            <label class="card-title">Editar Datos Personales del Niño, Niña o Adolescente</label>
+        <div class="card-header" style="background-color: #4dc0b5; color:black" >
+            <label class="card-title" >Editar Datos Personales del Niño, Niña o Adolescente</label>
         </div>
         @if ($errors->any())
             <div class="alert alert-danger">

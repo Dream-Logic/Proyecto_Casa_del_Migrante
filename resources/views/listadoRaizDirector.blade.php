@@ -22,9 +22,12 @@
     <br>
     <form class="form-inline my-2 my-lg-0 ml-auto">
 
-        <input class="form-control mr-sm-2 col-3" name="name"  type="search" aria-label="Search" placeholder="Buscar">
-        <button class="  mr-sm-2btn btn-success" type="submit">
-            <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
+        <form class="form-inline my-2 my-lg-0 ml-auto" >
+            <input class="form-control mr-sm-2 col-3" name="name"
+                   type="search" placeholder="Buscar" aria-label="Search">
+            <button class=" mr-sm-2 btn btn-success" type="submit">
+                <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
+
         </button>
         <a href="{{url('/huesped/listadoDirector')}}" class="btn btn-warning">
             <img src="/imagenes/iconos/restaurar.svg" class="svg" width="25">

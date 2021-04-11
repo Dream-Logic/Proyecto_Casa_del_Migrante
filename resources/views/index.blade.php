@@ -174,12 +174,12 @@
                 </div>
                 <div class="col-lg-3 hero_box_col">
                     <br>
-                    <a href="">
+                    <a href="{{ asset('/fichaMedica') }}">
                         <div class="hero_box d-flex flex-row align-items-center justify-content-start">
                             <img src="images/informe-medico.svg" class="svg" alt="">
                             <div class="hero_box_content">
                                 <h6 class="hero_box_title">Ficha Médica</h6>
-                                <a href="" class="hero_box_link">Ver</a>
+                                <a href="{{ asset('/fichaMedica') }}" class="hero_box_link">Ver</a>
                             </div>
                         </div>
                     </a>

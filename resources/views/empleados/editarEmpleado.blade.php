@@ -5,7 +5,7 @@
     <br><br><br>
     <div class="card ">
 
-        <div class="card-header">
+        <div class="card-header" style="background-color: #4dc0b5; color:black" >
             <label class="card-title">Editar Datos del Personal</label>
         </div>
         @if ($errors->any())

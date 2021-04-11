@@ -71,11 +71,12 @@
                             <li><a href="{{route('index.index')}}" class="nav-link"><strong>Inicio</strong></a></li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle"  id="navbardrop" data-toggle="dropdown">
-                                    <strong>Fichas de Ingreso</strong>
+                                    <strong>Registros</strong>
                                 </a>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="{{route('huesped.nuevo')}}">Huésped</a>
-                                    <a class="dropdown-item" href="{{ route('personal.personal') }}">Personal</a>
+                                    <a class="dropdown-item" href="{{route('huesped.nuevo')}}">Registro de Huésped</a>
+                                    <a class="dropdown-item" href="{{ route('personal.personal') }}">Registro de Personal</a>
+                                    <a class="dropdown-item" href="{{ route('ficha.index') }}">Registro Ficha Medica</a>
                                 </div>
                             </li>
                             <li class="nav-item dropdown nav-link">
@@ -86,10 +87,12 @@
                                     <a class="dropdown-item" href="{{route('listado.index')}}">Huésped</a>
                                     <a class="dropdown-item" href="{{ route('listadoEmpleado.index') }}">Personal</a>
                                     <a class="dropdown-item" href="{{ route('salud.salu') }}" class="nav-link">Salud</a>
+                                    <a class="dropdown-item" href="{{ route('lista.egreso') }}">Egresados</a>
+                                    <a class="dropdown-item" href="{{ route('ficha.listasFicha') }}">Ficha Medica</a>
                                 </div>
                             </li>
                             <li><a href="{{ route('estadisticas.admin')}}" class="nav-link"><strong>Estadísticas</strong></a></li>
-
+                            <li><a href="{{ asset('/Evento/index/') }}" class="nav-link"><strong>Calendario</strong></a></li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
