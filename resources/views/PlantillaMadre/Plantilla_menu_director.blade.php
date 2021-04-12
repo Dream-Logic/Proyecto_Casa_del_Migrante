@@ -64,16 +64,25 @@
                     <span class="text-md-left"
                           style="color: #e0a800; font-family: 'Arial Black'">Casa del Migrante</span>
                 </div>
-                <div class="col-12 col-md-10 d-none d-xl-block">
+                <div class="col-10 col-md-10 d-none d-xl-block">
                     <nav class="site-navigation position-relative text-right" role="navigation">
 
                         <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                            <li><a href="{{route('dire.access')}}" class="nav-link"><strong>Inicio</strong></a></li>
-                            <li><a href="{{ route('listado.director') }}" class="nav-link"><strong>Listado de
-                                        Huéspedes</strong></a></li>
+                            <li><a href="{{route('index.index')}}" class="nav-link"><strong>Inicio</strong></a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle"  id="navbardrop" data-toggle="dropdown">
+                                    <strong>Listados</strong>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="{{route('listado.director')}}">Listado de Huésped</a>
+                                    <a class="dropdown-item" href="{{ route('listaEmpleado.director') }}">Listado de Personal</a>
+                                    <a class="dropdown-item" href="{{ route('ficha.index') }}">Listado de egresos</a>
+                                    <a class="dropdown-item" href="{{ route('saludDire.salu') }}">Listado de salud</a>
+                                    <a class="dropdown-item" href="">Listado de Ficha Medica</a>
+                                </div>
+                            </li>
                             <li><a href="{{ route('estadisticas.direc')}}" class="nav-link"><strong>Estadísticas</strong></a></li>
-                            <li><a href="{{ route('saludDire.salu') }}" class="nav-link"><strong>Salud</strong></a></li>
-
+                            <li><a href="{{ asset('/Evento/index/') }}" class="nav-link"><strong>Calendario</strong></a></li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -91,19 +100,12 @@
                                     </form>
                                 </div>
                             </li>
-
-
                         </ul>
-
                     </nav>
-
-
                 </div>
-
                 <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a
                         href="#" class="site-menu-toggle js-menu-toggle float-right"><span
                             class="icon-menu h3"></span></a></div>
-
             </div>
         </div>
     </header>
@@ -123,10 +125,9 @@
 <script src="/js/jquery.easing.1.3.js"></script>
 <script src="/js/aos.js"></script>
 <script src="/js/jquery.fancybox.min.js"></script>
+<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
 <script src="/js/jquery.sticky.js"></script>
 <script src="/js/isotope.pkgd.min.js"></script>
-
-
 <script src="/js/main.js"></script>
 
 </body>

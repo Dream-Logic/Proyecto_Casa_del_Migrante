@@ -20,7 +20,10 @@
         <h6 class="mt-3" style="font-size: 30px; color: black; text-align: center"><b>Listado de Huéspedes</b></h6>
     </div>
     <br>
+
     <form class="form-inline my-2 my-lg-0 ml-auto">
+
+
 
         <form class="form-inline my-2 my-lg-0 ml-auto" >
             <input class="form-control mr-sm-2 col-3" name="name"
@@ -31,7 +34,15 @@
         </button>
         <a href="{{url('/huesped/listadoDirector')}}" class="btn btn-warning">
             <img src="/imagenes/iconos/restaurar.svg" class="svg" width="25">
+
         </a>
+            <a href="{{ asset('/huesped/export') }}"class="btn btn-success" style="color: white">  Excel
+
+            </a>
+
+            <a href="{{ asset('/pruebas/pdf') }}"class="btn btn-danger">  PDF
+
+            </a>
     </form>
     <br>
     <!--FIN BUSCADOR-->

@@ -177,7 +177,8 @@ Route::group(["middleware" => "auth"], function () {
     /*Empleado director lista*/
     Route::get('/empleado/lista', 'EmpleadoController@director')
         ->name('listaEmpleado.director');
-    /*Empleado vista ver Director*/
+
+
     Route::get('/empleado/{id}', 'EmpleadoController@show')
         ->name('empleado.mostrar')
         ->where('id', '[0-9]+');
@@ -185,6 +186,16 @@ Route::group(["middleware" => "auth"], function () {
     Route::get('/huesped/export','ExportHuespedController@export');
     Route::get('/pdfH/pdf','ExportHuespedController@pdf');
     Route::get('/pruebas/pdf','ExportHuespedController@prueba');
+    /*Empleado vista ver Director*/
+// listado egreso direc
+    Route::get('/egresos', 'paginaPrincipal_controller@egreso')
+        ->name('lista.egreso');
+    //Actividades
+    Route::get('/actividadesdirec', function () {
+        return view('actividades');
+    });
+    //Calendario
+    Route::get('Evento/index', 'ControllerEvent@index');
 
 
 });
