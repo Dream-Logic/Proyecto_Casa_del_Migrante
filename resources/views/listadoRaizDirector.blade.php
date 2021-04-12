@@ -26,6 +26,7 @@
 
 
         <form class="form-inline my-2 my-lg-0 ml-auto" >
+
             <input class="form-control mr-sm-2 col-3" name="name"
                    type="search" placeholder="Buscar" aria-label="Search">
             <button class=" mr-sm-2 btn btn-success" type="submit">
