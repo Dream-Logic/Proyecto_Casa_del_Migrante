@@ -87,20 +87,6 @@
                         </div>
                     </a>
                 </div>
-
-
-                <div class="col-3 hero_box_col">
-                    <br>
-                    <a href="{{ asset('/actividadesdirec') }}" >
-                        <div class="hero_box d-flex flex-row align-items-center justify-content-start">
-                            <img src="images/actividades.svg" class="svg" alt="">
-                            <div class="hero_box_content">
-                                <h6 class="hero_box_title"> Actividades</h6>
-                                <a href="{{ asset('/actividadesdirec') }}"  class="hero_box_link">Ver</a>
-                            </div>
-                        </div>
-                    </a>
-                </div>
                 <div class="col-lg-3 hero_box_col">
                     <br>
                     <a href="{{ asset('/Evento/index/') }}">

@@ -190,10 +190,6 @@ Route::group(["middleware" => "auth"], function () {
 // listado egreso direc
     Route::get('/egresos', 'paginaPrincipal_controller@egreso')
         ->name('lista.egreso');
-    //Actividades
-    Route::get('/actividadesdirec', function () {
-        return view('actividades');
-    });
     //Calendario
     Route::get('Evento/index', 'ControllerEvent@index');
 
