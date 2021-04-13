@@ -86,7 +86,6 @@
                     </a>
                 </div>
 
-
                 <div class="col-3 hero_box_col">
                     <br>
                     <a href="{{ route('personal.personal') }}" >
@@ -160,7 +159,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-3 hero_box_col">
+                <div class="col-lg-3 hero_box_col ">
                     <br>
                     <a href="">
                         <div class="hero_box d-flex flex-row align-items-center justify-content-start">

@@ -1,17 +1,12 @@
 @extends ('PlantillaMadre.menu_inicio')
-@section('titulo', 'Ficha de Ingreso')
+@section('titulo', 'Editar datos del huésped')
 @section('contenido')
-    <br>
-    <br>
-    <br>
-    <head>
-        <!-- CSRF Token -->
-        <meta name="csrf-token" content="{{ csrf_token() }}">
-    </head>
-    <body>
-    <div class="card" >
-        <div class="card-header" style="background-color: #4dc0b5">
-            <label class="card-title" style="color: black;">Estudiante</label>
+
+    <br><br><br>
+    <div class="card ">
+
+        <div class="card-header">
+            <label class="card-title">Editar Datos del Estudiante</label>
         </div>
         @if ($errors->any())
             <div class="alert alert-danger">
@@ -29,23 +24,21 @@
                 {{session("exito")}}
             </div>
         @endif
-
-
-        <form method="post" action="{{route('estudiante.store')}}" enctype="multipart/form-data">
-            @csrf
-            <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
-            <div class="abs-center">
+        <div class="card-body">
+            <form method="post" action="{{route('estudiante.update',["id"=>$estudiante->id])}}">
+                @method('PUT')
+                @csrf
                 <center>
-                    <div class="col-5" ><br>
-                        <div class="row" >
-                            <div class="form-group {{ $errors->has('imagen') ? ' has-error' : '' }}"style="width: 70%">
-                                <h6 style="text-align: start">Imagen  (Opcional)</h6>
-                                <img width="200px"  id="previewImagen" style="max-height:250px"
-                                     src="/imagenes/iconos_formulario/anadir-imagen.svg"
-                                     @if($errors->has("imagen"))  src="/imagenes/iconos_formulario/anadir-imagen.svg"
-                                     @endif onclick="seleccionarImagen(event)"/>
+                    <div class="col-5"><br>
+                        <div class="row">
+                            <div class="form-group {{ $errors->has('imagen') ? ' has-error' : '' }}" style="width: 90%">
+                                <h6 style="text-align: start">Imagen (Opcional)</h6>
+                                <img width="200px" id="previewImagen" style="max-height:250px"
+                                     src="{{"/foto/".$estudiante->imagen}}"
+                                     onclick="seleccionarImagen(event)"/>
 
-                                <label id="labelImagen" for="imagen" class="btn btn-large" ><span style="font-size: 60px">
+                                <label id="labelImagen" for="imagen" class="btn btn-large"><span
+                                        style="font-size: 60px">
                                                     </span></label>
                                 <input type="file" accept="image/*"
                                        onchange="loadFile(event)"
@@ -56,11 +49,7 @@
                                        class="form-control"
                                        style="opacity: 0" id="imagen"
                                        name="imagen"/>
-                                @if ($errors->has('imagen'))
-                                    <span class="help-block" style="color: red">
-                                        <h6> <strong>{{ $errors->first('imagen') }}</strong></h6>
-                                    </span>
-                                @endif
+
                             </div>
 
                             <script>
@@ -69,7 +58,7 @@
                                     var image = document.getElementById('previewImagen');
                                     image.src = URL.createObjectURL(event.target.files[0]);
                                     document.getElementById("imagen").style.display = "none";
-                                    document.getElementById("labelImagen").style.display="none";
+                                    document.getElementById("labelImagen").style.display = "none";
                                 };
                                 var seleccionarImagen = function (event) {
                                     var element = document.getElementById("imagen");
@@ -82,6 +71,7 @@
                 </center>
 
 
+                <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
                 <div class="form-row">
 
                     <div class="col-5"><br>
@@ -173,19 +163,14 @@
                     </div>
 
                     <br>
-
-                </div>
-                <div class="botones">
                     <button type="submit" class="btn btn-sm btn-success"><i class="fas fa-save"></i> Guardar</button>
-                </div>
-                <br>
-            </div>
 
-        <br>
-    </div class="card">
+                </div>
+            </form>
+        </div>
+    </div>
     <script src="/js/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-
-    </body>
+    </div>
 
 @endsection
