@@ -128,9 +128,30 @@ Route::group(["middleware" => "auth"], function () {
         Route::delete('/ficha/{id}/borrar', 'FichaController@destroy')
             ->name('ficha.borrar');
 
+        /*Ruta para el formulario del Estudiante*/
 
-
-
+        Route::get('/estudiante', 'EstudianteController@estudiante')
+            ->name('estudiante.estudiante');
+        /*  Rutas para el listado del Estudiante*/
+        Route::get('/estudiante/listado', 'EstudianteController@index')
+            ->name('listadoEstudiante.index');
+        /*Ruta para el store*/
+        Route::post("/estudiante/store", 'EstudianteController@store')
+            ->name("estudiante.store");
+        /*Ruta para editar*/
+        Route::get('/estudiante/{id}/editar', 'EstudianteController@edit')
+            ->name('estudiante.edit');
+        /*Ruta update*/
+        Route::put('/estudiante/{id}/editar', 'EstudianteController@update')
+            ->name('estudiante.update');
+        /*Ruta para eliminar*/
+        Route::delete('/estudiante/{id}/borrar', 'EstudianteController@destroy')
+            ->name('estudiante.borrar')
+            ->where('id', '[0-9]+');
+        /*RUtas para ver detalles del empleado*/
+        Route::get('/estudiante/{id}', 'EstudianteController@show')
+            ->name('estudiante.mostrar')
+            ->where('id', '[0-9]+');
 
 
 
@@ -161,8 +182,10 @@ Route::group(["middleware" => "auth"], function () {
     Route::get('/directorSalud', 'paginaPrincipal_contrller@buscador')
         ->name('Listado.buscador');
     Route::get('/home', 'HomeController@index')->name('home');
+
     //ROUTES Escolaridad
     Route::get('/estudiante/create_estudiante', 'EstudianteController@Escolaridad');
+
     //ROUTES LISTADO DIRECTOR
     Route::get('/huesped/listadoDirector', 'HuespedController@director')
         ->name('listado.director');
@@ -190,10 +213,6 @@ Route::group(["middleware" => "auth"], function () {
 // listado egreso direc
     Route::get('/egresos', 'paginaPrincipal_controller@egreso')
         ->name('lista.egreso');
-    //Actividades
-    Route::get('/actividadesdirec', function () {
-        return view('actividades');
-    });
     //Calendario
     Route::get('Evento/index', 'ControllerEvent@index');
 

@@ -318,12 +318,6 @@
             <div class="row mb-5">
                 <div class="col-md-4 text-center">
                     <p class="mb-4">
-                        <span class="icon-room  text-primary"></span>
-                        <span>El Paraíso, El Paraíso Honduras C.A</span>
-                    </p>
-                </div>
-                <div class="col-md-4 text-center">
-                    <p class="mb-4">
                         <span class="icon-phone  text-primary"></span>
                         <a href="#">(504) 98000025</a>
                     </p>
@@ -343,6 +337,16 @@
                 <div class="col-md-12 mb-5"></div>
             </div>
         </div>
+        <!--seccion ubicacion-->
+        <section class="site-section bg-light" id="contact-section" data-aos="fade">
+            <div class="container">
+                <div class="row mb-5">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3873.5605516145283!2d-86.56461728568713!3d13.865396798387788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6e15a9f5188661%3A0x4906f2045c5a6961!2sHospital%20Alivio%20del%20sufrimiento!5e0!3m2!1ses-419!2shn!4v1618302039885!5m2!1ses-419!2shn" width="1550" height="1000" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mb-5"></div>
+                </div>
+            </div>
     </section>
     <footer class="site-footer">
         <div class="container">

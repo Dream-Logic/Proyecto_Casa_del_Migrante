@@ -73,7 +73,6 @@
                     </div>
                     </a>
                 </div>
-
                 <div class="col-lg-3 hero_box_col">
                     <a href="{{ route('estadisticas.admin')}}" >
                         <div class="hero_box d-flex flex-row align-items-center justify-content-start">
@@ -85,8 +84,6 @@
                         </div>
                     </a>
                 </div>
-
-
                 <div class="col-3 hero_box_col">
                     <br>
                     <a href="{{ route('personal.personal') }}" >
@@ -138,6 +135,18 @@
                 </div>
                 <div class="col-lg-3 hero_box_col">
                     <br>
+                    <a href="{{ asset('/fichaMedica') }}">
+                        <div class="hero_box d-flex flex-row align-items-center justify-content-start">
+                            <img src="images/informe-medico.svg" class="svg" alt="">
+                            <div class="hero_box_content">
+                                <h6 class="hero_box_title">Ficha Médica</h6>
+                                <a href="{{ asset('/fichaMedica') }}" class="hero_box_link">Ver</a>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 hero_box_col">
+                    <br>
                     <a href="{{ asset('/egresos') }}">
                         <div class="hero_box d-flex flex-row align-items-center justify-content-start">
                             <img src="images/egresados.svg" class="svg" alt="">
@@ -148,19 +157,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-3 hero_box_col">
-                    <br>
-                    <a href="">
-                        <div class="hero_box d-flex flex-row align-items-center justify-content-start">
-                            <img src="images/carpeta.svg" class="svg" alt="">
-                            <div class="hero_box_content">
-                                <h6 class="hero_box_title">Expedientes</h6>
-                                <a href="" class="hero_box_link">Ver</a>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 hero_box_col">
+                <div class="col-lg-3 hero_box_col ">
                     <br>
                     <a href="">
                         <div class="hero_box d-flex flex-row align-items-center justify-content-start">
@@ -174,12 +171,12 @@
                 </div>
                 <div class="col-lg-3 hero_box_col">
                     <br>
-                    <a href="{{ asset('/fichaMedica') }}">
+                    <a href="">
                         <div class="hero_box d-flex flex-row align-items-center justify-content-start">
-                            <img src="images/informe-medico.svg" class="svg" alt="">
+                            <img src="images/carpeta.svg" class="svg" alt="">
                             <div class="hero_box_content">
-                                <h6 class="hero_box_title">Ficha Médica</h6>
-                                <a href="{{ asset('/fichaMedica') }}" class="hero_box_link">Ver</a>
+                                <h6 class="hero_box_title">Expedientes</h6>
+                                <a href="" class="hero_box_link">Ver</a>
                             </div>
                         </div>
                     </a>
