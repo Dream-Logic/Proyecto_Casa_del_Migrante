@@ -16,7 +16,7 @@
     </head>
     <div class="w3-container w3-teal mx-4" style="font-family: 'Raleway', sans-serif; text-align: center">
         <br>
-        <h6 class="mt-3" style="font-size: 30px; color: black;"><b>Listado del Estudiante</b></h6>
+        <h6 class="mt-3" style="font-size: 30px; color: black;"><b>Listado de Estudiantes</b></h6>
     </div>
     <br>
     <br>

@@ -77,6 +77,7 @@
                                     <a class="dropdown-item" href="{{route('huesped.nuevo')}}">Registro de Huésped</a>
                                     <a class="dropdown-item" href="{{ route('personal.personal') }}">Registro de Personal</a>
                                     <a class="dropdown-item" href="{{ route('ficha.index') }}">Registro Ficha Medica</a>
+                                    <a class="dropdown-item" href="{{ route('estudiante.estudiante') }}">Registro Ficha Escolaridad</a>
                                 </div>
                             </li>
                             <li class="nav-item dropdown nav-link">
@@ -89,6 +90,7 @@
                                     <a class="dropdown-item" href="{{ route('salud.salu') }}" class="nav-link">Salud</a>
                                     <a class="dropdown-item" href="{{ route('lista.egreso') }}">Egresados</a>
                                     <a class="dropdown-item" href="{{ route('ficha.listasFicha') }}">Ficha Medica</a>
+                                    <a class="dropdown-item" href="{{ route('listadoEstudiante.index') }}">Estudiantes</a>
                                 </div>
                             </li>
                             <li><a href="{{ route('estadisticas.admin')}}" class="nav-link"><strong>Estadísticas</strong></a></li>
