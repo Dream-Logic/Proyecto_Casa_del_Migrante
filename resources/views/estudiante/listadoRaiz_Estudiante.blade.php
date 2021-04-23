@@ -16,7 +16,7 @@
     </head>
     <div class="w3-container w3-teal mx-4" style="font-family: 'Raleway', sans-serif; text-align: center">
         <br>
-        <h6 class="mt-3" style="font-size: 30px; color: black;"><b>Listado del Estudiante</b></h6>
+        <h6 class="mt-3" style="font-size: 30px; color: black;"><b>Listado de Estudiantes</b></h6>
     </div>
     <br>
     <br>
@@ -27,7 +27,9 @@
     </div>
     <form class="form-inline my-2  my-lg-0 ml-auto">
 
-        <input class="form-control mr-sm-2 col-3" name="name" type="search" placeholder="Buscar" aria-label="Search">
+        <input class="form-control mr-sm-2 col-3" name="name
+
+" type="search" placeholder="Buscar" aria-label="Search">
         <button class="  mr-sm-2 btn btn-success" type="submit">
             <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
         </button>

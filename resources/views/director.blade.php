@@ -1,5 +1,5 @@
 @extends('PlantillaMadre.Plantilla_menu_director')
-@section('titulo','Principal Director')
+@section('titulo','Principal Administrador')
 @section('contenido')
 <!-- <!DOCTYPE html>
 <html lang="en"> -->
@@ -120,7 +120,7 @@
                             <img src="images/graduacion.svg" class="svg" alt="">
                             <div class="hero_box_content">
                                 <h6 class="hero_box_title"> Listado de Escolaridad</h6>
-                                <a href="" class="hero_box_link">Ver</a>
+                                <a href="{{ route('listadoEst.director') }}" class="hero_box_link">ver</a>
                             </div>
                         </div>
                     </a>

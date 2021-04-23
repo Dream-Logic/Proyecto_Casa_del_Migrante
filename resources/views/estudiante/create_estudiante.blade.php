@@ -1,5 +1,5 @@
 @extends ('PlantillaMadre.menu_inicio')
-@section('titulo', 'Ficha de Ingreso')
+@section('titulo', 'Ficha de Escolaridad')
 @section('contenido')
     <br>
     <br>
@@ -23,14 +23,11 @@
             </div>
         @endif
 
-
         @if(session("exito"))
             <div class="alert alert-info">
                 {{session("exito")}}
             </div>
         @endif
-
-
         <form method="post" action="{{route('estudiante.store')}}" enctype="multipart/form-data">
             @csrf
             <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
@@ -38,44 +35,7 @@
                 <center>
                     <div class="col-5" ><br>
                         <div class="row" >
-                            <div class="form-group {{ $errors->has('imagen') ? ' has-error' : '' }}"style="width: 70%">
-                                <h6 style="text-align: start">Imagen  (Opcional)</h6>
-                                <img width="200px"  id="previewImagen" style="max-height:250px"
-                                     src="/imagenes/iconos_formulario/anadir-imagen.svg"
-                                     @if($errors->has("imagen"))  src="/imagenes/iconos_formulario/anadir-imagen.svg"
-                                     @endif onclick="seleccionarImagen(event)"/>
 
-                                <label id="labelImagen" for="imagen" class="btn btn-large" ><span style="font-size: 60px">
-                                                    </span></label>
-                                <input type="file" accept="image/*"
-                                       onchange="loadFile(event)"
-                                       @if($errors->has("imagen"))
-                                       style="display: none"
-                                       required
-                                       @endif
-                                       class="form-control"
-                                       style="opacity: 0" id="imagen"
-                                       name="imagen"/>
-                                @if ($errors->has('imagen'))
-                                    <span class="help-block" style="color: red">
-                                        <h6> <strong>{{ $errors->first('imagen') }}</strong></h6>
-                                    </span>
-                                @endif
-                            </div>
-
-                            <script>
-
-                                var loadFile = function (event) {
-                                    var image = document.getElementById('previewImagen');
-                                    image.src = URL.createObjectURL(event.target.files[0]);
-                                    document.getElementById("imagen").style.display = "none";
-                                    document.getElementById("labelImagen").style.display="none";
-                                };
-                                var seleccionarImagen = function (event) {
-                                    var element = document.getElementById("imagen");
-                                    element.click();
-                                }
-                            </script>
                         </div>
 
                     </div>
@@ -148,6 +108,7 @@
                         <img src="/imagenes/iconos_formulario/Arte.svg" class="svg" width="50" height="35"  >
                         <label for="habilidades" style="color: #000000">Habilidades Artisticas</label><br>
                         <select class="form-control" name="habilidades">
+                            <option value="ninguno">Ninguno</option>
                             <option value="arte">Arte</option>
                             <option value="canto">Canto</option>
                             <option value="baile">Baile</option>

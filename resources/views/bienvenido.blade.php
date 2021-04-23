@@ -43,7 +43,7 @@
                     <span class="text-md-left" style="color: #e0a800; font-family: 'Arial Black';  font-size: 15px;">Fundación Alivio del Sufrimiento</span>
                     <h6 align="center" style="color: #e0a800; font-family: 'Arial Black';"><b>Casa del Migrante</b></h6>
                 </div>
-                <div class="col-12 col-md-8 d-none d-xl-block">
+                <div class="col-12 col-md-9 d-none d-xl-block">
                     <nav class="site-navigation  position-relative text-right" role="navigation">
 
                         <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
@@ -51,6 +51,7 @@
                             <li><a href="#about-section" class="nav-link">Acerca de</a></li>
                             <li><a href="#services-section" class="nav-link">Servicios</a></li>
                             <li><a href="#contact-section" class="nav-link">Contáctanos</a></li>
+                            <li><a href="#footer-section" class="nav-link">Ayuda</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -308,47 +309,76 @@
     </section>
 
     <!--seccion contactanos-->
+    <section class="site-section border-bottom bg-light" id="contact-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md-12">
+                    <div class="col-12 text-center" data-aos="fade">
+                        <h6 class="section-title mb-3">Contáctanos</h6>
+                    </div>
+                    <br>
+                    <div class="mu-contact-content">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mu-contact-left">
+                                    <!-- Email message div -->
+                                    <div id="form-messages"></div>
+                                    <!-- Start contact form -->
+                                    <form id="ajax-contact" method="post" action="mailer.php" class="mu-contact-form">
+                                        <div class="form-group">
+                                            <h6 style="color: black; font-size: 1.3em;">Presidente de la Fundación</h6>
+                                            <p><br>EMAIL: doncastriotti@gmail.com<br>CEL: +504 98000025</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <h6 style="color: black; font-size: 1.3em;">Coordinadora del Proyecto</h6>
+                                            <p><br>EMAIL: kvalladares@fundacionaliviodelsufrimiento.org<br>CEL: +504 97269628</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <h6 style="color: black; font-size: 1.3em;">Administración del Proyecto</h6>
+                                            <p><br>EMAIL: mmontoya@fundacionaliviodelsufrimiento.org<br>CEL: +504 97870248</p>
+                                            <p>EMAIL: informatica@fundacionaliviodelsufrimiento.org<br>CEL: +504 96085276</p>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mu-contact-right">
+                                    <div class="mu-contact-widget">
+                                        <h6 style="color: black; font-size: 1.3em;">Dirección Oficina</h6>
+                                        <p>HOSPITAL CASA DE ALIVIO DEL SUFRIMIENTO BARRIO SAN JOSÉ EL PARAÍSO, EL PARAÍSO HONDURAS C.A.</p>
+                                        <address>
+                                            <p><i class="fa fa-phone"></i> (504) 98000025</p>
+                                            <p><i class="fa fa-phone"></i> (504) 2793-4894</p>
+                                            <p><i class="fa fa-envelope-o"></i>doncastriotti@gmail.com</p>
+                                            <p><i class="fa fa-map-marker"></i>El Paraíso, El Paraíso Honduras C.A.</p>
+                                        </address>
+                                        <div class="form-group">
+                                            <h6 style="color: black; font-size: 1.3em;">Directores de Centros</h6>
+                                            <p><br>CEL: +504 89757244</p>
+                                            <p><br>CEL: +504 95714046</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Contact section -->
+    <!--seccion ubicacion-->
     <section class="site-section bg-light" id="contact-section" data-aos="fade">
         <div class="container">
             <div class="row mb-5">
-                <div class="col-12 text-center">
-                    <h6 class="section-title mb-3">Contáctanos</h6>
-                </div>
-            </div>
-            <div class="row mb-5">
-                <div class="col-md-4 text-center">
-                    <p class="mb-4">
-                        <span class="icon-phone  text-primary"></span>
-                        <a href="#">(504) 98000025</a>
-                    </p>
-                    <p class="mb-4">
-                        <span class="icon-phone text-primary"></span>
-                        <a href="#">(504) 2793-4894</a>
-                    </p>
-                </div>
-                <div class="col-md-4 text-center">
-                    <p class="mb-0">
-                        <span class="icon-mail_outline  text-primary"></span>
-                        <a href="#">doncastriotti@gmail.com</a>
-                    </p>
-                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3873.5605516145283!2d-86.56461728568713!3d13.865396798387788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6e15a9f5188661%3A0x4906f2045c5a6961!2sHospital%20Alivio%20del%20sufrimiento!5e0!3m2!1ses-419!2shn!4v1618302039885!5m2!1ses-419!2shn" width="1560" height="760" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
             <div class="row">
                 <div class="col-md-12 mb-5"></div>
             </div>
         </div>
-        <!--seccion ubicacion-->
-        <section class="site-section bg-light" id="contact-section" data-aos="fade">
-            <div class="container">
-                <div class="row mb-5">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3873.5605516145283!2d-86.56461728568713!3d13.865396798387788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6e15a9f5188661%3A0x4906f2045c5a6961!2sHospital%20Alivio%20del%20sufrimiento!5e0!3m2!1ses-419!2shn!4v1618302039885!5m2!1ses-419!2shn" width="1550" height="1000" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 mb-5"></div>
-                </div>
-            </div>
     </section>
-    <footer class="site-footer">
+    <footer class="site-footer" id="footer-section">
         <div class="container">
             <div class="row">
                 <div class="col-md-9">
@@ -357,15 +387,7 @@
                             <h6 class="footer-heading mb-6">Acerca de</h6>
                             <p>Sistema web realizado por alumnas de la Universidad Nacional Autónoma de Honduras Tecnológica Danlí</p>
                         </div>
-                        <div class="col-md-2">
-                            <h6 class="footer-heading mb-4">Enlaces</h6>
-                            <ul class="list-unstyled">
-                                <li><a href="#about-section" class="smoothscroll">Acerca de</a></li>
-                                <li><a href="#services-section" class="smoothscroll">Servicios</a></li>
-                                <li><a href="#blog-section" class="smoothscroll">Galeria</a></li>
-                                <li><a href="#contact-section" class="smoothscroll">Contáctanos</a></li>
-                            </ul>
-                        </div>
+
                         <div class="col-md-4">
                             <h6 class="footer-heading mb-4">Horarios de atención</h6>
                             <p>Lunes-Viernes  8:00 am a 4:00 pm</p>
@@ -378,9 +400,16 @@
                             <span class="icon-mail_outline text-primary"></span>
                             <a href="#">maridiaz4455@gmail.com</a>
                             <span class="icon-mail_outline  text-primary"></span>
+                            <img src="TaniaMelissaSanchez"  width="50" height="42">
                             <a href="#">tania.calix@yahoo.com</a><br>
                             <span class="icon-mail_outline text-primary"></span>
                             <a href="#">murillodaniela408@gmail.com</a>
+                        </div>
+                        <div class="container">
+                            <div class="div-img" >
+                                <img class="img" src="https://www.interactius.com/wp-content/uploads/2017/09/foto10.png" title="Foto10" alt="Foto10">
+                                <div class="text">That's all folks!</div>
+                            </div>
                         </div>
                     </div>
                 </div>
