@@ -11,7 +11,7 @@
     <body>
     <div class="card" >
         <div class="card-header" style="background-color: #4dc0b5">
-            <label class="card-title" style="color: black;">Estudiante</label>
+            <label class="card-title" style="color: black;">Escolaridad</label>
         </div>
         @if ($errors->any())
             <div class="alert alert-danger">
@@ -22,6 +22,9 @@
                 </ul>
             </div>
         @endif
+
+
+
 
         @if(session("exito"))
             <div class="alert alert-info">
