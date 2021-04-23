@@ -43,7 +43,7 @@
                     <span class="text-md-left" style="color: #e0a800; font-family: 'Arial Black';  font-size: 15px;">Fundación Alivio del Sufrimiento</span>
                     <h6 align="center" style="color: #e0a800; font-family: 'Arial Black';"><b>Casa del Migrante</b></h6>
                 </div>
-                <div class="col-12 col-md-8 d-none d-xl-block">
+                <div class="col-12 col-md-9 d-none d-xl-block">
                     <nav class="site-navigation  position-relative text-right" role="navigation">
 
                         <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
@@ -51,6 +51,7 @@
                             <li><a href="#about-section" class="nav-link">Acerca de</a></li>
                             <li><a href="#services-section" class="nav-link">Servicios</a></li>
                             <li><a href="#contact-section" class="nav-link">Contáctanos</a></li>
+                            <li><a href="#footer-section" class="nav-link">Ayuda</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -348,7 +349,7 @@
                 </div>
             </div>
     </section>
-    <footer class="site-footer">
+    <footer class="site-footer" id="footer-section">
         <div class="container">
             <div class="row">
                 <div class="col-md-9">
@@ -357,15 +358,7 @@
                             <h6 class="footer-heading mb-6">Acerca de</h6>
                             <p>Sistema web realizado por alumnas de la Universidad Nacional Autónoma de Honduras Tecnológica Danlí</p>
                         </div>
-                        <div class="col-md-2">
-                            <h6 class="footer-heading mb-4">Enlaces</h6>
-                            <ul class="list-unstyled">
-                                <li><a href="#about-section" class="smoothscroll">Acerca de</a></li>
-                                <li><a href="#services-section" class="smoothscroll">Servicios</a></li>
-                                <li><a href="#blog-section" class="smoothscroll">Galeria</a></li>
-                                <li><a href="#contact-section" class="smoothscroll">Contáctanos</a></li>
-                            </ul>
-                        </div>
+
                         <div class="col-md-4">
                             <h6 class="footer-heading mb-4">Horarios de atención</h6>
                             <p>Lunes-Viernes  8:00 am a 4:00 pm</p>
@@ -378,9 +371,16 @@
                             <span class="icon-mail_outline text-primary"></span>
                             <a href="#">maridiaz4455@gmail.com</a>
                             <span class="icon-mail_outline  text-primary"></span>
+                            <img src="TaniaMelissaSanchez"  width="50" height="42">
                             <a href="#">tania.calix@yahoo.com</a><br>
                             <span class="icon-mail_outline text-primary"></span>
                             <a href="#">murillodaniela408@gmail.com</a>
+                        </div>
+                        <div class="container">
+                            <div class="div-img" >
+                                <img class="img" src="https://www.interactius.com/wp-content/uploads/2017/09/foto10.png" title="Foto10" alt="Foto10">
+                                <div class="text">That's all folks!</div>
+                            </div>
                         </div>
                     </div>
                 </div>
