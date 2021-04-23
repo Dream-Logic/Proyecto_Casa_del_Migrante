@@ -205,6 +205,7 @@ Route::group(["middleware" => "auth"], function () {
         ->where('id', '[0-9]+');
 
     /*Empleado director lista*/
+    /*Empleado director lista*/
     Route::get('/estudiante/lista', 'EstudianteController@director')
         ->name('listadoEst.director');
     Route::get('/estudiante/{id}', 'EstudianteController@show')
