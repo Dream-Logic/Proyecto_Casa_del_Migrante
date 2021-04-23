@@ -2,10 +2,17 @@
 @section('titulo', 'Editar datos del huésped')
 @section('contenido')
 
-    <br><br><br>
+    <br>
+    <br>
+    <br>
+    <head>
+        <!-- CSRF Token -->
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+    </head>
+    <div>
     <div class="card ">
 
-        <div class="card-header">
+        <div class="card-header" style="background-color: #4dc0b5">
             <label class="card-title">Editar Datos del Estudiante</label>
         </div>
         @if ($errors->any())
@@ -165,14 +172,15 @@
                     </div>
 
                     <br>
+                    <div class="botones">
                     <button type="submit" class="btn btn-sm btn-success"><i class="fas fa-save"></i> Guardar</button>
 
                 </div>
             </form>
         </div>
     </div>
+    </div class="card">
     <script src="/js/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-    </div>
-
+    </body>
 @endsection
