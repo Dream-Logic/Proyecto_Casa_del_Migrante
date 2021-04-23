@@ -132,6 +132,7 @@ Route::group(["middleware" => "auth"], function () {
 
         Route::get('/estudiante', 'EstudianteController@estudiante')
             ->name('estudiante.estudiante');
+
         /*  Rutas para el listado del Estudiante*/
         Route::get('/estudiante/listado', 'EstudianteController@index')
             ->name('listadoEstudiante.index');
@@ -185,7 +186,6 @@ Route::group(["middleware" => "auth"], function () {
 
     //ROUTES Escolaridad
     Route::get('/estudiante/create_estudiante', 'EstudianteController@Escolaridad');
-
     //ROUTES LISTADO DIRECTOR
     Route::get('/huesped/listadoDirector', 'HuespedController@director')
         ->name('listado.director');
@@ -200,11 +200,17 @@ Route::group(["middleware" => "auth"], function () {
     /*Empleado director lista*/
     Route::get('/empleado/lista', 'EmpleadoController@director')
         ->name('listaEmpleado.director');
-
-
     Route::get('/empleado/{id}', 'EmpleadoController@show')
         ->name('empleado.mostrar')
         ->where('id', '[0-9]+');
+
+    /*Empleado director lista*/
+    Route::get('/estudiante/lista', 'EstudianteController@director')
+        ->name('listadoEst.director');
+    Route::get('/estudiante/{id}', 'EstudianteController@show')
+        ->name('estudiante.mostrar')
+        ->where('id', '[0-9]+');
+
     // EPORTAR A PDF Y A EXCEL
     Route::get('/huesped/export','ExportHuespedController@export');
     Route::get('/pdfH/pdf','ExportHuespedController@pdf');

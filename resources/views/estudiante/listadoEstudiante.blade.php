@@ -26,7 +26,7 @@
         <button class="mr-sm-2 btn btn-success" type="submit">
             <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
         </button>
-        <a href="{{url('/empleado/lista')}}" class="btn btn-warning">
+        <a href="{{url('/estudiante/lista')}}" class="btn btn-warning">
             <img src="/imagenes/iconos/restaurar.svg" class="svg" width="25">
         </a>
     </form>
@@ -53,7 +53,7 @@
             <tbody>
             @forelse($listas as $estudiante)
                 <tr>
-                    <th scope="row">{{ $personal->id }}</th>
+                    <th scope="row">{{ $estudiante->id }}</th>
                     <td>{{ $estudiante->nombres_alumno}} </td>
                     <td> {{$estudiante->apellidos_alumno}}</td>
                     <td>{{ $estudiante->grado}}</td>

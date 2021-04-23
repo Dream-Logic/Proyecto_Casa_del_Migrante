@@ -31,42 +31,7 @@
                 <center>
                     <div class="col-5"><br>
                         <div class="row">
-                            <div class="form-group {{ $errors->has('imagen') ? ' has-error' : '' }}" style="width: 90%">
-                                <h6 style="text-align: start">Imagen (Opcional)</h6>
-                                <img width="200px" id="previewImagen" style="max-height:250px"
-                                     src="{{"/foto/".$estudiante->imagen}}"
-                                     onclick="seleccionarImagen(event)"/>
-
-                                <label id="labelImagen" for="imagen" class="btn btn-large"><span
-                                        style="font-size: 60px">
-                                                    </span></label>
-                                <input type="file" accept="image/*"
-                                       onchange="loadFile(event)"
-                                       @if($errors->has("imagen"))
-                                       style="display: none"
-                                       required
-                                       @endif
-                                       class="form-control"
-                                       style="opacity: 0" id="imagen"
-                                       name="imagen"/>
-
-                            </div>
-
-                            <script>
-
-                                var loadFile = function (event) {
-                                    var image = document.getElementById('previewImagen');
-                                    image.src = URL.createObjectURL(event.target.files[0]);
-                                    document.getElementById("imagen").style.display = "none";
-                                    document.getElementById("labelImagen").style.display = "none";
-                                };
-                                var seleccionarImagen = function (event) {
-                                    var element = document.getElementById("imagen");
-                                    element.click();
-                                }
-                            </script>
                         </div>
-
                     </div>
                 </center>
 
@@ -78,7 +43,7 @@
                         <img src="/imagenes/iconos_formulario/usuario.svg" class="svg" width="25" height="35"   >
                         <label for="nombres_alumno" style="color: #000000">Nombres</label><br>
                         <input type="text" class="form-control" name="nombres_alumno"
-                               id="nombres_alumno" placeholder="Nombres"><br>
+                               id="nombres_alumno" placeholder="Nombres"  value="{{$estudiante->nombres_alumno}}"><br>
                     </div>
                     <br>
 
@@ -86,7 +51,7 @@
                         <img src="/imagenes/iconos_formulario/usuario.svg" class="svg" width="25" height="35"  >
                         <label for="apellidos_alumno" style="color: #000000">Apellidos</label><br>
                         <input type="text" class="form-control" name="apellidos_alumno"
-                               id="apellidos_alumno" placeholder="Apellidos">
+                               id="apellidos_alumno" placeholder="Apellidos"  value="{{$estudiante->apellidos_alumno}}">
                     </div>
                     <br>
                     <br>
@@ -95,7 +60,7 @@
                         <img src="/imagenes/iconos_formulario/Grado.svg" class="svg" width="25" height="35"  >
                         <label for="grado" style="color: #000000">Grado</label><br>
                         <input type="text" class="form-control" name="grado"
-                               id="grado" placeholder="Grado">
+                               id="grado" placeholder="Grado"  value="{{$estudiante->grado}}">
                     </div>
                     <br>
                     <br>
@@ -104,7 +69,7 @@
                         <img src="/imagenes/iconos_formulario/Ca1.svg" class="svg" width="25" height="35"  >
                         <label for="carrera" style="color: #000000">Carrera</label><br>
                         <input type="text" class="form-control" name="carrera"
-                               id="carrera" placeholder="Carrera">
+                               id="carrera" placeholder="Carrera"  value="{{$estudiante->carrera}}">
                     </div>
                     <br>
 
@@ -112,11 +77,19 @@
                     <div class="col-5">
                         <img src="/imagenes/iconos_formulario/Escritura.svg" class="svg" width="50" height="35"  >
                         <label for="escritura" style="color: #000000">Nivel de escritura</label><br>
-                        <select class="form-control" name="escritura">
-                            <option value="ninguno">Ninguno</option>
-                            <option value="bajo">Bajo</option>
-                            <option value="medio">Medio</option>
-                            <option value="alto">Alto</option>
+                        <select class="form-control" name="escritura" >
+                            <option  value="ninguno" @if($estudiante->escritura === "ninguno") selected='selected' @endif>
+                        Ninguno
+                        </option>
+                            <option  value="bajo" @if($estudiante->escritura === "bajo") selected='selected' @endif>
+                                Bajo
+                            </option>
+                        <option  value="medio" @if($estudiante->escritura === "medio") selected='selected' @endif>
+                            Medio
+                        </option>
+                            <option  value="alto" @if($estudiante->escritura === "alto") selected='selected' @endif>
+                                alto
+                            </option>
                         </select><br>
                     </div>
                     <br>
@@ -126,10 +99,18 @@
                         <img src="/imagenes/iconos_formulario/Reed.svg" class="svg" width="50" height="35"  >
                         <label for="lectura" style="color: #000000">Nivel de Lectura</label><br>
                         <select class="form-control" name="lectura">
-                            <option value="ninguno">Ninguno</option>
-                            <option value="bajo">Bajo</option>
-                            <option value="medio">Medio</option>
-                            <option value="alto">Alto</option>
+                            <option  value="ninguno" @if($estudiante->escritura === "ninguno") selected='selected' @endif>
+                                Ninguno
+                            </option>
+                            <option  value="bajo" @if($estudiante->escritura === "bajo") selected='selected' @endif>
+                                Bajo
+                            </option>
+                            <option  value="medio" @if($estudiante->escritura === "medio") selected='selected' @endif>
+                                Medio
+                            </option>
+                            <option  value="alto" @if($estudiante->escritura === "alto") selected='selected' @endif>
+                                alto
+                            </option>
                         </select><br>
                     </div>
 
@@ -138,11 +119,18 @@
                         <img src="/imagenes/iconos_formulario/Arte.svg" class="svg" width="50" height="35"  >
                         <label for="habilidades" style="color: #000000">Habilidades Artisticas</label><br>
                         <select class="form-control" name="habilidades">
-                            <option value="arte">Arte</option>
-                            <option value="canto">Canto</option>
-                            <option value="baile">Baile</option>
-                            <option value="dibujo">Dibujo</option>
-                            <option value="ejecucion">Ejecución de instrumento</option>
+                            <option  value="arte" @if($estudiante->habilidades === "arte") selected='selected' @endif>
+                                Arte
+                            </option>
+                            <option  value="canto" @if($estudiante->habilidades === "canto") selected='selected' @endif>
+                                Canto
+                            </option>
+                            <option  value="baile" @if($estudiante->habilidades === "baile") selected='selected' @endif>
+                                Baile
+                            </option>
+                            <option  value="dibujo" @if($estudiante->habilidades === "dibujo") selected='selected' @endif>
+                                Dibujo
+                            </option>
                         </select><br>
                     </div>
 
@@ -151,13 +139,27 @@
                         <img src="/imagenes/iconos_formulario/Musica.svg" class="svg" width="50" height="35"  >
                         <label for="instrumento" style="color: #000000">Ejecuta algun instrumento</label><br>
                         <select class="form-control" name="instrumento">
-                            <option value="ninguno">Ninguno</option>
-                            <option value="guitarra">Guitarra</option>
-                            <option value="violin">Violin</option>
-                            <option value="ukele">Ukelele</option>
-                            <option value="saxofon">Saxofon</option>
-                            <option value="teclado">Teclado</option>
-                            <option value="otros">Otros</option>
+                            <option  value="ninguno" @if($estudiante->instrumento === "ninguno") selected='selected' @endif>
+                                Ninguno
+                            </option>
+                            <option  value="guitarra" @if($estudiante->instrumento === "guitarra") selected='selected' @endif>
+                                Guitarra
+                            </option>
+                            <option  value="violin" @if($estudiante->instrumento === "violin") selected='selected' @endif>
+                                Violin
+                            </option>
+                            <option  value="ukelele" @if($estudiante->instrumento === "ukelele") selected='selected' @endif>
+                                Ukelele
+                            </option>
+                            <option  value="saxofon" @if($estudiante->instrumento === "saxofon") selected='selected' @endif>
+                                Saxofon
+                            </option>
+                            <option  value="teclado" @if($estudiante->instrumento === "teclado") selected='selected' @endif>
+                                Teclado
+                            </option>
+                            <option  value="otros" @if($estudiante->instrumento === "otros") selected='selected' @endif>
+                                Otros
+                            </option>
 
                         </select>
                     </div>
