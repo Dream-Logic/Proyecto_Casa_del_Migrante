@@ -11,7 +11,9 @@
     <body>
 
     <div class="card">
-        <div class="card-header" style="background-color: #4dc0b5">
+        <div class="card"  class="table-responsive" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
+    box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);" >
+            <div class="card-header" style="background-color: #4cd213">
             <label class="card-title" style="color: black;">Datos del Personal</label>
         </div>
         @if ($errors->any())
@@ -37,11 +39,11 @@
             <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
             <div class="abs-center">
                 <center>
-                    <div class="col-5"><br>
+                    <div class="col-2"><br>
                         <div class="row">
                             <div class="form-group {{ $errors->has('imagen') ? ' has-error' : '' }}" style="width: 70%">
-                                <h6 style="text-align: start">Imagen (Opcional)</h6>
-                                <img width="200px" id="previewImagen" style="max-height:250px"
+                                <h6 style="text-align: center">Imagen (Opcional)</h6>
+                                <img width="150px" id="previewImagen" style="max-height:250px"
                                      src="/imagenes/iconos_formulario/anadir-imagen.svg"
                                      @if($errors->has("imagen"))  src="/imagenes/iconos_formulario/anadir-imagen.svg"
                                      @endif onclick="seleccionarImagen(event)"/>
@@ -87,40 +89,40 @@
                 <div class="form-row">
 
                     <div class="col-5"><br>
-                        <img src="/imagenes/iconos_formulario/usuario.svg" class="svg" width="25" height="35">
+                        <img src="/imagenes/iconos_formulario/usuario.svg" style="margin-left: 50px" class="svg" width="25" height="35">
                         <label for="nombre_personal" style="color: #000000">Nombres</label><br>
-                        <input type="text" class="form-control" name="nombres_personal"
+                        <input style="margin-left: 30px" type="text" class="form-control" name="nombres_personal"
                                id="nombres_personal" placeholder="Nombres"><br>
                     </div>
                     <br>
 
                     <div class="col-5"><br>
-                        <img src="/imagenes/iconos_formulario/usuario.svg" class="svg" width="25" height="35">
+                        <img src="/imagenes/iconos_formulario/usuario.svg" style="margin-left: 50px" class="svg" width="25" height="35">
                         <label for="apellido_personal" style="color: #000000">Apellidos</label><br>
-                        <input type="text" class="form-control" name="apellidos_personal"
+                        <input style="margin-left: 30px" type="text" class="form-control" name="apellidos_personal"
                                id="apellidos_personal" placeholder="Apellidos">
                     </div>
                     <br>
 
 
                     <div class="col-5">
-                        <img src="/imagenes/iconos_formulario/calendario.svg" class="svg" width="50" height="35">
+                        <img src="/imagenes/iconos_formulario/calendario.svg" style="margin-left: 50px" class="svg" width="50" height="35">
                         <label for="FechaNac_personal" style="color: #000000">Fecha de Nacimiento</label><br>
-                        <input type="date" class="form-control" name="fnacimiento_personal"
+                        <input style="margin-left: 30px" type="date" class="form-control" name="fnacimiento_personal"
                                id="fnacimiento_personal"><br>
                     </div>
 
 
                     <div class="col-5">
-                        <img src="/imagenes/iconos_formulario/grupo-de-edad.svg" class="svg" width="50" height="35">
+                        <img src="/imagenes/iconos_formulario/grupo-de-edad.svg" style="margin-left: 50px" class="svg" width="50" height="35">
                         <label for="edad_personal" style="color: #000000">Edad</label><br>
-                        <input type="number" class="form-control" name="edad_personal"
+                        <input style="margin-left: 30px" type="number" class="form-control" name="edad_personal"
                                id="edad_personal" placeholder="Edad"><br>
                     </div>
                     <div class="col-5">
-                        <img src="/imagenes/iconos_formulario/sexo.svg" class="svg" width="50" height="35">
+                        <img src="/imagenes/iconos_formulario/sexo.svg" style="margin-left: 50px" class="svg" width="50" height="35">
                         <label for="sexo_personal" style="color: #000000">Sexo</label><br>
-                        <select class="form-control" name="sexo_personal">
+                        <select style="margin-left: 30px" class="form-control" name="sexo_personal">
                             <option value="femenino">Femenino</option>
                             <option value="masculino">Masculino</option>
                         </select><br>
@@ -128,102 +130,71 @@
 
 
                     <div class="col-5">
-                        <img src="/imagenes/iconos_formulario/tarjeta-de-identificacion.svg" class="svg" width="50"
+                        <img src="/imagenes/iconos_formulario/tarjeta-de-identificacion.svg" style="margin-left: 50px" class="svg" width="50"
                              height="35">
                         <label for="identidad_personal" style="color: #000000">Identidad </label><br>
-                        <input type="text" class="form-control" name="identidad_personal"
+                        <input style="margin-left: 30px" type="text" class="form-control" name="identidad_personal"
                                id="identidad_personal" placeholder="0000-0000-00000"><br>
                     </div>
 
-                    <div class="col-11">
-                        <img src="/imagenes/iconos_formulario/ubicacion.svg" class="svg" width="50" height="35">
+                    <div style="margin-left: 45px">
+                        <img src="/imagenes/iconos_formulario/ubicacion.svg" style="margin-left: 50px" class="svg" width="50" height="35">
                         <label for="direccion_personal" style="color: #000000">Dirección</label>
                         <span class="col-md-5 col-md-offset-10 text-center">
         <textarea class="form-control" id="direccion_personal" name="direccion_personal"
-                  placeholder="Dirección" rows="2"></textarea><br>
+                  placeholder="Dirección" style="margin-left: 35px" cols="156" rows="2"></textarea><br>
                     </span></div>
                     <br>
 
 
-                    <div class="col-11">
-                        <img src="/imagenes/iconos_formulario/profesion.svg" class="svg" width="50" height="35">
+                    <div style="margin-left: 45px">
+                        <img src="/imagenes/iconos_formulario/profesion.svg" style="margin-left: 50px" class="svg" width="50" height="35">
                         <label for="profesion" style="color: #000000">Profesión u Oficio</label>
                         <span class="col-md-5 col-md-offset-10 text-center">
         <textarea class="form-control" id="profesionPersonal" name="profesionPersonal"
-                  placeholder="Ingrese su profesión u oficio" rows="2"></textarea><br>
+                  placeholder="Ingrese su profesión u oficio" style="margin-left: 35px" cols="156" rows="2"></textarea><br>
                     </span></div>
                     <br>
 
                     <br>
-                    <div class="col-11">
-                        <img src="/imagenes/iconos_formulario/cargo.svg" class="svg" width="50" height="35">
+                    <div style="margin-left: 45px">
+                        <img src="/imagenes/iconos_formulario/cargo.svg" style="margin-left: 50px" class="svg" width="50" height="35">
                         <label for="cargo" style="color: #000000">Cargo</label>
                         <span class="col-md-5 col-md-offset-10 text-center">
                        <textarea class="form-control" id="cargo" name="cargo"
-                                 placeholder="Cargo que desempeñará" rows="2"></textarea><br>
+                                 placeholder="Cargo que desempeñará" style="margin-left: 35px" cols="156" rows="2"></textarea><br>
                     </span></div>
                     <br>
-
-
                 </div>
-
-
                 <div class="col-11">
-                    <img src="/imagenes/iconos_formulario/email.svg" class="svg" width="50" height="35">
+                    <img src="/imagenes/iconos_formulario/email.svg" style="margin-left: 25px" class="svg" width="50" height="35">
                     <label for="email" style="color: #000000">Correo Electrónico </label>
                     <span class="col-md-5 col-md-offset-10 text-center">
-        <textarea class="form-control" id="email" name="email"
+        <textarea style="margin-left: 10px" class="form-control" id="email" name="email"
                   placeholder="Ingrese su correo electrónico" rows="2"></textarea><br>
                     </span></div>
 
 
                 <div class="col-11">
-                    <img src="/imagenes/iconos_formulario/telefono.svg" class="svg" width="50" height="35">
+                    <img src="/imagenes/iconos_formulario/telefono.svg" style="margin-left: 25px" class="svg" width="50" height="35">
                     <label for="telefono_personal" style="color: #000000">Telefono</label>
                     <span class="col-md-5 col-md-offset-10 text-center">
-        <textarea class="form-control" id="telefono_personal" name="telefono_personal"
+        <textarea style="margin-left: 10px" class="form-control" id="telefono_personal" name="telefono_personal"
                   placeholder="Numero de telefono" rows="2"></textarea><br>
                     </span></div>
                 <br>
 
 
-
-
-
-                <div class="modal" id="cambio"tabindex="-1" role="dialog">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">Guardar Cliente</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <p>¿Desea crear el cliente?</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="submit" class="btn btn-primary " href="">
-                                    Guardar
-                                </button>
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
             <div class="botones">
-                <button type="submit" class="btn btn-sm btn-success" data-toggle="model" data-target="#cambio><i class="fas fa-save" "></i> Guardar</button>
+                <button type="submit" class="btn btn-outline-success"> Guardar</button>
             </div>
-            <br>
+            </div>
         </form>
-
-        <br>
-    </div class="card">
+        </div>
+        </div>
     <script src="/js/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-
-    </body>
+    <br>
+    <br>
 
 @endsection

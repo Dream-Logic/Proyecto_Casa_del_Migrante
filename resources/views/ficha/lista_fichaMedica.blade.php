@@ -67,7 +67,7 @@
                     <td>{{ $ficha->enfermedad_paciente}}</td>
                     <td>{{ $ficha->tratamiento_paciente}}</td>
 
-                    <td><a class="btn btn-outline-info" href="">
+                    <td><a class="btn btn-outline-info" href="{{route('ficha.mostrar',['id' =>$ficha->id])}}">
                             <img src="/imagenes/iconos/ver.svg" width="25" >
                         </a></td>
                     <td><a class="btn btn-outline-warning" href="{{route('ficha.edit',['id' =>$ficha->id])}}" >
@@ -79,8 +79,8 @@
                             <form method="post" action="{{route('ficha.borrar',['id'=>$ficha->id])}}">
                                 @csrf
                                 @method('delete')
-                                <img src="/imagenes/iconos/eliminar.svg" >
-                                <input type="submit" value="Eliminar" class="btn btn-outline-danger">
+
+                                <input  src="/imagenes/iconos/eliminar.svg" type="image" height="45" class="btn btn-outline-danger">
                             </form>
                         </a>
                     </td>
@@ -93,6 +93,8 @@
             </tbody>
         </table>
     </div>
+    <br>
+    <br>
     {{ $pacientes->links()}}
     <script src="/js/jquery-3.2.1.min.js"></script>
     <script src="js/jquery-3.2.1.min.js"></script>

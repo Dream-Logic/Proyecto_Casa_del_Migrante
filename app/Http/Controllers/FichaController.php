@@ -27,10 +27,18 @@ class FichaController extends Controller
     public function listasFicha(Request $request){
 
 
-        $pacientes= Ficha::Paginate(15);
-
+        $pacientes = Ficha::name($request->get('name'))->orderBy('id', 'ASC')->paginate(15);
         return view('ficha\lista_fichaMedica')->with('pacientes', $pacientes);
 
+        //$pacientes= Ficha::Paginate(15);
+        //return view('ficha\lista_fichaMedica')->with('pacientes', $pacientes);
+
+    }
+    public function fichaDire(Request $request){
+
+        $pacientes = Ficha::name($request->get('name'))->orderBy('id', 'DESC')->paginate(15);
+
+        return view('ficha\lista_fichaDirector')->with('pacientes', $pacientes);
     }
 
 
@@ -157,6 +165,12 @@ class FichaController extends Controller
     public function show($id)
     {
         //
+        $ficha = Ficha::findOrFail($id);
+        //$responsables = Responsable::where('id_huesped', "=", $id)->get();
+        //  $narracion = NarracionHecho::where('id_huesped', "=", $id)->get();
+
+        return view('ficha\verFicha')->with('ficha', $ficha);
+
     }
 
     /**

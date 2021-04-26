@@ -14,12 +14,13 @@
             </ul>
         </div>
     @endif
-    <label class="card-title" style="color: black; height: 75px">Detalles de {{$personal->nombres_personal}} {{$personal->apellidos_personal}} </label>
+    <div style="background-color:  #0d95e8; height: 60px" >
+    <label class="card-title" style="color: black; height: 75px;  margin-left: 40px; margin-top: 18px">Información de {{$personal->nombres_personal}} {{$personal->apellidos_personal}} </label>
     <input  class="btn btn-warning "  width="25" type="button" value="Imprimir" onclick="window.print()"
-            style="margin-left: 850px" >
-    <img src="/imagenes/iconos_formulario/imprimir.svg" class="svg"  style="margin-left: 1010px;border: 25px;height: 40px ;margin-top: -176px" >
+            style="margin-left: 985px;" >
+   </div>
     <center>
-        <div class="col-5" ><br>
+        <div class="col-2" ><br>
             <div class="row" >
                 <div class="form-group {{ $errors->has('imagen') ? ' has-error' : '' }}"style="width: 90%">
                     <img width="200px"  id="previewImagen" style="max-height:200px"
@@ -43,11 +44,13 @@
         </div>
     </center>
     <div class="ver">
-        <table class="table">
-            <thead class="mx-4" style="background-color: #90bf23">
+       <div class="table-responsive" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
+    box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);">
+        <table  class="table ruler-vertical table-hover mx-sm-0 table-bordered ">
+            <thead class="mx-2" style="background-color: #0d95e8">
             <tr class="mx-4">
-                <th scope="col"><h6>Datos personales del Empleado</h6></th>
-                <th scope="col"><h6></h6></th>
+                <th scope="col"><h6 style="  font-weight: bold;">Datos personales del Empleado</h6></th>
+                <th scope="col"><h6 style="  font-weight: bold;">Detalles</h6></th>
 
             </tr>
             </thead>
@@ -104,6 +107,9 @@
 
             </tbody>
         </table>
+       </div>
+        <br>
+        <br>
         <script src="/js/jquery-3.2.1.min.js"></script>
     </div>
 @endsection
