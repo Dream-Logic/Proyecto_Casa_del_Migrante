@@ -102,7 +102,7 @@
                 <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
                     <div class="mb-4">
                         <h6 class= "section-title mb-3"><b>Casa del Gran Árbol</b></h6>
-                        <p>Es una entidad sin ánimo de lucro, que se ha destacado por enfocarse en servir,
+                        <p style="text-align: justify">Es una entidad sin ánimo de lucro, que se ha destacado por enfocarse en servir,
                             formar y desarrollar niños y niñas en riesgo social, permitiendo así ofrecer
                             oportunidades a los mismos y brindar a la sociedad individuos con un ímpetu de creación.</p>
                         <p>El objetivo que tiene Casa del Gran Árbol es generar un modelo que facilite la inclusión de los jóvenes
@@ -131,7 +131,7 @@
                 <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
                     <div class="mb-4">
                         <h6 class= "section-title mb-3" align="center"><b>Proyecto Casa del</b></h6><h6 class= "section-title mb-3" align="center"><b>Migrante</b></h6>
-                        <p>El principal problema que el proyecto propuesto quiere abordar es la necesidad de
+                        <p style="text-align: justify">El principal problema que el proyecto propuesto quiere abordar es la necesidad de
                             un modelo integral que atienda las necesidades de seguridad y acceso a formación
                             de calidad para reincorporarse al sistema educativo o mercado laboral. No existen
                             espacios equipados, seguros y con actividades adecuadas para la inclusión socioeconómica
@@ -167,7 +167,7 @@
                 <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
                     <div class="mb-4">
                         <h6 class= "section-title mb-3" align="center"><b>Don Ferdinando Castriotti</b></h6>
-                        <p>Don Fernando Castriotti nacido en Venosa, de Potenza Provincia, 3 de marzo de 1969.
+                        <p style="text-align: justify">Don Fernando Castriotti nacido en Venosa, de Potenza Provincia, 3 de marzo de 1969.
                             Realiza los estudios clásicos en el Instituto de Horacio Flaco.
                             Licenciatura en Filosofía y Teología en la Universidad de Santo Tomás de Nápoles
                             Especialista en Dogmática y Moral de la Universidad de Roma
@@ -194,7 +194,7 @@
                 <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
                     <div class="mb-4">
                         <h6 class= "section-title mb-3" align="center"><b>Camino de fe</b></h6>
-                        <p>Entró en el seminario a la edad de 18 años
+                        <p style="text-align: justify">Entró en el seminario a la edad de 18 años
                             Ordenado sacerdote el 06 de marzo 1993
                             Encargado de la Pastoral de Trabajo Social de la Conferencia Episcopal Italiana hasta el año 2002
                             Parroco de Melfi, Lavello, Rapolla
@@ -221,7 +221,7 @@
                 <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
                     <div class="mb-4">
                         <h6 class= "section-title mb-3" align="center"><b>Misionero</b></h6>
-                        <p>10 años de misión en Baibokum misión franciscana en el Chad
+                        <p style="text-align: justify">10 años de misión en Baibokum misión franciscana en el Chad
                             Comenzó su trabajo como misionero diocesano, "don de la fe" en territorio hondureño. Publicado por San Juan.
                             Bautista de la parroquia de El Paraíso, en el departamento homónimo al este de Honduras.
                             Es un cercano colaborador de Su Eminencia el Cardenal Oscar Andrés Rodríguez Maradiaga,
@@ -245,7 +245,7 @@
                         <img src="images/bienvenido/iconos/comida-y-bebida (1).svg" class="svg" width="60">
                         <div>
                             <h6 style="color: black; font-size: 1.3em;">Alimentación gratuita</h6>
-                            <p>La alimentación es un elemento importante en la buena salud, influye la calidad de
+                            <p style="text-align: justify">La alimentación es un elemento importante en la buena salud, influye la calidad de
                                 los alimentos, la cantidad de comida y los hábitos alimentarios para un bienestar
                                 del ser humano, con lo cual se obtiene una nutrición equilibrada</p>
                         </div>
@@ -256,7 +256,7 @@
                         <img src="images/bienvenido/iconos/kit-de-primeros-auxilios.svg" class="svg" width="50">
                         <div>
                             <h6 style="color: black; font-size: 1.3em;">Atención médica</h6>
-                            <p>La buena atención médica es el tipo de medicina que practican y enseñan los líderes
+                            <p style="text-align: justify">La buena atención médica es el tipo de medicina que practican y enseñan los líderes
                                 reconocidos de la profesión médica en un cierto periodo del desarrollo.</p>
                         </div>
                     </div>
@@ -266,7 +266,7 @@
                         <img src="images/bienvenido/iconos/ropa-limpia.svg" class="svg" width="50">
                         <div>
                             <h6 style="color: black; font-size: 1.3em;">Vestuario</h6>
-                            <p>Conjunto de prendas de vestir para los niños, niñas y jóvenes</p>
+                            <p style="text-align: justify">Conjunto de prendas de vestir para los niños, niñas y jóvenes</p>
                         </div>
                     </div>
                 </div>
@@ -277,7 +277,7 @@
                         <img src="images/bienvenido/iconos/casa.svg" class="svg" width="50">
                         <div>
                             <h6 style="color: black; font-size: 1.3em;">Alojamiento</h6>
-                            <p>Garantizar el alojamiento de los migrantes y sus familias. Sector de la población
+                            <p style="text-align: justify">Garantizar el alojamiento de los migrantes y sus familias. Sector de la población
                                 al que va dirigido el servicio: Población inmigrante.</p>
                         </div>
                     </div>
@@ -287,7 +287,7 @@
                         <img src="images/bienvenido/iconos/llamada-telefonica.svg" class="svg" width="50">
                         <div>
                             <h6 style="color: black; font-size: 1.3em;">Llamada telefónica</h6>
-                            <p>Una llamada telefónica es la operación en la que se comunican generalmente 2 personas,
+                            <p style="text-align: justify">Una llamada telefónica es la operación en la que se comunican generalmente 2 personas,
                                 aunque pueden ser varias personas, a ambos extremos.</p>
                         </div>
                     </div>
@@ -297,7 +297,7 @@
                         <img src="images/bienvenido/iconos/psicologia.svg" class="svg" width="50">
                         <div>
                             <h6 style="color: black; font-size: 1.3em;">Atención psicológica</h6>
-                            <p>Como parte de la atención integral se cuenta con el servicio de atención psicológica al menor.
+                            <p style="text-align: justify">Como parte de la atención integral se cuenta con el servicio de atención psicológica al menor.
                                 A su corta edad muchos de los Niños, Niñas y adolescentes atendidos han sido migrantes transnacionales
                                 y en su recorrido han vivido experiencias traumáticas que pueden marcar su desarrollo. La importancia
                                 de la atención psicológica radica en ayudar al joven en el aspecto psicosocial</p>
@@ -370,54 +370,53 @@
     <!--seccion ubicacion-->
     <section class="site-section bg-light" id="contact-section" data-aos="fade">
         <div class="container">
-            <div class="row mb-5">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3873.5605516145283!2d-86.56461728568713!3d13.865396798387788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6e15a9f5188661%3A0x4906f2045c5a6961!2sHospital%20Alivio%20del%20sufrimiento!5e0!3m2!1ses-419!2shn!4v1618302039885!5m2!1ses-419!2shn" width="1560" height="760" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-            <div class="row">
-                <div class="col-md-12 mb-5"></div>
-            </div>
+                <div class="row mb-5">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3873.5605516145283!2d-86.56461728568713!3d13.865396798387788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6e15a9f5188661%3A0x4906f2045c5a6961!2sHospital%20Alivio%20del%20sufrimiento!5e0!3m2!1ses-419!2shn!4v1618302039885!5m2!1ses-419!2shn" width="1560" height="760" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mb-5"></div>
+                </div>
         </div>
     </section>
     <footer class="site-footer" id="footer-section">
         <div class="container">
+            <h6 style="color: white; font-size: 25px;">Soporte Técnico</h6><br>
             <div class="row">
-                <div class="col-md-9">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <h6 class="footer-heading mb-6">Acerca de</h6>
-                            <p>Sistema web realizado por alumnas de la Universidad Nacional Autónoma de Honduras Tecnológica Danlí</p>
-                        </div>
+                <table align="left">
+                    <td>
+                        <h6 style="color: white; font-size: 15px;">Gaby Marisol Díaz </h6>
+                        <img src="/images/bienvenido/SoporteTecnico/1.jpg" width="150px"><br>
+                        <p class="icon-phone text-primary"><a href="#">+50431618783</a></p>
+                        <p class="icon-mail_outline text-primary"><a href="#">maridiaz4455@gmail.com</a></p>
+                    </td>
+                    <td colspan="2">
+                        <h6 style="color: white; font-size: 15px;">Tania Melissa Sánchez</h6>
+                        <img src="/images/bienvenido/SoporteTecnico/2.jpg" width="150px">
+                        <p class="icon-mail_outline text-primary"><a href="#">tania.calix@yahoo.com</a></p>
+                        <p class="icon-phone text-primary"><a href="#">+50431618783</a></p>
+                    </td>
+                    <td colspan="2">
+                        <h6 style="color: white; font-size: 15px;">Karina Montiel Estrada</h6>
+                        <img src="/images/bienvenido/SoporteTecnico/3.jpg" width="150px" height="190px">
+                        <p class="icon-mail_outline text-primary"><a href="#">montielkarina1@gmail.com</a></p>
+                        <p class="icon-phone text-primary"><a href="#">+50496237018</a></p>
+                    </td>
+                    <td>
+                        <h6 style="color: white; font-size: 15px;">Daniela Murillo Dalama</h6>
+                        <img src="/images/bienvenido/SoporteTecnico/4.jpg" width="150px">
+                        <p class="icon-mail_outline text-primary"><a href="#">murillodaniela408@gmail.com</a></p>
+                        <p class="icon-phone text-primary"><a href="#">+50495296273</a></p>
+                    </td>
+                    <td>
+                        <h6 class="footer-heading ">Acerca de</h6>
+                        <p>Sistema web realizado por alumnas de la Universidad Nacional Autónoma de Honduras
+                            Tecnológica Danlí</p>
+                    </td>
 
-                        <div class="col-md-4">
-                            <h6 class="footer-heading mb-4">Horarios de atención</h6>
-                            <p>Lunes-Viernes  8:00 am a 4:00 pm</p>
-                            <p>Sábados 8:00 am a 12:00 pm</p>
-                        </div>
-                        <div class="col-md-2">
-                            <h6 class="footer-heading" style="color: white; ">Soporte técnico</h6>
-                            <span class="icon-mail_outline  text-primary"></span>
-                            <a href="#">montielkarina1@gmail.com</a>
-                            <span class="icon-mail_outline text-primary"></span>
-                            <a href="#">maridiaz4455@gmail.com</a>
-                            <span class="icon-mail_outline  text-primary"></span>
-                            <img src="TaniaMelissaSanchez"  width="50" height="42">
-                            <a href="#">tania.calix@yahoo.com</a><br>
-                            <span class="icon-mail_outline text-primary"></span>
-                            <a href="#">murillodaniela408@gmail.com</a>
-                        </div>
-                        <div class="container">
-                            <div class="div-img" >
-                                <img class="img" src="https://www.interactius.com/wp-content/uploads/2017/09/foto10.png" title="Foto10" alt="Foto10">
-                                <div class="text">That's all folks!</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </table>
             </div>
         </div>
     </footer>
-
-</div> <!-- .site-wrap -->
 
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/jquery-ui.js"></script>
