@@ -217,6 +217,26 @@ Route::group(["middleware" => "auth"], function () {
     Route::get('/pdfH/pdf','ExportHuespedController@pdf');
     Route::get('/pruebas/pdf','ExportHuespedController@prueba');
     /*Empleado vista ver Director*/
+    Route::get('/empleado/export','ExportEmpleadoController@export');
+
+    Route::get('/pruebaemple/pdf','ExportEmpleadoController@prueba');
+    /*Empleado vista ver Director*/
+    // EPORTAR A PDF Y A EXCEL
+    Route::get('/estudiante/export','ExportEscolaridadController@export');
+
+    Route::get('/pruebaestule/pdf','ExportEscolaridadController@prueba');
+
+    // EPORTAR A PDF Y A EXCEL
+    Route::get('/fichamedic/export','ExportFichaMedicaController@export');
+
+    Route::get('/pruebafichame/pdf','ExportEscolaridadController@prueba');
+    /*Empleado vista ver Director*/
+// listado egreso direc
+    Route::get('/egresos', 'paginaPrincipal_controller@egreso')
+        ->name('lista.egreso');
+    Route::get('/descarga', 'paginaPrincipal_controller@descarga')
+        ->name('listado.descarga');
+
 // listado egreso direc
     Route::get('/egresos', 'paginaPrincipal_controller@egreso')
         ->name('lista.egreso');
