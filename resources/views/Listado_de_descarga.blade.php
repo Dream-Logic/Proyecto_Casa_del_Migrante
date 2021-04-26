@@ -38,7 +38,7 @@
             <tr>
 
                 <th scope="col">Descarga de Archivos</th>
-                <th scope="col">Execel</th>
+                <th scope="col">Excel</th>
                 <th scope="col">Pdf</th>
 
             </tr>

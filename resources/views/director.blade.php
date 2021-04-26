@@ -89,24 +89,24 @@
                 </div>
                 <div class="col-lg-3 hero_box_col">
                     <br>
-                    <a href="{{ asset('evento/director') }}">
+                    <a href="{{ asset('Evento/index') }}">
                         <div class="hero_box d-flex flex-row align-items-center justify-content-start">
                             <img src="images/calendario.svg" class="svg" alt="">
                             <div class="hero_box_content">
                                 <h6 class="hero_box_title">Calendario</h6>
-                                <a href="{{asset('evento/director') }}" class="hero_box_link">Ver</a>
+                                <a href="{{asset('Evento/index') }}" class="hero_box_link">Ver</a>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-3 hero_box_col">
                     <br>
-                    <a href="{{ asset('/egresos') }}">
+                    <a href="{{ asset('/egresosdirec') }}">
                         <div class="hero_box d-flex flex-row align-items-center justify-content-start">
                             <img src="images/egresados.svg" class="svg" alt="">
                             <div class="hero_box_content">
                                 <h6 class="hero_box_title">Lista de Egresados</h6>
-                                <a href="{{ asset('/egresos') }}" class="hero_box_link">Ver</a>
+                                <a href="{{ asset('/egresosdirec') }}" class="hero_box_link">Ver</a>
                             </div>
                         </div>
                     </a>

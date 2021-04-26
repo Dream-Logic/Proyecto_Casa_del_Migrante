@@ -239,10 +239,18 @@ Route::group(["middleware" => "auth"], function () {
         ->name('listado.descarga');
 
 // listado egreso direc
-    Route::get('/egresos', 'paginaPrincipal_controller@egreso')
-        ->name('lista.egreso');
+    Route::get('/egresosdirec', 'paginaPrincipal_controller@egresodirec')
+        ->name('lista.egresod');
     //Calendario
     Route::get('Evento/index', 'ControllerEvent@index');
+    Route::get('Evento/index/{month}', 'ControllerEvent@index_month');
+
+    // formulario
+    Route::get('Evento/form', 'ControllerEvent@form');
+    Route::post('Evento/create', 'ControllerEvent@create');
+    // Detalles de evento
+    Route::get('Evento/details/{id}', 'ControllerEvent@details');
+    Route::get('evento/form','ControllerEvent@form');
 
 
 });

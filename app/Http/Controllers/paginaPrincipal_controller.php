@@ -47,6 +47,23 @@ class paginaPrincipal_controller extends Controller
 
     }
 
+        //
+        public function egresodirec(Request $request)
+    {
+
+        $egreso=$request->get("name");
+
+        $listados= Huesped::where(\DB::raw("CONCAT(nombres, '' , apellidos, identidad, direccion)"),
+            'LIKE', "%$egreso%")
+            ->where("egreso", "!=", "")->Paginate(15);
+
+
+
+        return view('empleados\egresodirector')->with('listados', $listados);
+
+    }
+
+
     public function salud(Request $request)
     {
 

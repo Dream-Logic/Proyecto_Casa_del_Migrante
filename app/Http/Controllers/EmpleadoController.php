@@ -319,4 +319,5 @@ class EmpleadoController extends Controller
         return redirect()->route('listadoEmpleado.index')
             ->with('mensaje', 'El empleado y todos sus datos fueron borrados completamente');
     }
+
 }
