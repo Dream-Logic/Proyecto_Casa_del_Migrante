@@ -127,10 +127,6 @@ Route::group(["middleware" => "auth"], function () {
         /*Ruta para eliminar*/
         Route::delete('/ficha/{id}/borrar', 'FichaController@destroy')
             ->name('ficha.borrar');
-        /*RUtas para ver detalles de la ficha*/
-        Route::get('/ficha/{id}', 'FichaController@show')
-            ->name('ficha.mostrar')
-            ->where('id', '[0-9]+');
 
         /*Ruta para el formulario del Estudiante*/
 
@@ -224,14 +220,7 @@ Route::group(["middleware" => "auth"], function () {
 // listado egreso direc
     Route::get('/egresos', 'paginaPrincipal_controller@egreso')
         ->name('lista.egreso');
-    /*listado ficha direc*/
-    Route::get('/ficha', 'FichaController@fichaDire')
-        ->name('ficha.fichaDire');
-    /*RUtas para ver detalles de la ficha*/
-    Route::get('/ficha/{id}', 'FichaController@show')
-        ->name('ficha.mostrar')
-        ->where('id', '[0-9]+');
-
+    //Calendario
     Route::get('Evento/index', 'ControllerEvent@index');
 
 

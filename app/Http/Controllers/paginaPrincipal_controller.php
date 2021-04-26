@@ -18,6 +18,12 @@ class paginaPrincipal_controller extends Controller
         //
         return view('views\calendario\evento');
     }
+    public function Descarga()
+
+    {
+        //
+        return view('Listado_de_descarga');
+    }
     public function formPersonal()
 
     {

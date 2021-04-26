@@ -23,7 +23,17 @@
     <div class="unit-4 mx-4" style="float: right">
         <a class="btn btn-outline-warning " href="{{route('personal.personal')}}">
             <img src="/imagenes/iconos/agregarUsuario.svg" class="svg" width="25">
+            <!-- CSRF Token
         </a>
+          <a href="{{ asset('/empleado/export') }}"class="btn btn-success" style="color: white">  Excel
+
+        </a>
+
+        <a href="{{ asset('/pruebaemple/pdf') }}"class="btn btn-danger">  PDF
+
+        </a>
+        -->
+
     </div>
     <form class="form-inline my-2  my-lg-0 ml-auto">
 

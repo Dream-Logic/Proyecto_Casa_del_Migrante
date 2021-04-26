@@ -2,35 +2,35 @@
 @section('titulo', 'Listado del Pesonal')
 @section('contenido')
 
-        @if(session('mensaje'))
-            <div class="alert alert-success">
-                {{session('mensaje')}}
-            </div>
-        @endif
-        <br>
-        <br>
-        <br>
-        <head>
+    @if(session('mensaje'))
+        <div class="alert alert-success">
+            {{session('mensaje')}}
+        </div>
+    @endif
+    <br>
+    <br>
+    <br>
+    <head>
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        </head>
-        <div class="w3-container w3-teal mx-4" style="font-family: 'Raleway', sans-serif; text-align: center">
-            <br>
-            <h6 class="mt-3" style="font-size: 30px; color: black;"><b>Listado del Personal</b></h6>
-        </div>
+    </head>
+    <div class="w3-container w3-teal mx-4" style="font-family: 'Raleway', sans-serif; text-align: center">
         <br>
-        <br>
+        <h6 class="mt-3" style="font-size: 30px; color: black;"><b>Listado del Personal</b></h6>
+    </div>
+    <br>
+    <br>
 
-        <form class="form-inline my-2  my-lg-0 ml-auto">
-            <input class="form-control mr-sm-2 col-3" name="name" type="search" aria-label="Search" placeholder="Buscar">
-            <button class="mr-sm-2 btn btn-success" type="submit">
-                <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
-            </button>
-            <a href="{{url('/empleado/lista')}}" class="btn btn-warning">
-                <img src="/imagenes/iconos/restaurar.svg" class="svg" width="25">
-            </a>
-        </form>
-        <br>
+    <form class="form-inline my-2  my-lg-0 ml-auto">
+        <input class="form-control mr-sm-2 col-3" name="name" type="search" aria-label="Search" placeholder="Buscar">
+        <button class="mr-sm-2 btn btn-success" type="submit">
+            <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
+        </button>
+        <a href="{{url('/empleado/lista')}}" class="btn btn-warning">
+            <img src="/imagenes/iconos/restaurar.svg" class="svg" width="25">
+        </a>
+    </form>
+    <br>
 
     <div class="table-responsive" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
     box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);">
