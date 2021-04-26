@@ -9,8 +9,9 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
     <body>
-    <div class="card" >
-        <div class="card-header" style="background-color: #4dc0b5">
+    <div class="card" class="table-responsive" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
+    box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);">
+        <div class="card-header" style="background-color: #4cd213">
             <label class="card-title" style="color: black;">Escolaridad</label>
         </div>
         @if ($errors->any())
@@ -22,9 +23,6 @@
                 </ul>
             </div>
         @endif
-
-
-
 
         @if(session("exito"))
             <div class="alert alert-info">
@@ -48,57 +46,49 @@
                 <div class="form-row">
 
                     <div class="col-5"><br>
-                        <img src="/imagenes/iconos_formulario/usuario.svg" class="svg" width="25" height="35"   >
+                        <img src="/imagenes/iconos_formulario/usuario.svg" style="margin-left: 50px"
+                             class="svg" width="25" height="35"   >
                         <label for="nombres_alumno" style="color: #000000">Nombres</label><br>
-                        <input type="text" class="form-control" name="nombres_alumno"
-                               id="nombres_alumno" placeholder="Nombres"><br>
+                        <input type="text" class="form-control" style="margin-left: 27px" name="nombres_alumno"
+                               id="nombres_alumno" placeholder="Nombres">
                     </div>
-                    <br>
 
                     <div class="col-5"><br>
-                        <img src="/imagenes/iconos_formulario/usuario.svg" class="svg" width="25" height="35"  >
+                        <img src="/imagenes/iconos_formulario/usuario.svg" class="svg" style="margin-left: 50px"  class="svg" width="25" height="35"     >
                         <label for="apellidos_alumno" style="color: #000000">Apellidos</label><br>
-                        <input type="text" class="form-control" name="apellidos_alumno"
+                        <input type="text" class="form-control" style="margin-left: 27px" name="apellidos_alumno"
                                id="apellidos_alumno" placeholder="Apellidos">
                     </div>
-                    <br>
-                    <br>
 
                     <div class="col-5"><br>
-                        <img src="/imagenes/iconos_formulario/Grado.svg" class="svg" width="25" height="35"  >
+                        <img src="/imagenes/iconos_formulario/Grado.svg" class="svg"style="margin-left: 50px"  class="svg" width="25" height="35"    >
                         <label for="grado" style="color: #000000">Grado</label><br>
-                        <input type="text" class="form-control" name="grado"
+                        <input type="text" class="form-control" style="margin-left:27px " name="grado"
                                id="grado" placeholder="Grado">
                     </div>
-                    <br>
-                    <br>
 
                     <div class="col-5"><br>
-                        <img src="/imagenes/iconos_formulario/Ca1.svg" class="svg" width="25" height="35"  >
+                        <img src="/imagenes/iconos_formulario/Ca1.svg" class="svg" style="margin-left: 50px"  class="svg" width="25" height="35"    >
                         <label for="carrera" style="color: #000000">Carrera</label><br>
-                        <input type="text" class="form-control" name="carrera"
+                        <input type="text" class="form-control" style="margin-left: 27px" name="carrera"
                                id="carrera" placeholder="Carrera">
                     </div>
-                    <br>
-
 
                     <div class="col-5">
-                        <img src="/imagenes/iconos_formulario/Escritura.svg" class="svg" width="50" height="35"  >
+                        <img src="/imagenes/iconos_formulario/Escritura.svg" class="svg" style="margin-left: 50px"  class="svg" width="25" height="35"    >
                         <label for="escritura" style="color: #000000">Nivel de escritura</label><br>
-                        <select class="form-control" name="escritura">
+                        <select class="form-control"style="margin-left: 27px" name="escritura">
                             <option value="ninguno">Ninguno</option>
                             <option value="bajo">Bajo</option>
                             <option value="medio">Medio</option>
                             <option value="alto">Alto</option>
                         </select><br>
                     </div>
-                    <br>
-
 
                     <div class="col-5">
-                        <img src="/imagenes/iconos_formulario/Reed.svg" class="svg" width="50" height="35"  >
+                        <img src="/imagenes/iconos_formulario/Reed.svg" class="svg" style="margin-left: 50px"  class="svg" width="25" height="35"     >
                         <label for="lectura" style="color: #000000">Nivel de Lectura</label><br>
-                        <select class="form-control" name="lectura">
+                        <select class="form-control" style="margin-left: 27px" name="lectura">
                             <option value="ninguno">Ninguno</option>
                             <option value="bajo">Bajo</option>
                             <option value="medio">Medio</option>
@@ -106,11 +96,10 @@
                         </select><br>
                     </div>
 
-
                     <div class="col-5">
-                        <img src="/imagenes/iconos_formulario/Arte.svg" class="svg" width="50" height="35"  >
+                        <img src="/imagenes/iconos_formulario/Arte.svg" class="svg" style="margin-left: 50px"  class="svg" width="25" height="35"    >
                         <label for="habilidades" style="color: #000000">Habilidades Artisticas</label><br>
-                        <select class="form-control" name="habilidades">
+                        <select class="form-control" style="margin-left: 27px" name="habilidades">
                             <option value="ninguno">Ninguno</option>
                             <option value="arte">Arte</option>
                             <option value="canto">Canto</option>
@@ -122,9 +111,9 @@
 
 
                     <div class="col-5">
-                        <img src="/imagenes/iconos_formulario/Musica.svg" class="svg" width="50" height="35"  >
+                        <img src="/imagenes/iconos_formulario/Musica.svg" class="svg" style="margin-left: 50px"  class="svg" width="25" height="35"    >
                         <label for="instrumento" style="color: #000000">Ejecuta algun instrumento</label><br>
-                        <select class="form-control" name="instrumento">
+                        <select class="form-control" style="margin-left: 27px" name="instrumento">
                             <option value="ninguno">Ninguno</option>
                             <option value="guitarra">Guitarra</option>
                             <option value="violin">Violin</option>
@@ -146,10 +135,14 @@
             </div>
 
         <br>
-    </div class="card">
+        </form>
+
     <script src="/js/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-
+    </div>
     </body>
+    <br>
+    <br>
+
 
 @endsection

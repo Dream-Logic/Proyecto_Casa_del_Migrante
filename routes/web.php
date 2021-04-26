@@ -212,6 +212,7 @@ Route::group(["middleware" => "auth"], function () {
         ->name('estudiante.mostrar')
         ->where('id', '[0-9]+');
 
+
     // EPORTAR A PDF Y A EXCEL
     Route::get('/huesped/export','ExportHuespedController@export');
     Route::get('/pdfH/pdf','ExportHuespedController@pdf');

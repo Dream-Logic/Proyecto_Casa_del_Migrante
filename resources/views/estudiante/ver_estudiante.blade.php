@@ -4,7 +4,6 @@
     <br>
     <br>
     <br>
-
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -14,17 +13,23 @@
             </ul>
         </div>
     @endif
-    <label class="card-title" style="color: black; height: 75px">Detalles de {{$estudiante->nombres_alumno}} {{$estudiante->apellidos_alumno}} </label>
-    <input  class="btn btn-warning "  width="25" type="button" value="Imprimir" onclick="window.print()"
-            style="margin-left: 850px" >
-    <img src="/imagenes/iconos_formulario/imprimir.svg" class="svg"  style="margin-left: 1010px;border: 25px;height: 40px ;margin-top: -176px" >
+    <div style="background-color:  #0d95e8; height: 60px" >
+    <label class="card-title" style="color: black; height: 75px;  margin-left: 40px; margin-top: 18px">
+        Informacion de {{$estudiante->nombres_alumno}} {{$estudiante->apellidos_alumno}} </label>
+        <input  class="btn btn-warning "  width="25" type="button" value="Imprimir" onclick="window.print()"
+                style="margin-left: 985px;   "  >
+    </div>
+    <br>
+    <br>
 
     <div class="ver">
-        <table class="table">
-            <thead class="mx-4" style="background-color: #90bf23">
-            <tr class="mx-4">
-                <th scope="col"><h6>Detalles de escolaridad del Niño o Niña</h6></th>
-                <th scope="col"><h6></h6></th>
+        <div class="table-responsive" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
+    box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);">
+            <table  class="table ruler-vertical table-hover mx-sm-0 table-bordered ">
+                <thead class="mx-2" style="background-color: #0d95e8">
+                <tr class="mx-4">
+                    <th scope="col"><h6 style="  font-weight: bold;">Datos de escolaridad del huesped</h6></th>
+                    <th scope="col"><h6 style="  font-weight: bold;">Detalles</h6></th>
 
             </tr>
             </thead>
@@ -67,6 +72,9 @@
 
             </tbody>
         </table>
+        </div>
+        <br>
+        <br>
         <script src="/js/jquery-3.2.1.min.js"></script>
     </div>
 @endsection

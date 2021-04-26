@@ -26,7 +26,7 @@ class Estudiante extends Model
         if (trim($name) != "") {
 
 
-            $query->where(\DB::raw("CONCAT(nombres_alumno, '' , apellidos_alumno, carrera, grado)"),
+            $query->where(\DB::raw("CONCAT(nombres_alumno, '' , apellidos_alumno)"),
                 'LIKE', "%$name%");
         }
     }

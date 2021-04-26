@@ -91,7 +91,7 @@
                                     <a class="dropdown-item" href="{{ route('salud.salu') }}" class="nav-link">Salud</a>
                                     <a class="dropdown-item" href="{{ route('lista.egreso') }}">Egresados</a>
                                     <a class="dropdown-item" href="{{ route('ficha.listasFicha') }}">Ficha Medica</a>
-                                    <a class="dropdown-item" href="{{ route('listadoEst.director') }}">Estudiantes</a>
+                                    <a class="dropdown-item" href="{{ route('listadoEst.director') }}">Listado de Estudiantes</a>
                                 </div>
                             </li>
                             <li><a href="{{ route('estadisticas.admin')}}" class="nav-link"><strong>Estadísticas</strong></a></li>

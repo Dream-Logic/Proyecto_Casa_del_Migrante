@@ -27,9 +27,7 @@
     </div>
     <form class="form-inline my-2  my-lg-0 ml-auto">
 
-        <input class="form-control mr-sm-2 col-3" name="name
-
-" type="search" placeholder="Buscar" aria-label="Search">
+        <input class="form-control mr-sm-2 col-3" name="name" type="search" placeholder="Buscar" aria-label="Search">
         <button class="  mr-sm-2 btn btn-success" type="submit">
             <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
         </button>
