@@ -35,7 +35,6 @@ class HuespedController extends Controller
 
         return view('listadoRaiz')->with('listados', $listados);
 
-
     }
 
     public function director(Request $request)
@@ -152,6 +151,7 @@ class HuespedController extends Controller
             $nombre_archivo = time() . "." . $request->imagen->extension();
 
             $image_resize->save(public_path('foto/' . $nombre_archivo));
+
             $request->piel;
             $request->sexo;
             $request->cabello;

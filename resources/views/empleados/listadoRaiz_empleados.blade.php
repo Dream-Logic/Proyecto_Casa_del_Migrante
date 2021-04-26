@@ -66,24 +66,23 @@
                     <td align="center"><a class="btn btn-outline-info" href="{{route('empleado.mostrar',['id' =>$personal->id])}}">
                             <img src="/imagenes/iconos/ver.svg" width="25" >
                         </a></td>
-                    <td><a class="btn btn-outline-warning" href="{{route('personal.edit',['id' =>$personal->id])}}" >
+                    <td align="center"><a class="btn btn-outline-warning" href="{{route('personal.edit',['id' =>$personal->id])}}" >
                             <img src="/imagenes/iconos/editar.svg" class="svg" width="25" >
                         </a>
                     </td>
-                    <td>
+                    <td align="center">
                         <a href="#" onclick="return confirm('Estás seguro que deseas eliminar el registro?');">
                             <form method="post" action="{{route('personal.borrar',['id'=>$personal->id])}}">
                                 @csrf
                                 @method('delete')
-                                <img src="/imagenes/iconos/eliminar.svg">
-                                <input type="submit" value="Eliminar" class="btn btn-outline-danger">
+                                <input src="/imagenes/iconos/eliminar.svg" type="image" height="45" class="btn btn-outline-danger">
                             </form>
                         </a>
                     </td>
                 </tr>
             @empty
                 <tr>
-                    <td colspan="4">No hay Registros</td>
+                    <td colspan="9">No hay Registros</td>
                 </tr>
             @endforelse
             </tbody>

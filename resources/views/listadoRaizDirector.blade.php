@@ -15,37 +15,38 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
-    <div class="w3-container w3-teal mx-4" style="font-family: 'Raleway', sans-serif;">
-        <br>
-        <h6 class="mt-3" style="font-size: 30px; color: black; text-align: center"><b>Listado de Huéspedes</b></h6>
+    < <div class="w3-container w3-teal mx-4" style="font-family: 'Raleway', sans-serif; text-align: center">
+        <h6 class="mt-3" style="font-size: 30px; color: black;"><b>Listado de Huéspedes</b></h6>
     </div>
     <br>
+    <br>
 
-    <form class="form-inline my-2 my-lg-0 ml-auto">
 
 
+
+            <div class="unit-4 mx-4" style="float: right">
+
+                    <a href="{{ asset('/huesped/export') }}"class="btn btn-success"
+                       style="color: white; margin-left: 50px"> Descarga en Excel
+                    </a>
+
+                <a href="{{ asset('/pruebas/pdf') }}"class="btn btn-danger">Descarga en PDF</a>
+
+            </div>
 
         <form class="form-inline my-2 my-lg-0 ml-auto" >
-            <input class="form-control mr-sm-2 col-3" name="name"
+            <input class="form-control mr-sm-2 col-4" name="name"
                    type="search" placeholder="Buscar" aria-label="Search">
             <button class=" mr-sm-2 btn btn-success" type="submit">
-                <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
-
-        </button>
-        <a href="{{url('/huesped/listadoDirector')}}" class="btn btn-warning">
-            <img src="/imagenes/iconos/restaurar.svg" class="svg" width="25">
-
-        </a>
-            <a href="{{ asset('/huesped/export') }}"class="btn btn-success" style="color: white">  Excel
+                    <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
+             </button>
+            <a href="{{url('/huesped/listadoDirector')}}" class="btn btn-warning">
+                <img src="/imagenes/iconos/restaurar.svg" class="svg" width="25">
 
             </a>
 
-            <a href="{{ asset('/pruebas/pdf') }}"class="btn btn-danger">  PDF
-
-            </a>
-    </form>
+        </form>
     <br>
-    <!--FIN BUSCADOR-->
     <div class="table-responsive" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
     box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);">
         <table class="table ruler-vertical table-hover mx-sm-0 table-bordered">

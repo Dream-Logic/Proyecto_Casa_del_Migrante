@@ -25,5 +25,16 @@ class Ficha extends Model
         'tratamiento_paciente'
 
     ];
+    Public function scopeName($query , $name)
+    {
+
+        if (trim($name) != "") {
+
+
+            $query->where(\DB::raw("CONCAT(nombre_hospital ,'',  '' ,departamento,
+             nombres_paciente, apellidos_paciente,enfermedad_paciente,tratamiento_paciente )"),
+                'LIKE', "%$name%");
+        }
+    }
 
 }

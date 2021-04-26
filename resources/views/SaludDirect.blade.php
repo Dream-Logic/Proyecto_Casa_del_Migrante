@@ -29,6 +29,9 @@
             <button class=" mr-sm-2 btn btn-success" type="submit">
                 <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
             </button>
+            <a href="{{url('/saludDi')}}" class="btn btn-warning">
+                <img src="/imagenes/iconos/restaurar.svg" class="svg" width="25">
+            </a>
         </form>
    <br>
     <div class="table-responsive" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);

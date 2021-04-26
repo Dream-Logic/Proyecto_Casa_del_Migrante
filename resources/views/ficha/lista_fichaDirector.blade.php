@@ -1,5 +1,5 @@
 @extends ('PlantillaMadre.menu_inicio')
-@section('titulo', 'Listado Huéspedes')
+@section('titulo', 'Listado de Expedientes Médicos')
 @section('contenido')
 
     @if(session('mensaje'))
@@ -15,31 +15,18 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
     <div class="w3-container w3-teal mx-4" style="font-family: 'Raleway', sans-serif; text-align: center">
-        <h6 class="mt-3" style="font-size: 30px; color: black;"><b>Listado de Huéspedes</b></h6>
+        <h6 class="mt-3" style="font-size: 30px; color: black;"><b>Listado de Expedientes Médicos</b></h6>
     </div>
     <br>
     <br>
-    <div class="unit-4 mx-4" style="float: right">
-        <a class="btn btn-outline-warning "href="{{route('huesped.nuevo')}}">
-            <img src="/imagenes/iconos/agregarUsuario.svg" class="svg" width="25" >
-        </a>
-        <a href="{{ asset('/huesped/export') }}"class="btn btn-success" style="color: white">  Excel
 
-        </a>
-
-        <a href="{{ asset('/pruebas/pdf') }}"class="btn btn-danger">  PDF
-
-        </a>
-
-    </div>
-
-        <form class="form-inline my-2 my-lg-0 ml-auto" >
+    <form class="form-inline my-2 my-lg-0 ml-auto" >
         <input class="form-control mr-sm-2 col-3" name="name"
                type="search" placeholder="Buscar" aria-label="Search">
         <button class=" mr-sm-2 btn btn-success" type="submit">
             <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
         </button>
-        <a href="{{url('/proyectos/listado')}}" class="btn btn-warning">
+        <a href="{{url('/ficha')}}" class="btn btn-warning">
             <img src="/imagenes/iconos/restaurar.svg" class="svg" width="25">
         </a>
     </form>
@@ -52,45 +39,30 @@
             <thead class="thead-dark" >
             <tr>
                 <th scope="col">N°</th>
-                <th scope="col">Nombres</th>
-                <th scope="col">Apellidos</th>
-                <th scope="col">Identidad</th>
-                <th scope="col">Fecha de Nacimiento</th>
-                <th scope="col">Dirección</th>
-                <th scope="col">Fecha de ingreso</th>
-                <th scope="col"></th>
+                <th scope="col">Hospital o Clínica</th>
+                <th scope="col">Médico</th>
+                <th scope="col">Nombres del Paciente</th>
+                <th scope="col">Apellidos del Paciente</th>
+                <th scope="col">Enfermedad</th>
+                <th scope="col">Tratamiento</th>
                 <th scope="col">Acciones</th>
-                <th scope="col"></th>
+
             </tr>
             </thead>
             <tbody>
-            @forelse($listados as $huesped)
+            @forelse($pacientes as $ficha)
                 <tr>
-                    <th scope="row">{{ $huesped->id }}</th>
-                    <td>{{ $huesped->nombres}} </td>
-                    <td> {{ $huesped->apellidos }}</td>
-                    <td>{{ $huesped->identidad}}</td>
-                    <td>{{ $huesped->fnacimiento }}</td>
-                    <td>{{ $huesped->direccion}}</td>
-                    <td>{{ $huesped->ingreso}}</td>
+                    <th scope="row">{{ $ficha->id }}</th>
+                    <td>{{ $ficha->nombre_hospital}} </td>
+                    <td> {{ $ficha->medico }}</td>
+                    <td>{{ $ficha->nombres_paciente}}</td>
+                    <td>{{ $ficha->apellidos_paciente}}</td>
+                    <td>{{ $ficha->enfermedad_paciente}}</td>
+                    <td>{{ $ficha->tratamiento_paciente}}</td>
 
-                    <td align="center"><a class="btn btn-outline-info" href="{{route('huesped.mostrar',['id' =>$huesped->id])}}">
+                    <td><a class="btn btn-outline-info" href="{{route('ficha.mostrar',['id' =>$ficha->id])}}">
                             <img src="/imagenes/iconos/ver.svg" width="25" >
                         </a></td>
-                    <td align="center"><a class="btn btn-outline-warning" href="{{route('huesped.edit',['id' =>$huesped->id])}}" >
-                            <img src="/imagenes/iconos/editar.svg" class="svg" width="25" >
-                        </a>
-                    </td>
-                    <td align="center">
-                        <a href="#" onclick="return confirm('Estás seguro que deseas eliminar el registro?');">
-                        <form method="post" action="{{route('huesped.borrar',['id'=>$huesped->id])}}">
-                            @csrf
-                            @method('delete')
-
-                      <input   src="/imagenes/iconos/eliminar.svg"   type="image" height="45" class="btn btn-outline-danger">
-                        </form>
-                        </a>
-                    </td>
                 </tr>
             @empty
                 <tr>
@@ -102,7 +74,7 @@
     </div>
     <br>
     <br>
-    {{ $listados->links()}}
+    {{ $pacientes->links()}}
     <script src="/js/jquery-3.2.1.min.js"></script>
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/main.js"></script>

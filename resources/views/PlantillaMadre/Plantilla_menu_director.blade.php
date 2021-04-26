@@ -78,7 +78,6 @@
                                     <a class="dropdown-item" href="{{ route('listaEmpleado.director') }}">Listado de Personal</a>
                                     <a class="dropdown-item" href="{{ route('ficha.index') }}">Listado de egresos</a>
                                     <a class="dropdown-item" href="{{ route('saludDire.salu') }}">Listado de salud</a>
-                                    <a class="dropdown-item" href="{{ route('listadoEst.director') }}">Listado de Estudiantes</a>
                                     <a class="dropdown-item" href="">Listado de Ficha Medica</a>
                                 </div>
                             </li>

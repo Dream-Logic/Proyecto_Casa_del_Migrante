@@ -16,7 +16,9 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
 
-    <h6 class="mt-3" style="font-size: 30px; color: black; text-align: center;"><b>Listado de Salud</b></h6>
+    <div class="w3-container w3-teal mx-4" style="font-family: 'Raleway', sans-serif; text-align: center">
+        <h6 class="mt-3" style="font-size: 30px; color: black;"><b>Listado de Salud</b></h6>
+    </div>
     <br>
     <br>
         <form class="form-inline my-2 my-lg-0 ml-auto " >
@@ -32,21 +34,16 @@
     <br>
     <div class="table-responsive" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
     box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);">
-    <table class="table ruler-vertical table-hover mx-sm-0 table-bordered" >
-        <thead>
-        <tr class="w3-hover-green" align="center">
-            <th class="bg-dark text-white" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
-    box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);" scope="col" >Id</th>
-            <th class="bg-dark text-white"style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
-    box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);" scope="col">Nombres</th>
-            <th class="bg-dark text-white" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
-    box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);"  scope="col">Apellidos</th>
-            <th class="bg-dark text-white"style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
-    box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);"  scope="col">Enfermedad</th>
-            <th class="bg-dark text-white"style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
-    box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);"  scope="col">Tratamiento</th>
-            <th class="bg-dark text-white"style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
-    box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);"  scope="col">Acciones</th>
+        <table class="table ruler-vertical table-hover mx-sm-0 table-bordered " >
+
+        <thead class="thead-dark" >
+        <tr>
+            <th  scope="col" >Id</th>
+            <th scope="col">Nombres</th>
+            <th  scope="col">Apellidos</th>
+            <th scope="col">Enfermedad</th>
+            <th  scope="col">Tratamiento</th>
+            <th  scope="col">Acciones</th>
 
         </tr>
 
@@ -68,7 +65,7 @@
             </tr>
         @empty
             <tr>
-                <td colspan="4">No hay Registros</td>
+                <td colspan="6">No hay Registros</td>
             </tr>
         @endforelse
 

@@ -29,6 +29,7 @@
         }
 
 
+
     </style>
     <title>@yield('titulo')</title>
     <meta charset="utf-8">
