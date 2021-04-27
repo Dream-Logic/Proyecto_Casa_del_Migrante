@@ -20,13 +20,21 @@
         <h6 class="mt-3" style="font-size: 30px; color: black; text-align: center"><b>Listado de Huéspedes</b></h6>
     </div>
     <br>
+    <br>
+    <div class="unit-4 mx-4" style="float: right">
+        <a href="{{ asset('/huesped/export') }}"class="btn btn-success" style="color: white">Descarga en Excel
 
-    <form class="form-inline my-2 my-lg-0 ml-auto">
+        </a>
+
+        <a href="{{ asset('/pruebas/pdf') }}"class="btn btn-danger">Descarga en PDF
+
+        </a>
+    </div>
 
 
 
         <form class="form-inline my-2 my-lg-0 ml-auto" >
-            <input class="form-control mr-sm-2 col-3" name="name"
+            <input class="form-control mr-sm-2 col-4" name="name"
                    type="search" placeholder="Buscar" aria-label="Search">
             <button class=" mr-sm-2 btn btn-success" type="submit">
                 <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
@@ -36,13 +44,7 @@
             <img src="/imagenes/iconos/restaurar.svg" class="svg" width="25">
 
         </a>
-            <a href="{{ asset('/huesped/export') }}"class="btn btn-success" style="color: white">  Excel
 
-            </a>
-
-            <a href="{{ asset('/pruebas/pdf') }}"class="btn btn-danger">  PDF
-
-            </a>
     </form>
     <br>
     <!--FIN BUSCADOR-->

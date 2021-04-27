@@ -47,6 +47,7 @@ class paginaPrincipal_controller extends Controller
 
     }
 
+
         //
         public function egresodirec(Request $request)
     {
@@ -62,6 +63,7 @@ class paginaPrincipal_controller extends Controller
         return view('empleados\egresodirector')->with('listados', $listados);
 
     }
+
 
 
     public function salud(Request $request)

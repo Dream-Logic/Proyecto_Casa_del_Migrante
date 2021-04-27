@@ -220,31 +220,31 @@
 
 
                     <div style="margin-left: 45px" >
-                        <img src="/imagenes/iconos_formulario/ubicacion.svg" style="margin-left: 50px" class="svg" width="50" height="35"  >
+                        <img src="/imagenes/iconos_formulario/ubicacion.svg" style="margin-left: 54px" class="svg" width="50" height="35"  >
                         <label for="direccionProcede" style="color: #000000">Dirección</label>
                         <span class="col-md-5 col-md-offset-10 text-center">
         <textarea  class="form-control" id="direccion" name="direccion"
-                  placeholder="Dirección de dónde procede" style="margin-left: 35px" cols="156"  rows="2"></textarea><br>
+                  placeholder="Dirección de dónde procede" style="margin-left: 35px" cols="138"  rows="2"></textarea><br>
                     </span></div>
                     <br>
 
 
                     <div style="margin-left: 45px">
-                        <img src="/imagenes/iconos_formulario/material-escolar.svg" style="margin-left: 50px" class="svg" width="50" height="35"  >
+                        <img src="/imagenes/iconos_formulario/material-escolar.svg" style="margin-left: 54px" class="svg" width="50" height="35"  >
                         <label for="signos" style="color: #000000">Grado Escolar</label>
                         <span class="col-md-5 col-md-offset-10 text-center">
         <textarea class="form-control" id="gradoEscolar" name="gradoEscolar"
-                  placeholder="Describa el grado escolar del niño, niña o adolescente"  style="margin-left: 35px" cols="156"  rows="2"></textarea><br>
+                  placeholder="Describa el grado escolar del niño, niña o adolescente"  style="margin-left: 35px" cols="138"  rows="2"></textarea><br>
                     </span></div>
                     <br>
 
 
                     <div style="margin-left: 45px">
-                        <img src="/imagenes/iconos_formulario/fisico.svg" style="margin-left: 50px" class="svg" width="50" height="35"  >
+                        <img src="/imagenes/iconos_formulario/fisico.svg" style="margin-left: 54px" class="svg" width="50" height="35"  >
                         <label for="signos" style="color: #000000">Signos Fisicos</label>
                         <span class="col-md-5 col-md-offset-10 text-center">
         <textarea class="form-control" id="signosFisicos" name="signosFisicos"
-                  placeholder="Lunares, cicatrices y otros. Describir"  style="margin-left: 35px" cols="156"   rows="2"></textarea><br>
+                  placeholder="Lunares, cicatrices y otros. Describir"  style="margin-left: 35px" cols="138"   rows="2"></textarea><br>
                     </span></div>
                     <br>
 
@@ -254,8 +254,7 @@
                         <label for="enfermedad" style="color: #000000">Enfermedad o padecimiento </label>
                         <span class="col-md-5 col-md-offset-10 text-center">
         <textarea class="form-control" id="enfermedad" name="enfermedad"
-
-                  placeholder="Describa la enfermedad o padecimiento" style="margin-left: 35px" cols="156" rows="2"></textarea><br>
+                  placeholder="Describa la enfermedad o padecimiento" style="margin-left: 35px" cols="138" rows="2"></textarea><br>
                     </span></div>
                     <br>
 
@@ -265,7 +264,7 @@
                         <label for="tratamiento" style="color: #000000">Tratamiento</label>
                         <span class="col-md-5 col-md-offset-10 text-center">
         <textarea class="form-control" id="tratamiento" name="tratamiento"
-                  placeholder="Describa el tratamiento que necesita" style="margin-left: 35px" cols="156"  rows="2"></textarea><br>
+                  placeholder="Describa el tratamiento que necesita" style="margin-left: 35px" cols="138"  rows="2"></textarea><br>
                     </span></div>
                     <br>
 

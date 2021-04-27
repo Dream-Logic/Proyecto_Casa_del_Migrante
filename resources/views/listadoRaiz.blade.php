@@ -23,18 +23,18 @@
         <a class="btn btn-outline-warning "href="{{route('huesped.nuevo')}}">
             <img src="/imagenes/iconos/agregarUsuario.svg" class="svg" width="25" >
         </a>
-        <a href="{{ asset('/huesped/export') }}"class="btn btn-success" style="color: white">  Excel
+        <a href="{{ asset('/huesped/export') }}"class="btn btn-success" style="color: white">Descarga en Excel
 
         </a>
 
-        <a href="{{ asset('/pruebas/pdf') }}"class="btn btn-danger">  PDF
+        <a href="{{ asset('/pruebas/pdf') }}"class="btn btn-danger">Descarga en PDF
 
         </a>
 
     </div>
 
         <form class="form-inline my-2 my-lg-0 ml-auto" >
-        <input class="form-control mr-sm-2 col-3" name="name"
+        <input class="form-control mr-sm-2 col-4" name="name" style="margin-right: 20px"
                type="search" placeholder="Buscar" aria-label="Search">
         <button class=" mr-sm-2 btn btn-success" type="submit">
             <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">

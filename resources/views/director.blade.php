@@ -115,7 +115,7 @@
 
                 <div class="col-lg-3 hero_box_col">
                     <br>
-                    <a href="">
+                    <a href="{{ route('listadoEst.director') }}">
                         <div class="hero_box d-flex flex-row align-items-center justify-content-start">
                             <img src="images/graduacion.svg" class="svg" alt="">
                             <div class="hero_box_content">
@@ -127,12 +127,12 @@
                 </div>
                 <div class="col-lg-3 hero_box_col">
                     <br>
-                    <a href="{{ asset('/ficha') }}">
+                    <a href="{{ asset('/egresos') }}">
                         <div class="hero_box d-flex flex-row align-items-center justify-content-start">
                             <img src="images/informe-medico.svg" class="svg" alt="">
                             <div class="hero_box_content">
                                 <h6 class="hero_box_title"> Listado de Ficha Médica</h6>
-                                <a href="" class="hero_box_link">Ver</a>
+                                <a href="{{ asset('/egresos') }}" class="hero_box_link">Ver</a>
                             </div>
                         </div>
                     </a>

@@ -164,8 +164,8 @@
                     </div>
                 </div>
                 <br>
-                <div class="">
-                    <a class="btn btn-outline-danger" style="margin-left: 1110px" href="{{route('narracion.nuevo', ['id'=>$id])}}">Siguiente</a>
+                <div class="table-responsive">
+                    <a class="btn btn-outline-danger" style="margin-left: 990px" href="{{route('narracion.nuevo', ['id'=>$id])}}">Siguiente</a>
                     <button type="submit" class="btn btn-outline-success"><i class="fas fa-save"></i> Guardar</button>
                 </div>
             </div>
