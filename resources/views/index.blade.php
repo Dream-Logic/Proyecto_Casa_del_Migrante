@@ -27,7 +27,7 @@
         <div class="hero_slide_background"></div>
         <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
             <div class="hero_slide_content text-center" style="height:560px ">
-                <h6 style="color: white; font-size: 15px;">Bienvenido Director(a) :</h6>
+                <h6 style="color: white; font-size: 25px;">Bienvenido Director(a) :</h6>
             </div>
         </div>
     </div>
@@ -159,7 +159,7 @@
                 </div>
                 <div class="col-lg-3 hero_box_col ">
                     <br>
-                    <a href="">
+                    <a href="{{('/estudiante/create_estudiante') }} ">
                         <div class="hero_box d-flex flex-row align-items-center justify-content-start">
                             <img src="images/graduacion.svg" class="svg" alt="">
                             <div class="hero_box_content">
