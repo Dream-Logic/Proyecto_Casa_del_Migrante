@@ -69,6 +69,23 @@ class ControllerEvent extends Controller
       ]);
 
   }
+    public function calendarioadmin(){
+
+        $month = date("Y-m");
+        //
+        $data = $this->calendar_month($month);
+        $mes = $data['month'];
+        // obtener mes en espanol
+        $mespanish = $this->spanish_month($mes);
+        $mes = $data['month'];
+
+        return view("evento/Calendario_administrador",[
+            'data' => $data,
+            'mes' => $mes,
+            'mespanish' => $mespanish
+        ]);
+
+    }
 
   public function index_month($month){
 
