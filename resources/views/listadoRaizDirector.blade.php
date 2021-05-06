@@ -21,18 +21,6 @@
     </div>
     <br>
     <br>
-    <div class="unit-4 mx-4" style="float: right">
-        <a href="{{ asset('/huesped/export') }}"class="btn btn-success" style="color: white">Descarga en Excel
-
-        </a>
-
-        <a href="{{ asset('/pruebas/pdf') }}"class="btn btn-danger">Descarga en PDF
-
-        </a>
-    </div>
-
-
-
         <form class="form-inline my-2 my-lg-0 ml-auto" >
             <input class="form-control mr-sm-2 col-4" name="name"
                    type="search" placeholder="Buscar" aria-label="Search">

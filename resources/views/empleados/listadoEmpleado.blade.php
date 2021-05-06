@@ -21,6 +21,7 @@
     <br>
     <br>
 
+    </div>
     <form class="form-inline my-2  my-lg-0 ml-auto">
         <input class="form-control mr-sm-2 col-3" name="name" type="search" aria-label="Search" placeholder="Buscar">
         <button class="mr-sm-2 btn btn-success" type="submit">

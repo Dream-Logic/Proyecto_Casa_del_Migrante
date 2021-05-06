@@ -20,7 +20,11 @@
     </div>
     <br>
     <br>
-
+    <div class="unit-4 mx-4" style="float: right">
+        <a class="btn btn-outline-warning " href="{{route('personal.personal')}}">
+            <img src="/imagenes/iconos/agregarUsuario.svg" class="svg" width="25">
+        </a>
+    </div>
     <form class="form-inline my-2  my-lg-0 ml-auto">
 
         <input class="form-control mr-sm-2 col-3" name="name" type="search" placeholder="Buscar" aria-label="Search">
@@ -29,6 +33,7 @@
         </button>
         <a href="{{route('listadoEmpleado.index')}}" class="btn btn-warning">
             <img src="/imagenes/iconos/restaurar.svg" class="svg" width="25">
+
         </a>
 
     </form>
