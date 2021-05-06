@@ -19,41 +19,37 @@ Auth::routes();
 Route::get('/', function () {
     return view('bienvenido');
 });
-//DIRECTOR
+
+//--------------------------------------------Mildware de Administrador-----------------------------------------------------------------------------------------------------------------------------
 Route::group(["middleware" => "auth"], function () {
 
-//ADMINISTRADOR
+//--------------------------------------------Mildware de Director-------------------------------------------------------------------------------------------------------------------------------------
     Route::group(['middleware' => 'admin'], function () {
-        /*RUTAS DEL ADMINISTRADOR*/
-        //RUTA QUE DIRIGE A LA VISTA PRINCIPAL DEL ADMINISTRADOR
+        //------------------------------------------------Rutas de Director-------------------------------------------       ---------------------------------------------------------------------------------------------
+        //--------------------------------------------RUTA QUE DIRIGE A LA VISTA PRINCIPAL DEL DIRECTOR-------------------------------------------------------------------------------------------
         Route::get('/principal', 'paginaPrincipal_controller@index')
             ->name('index.index');
-        /*RUTAS QUE DIRIGE A LOS FORMULARIOS*/
+        //--------------------------------------------RUTAS QUE DIRIGE A LOS FORMULARIOS----------------------------------------------------------------------
         Route::get('/Btn_atras', 'paginaPrincipal_controller@atras')
             ->name('atras.regre');
         Route::get('/Btn_regresar', 'paginaPrincipal_controller@regreso')
             ->name('regresar.volv');
-
-        /*RUTAS PARA EL LISTADO DEL ADMINISTRADOR*/
+ //--------------------------------------------RUTAS PARA EL LISTADO DEL DIRECTOR------------------------------------------
         Route::get('/proyectos/listado', 'HuespedController@index')
             ->name('listado.index');
-
-        /*RUTAS PARA LA VISTA SALUD DEL ADMINISTRADOR*/
+//--------------------------------------------RUTAS PARA LA VISTA SALUD DEL DIRECTOR------------------------------------------
         Route::get('/salud', 'paginaPrincipal_controller@salud')
             ->name('salud.salu');
-
-
         Route::get('/saludAdmin', 'paginaPrincipal_controller@saludAdmin')
             ->name('Admin.salud');
-        //RUTA QUE DIRIGE A LAS ESTADISTICAS//
+        //--------------------------------------------RUTA QUE DIRIGE A LAS ESTADISTICAS-------------------------------------
+
         Route::get('/estadisticas', 'EstadisticaController@index')
             ->name('estadisticas.admin');
-        //RUTA QUE DIRIGE A LA VISTA DE ACTIVIDADES//
+        //--------------------------------------------RUTA QUE DIRIGE A LA VISTA DE ACTIVIDADES-------------------------------------
         Route::get('/actividades', 'ActividadController@activities')
             ->name('actividades.admin');
-
-        //NUEVAS RUTAS DEL FORMULARIO HUESPED
-
+        //--------------------------------------------NUEVAS RUTAS DEL FORMULARIO HUESPED------------------------------
         Route::get('/huesped/crear', 'HuespedController@nuevo')
             ->name('huesped.nuevo');
         Route::post("/huesped/store", "HuespedController@store")
@@ -78,107 +74,101 @@ Route::group(["middleware" => "auth"], function () {
         Route::get('/huesped/{id}', 'HuespedController@show')
             ->name('huesped.mostrar')
             ->where('id', '[0-9]+');
-
-        /*Ruta para el listado de egresados*/
-
+        //-------------------------------------------RUTA PARA EL LISTADO DE EGRESADOS------------------------------
         Route::get('/egresos', 'paginaPrincipal_controller@egreso')
             ->name('lista.egreso');
-        /*NUEVASSSS*/
-        /*  RUTAS PARA EL LISTADO EMPLEADOS ADMINISTRADOR*/
-        /*Ruta para el forulario del personal*/
+        //-------------------------------------------NUEVASSSS--------------------------------------------------------------
+        //------------------------------------------- RUTAS PARA EL LISTADO EMPLEADOS DIRECTOR------------------------------
+        //------------------------------------------- Ruta para el forulario del personal------------------------------
         Route::get('/personal', 'EmpleadoController@personal')
             ->name('personal.personal');
-        /*  Rutas para el listado del personal*/
+        //------------------------------------------- Rutas para el listado del personal------------------------------
         Route::get('/empleados/listado', 'EmpleadoController@index')
             ->name('listadoEmpleado.index');
-        /*Ruta para el store*/
+        //------------------------------------------- Ruta para el store------------------------------------------------------
         Route::post("/personal/store", "EmpleadoController@store")
             ->name("personal.store");
-        /*Ruta para editar*/
+        //------------------------------------------- Ruta para editar---------------------------------------------------
         Route::get('/personal/{id}/editar', 'EmpleadoController@edit')
             ->name('personal.edit');
-        /*Ruta update*/
+        //-------------------------------------------Ruta update--------------------------------------------------------
         Route::put('/empleado/{id}/editar', 'EmpleadoController@update')
             ->name('personal.update');
-        /*Ruta para eliminar*/
+        //-------------------------------------------Ruta para eliminar--------------------------------------------------------
         Route::delete('/personal/{id}/borrar', 'EmpleadoController@destroy')
             ->name('personal.borrar')
             ->where('id', '[0-9]+');
-        /*RUtas para ver detalles del empleado*/
+        //-------------------------------------------RUtas para ver detalles del empleado---------------------------------------------------
         Route::get('/empleado/{id}', 'EmpleadoController@show')
             ->name('empleado.mostrar')
             ->where('id', '[0-9]+');
-        /*TODAS RUTAS PARA FICHA MEDICA*/
-        /*Rutas para formulario del ficha*/
+        //-------------------------------------------TODAS RUTAS PARA FICHA MEDICA-----------------------------------
+        //-------------------------------------------Rutas para formulario del ficha-----------------------------------
         Route::get('/fichaMedica', 'FichaController@index')
             ->name('ficha.index');
         Route::post("/fichaMedica/store", "FichaController@store")
             ->name("fichaMedica.store");
-        /*Rutas para el listado del expedinte medico*/
+        //-------------------------------------------Rutas para el listado del expedinte medico----------------------------------
         Route::get('/fichaMedica/listados', 'FichaController@listasFicha')
             ->name('ficha.listasFicha');
-        /*Rutas para editar*/
+        //-------------------------------------------Rutas para editar-------------------------------------------------------------
         Route::get('/ficha/{id}/editar', 'FichaController@edit')
             ->name('ficha.edit')
             ->where('id', '[0-9]+');
-        /*Rutas para la vista de actualizar */
+        //-------------------------------------------Rutas para la vista de actualizar--------------------------------------------------
+
         Route::put('/ficha/{id}/editar', 'FichaController@update')
             ->name('ficha.update');
-        /*Ruta para eliminar*/
+        //-------------------------------------------Ruta para eliminar-----------------------------------------------
         Route::delete('/ficha/{id}/borrar', 'FichaController@destroy')
             ->name('ficha.borrar');
         Route::get('/ficha/{id}', 'FichaController@show')
             ->name('ficha.mostrar')
             ->where('id', '[0-9]+');
-
-        /*Ruta para el formulario del Estudiante*/
+        //-------------------------------------------Ruta para el formulario del Estudiante-----------------------------------------------
 
         Route::get('/estudiante', 'EstudianteController@estudiante')
             ->name('estudiante.estudiante');
-
-        /*  Rutas para el listado del Estudiante*/
+        //-------------------------------------------Rutas para el listado del Estudiante----------------------------------------------
         Route::get('/estudiante/listado', 'EstudianteController@index')
             ->name('listadoEstudiante.index');
-        /*Ruta para el store*/
+        //-------------------------------------------Ruta para el store-------------------------------------------------
         Route::post("/estudiante/store", 'EstudianteController@store')
             ->name("estudiante.store");
-        /*Ruta para editar*/
+        //-------------------------------------------Ruta para editar-------------------------------------------------
         Route::get('/estudiante/{id}/editar', 'EstudianteController@edit')
             ->name('estudiante.edit');
-        /*Ruta update*/
+        //-------------------------------------------Ruta para update-------------------------------------------------
         Route::put('/estudiante/{id}/editar', 'EstudianteController@update')
             ->name('estudiante.update');
-        /*Ruta para eliminar*/
+        //-------------------------------------------Ruta para eliminar-------------------------------------------------
         Route::delete('/estudiante/{id}/borrar', 'EstudianteController@destroy')
             ->name('estudiante.borrar')
             ->where('id', '[0-9]+');
-        /*RUtas para ver detalles del empleado*/
+        //-------------------------------------------RUtas para ver detalles del empleado-------------------------------------------------
         Route::get('/estudiante/{id}', 'EstudianteController@show')
             ->name('estudiante.mostrar')
             ->where('id', '[0-9]+');
 
+        //-------------------------------------------Rutas para el Calendario de eventos-------------------------------------------------
 
-
-        /*  Rutas para el Calendario de eventos*/
         Route::get('Evento/index', 'ControllerEvent@index');
         Route::get('Evento/index/{month}', 'ControllerEvent@index_month');
-
-        // formulario
+        //-------------------------------------------Rutas formulario Evento-------------------------------------
         Route::get('Evento/form', 'ControllerEvent@form');
         Route::post('Evento/create', 'ControllerEvent@create');
-        // Detalles de evento
+        //-------------------------------------------Rutas Detalles de evento-------------------------------------
         Route::get('Evento/details/{id}', 'ControllerEvent@details');
         Route::get('evento/form','ControllerEvent@form');
-        // EPORTAR A PDF Y A EXCEL
+        //-------------------------------------------Rutas EPORTAR A PDF Y A EXCEL-------------------------------------
         Route::get('/huesped/export','ExportHuespedController@export');
         Route::get('/pdfH/pdf','ExportHuespedController@pdf');
         Route::get('/pruebas/pdf','ExportHuespedController@prueba');
 
     });
-
-        //Aqui van todas las rutas de director
-        //Ruta para acceso del direcctor//
-        //Rutas de listados de salud//
+//-------------------------------------------Aqui van todas las rutas de Administrador-------------------------------------
+    //----------------------------------------Ruta para acceso del Administrador--------------------------------------------
+    //----------------------------------------Rutas de listados de salud-----------------------------------------------
     Route::get('/saludDi', 'paginaPrincipal_controller@SaDire')
         ->name('saludDire.salu');
     Route::get('/saludD', 'paginaPrincipal_controller@SDire')
@@ -186,10 +176,11 @@ Route::group(["middleware" => "auth"], function () {
     Route::get('/directorSalud', 'paginaPrincipal_contrller@buscador')
         ->name('Listado.buscador');
     Route::get('/home', 'HomeController@index')->name('home');
+//----------------------------------------ROUTES Escolaridad-----------------------------------------------
 
-    //ROUTES Escolaridad
     Route::get('/estudiante/create_estudiante', 'EstudianteController@Escolaridad');
-    //ROUTES LISTADO DIRECTOR
+    //----------------------------------------ROUTES LISTADO Administrador-----------------------------------------------
+
     Route::get('/huesped/listadoDirector', 'HuespedController@director')
         ->name('listado.director');
     Route::get('/dire', 'paginaPrincipal_controller@principaldirec')
@@ -197,67 +188,60 @@ Route::group(["middleware" => "auth"], function () {
     Route::get('/huesped/{id}', 'HuespedController@show')
         ->name('huesped.mostrar')
         ->where('id', '[0-9]+');
-    //Ruta de las estadisticas del director//
+    //----------------------------------------Ruta de las estadisticas del administrador-----------------------------------------------
+
     Route::get('/estadisticasDirec', 'EstadisticaDirectorController@index')
         ->name('estadisticas.direc');
-    /*Empleado director lista*/
+    //----------------------------------------Empleado Administrador lista---------------------------------------------------------
     Route::get('/empleado/lista', 'EmpleadoController@director')
         ->name('listaEmpleado.director');
     Route::get('/empleado/{id}', 'EmpleadoController@show')
         ->name('empleado.mostrar')
         ->where('id', '[0-9]+');
+    //----------------------------------------ficha medica Administrador lista--------------------------------------------------------
 
-    /*ficha medica director lista*/
     Route::get('/fichaMedica/lista', 'FichaController@fichaDire')
         ->name('ficha.fichaDire');
-    /*Mostrar ficha medica*/
+    //----------------------------------------Mostrar ficha medica------------------------------------------
     Route::get('/ficha/{id}', 'FichaController@show')
         ->name('fichas.mostrar')
         ->where('id', '[0-9]+');
-
-    /*Empleado director lista*/
+    //----------------------------------------Empleado administrador lista------------------------------------------
     Route::get('/estudiante/lista', 'EstudianteController@director')
         ->name('listadoEst.director');
     Route::get('/estudiante/{id}', 'EstudianteController@show')
         ->name('estudiante.mostrar')
         ->where('id', '[0-9]+');
-
-
-    // EPORTAR A PDF Y A EXCEL
+    //---------------------------------------- ExPORTAR A PDF Y A EXCEL Administrador------------------------------------------
     Route::get('/huesped/export','ExportHuespedController@export');
     Route::get('/pdfH/pdf','ExportHuespedController@pdf');
     Route::get('/pruebas/pdf','ExportHuespedController@prueba');
-    /*Empleado vista ver Director*/
+
+    //---------------------------------------- ExPORTAR A PDF Y A EXCEL Administrado Empleado--------------------------------------
     Route::get('/empleado/export','ExportEmpleadoController@export');
 
     Route::get('/pruebaemple/pdf','ExportEmpleadoController@prueba');
-    /*Empleado vista ver Director*/
-    // EPORTAR A PDF Y A EXCEL
+
+    //---------------------------------------- ExPORTAR A PDF Y A EXCEL Administrado EScolaridad---------------------------
     Route::get('/estudiante/export','ExportEscolaridadController@export');
-
     Route::get('/pruebaestule/pdf','ExportEscolaridadController@prueba');
-
-    // EPORTAR A PDF Y A EXCEL
+    //---------------------------------------- ExPORTAR A PDF Y A EXCEL Administrado FichaMedica---------------------------
     Route::get('/fichamedic/export','ExportFichaMedicaController@export');
 
-    Route::get('/pruebafichame/pdf','ExportEscolaridadController@prueba');
-    /*Empleado vista ver Director*/
-// listado egreso direc
-
+    Route::get('/pruebafichame/pdf','ExportFichaMedicaController@prueba');
+    //---------------------------------------- listado egreso Administrador--------------------------------------------------
     Route::get('/descarga', 'paginaPrincipal_controller@descarga')
         ->name('listado.descarga');
-
-// listado egreso direc
+    //---------------------------------------- listado egreso Administrador--------------------------------------------------
     Route::get('/egresosdirec', 'paginaPrincipal_controller@egresodirec')
         ->name('lista.egresod');
-    //Calendario
+    //---------------------------------------- Calendario--------------------------------------------------
     Route::get('Evento/index', 'ControllerEvent@index');
     Route::get('Evento/index/{month}', 'ControllerEvent@index_month');
-
-    // formulario
+    //---------------------------------------- Formulario--------------------------------------------------
     Route::get('Evento/form', 'ControllerEvent@form');
     Route::post('Evento/create', 'ControllerEvent@create');
-    // Detalles de evento
+    //---------------------------------------- Detalles de evento--------------------------------------------------
     Route::get('Evento/details/{id}', 'ControllerEvent@details');
     Route::get('evento/form','ControllerEvent@form');
 
