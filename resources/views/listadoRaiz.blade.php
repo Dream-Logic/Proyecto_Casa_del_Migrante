@@ -19,7 +19,7 @@
     </div>
     <br>
     <br>
-    <div class="unit-4 mx-4" style="float: right">
+    <div class="unit-4 mx-4" style="float: right; " >
         <a class="btn btn-outline-warning "href="{{route('huesped.nuevo')}}">
             <img src="/imagenes/iconos/agregarUsuario.svg" class="svg" width="25" >
         </a>

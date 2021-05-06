@@ -122,8 +122,9 @@ Route::group(["middleware" => "auth"], function () {
         //-------------------------------------------Ruta para eliminar-----------------------------------------------
         Route::delete('/ficha/{id}/borrar', 'FichaController@destroy')
             ->name('ficha.borrar');
+        /*RUtas para ver detalles de la ficha*/
         Route::get('/ficha/{id}', 'FichaController@show')
-            ->name('ficha.mostrar')
+            ->name('fichas.mostrar')
             ->where('id', '[0-9]+');
         //-------------------------------------------Ruta para el formulario del Estudiante-----------------------------------------------
 

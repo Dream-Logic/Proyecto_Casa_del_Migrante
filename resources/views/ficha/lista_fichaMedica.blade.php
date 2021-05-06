@@ -67,7 +67,7 @@
                     <td>{{ $ficha->enfermedad_paciente}}</td>
                     <td>{{ $ficha->tratamiento_paciente}}</td>
 
-                    <td><a class="btn btn-outline-info" href="{{route('ficha.mostrar',['id' =>$ficha->id])}}">
+                    <td><a class="btn btn-outline-info" href="{{route('fichas.mostrar', ['id' =>$ficha->id])}}">
                             <img src="/imagenes/iconos/ver.svg" width="25" >
                         </a></td>
                     <td><a class="btn btn-outline-warning" href="{{route('ficha.edit',['id' =>$ficha->id])}}" >
