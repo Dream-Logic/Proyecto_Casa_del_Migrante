@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -36,7 +37,7 @@
         </div>
         <div class="site-mobile-menu-body"></div>
     </div>
-    <header class="site-navbar  py-4 js-sticky-header site-navbar-target" role="banner">
+    <header class="site-navbar  py-4 js-sticky-header site-navbar-target" role="banner" style="width: 100%">
         <div class="container">
             <div class="row align-items-center">
                 <div class="flex-row justify-content-center align-items-center">
