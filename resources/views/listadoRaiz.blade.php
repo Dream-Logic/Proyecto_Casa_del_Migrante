@@ -23,13 +23,6 @@
         <a class="btn btn-outline-warning "href="{{route('huesped.nuevo')}}">
             <img src="/imagenes/iconos/agregarUsuario.svg" class="svg" width="25" >
         </a>
-        <a href="{{ asset('/huesped/export') }}"class="btn btn-success" style="color: white">Descarga en Excel
-
-        </a>
-
-        <a href="{{ asset('/pruebas/pdf') }}"class="btn btn-danger">Descarga en PDF
-
-        </a>
 
     </div>
 
