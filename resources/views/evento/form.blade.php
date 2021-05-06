@@ -36,8 +36,10 @@
     <div style="height:50px"></div>
     <p class="lead">
 
-            <div class="card-header" style="background-color: #ccde2e">
-                <label class="card-title" style="color: black;">Registro del evento</label>
+    <div class="card"  class="table-responsive" style="-moz-box-shadow: 0px 5px 3px 3px rgb(194,194,194);
+    box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);" >
+        <div class="card-header" style="background-color: #4cd213">
+                <label class="card-title" style="color: black;">Registrar el evento</label>
             </div>
     <hr>
 
@@ -67,7 +69,7 @@
                 <div class="col-5"><br>
                     <img src="/imagenes/iconos_formulario/eve.svg" class="svg" width="25" height="35"   >
                     <label for="titulo" style="color: #000000">Titulo</label><br>
-                    <input type="text" class="form-control" name="titulo"
+                    <input type="text" class="form-control" style="width: 900px" name="titulo"
                            id="titulo" placeholder="Titulo del evento"><br>
                 </div>
                 <br>
@@ -78,7 +80,7 @@
             <div class="col-5">
                 <img src="/imagenes/iconos_formulario/calendario.svg" class="svg" width="50" height="35"   >
                 <label for="fecha" style="color: #000000">Fecha</label><br>
-                <input type="date" class="form-control" name="fecha"
+                <input type="date" class="form-control" style="width: 900px" name="fecha"
                        id="fecha"><br>
             </div>
 
@@ -86,11 +88,11 @@
                 <img src="/imagenes/iconos_formulario/descrip.svg" class="svg" width="50" height="35"  >
                 <label for="descripcion" style="color: black;">Descripción</label>
                 <span class="col-md-5 col-md-offset-10 text-center">
-                     <textarea class="form-control" id="descripcion" name="descripcion"
+                     <textarea class="form-control" style="width: 900px" id="descripcion" name="descripcion"
                                placeholder="Descripción del evento"></textarea>
                         </span></div>
             <br>
-             <input type="submit" class="btn btn-info" value="Guardar">
+             <input type="submit" class="btn btn-success" value="Guardar">
 
             <a href="{{ asset('/Evento/index') }}" class="btn btn-warning">
                 <img src="/imagenes/iconos/restaurar.svg" class="svg" width="25">
