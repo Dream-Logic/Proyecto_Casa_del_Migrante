@@ -245,6 +245,9 @@ Route::group(["middleware" => "auth"], function () {
     //---------------------------------------- Detalles de evento--------------------------------------------------
     Route::get('Evento/details/{id}', 'ControllerEvent@details');
     Route::get('evento/form','ControllerEvent@form');
+    //---------------------------------------- Calendario Admin--------------------------------------------------
+    Route::get('Evento/admin', 'ControllerEvent@calendarioadmin');
+
 
 
 });
