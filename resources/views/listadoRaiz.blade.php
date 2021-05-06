@@ -26,7 +26,7 @@
 
     </div>
 
-        <form class="form-inline my-2 my-lg-0 ml-auto" >
+    <form class="form-inline my-2 my-lg-0 ml-auto" >
         <input class="form-control mr-sm-2 col-4" name="name" style="margin-right: 20px"
                type="search" placeholder="Buscar" aria-label="Search">
         <button class=" mr-sm-2 btn btn-success" type="submit">
@@ -37,6 +37,7 @@
         </a>
     </form>
     <br>
+
 
     <div class="table-responsive" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
     box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);">
