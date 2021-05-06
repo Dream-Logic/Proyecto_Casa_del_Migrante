@@ -49,7 +49,6 @@
                 <th scope="col">Grado</th>
                 <th scope="col">Carrera</th>
                 <th scope="col"></th>
-                <th scope="col"></th>
                 <th scope="col">Acciones</th>
                 <th scope="col"></th>
             </tr>
@@ -62,20 +61,21 @@
                     <td> {{$estudiante->apellidos_alumno}}</td>
                     <td>{{ $estudiante->grado}}</td>
                     <td>{{ $estudiante->carrera}}</td>
+
                     <td align="center"><a class="btn btn-outline-info" href="{{route('estudiante.mostrar',['id' =>$estudiante->id])}}">
                             <img src="/imagenes/iconos/ver.svg" width="25" >
                         </a></td>
-                    <td><a class="btn btn-outline-warning" href="{{route('estudiante.edit',['id' =>$estudiante->id])}}" >
+                    <td align="center"><a class="btn btn-outline-warning" href="{{route('estudiante.edit',['id' =>$estudiante->id])}}" >
                             <img src="/imagenes/iconos/editar.svg" class="svg" width="25" >
                         </a>
                     </td>
-                    <td>
+                    <td align="center">
                         <a href="#" onclick="return confirm('Estás seguro que deseas eliminar el registro?');">
                             <form method="post" action="{{route('estudiante.borrar',['id'=>$estudiante->id])}}">
                                 @csrf
-                                @method('delete')
-                                <img src="/imagenes/iconos/eliminar.svg">
-                                <input type="submit" value="Eliminar" class="btn btn-outline-danger">
+                                 @method('delete')
+
+                                <input   src="/imagenes/iconos/eliminar.svg" type="image" height="45" value="Eliminar" class="btn btn-outline-danger">
                             </form>
                         </a>
                     </td>

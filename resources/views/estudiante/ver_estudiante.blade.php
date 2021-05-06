@@ -17,7 +17,7 @@
     <label class="card-title" style="color: black; height: 75px;  margin-left: 40px; margin-top: 18px">
         Informacion de {{$estudiante->nombres_alumno}} {{$estudiante->apellidos_alumno}} </label>
         <input  class="btn btn-warning "  width="25" type="button" value="Imprimir" onclick="window.print()"
-                style="margin-left: 985px;   "  >
+                style="margin-left: 800px;   "  >
     </div>
     <br>
     <br>
@@ -76,5 +76,9 @@
         <br>
         <br>
         <script src="/js/jquery-3.2.1.min.js"></script>
+    </div>
+    <div class="footer-copyright text-center py-3" style="color: #0d95e8">
+        Proyecto Casa del Migrante
+
     </div>
 @endsection

@@ -154,7 +154,7 @@
                     <label for="direccion_paciente" style="color: #000000">Domicilio</label>
                     <span class="col-md-5 col-md-offset-10 text-center">
         <textarea class="form-control" id="direccion_paciente" name="direccion_paciente"
-                  placeholder="Dirección actual del paciente" style="margin-left: 35px" cols="156"
+                  placeholder="Dirección actual del paciente" style="margin-left: 35px" cols="138"
                   rows="2"></textarea><br>
                     </span></div>
                 <br>
@@ -167,11 +167,10 @@
                     <span class="col-md-5 col-md-offset-10 text-center">
         <textarea class="form-control" id="enfermedad_paciente" name="enfermedad_paciente"
 
-                  placeholder="Describa la enfermedad o padecimiento" style="margin-left: 35px" cols="156"
+                  placeholder="Describa la enfermedad o padecimiento" style="margin-left: 35px" cols="138"
                   srows="2"></textarea><br>
                     </span></div>
                 <br>
-
 
                 <div style="margin-left: 45px">
                     <img src="/imagenes/iconos_formulario/medicamento.svg" style="margin-left: 50px" class="svg"
@@ -180,7 +179,7 @@
                     <span class="col-md-5 col-md-offset-10 text-center">
         <textarea class="form-control" id="tratamiento_paciente" name="tratamiento_paciente"
                   placeholder="Describa el tratamiento que necesita o inidcaciones médicas" style="margin-left: 35px"
-                  cols="156" rows="2"></textarea><br>
+                  cols="138" rows="2"></textarea><br>
                     </span></div>
                 <br>
             </div>

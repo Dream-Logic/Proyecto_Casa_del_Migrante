@@ -40,8 +40,10 @@ class HuespedController extends Controller
     public function director(Request $request)
     {
 
+        $egreso=$request->get("name");
+        $listados = Huesped::where(\DB::raw("CONCAT(nombres, '' , apellidos, identidad, direccion)"),
+        'LIKE', "%$egreso%")->where("egreso")->Paginate(15);
 
-        $listados = Huesped::name($request->get('name'))->orderBy('id', 'DESC')->paginate(15);
 
         return view('listadoRaizDirector')->with('listados', $listados);
 

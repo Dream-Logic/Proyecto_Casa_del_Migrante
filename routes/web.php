@@ -127,6 +127,9 @@ Route::group(["middleware" => "auth"], function () {
         /*Ruta para eliminar*/
         Route::delete('/ficha/{id}/borrar', 'FichaController@destroy')
             ->name('ficha.borrar');
+        Route::get('/ficha/{id}', 'FichaController@show')
+            ->name('ficha.mostrar')
+            ->where('id', '[0-9]+');
 
         /*Ruta para el formulario del Estudiante*/
 
@@ -204,7 +207,14 @@ Route::group(["middleware" => "auth"], function () {
         ->name('empleado.mostrar')
         ->where('id', '[0-9]+');
 
-    /*Empleado director lista*/
+    /*ficha medica director lista*/
+    Route::get('/fichaMedica/lista', 'FichaController@fichaDire')
+        ->name('ficha.fichaDire');
+    /*Mostrar ficha medica*/
+    Route::get('/ficha/{id}', 'FichaController@show')
+        ->name('fichas.mostrar')
+        ->where('id', '[0-9]+');
+
     /*Empleado director lista*/
     Route::get('/estudiante/lista', 'EstudianteController@director')
         ->name('listadoEst.director');
@@ -233,8 +243,7 @@ Route::group(["middleware" => "auth"], function () {
     Route::get('/pruebafichame/pdf','ExportEscolaridadController@prueba');
     /*Empleado vista ver Director*/
 // listado egreso direc
-    Route::get('/egresos', 'paginaPrincipal_controller@egreso')
-        ->name('lista.egreso');
+
     Route::get('/descarga', 'paginaPrincipal_controller@descarga')
         ->name('listado.descarga');
 

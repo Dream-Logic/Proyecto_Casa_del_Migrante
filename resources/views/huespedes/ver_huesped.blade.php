@@ -22,7 +22,7 @@
             Información de {{$huesped->nombres}} {{$huesped->apellidos}} </label>
 
         <input  class="btn btn-warning mr-sm-2 "  width="25" type="button" value="Imprimir"  onclick="window.print()"
-               style="margin-left: 985px;" >
+               style="margin-left: 800px;" >
 
 
     </div>

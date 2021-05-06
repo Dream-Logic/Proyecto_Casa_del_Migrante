@@ -1,4 +1,4 @@
-@extends ('PlantillaMadre.menu_inicio')
+@extends ('PlantillaMadre.Plantilla_menu_director')
 @section('titulo', 'Listado de Expedientes Médicos')
 @section('contenido')
 
@@ -26,7 +26,7 @@
         <button class=" mr-sm-2 btn btn-success" type="submit">
             <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
         </button>
-        <a href="{{url('/ficha')}}" class="btn btn-warning">
+        <a href="{{url('/fichaMedica/lista')}}" class="btn btn-warning">
             <img src="/imagenes/iconos/restaurar.svg" class="svg" width="25">
         </a>
     </form>
@@ -60,7 +60,7 @@
                     <td>{{ $ficha->enfermedad_paciente}}</td>
                     <td>{{ $ficha->tratamiento_paciente}}</td>
 
-                    <td><a class="btn btn-outline-info" href="{{route('ficha.mostrar',['id' =>$ficha->id])}}">
+                    <td><a class="btn btn-outline-info" href="{{route('fichas.mostrar',['id' =>$ficha->id])}}">
                             <img src="/imagenes/iconos/ver.svg" width="25" >
                         </a></td>
                 </tr>

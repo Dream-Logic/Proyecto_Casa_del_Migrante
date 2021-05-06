@@ -27,7 +27,7 @@
         <button class=" mr-sm-1 btn btn-success" type="submit">
             <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
         </button>
-        <a href="{{url('/egresos')}}" class="btn btn-warning">
+        <a href="{{url('/egresosdirec')}}" class="btn btn-warning">
             <img src="/imagenes/iconos/restaurar.svg" class="svg" width="25">
         </a>
     </form>

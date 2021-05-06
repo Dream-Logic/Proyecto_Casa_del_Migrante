@@ -142,7 +142,7 @@
                         <label for="direccion_personal" style="color: #000000">Dirección</label>
                         <span class="col-md-5 col-md-offset-10 text-center">
         <textarea class="form-control" id="direccion_personal" name="direccion_personal"
-                  placeholder="Dirección" style="margin-left: 35px" cols="156" rows="2"></textarea><br>
+                  placeholder="Dirección" style="margin-left: 35px" cols="138" rows="2"></textarea><br>
                     </span></div>
                     <br>
 
@@ -152,7 +152,7 @@
                         <label for="profesion" style="color: #000000">Profesión u Oficio</label>
                         <span class="col-md-5 col-md-offset-10 text-center">
         <textarea class="form-control" id="profesionPersonal" name="profesionPersonal"
-                  placeholder="Ingrese su profesión u oficio" style="margin-left: 35px" cols="156" rows="2"></textarea><br>
+                  placeholder="Ingrese su profesión u oficio" style="margin-left: 35px" cols="138" rows="2"></textarea><br>
                     </span></div>
                     <br>
 
@@ -162,7 +162,7 @@
                         <label for="cargo" style="color: #000000">Cargo</label>
                         <span class="col-md-5 col-md-offset-10 text-center">
                        <textarea class="form-control" id="cargo" name="cargo"
-                                 placeholder="Cargo que desempeñará" style="margin-left: 35px" cols="156" rows="2"></textarea><br>
+                                 placeholder="Cargo que desempeñará" style="margin-left: 35px" cols="138" rows="2"></textarea><br>
                     </span></div>
                     <br>
                 </div>

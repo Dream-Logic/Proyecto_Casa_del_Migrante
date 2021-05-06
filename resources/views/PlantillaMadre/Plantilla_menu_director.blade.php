@@ -76,10 +76,10 @@
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="{{route('listado.director')}}">Listado de Huésped</a>
                                     <a class="dropdown-item" href="{{ route('listaEmpleado.director') }}">Listado de Personal</a>
-                                    <a class="dropdown-item" href="{{ route('lista.egreso') }}">Listado de egresos</a>
+                                    <a class="dropdown-item" href="{{ route('lista.egresod') }}">Listado de egresos</a>
                                     <a class="dropdown-item" href="{{ route('saludDire.salu') }}">Listado de salud</a>
                                     <a class="dropdown-item" href="{{ route('listadoEst.director') }}">Listado de Estudiantes</a>
-                                    <a class="dropdown-item" href="">Listado de Ficha Medica</a>
+                                    <a class="dropdown-item" href="{{route('ficha.fichaDire')}}">Listado de Ficha Medica</a>
                                 </div>
                             </li>
                             <li><a href="{{ route('estadisticas.direc')}}" class="nav-link"><strong>Estadísticas</strong></a></li>
