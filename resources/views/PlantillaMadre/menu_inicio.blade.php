@@ -3,7 +3,7 @@
 <head>
     <style>
         .site-navbar {
-            background-color: #fd7e14;
+            background-image: url(images/fondoOscuro.jpg);
         }
         .col-5 {
             margin-left: 50px;
@@ -63,16 +63,16 @@
             <div class="row align-items-center">
                 <div class="flex-row justify-content-center align-items-center">
                     <span class="text-md-left"
-                          style="color: black;  font-family: 'Arial Black'">Casa del Gran Árbol</span>
+                          style="color: #e0a800;  font-family: 'Arial Black'">Casa del Gran Árbol</span>
                 </div>
                 <div class="col-10 col-md-10 d-none d-xl-block">
                     <nav class="site-navigation position-relative text-right" role="navigation" >
 
                         <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                            <li><a href="{{route('index.index')}}" class="nav-link"><strong style="color: black">Inicio</strong></a></li>
+                            <li><a href="{{route('index.index')}}" class="nav-link"><strong>Inicio</strong></a></li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle"  id="navbardrop" data-toggle="dropdown">
-                                    <strong style="color: black">Registros</strong>
+                                    <strong>Registros</strong>
                                 </a>
                                 <div class="dropdown-menu" >
                                     <a class="dropdown-item" href="{{route('huesped.nuevo')}}">Registro de Huésped</a>
@@ -83,7 +83,7 @@
                             </li>
                             <li class="nav-item dropdown nav-link">
                                 <a class="nav-link dropdown-toggle"  id="navbardrop" data-toggle="dropdown" >
-                                    <strong style="color: black">Listados</strong>
+                                    <strong>Listados</strong>
                                 </a>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="{{route('listado.index')}}">Huésped</a>
@@ -94,8 +94,8 @@
                                     <a class="dropdown-item" href="{{ route('listadoEstudiante.index') }}">Listado de Estudiantes</a>
                                 </div>
                             </li>
-                            <li><a href="{{ route('estadisticas.admin')}}" class="nav-link"><strong style="color: black">Estadísticas</strong></a></li>
-                            <li><a href="{{ asset('/Evento/index/') }}" class="nav-link"><strong style="color: black">Calendario</strong></a></li>
+                            <li><a href="{{ route('estadisticas.admin')}}" class="nav-link"><strong>Estadísticas</strong></a></li>
+                            <li><a href="{{ asset('/Evento/index/') }}" class="nav-link"><strong>Calendario</strong></a></li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre >

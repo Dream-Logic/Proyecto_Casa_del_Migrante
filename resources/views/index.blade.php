@@ -17,7 +17,7 @@
 
 
 </head>
-<body style="background-image: url(images/fondoOscuro.jpg)">
+<body style="background-image: url(images/fondoOscuro.jpg) ">
 
 <div class="site-blocks overlay" data-aos="fade" >
 <div class="hero_slider_container">
