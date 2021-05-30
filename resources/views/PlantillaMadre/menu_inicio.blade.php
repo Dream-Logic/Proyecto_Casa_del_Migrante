@@ -3,7 +3,7 @@
 <head>
     <style>
         .site-navbar {
-            background-image: url(images/fondoOscuro.jpg);
+            background-image: url(/images/fondoOscuro.jpg);
         }
         .col-5 {
             margin-left: 50px;
