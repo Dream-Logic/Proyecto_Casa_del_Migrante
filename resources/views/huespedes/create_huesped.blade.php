@@ -6,10 +6,12 @@
     <br>
     <head>
         <!-- CSRF Token -->
+
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
     <body >
-    <div class="card"  class="table-responsive" style="-moz-box-shadow: 0px 5px 3px 3px rgb(194,194,194);
+    <div class="card"  class="responsive" style="-moz-box-shadow: 0px 5px 3px 3px rgb(194,194,194);
     box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);" >
         <div class="card-header" style="background-color: #4cd213">
             <label class="card-title" style="color: black;">Datos Personales del Niño, Niña o Adolescente</label>
@@ -31,7 +33,7 @@
             </div>
         @endif
 
-        <form method="post" action="{{route('huesped.store')}}" enctype="multipart/form-data">
+        <form method="post" class="table-responsive" action="{{route('huesped.store')}}" enctype="multipart/form-data">
 
             @csrf
             <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
@@ -88,7 +90,7 @@
                     <div class="col-5"><br>
                         <img src="/imagenes/iconos_formulario/usuario.svg" style="margin-left: 50px" class="svg" width="25" height="35"   >
                         <label for="nombre" style="color: #000000;">Nombres</label><br>
-                        <input type="text" style="margin-left: 30px" class="form-control" name="nombres"
+                        <input type="text" style="margin-left: 30px" class="form-control" maxlength="50"  name="nombres"
                                id="nombres" placeholder="Nombres"><br>
                     </div>
                     <br>
@@ -96,24 +98,30 @@
                     <div class="col-5"><br>
                         <img src="/imagenes/iconos_formulario/usuario.svg" style="margin-left: 50px" class="svg" width="25" height="35"  >
                         <label for="apellido" style="color: #000000">Apellidos</label><br>
-                        <input type="text" style="margin-left: 30px"  class="form-control" name="apellidos"
+
+
+                        <input type="text" style="margin-left: 30px"  class="form-control" maxlength="50" name="apellidos"
                                id="apellidos" placeholder="Apellidos">
                     </div>
                     <br>
 
-
+                   <?php $fnacimiento =date("d-m-Y");?>
                     <div class="col-5">
                         <img src="/imagenes/iconos_formulario/calendario.svg" style="margin-left: 50px"  class="svg" width="50" height="35"  >
-                        <label for="FechaNac" style="color: #000000">Fecha de Nacimiento</label><br>
+                        <label for="fnacimiento" style="color: #000000">Fecha de Nacimiento</label><br>
                         <input type="date" class="form-control" style="margin-left: 30px" name="fnacimiento"
-                               id="fnacimiento"><br>
+                               id="fnacimiento" value="{{old('fnacimiento')}}"
+                               min="<?php echo date('Y-m-d',strtotime($fnacimiento."- 25 year"));?>"
+                               max="<?php echo date('Y-m-d',strtotime($fnacimiento." 10 year"));?>">
+
+                        <br>
                     </div>
 
 
                     <div class="col-5">
                         <img src="/imagenes/iconos_formulario/grupo-de-edad.svg" style="margin-left: 50px" class="svg" width="50" height="35"  >
                         <label for="edad" style="color: #000000">Edad</label><br>
-                        <input type="number" style="margin-left: 30px" class="form-control" name="edad"
+                        <input type="number"   type="number" min="1"  pattern="^[0-9]+" style="margin-left: 30px" class="form-control" name="edad"
                                id="edad" placeholder="Edad"><br>
                     </div>
                     <div class="col-5">
@@ -187,7 +195,7 @@
                     <div class="col-5">
                         <img src="/imagenes/iconos_formulario/tarjeta-de-identificacion.svg"style="margin-left: 50px" class="svg" width="50" height="35"  >
                         <label for="identidad" style="color: #000000">Identidad </label><br>
-                        <input type="text" style="margin-left: 30px" class="form-control" name="identidad"
+                        <input type="text" style="margin-left: 30px" class="form-control" name="identidad" maxlength="13"
                                id="identidad" placeholder="0000-0000-00000"><br>
                     </div>
                     <br>
@@ -205,7 +213,7 @@
                     <div class="col-5">
                         <img src="/imagenes/iconos_formulario/pasaporte.svg" style="margin-left: 50px"class="svg" width="50" height="35"  >
                         <label for="pasaporte" style="color: #000000">Pasaporte</label><br>
-                        <input style="margin-left: 30px" type="text" class="form-control" name="pasaporte"
+                        <input style="margin-left: 30px" type="text" class="form-control" name="pasaporte" maxlength="20"
                                id="pasaporte" placeholder="Numero de pasaporte">
                     </div>
                     <br>
@@ -280,6 +288,9 @@
         <br>
     </div>
     <br>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="/js/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
 

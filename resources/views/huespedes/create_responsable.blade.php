@@ -159,7 +159,7 @@
                     <div class="col-5">
                         <img src="/imagenes/iconos_formulario/telefono.svg" style="margin-left: 50px" class="svg" width="50" height="35"  >
                         <label for="telefono" style="color: black;">Teléfono</label><br>
-                        <input style="margin-left: 30px" type="text" class="form-control" name="telefono"
+                        <input style="margin-left: 30px" type="text" class="form-control" name="telefono" maxlength="8"
                                id="telefono" placeholder="Número de teléfono"><br>
                     </div>
                 </div>
