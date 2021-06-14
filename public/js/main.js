@@ -288,22 +288,25 @@ jQuery(document).ready(function($) {
 	siteSticky();
 
 	// navigation
-  var OnePageNavigation = function() {
-    var navToggler = $('.site-menu-toggle');
-   	$("body").on("click", ".main-menu li a[href^='#'], .smoothscroll[href^='#'], .site-mobile-menu .site-nav-wrap li a", function(e) {
-      e.preventDefault();
-
-      var hash = this.hash;
-
-      $('html, body').animate({
-        'scrollTop': $(hash).offset().top
-      }, 600, 'easeInOutExpo', function(){
-        window.location.hash = hash;
-      });
-
-    });
-  };
-  OnePageNavigation();
+	var OnePageNavigation = function() {
+		var navToggler = $('.site-menu-toggle');
+		$("body").on("click", ".main-menu li a[href^='#'], .smoothscroll[href^='#'], .site-mobile-menu .site-nav-wrap li a", function(e) {
+			if (this.hash !== "" && this.pathname == window.location.pathname) {
+				e.preventDefault();
+				var target = this.hash;
+				var topOffset = 0; //#top should default to 0 so no need to calculate the difference between top and top :)
+				if (target != "#top") { //If the target is not "#top", then calculate topOffset
+					var topOffset = $(target).offset().top;
+				}
+				$('html, body').animate({
+					'scrollTop': $(target).offset().top
+				}, 600, 'easeInOutCirc', function(){
+					window.location.hash = target;
+				});
+			}
+		});
+	};
+	OnePageNavigation();
 
   var siteScroll = function() {
 

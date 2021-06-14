@@ -5,6 +5,7 @@
         .site-navbar {
             background-image: url(/images/fondoOscuro.jpg)
         }
+
         .col-5 {
             margin-left: 55px;
             margin-right: 30px;
@@ -23,9 +24,26 @@
         .botones {
 
             padding-bottom: 30px;
-            padding-left: 85%;
+            padding-left: 70%;
             font-family: 'Verdana', Geneva, Tahoma, sans-serif;
         }
+        .pereza{
+            content-align: right;
+        }
+        .btn-whatsapp {
+            display:block;
+            width:70px;
+            height:70px;
+            color:#fff;
+            position: fixed;
+            right:20px;
+            bottom:20px;
+            border-radius:50%;
+            line-height:80px;
+            text-align:center;
+            z-index:999;
+        }
+
 
 
     </style>

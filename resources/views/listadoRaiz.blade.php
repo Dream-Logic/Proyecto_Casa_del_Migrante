@@ -13,20 +13,19 @@
     <head>
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <link  href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    </head>
+        <meta charset="utf-8">
 
+
+
+
+    </head>
+    <tbody class="embed-responsive">
     <div class="w3-container w3-teal mx-4" style="font-family: 'Raleway', sans-serif; text-align: center">
         <h6 class="mt-3" style="font-size: 30px; color: black;"><b>Listado de Huéspedes</b></h6>
     </div>
     <br>
     <br>
-    <div class="unit-4 mx-4" style="float: right; " >
-        <a class="btn btn-outline-warning "href="{{route('huesped.nuevo')}}">
-            <img src="/imagenes/iconos/agregarUsuario.svg" class="svg" width="25" >
-        </a>
 
-    </div>
 
     <form class="form-inline my-2 my-lg-0 ml-auto" >
         <input class="form-control mr-sm-2 col-4" name="name" style="margin-right: 20px"
@@ -37,6 +36,12 @@
         <a href="{{url('/proyectos/listado')}}" class="btn btn-warning">
             <img src="/imagenes/iconos/restaurar.svg" class="svg" width="25">
         </a>
+
+            <a style="margin-left: 400px" class="btn btn-outline-warning "href="{{route('huesped.nuevo')}}">
+                <img src="/imagenes/iconos/agregarUsuario.svg" class="svg" width="25" s >
+            </a>
+
+        
     </form>
     <br>
 
@@ -59,7 +64,7 @@
                 <th scope="col"></th>
             </tr>
             </thead>
-            <tbody>
+
             @forelse($listados as $huesped)
                 <tr>
                     <th scope="row">{{ $huesped->id }}</th>
@@ -93,11 +98,8 @@
                     <td colspan="10">No hay Registros</td>
                 </tr>
             @endforelse
-
-
-
+            </tbody>
         </table>
-
     </div>
     <br>
     <br>
@@ -117,8 +119,7 @@
     <script src="plugins/easing/easing.js"></script>
     <script src="js/custom.js"></script>
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 
-    </tbody>
+
 @endsection
