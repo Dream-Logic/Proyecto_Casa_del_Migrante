@@ -330,13 +330,13 @@
                             <br>
 
 
-                            <div style="margin-left: 35px">
+                            <div class="col-md-12 justify-content-center">
                                 <img src="/imagenes/iconos_formulario/fiebre.svg" style="margin-left: 50px" class="svg"
                                      width="50" height="35">
                                 <label for="enfermedad" style="color: #000000">Enfermedad o padecimiento </label>
-                                <span class="col-md-5 col-md-offset-10 text-center">
-        <textarea class="form-control" id="enfermedad" name="enfermedad"
-                  placeholder="Describa la enfermedad o padecimiento" style="margin-left: 25px" cols="120"
+                                <span class=" text-center">
+        <textarea class="form-control col-md-8" id="enfermedad" name="enfermedad"
+                  placeholder="Describa la enfermedad o padecimiento"
                   rows="2"></textarea><br>
                     </span>{{old('enfermedad')}}</div>
                             <br>
