@@ -311,7 +311,7 @@
                                  class="svg" width="50" height="35">
                             <label for="direccionProcede" style="color: #000000">Dirección</label>
                             <span class="text-center col-md-10 justify-content-center">
-                            <textarea class="form-control " id="direccion" name="direccion"
+                            <textarea class="form-control " id="direccion" name="direccion" maxlength="100"
                                       placeholder="Describa la dirección excata de dónde procede."
                                       rows="2">{{old('direccion')}}</textarea><br></span>
                         </div>
@@ -323,7 +323,7 @@
                                  class="svg" width="50" height="35">
                             <label for="signos" style="color: #000000">Grado Escolar</label>
                             <span class="text-center col-md-10 justify-content-center">
-                            <textarea class="form-control " id="gradoEscolar" name="gradoEscolar"
+                            <textarea class="form-control " id="gradoEscolar" name="gradoEscolar" maxlength="100"
                                       placeholder="Describa el grado escolar."
                                       rows="2">{{old('gradoEscolar')}}</textarea></span><br>
                         </div>
@@ -335,7 +335,7 @@
                                  width="50" height="35">
                             <label for="signos" style="color: #000000">Signos Fisicos</label>
                             <span class="text-center col-md-10 justify-content-center ">
-                             <textarea class="form-control" id="signosFisicos" name="signosFisicos"
+                             <textarea class="form-control" id="signosFisicos" name="signosFisicos" maxlength=""
                                        placeholder="Describa los signos físicos (lunares, cicatrices, otros)."
                                        rows="2">{{old('signosFisicos')}}</textarea></span><br>
                         </div>
@@ -347,7 +347,7 @@
                                  width="50" height="35">
                             <label for="enfermedad" style="color: #000000">Enfermedad </label>
                             <span class="text-center col-md-10 justify-content-center ">
-                                    <textarea class="form-control" id="enfermedad" name="enfermedad"
+                                    <textarea class="form-control" id="enfermedad" name="enfermedad" maxlength="100"
                                               placeholder="Describa la enfermedad o padecimiento (opcional)."
                                               rows="2">{{old('enfermedad')}}</textarea></span><br>
                         </div>
@@ -358,7 +358,7 @@
                                  class="svg" width="50" height="35">
                             <label for="tratamiento" class="" style="color: #000000">Tratamiento</label>
                             <span class="text-center col-md-10 justify-content-center">
-                             <textarea class="form-control" id="tratamiento" name="tratamiento"
+                             <textarea class="form-control" id="tratamiento" name="tratamiento" maxlength="100"
                                        placeholder="Describa el tratamiento que necesita (opcional)."
                                        rows="2">{{old('tratamiento')}}</textarea></span><br>
                         </div>

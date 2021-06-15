@@ -28,7 +28,7 @@ class CreateHuespedsTable extends Migration
             $table->string('piel');
             $table->string('identidad')->unique();
             $table->string('nacionalidad');
-            $table->string('pasaporte')->nullable();
+            $table->string('pasaporte')->nullable()->unique();
             $table->string('nacimiento');
             $table->string('direccion');
             $table->string('gradoEscolar');
