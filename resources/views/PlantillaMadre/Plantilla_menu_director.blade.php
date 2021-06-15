@@ -23,8 +23,7 @@
 
         .botones {
 
-            padding-bottom: 30px;
-            padding-left: 70%;
+
             font-family: 'Verdana', Geneva, Tahoma, sans-serif;
         }
         .pereza{
