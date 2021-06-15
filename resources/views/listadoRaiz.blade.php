@@ -34,14 +34,13 @@
             <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
         </button>
         <a href="{{url('/proyectos/listado')}}" class="btn btn-warning">
-            <img src="/imagenes/iconos/restaurar.svg" class="svg" width="25">
+            <img src="/imagenes/iconos/recargar (1).svg" class="svg" width="25">
         </a>
-
-            <a style="margin-left: 400px" class="btn btn-outline-warning "href="{{route('huesped.nuevo')}}">
-                <img src="/imagenes/iconos/agregarUsuario.svg" class="svg" width="25" s >
+            <a style="margin-left: 600px" class="btn btn-outline-warning "href="{{route('huesped.nuevo')}}">
+                <img src="/imagenes/iconos/agregarUsuario.svg" class="svg" width="25" >
             </a>
 
-        
+
     </form>
     <br>
 

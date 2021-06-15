@@ -21,14 +21,13 @@
     </div>
     <br>
     <br>
-        <form class="form-inline my-2 my-lg-0 ml-auto " >
-            <a class=" mr-sm-auto btn btn-success btn-warning" href="{{route('index.index')}}">Regresar</a>
+        <form class="form-inline my-3 my-lg-0 ml-auto " >
             <input class="form-control mr-sm-2 col-3"  name="name" type="search" aria-label="Search" placeholder="Buscar">
             <button class="   mr-sm-1 btn btn-success" type="submit">
                 <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
             </button>
             <a href="{{url('salud')}}" class="btn btn-warning">
-                <img src="/imagenes/iconos/restaurar.svg" class="svg" width="25">
+                <img src="/imagenes/iconos/recargar (1).svg" class="svg" width="25">
             </a>
         </form>
     <br>

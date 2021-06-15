@@ -19,18 +19,13 @@
     <h6 class="mt-3"  style="font-size: 30px; color: black; text-align: center;"><b>Listado de Salud</b></h6>
     <br>
 
-
-
-
         <form class="form-inline my-2 my-lg-0 ">
-            <a class="mr-sm-auto btn btn-success btn-warning" href="{{route('index.index')}}">Regresar</a>
-
             <input class="form-control mr-sm-2 col-3 " name="name" type="search" aria-label="Search" placeholder="Buscar">
             <button class=" mr-sm-2 btn btn-success" type="submit">
                 <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
             </button>
             <a href="{{url('/saludDi')}}" class="btn btn-warning">
-                <img src="/imagenes/iconos/restaurar.svg" class="svg" width="25">
+                <img src="/imagenes/iconos/recargar.svg" class="svg" width="25">
             </a>
         </form>
    <br>

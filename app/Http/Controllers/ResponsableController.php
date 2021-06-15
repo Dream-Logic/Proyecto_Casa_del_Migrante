@@ -55,7 +55,7 @@ class ResponsableController extends Controller
             'direccion' => 'required',
             'trabaja' => 'required',
             'profesionOficio' => 'required',
-            'identidad' => 'required',
+            'identidad' => 'required|digits:13',
             'pasaporte' => 'nullable',
             'civil' => 'required',
             'telefono' => 'nullable',
