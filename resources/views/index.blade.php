@@ -37,7 +37,7 @@
 <div class="hero_boxes" >
     <div class="hero_boxes_inner"  >
         <div>
-            <div class="row " >
+            <div class="row justify-content-center" >
 
                 <div class="col-lg-3 hero_box_col ">
                     <br>
@@ -45,8 +45,7 @@
                     <div class="hero_box d-flex flex-row align-items-center justify-content-start" >
                         <img src="images/registro.svg"  class="svg" alt="">
                         <div class="hero_box_content" >
-                            <h6 class="hero_box_title">Ficha de Ingreso</h6>
-                            <a href="{{route('huesped.nuevo')}}" class="hero_box_link">Registro</a>
+                            <a style="font-size:15px " href="{{route('huesped.nuevo')}}" class="hero_box_link">Ficha de Ingreso</a>
                         </div>
                     </div>
                     </a>
@@ -57,8 +56,8 @@
                         <div class="hero_box d-flex flex-row align-items-center justify-content-start">
                             <img src="images/bueno.svg" class="svg" alt="">
                             <div class="hero_box_content">
-                                <h6 class="hero_box_title">Listado  de Huéspedes</h6>
-                                <a href="{{ route('listado.index') }}" class="hero_box_link">ver</a>
+
+                                <a style="font-size:15px " href="{{ route('listado.index') }}" class="hero_box_link">Listado Huesped</a>
                             </div>
                         </div>
                     </a>
@@ -68,10 +67,10 @@
                     <br>
                     <a href="{{ route('salud.salu')}}" >
                     <div class="hero_box d-flex flex-row align-items-center justify-content-start">
-                        <img src="images/salud.svg" class="svg " alt="">
+                        <img src="images/salud.svg" class="svg" alt="">
                         <div class="hero_box_content">
-                            <h6 class="hero_box_title">Salud</h6>
-                            <a href="{{ route('salud.salu') }}" class="hero_box_link">Ver</a>
+
+                            <a style="font-size:15px " href="{{ route('salud.salu') }}" class="hero_box_link">Salud</a>
                         </div>
                     </div>
                     </a>
@@ -80,10 +79,11 @@
                     <br>
                     <a href="{{ route('estadisticas.admin')}}" >
                         <div class="hero_box d-flex flex-row align-items-center justify-content-start">
+
                             <img src="images/creciente.svg" class="svg" alt="">
                             <div class="hero_box_content">
-                                <h6 class="hero_box_title">Estadísticas</h6>
-                                <a href="{{ route('estadisticas.admin') }}" class="hero_box_link">Ver</a>
+
+                                <a style="font-size:15px " href="{{ route('estadisticas.admin') }}" class="hero_box_link">Estadísticas</a>
                             </div>
                         </div>
                     </a>
@@ -94,8 +94,8 @@
                         <div class="hero_box d-flex flex-row align-items-center justify-content-start">
                             <img src="images/personal.svg" class="svg" alt="">
                             <div class="hero_box_content">
-                                <h6 class="hero_box_title"> Ficha del Personal</h6>
-                                <a href="{{ route('personal.personal') }}" class="hero_box_link">Ver</a>
+
+                                <a  style="font-size:15px  "href="{{ route('personal.personal') }}" class="hero_box_link">Ficha Personal</a>
                             </div>
                         </div>
                     </a>
@@ -106,8 +106,8 @@
                         <div class="hero_box d-flex flex-row align-items-center justify-content-start">
                             <img src="images/personal.svg" class="svg" alt="">
                             <div class="hero_box_content">
-                                <h6 class="hero_box_title">Listado de Personal</h6>
-                                <a href="{{route('listadoEmpleado.index')}}" class="hero_box_link">Ver</a>
+
+                                <a  style="font-size:15px " href="{{route('listadoEmpleado.index')}}" class="hero_box_link">Listado Personal</a>
                             </div>
                         </div>
                     </a>
@@ -119,8 +119,8 @@
                         <div class="hero_box d-flex flex-row align-items-center justify-content-start">
                             <img src="images/actividades.svg" class="svg" alt="">
                             <div class="hero_box_content">
-                                <h6 class="hero_box_title">Actividades</h6>
-                                <a href="{{ route('actividades.admin')}}" class="hero_box_link">Ver</a>
+
+                                <a  style="font-size:15px "href="{{ route('actividades.admin')}}" class="hero_box_link">Actividades</a>
                             </div>
                         </div>
                     </a>
@@ -131,8 +131,8 @@
                         <div class="hero_box d-flex flex-row align-items-center justify-content-start">
                             <img src="images/calendario.svg" class="svg" alt="">
                             <div class="hero_box_content">
-                                <h6 class="hero_box_title">Calendario</h6>
-                                <a href="{{ asset('/Evento/index/') }}" class="hero_box_link">Ver</a>
+
+                                <a  style="font-size:15px "href="{{ asset('/Evento/index/') }}" class="hero_box_link">Calendario</a>
                             </div>
                         </div>
                     </a>
@@ -143,8 +143,8 @@
                         <div class="hero_box d-flex flex-row align-items-center justify-content-start">
                             <img src="images/informe-medico.svg" class="svg" alt="">
                             <div class="hero_box_content">
-                                <h6 class="hero_box_title">Ficha Médica</h6>
-                                <a href="{{ asset('/fichaMedica') }}" class="hero_box_link">Ver</a>
+
+                                <a  style="font-size:15px "href="{{ asset('/fichaMedica') }}" class="hero_box_link">Ficha Médica</a>
                             </div>
                         </div>
                     </a>
@@ -153,10 +153,9 @@
                     <br>
                     <a href="{{ asset('/egresos') }}">
                         <div class="hero_box d-flex flex-row align-items-center justify-content-start">
-                            <img src="images/egresados.svg" class="svg" alt="">
+                            <img src="images/egresados.svg" class="svg " alt="">
                             <div class="hero_box_content">
-                                <h6 class="hero_box_title">Lista de Egresados</h6>
-                                <a href="{{ asset('/egresos') }}" class="hero_box_link">Ver</a>
+                                <a  style="font-size:15px "href="{{ asset('/egresos') }}" class="hero_box_link">Lista de Egresados</a>
                             </div>
                         </div>
                     </a>
@@ -167,8 +166,7 @@
                         <div class="hero_box d-flex flex-row align-items-center justify-content-start">
                             <img src="images/graduacion.svg" class="svg" alt="">
                             <div class="hero_box_content">
-                                <h6 class="hero_box_title">Escolaridad</h6>
-                                <a href="{{('/estudiante/create_estudiante') }}" class="hero_box_link">Ver</a>
+                                <a  style="font-size:15px " href="{{('/estudiante/create_estudiante') }}" class="hero_box_link">Escolaridad</a>
                             </div>
                         </div>
                     </a>
@@ -179,8 +177,8 @@
                         <div class="hero_box d-flex flex-row align-items-center justify-content-start">
                             <img src="images/carpeta.svg" class="svg" alt="">
                             <div class="hero_box_content">
-                                <h6 class="hero_box_title">Zona de Descarga</h6>
-                                <a href="{{ route('listado.descarga')}}" class="hero_box_link">Ver</a>
+
+                                <a   style="font-size:15px "href="{{ route('listado.descarga')}}" class="hero_box_link">Zona de Descarga</a>
                             </div>
                         </div>
                     </a>
