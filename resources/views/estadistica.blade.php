@@ -1,5 +1,5 @@
 @extends('PlantillaMadre.menu_inicio')
-@section('titulo', 'Estadísticas')
+@section('titulo', 'Estadísticas Director')
 @section('contenido')
     <br><br><br>
     <br><br><br>
