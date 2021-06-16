@@ -47,12 +47,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
                 <div class="alert alert-success">
                     {{ session('status') }}
                 </div>
+
             @endif
             <form class="login100-form validate-form p-b-33 p-t-5"  method="POST" action="{{ route('password.email1') }}">
                 {{ csrf_field() }}
                 <div class="wrap-input100 validate-input" data-validate="Enter username">
-                    <input class="input100" type="text" name="email"  value="{{old("email")}}" placeholder="Correo Electronico">
-                    <span class="focus-input100"  data-placeholder="&#x2709;"></span>
+                    <h4  class="justify-content-center" style="text-align: center ">Correo Electronico</h4>
+                    <br>
+                    <input class="form-control input100 justify-content-center" type="text" name="email"  value="{{old("email")}}" >
+
+                    <span class="focus-input100 justify-content-center"  data-placeholder="&#x2709;"></span>
                     @if ($errors->has('email'))
                         <span class="help-block">
                                         <strong>{{ $errors->first('email') }}</strong>

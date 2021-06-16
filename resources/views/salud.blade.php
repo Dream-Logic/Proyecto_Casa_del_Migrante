@@ -24,10 +24,10 @@
         <form class="form-inline my-3 my-lg-0 ml-auto " >
             <input class="form-control mr-sm-2 col-3"  name="name" type="search" aria-label="Search" placeholder="Buscar">
             <button class="   mr-sm-1 btn btn-success" type="submit">
-                <img src="" class="svg" width="25">
+                <img src="/imagenes/iconos/busque.png" class="svg" width="25">
             </button>
             <a href="{{url('salud')}}" class="btn btn-warning">
-                <img src="" class="svg" width="25">
+                <img src="/imagenes/iconos/automatic_updates.png" class="svg" width="25">
             </a>
         </form>
     <br>

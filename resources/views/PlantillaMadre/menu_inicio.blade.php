@@ -63,16 +63,16 @@
             <div class="row align-items-center">
                 <div class="flex-row justify-content-center align-items-center">
                     <span class="text-md-left"
-                          style="color: #e0a800;  font-family: 'Arial Black'">Casa del Gran Árbol</span>
+                          style="color: #e0a800;  font-family: 'Arial Black';font-size: 16px">Casa del Gran Árbol</span>
                 </div>
                 <div class="col-10 col-md-10 d-none d-xl-block">
                     <nav class="site-navigation position-relative text-right" role="navigation" >
 
                         <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                            <li><a href="{{route('index.index')}}" class="nav-link"><strong>Inicio</strong></a></li>
+                            <li><a href="{{route('index.index')}}" class="nav-link"><strong  style="font-size: 18px">Inicio</strong></a></li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle"  id="navbardrop" data-toggle="dropdown">
-                                    <strong>Registros</strong>
+                                    <strong style="font-size: 18px">Registros</strong>
                                 </a>
                                 <div class="dropdown-menu" >
                                     <a class="dropdown-item" href="{{route('huesped.nuevo')}}">Registro de Huésped</a>
@@ -83,7 +83,7 @@
                             </li>
                             <li class="nav-item dropdown nav-link">
                                 <a class="nav-link dropdown-toggle"  id="navbardrop" data-toggle="dropdown" >
-                                    <strong>Listados</strong>
+                                    <strong style="font-size: 18px">Listados</strong>
                                 </a>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="{{route('listado.index')}}">Huésped</a>
@@ -94,15 +94,15 @@
                                     <a class="dropdown-item" href="{{ route('listadoEstudiante.index') }}">Listado de Estudiantes</a>
                                 </div>
                             </li>
-                            <li><a href="{{ route('estadisticas.admin')}}" class="nav-link"><strong>Estadísticas</strong></a></li>
-                            <li><a href="{{ asset('/Evento/index/') }}" class="nav-link"><strong>Calendario</strong></a></li>
+                            <li><a href="{{ route('estadisticas.admin')}}" class="nav-link"><strong  style="font-size: 18px">Estadísticas</strong></a></li>
+                            <li><a href="{{ asset('/Evento/index/') }}" class="nav-link"><strong  style="font-size: 16px">Calendario</strong></a></li>
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                <a   style="font-size: 18px"id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre >
                                     {{ Auth::user()->name }}
                                 </a>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                <div  class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a    class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Cerrar Sesión') }}

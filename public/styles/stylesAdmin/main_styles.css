@@ -775,11 +775,14 @@ modificar los cuadro negros
 
 .hero_boxes_inner
 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 	position: center;
     /*********************************
 mover los cuadros negros hacia arriba o abajo
 *********************************/
-	top: -530px;
+	top: -500px;
 	left: 0;
     /*********************************
 mover los cuadros negros hacia el lado
@@ -791,12 +794,14 @@ mover los cuadros negros hacia el lado
     /*********************************
 mas grande y pequeño el cuadro negro
 *********************************/
-	width: 95%;
+	width: 100%;
 	height: 151px;
 	background: #1a1a1a;
 	padding-left: 100px;
 	cursor: pointer;
-
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 /*********************************
 al pasar el cursor cambiar color
@@ -816,12 +821,21 @@ iconos del mismo color
 *********************************/
 .svg path
 {
-	fill: #ffb606
+	fill: #ffb606;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 .hero_box svg
 {
+
+    padding-right: 6px;
 	width: 62px;
 	height: auto;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 .hero_box:hover svg path
 {
@@ -838,11 +852,16 @@ Cambiar tamaño  a las letras de los cuadritoa
 *********************************/
 .hero_box_title
 {
+    text-align: left;
 	font-size: 24px;
 	font-weight: 500;
 	color: #FFF;
 	margin-bottom: 2px;
+    font-size-adjust: none;
 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 .hero_box_link
 {
@@ -1510,3 +1529,4 @@ input:last-of-type
 {
 	margin-right: 0px;
 }
+

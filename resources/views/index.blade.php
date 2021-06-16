@@ -19,27 +19,27 @@
 </head>
 <body style="background-image: url(images/fondoOscuro.jpg) ">
 
-<div class="site-blocks overlay" data-aos="fade" >
 <div class="hero_slider_container">
     <!-- Hero Slide -->
     <div class="hero_slide">
         <div >
         <div class="hero_slide_background"></div>
         <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
-            <div class="hero_slide_content text-center" style="height:560px ">
-                <h6 style="color: white; font-size: 25px;">Bienvenido Director(a) :</h6>
+            <div class="hero_slide_content text-center"  >
+                <h6 style="color: white; font-size: 25px;height: 500px">Bienvenido Director(a) :</h6>
             </div>
         </div>
     </div>
     </div>
 </div>
-</div>
 
-<div class="hero_boxes">
+
+<div class="hero_boxes" >
     <div class="hero_boxes_inner"  >
         <div>
             <div class="row" >
                 <div class="col-lg-3 hero_box_col">
+                    <br>
                     <a href="{{route('huesped.nuevo')}}" >
                     <div class="hero_box d-flex flex-row align-items-center justify-content-start" >
                         <img src="images/registro.svg"  class="svg" alt="">
@@ -51,6 +51,7 @@
                     </a>
                 </div>
                 <div class="col-lg-3 hero_box_col">
+                    <br>
                     <a href="{{ route('listado.index') }}">
                         <div class="hero_box d-flex flex-row align-items-center justify-content-start">
                             <img src="images/bueno.svg" class="svg" alt="">
@@ -63,6 +64,7 @@
                 </div>
 
                 <div class="col-lg-3 hero_box_col">
+                    <br>
                     <a href="{{ route('salud.salu')}}" >
                     <div class="hero_box d-flex flex-row align-items-center justify-content-start">
                         <img src="images/salud.svg" class="svg" alt="">
@@ -74,6 +76,7 @@
                     </a>
                 </div>
                 <div class="col-lg-3 hero_box_col">
+                    <br>
                     <a href="{{ route('estadisticas.admin')}}" >
                         <div class="hero_box d-flex flex-row align-items-center justify-content-start">
                             <img src="images/creciente.svg" class="svg" alt="">
