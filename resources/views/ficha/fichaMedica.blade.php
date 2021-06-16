@@ -9,7 +9,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
     <body>
-    <div class="card" class="table-responsive" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
+    <div class="" class="table-responsive" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
     box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);">
         <div class="card-header" style="background-color: #4cd213">
             <label class="card-title" style="color: black;">Registro de Expediente Médico</label>
@@ -183,7 +183,7 @@
                     </span></div>
                 <br>
             </div>
-            <div class="botones">
+            <div class="trans text-center">
                 <button type="submit" class="btn btn-outline-success"><i class="fas fa-save"></i>Guardar</button>
             </div>
             <br>

@@ -8,13 +8,13 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
-    <body>
+    <body class="table-responsive">
 
-    <div class="card">
-        <div class="card"  class="table-responsive" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
+    <div class="">
+        <div   class="" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
     box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);" >
             <div class="card-header" style="background-color: #4cd213">
-            <label class="card-title" style="color: black;">Datos del Personal</label>
+            <label class="" style="color: black;">Datos del Personal</label>
         </div>
         @if ($errors->any())
             <div class="alert alert-danger">
@@ -185,7 +185,7 @@
                 <br>
 
 
-            <div class="botones">
+            <div class="trans text-center">
                 <button type="submit" class="btn btn-outline-success"> Guardar</button>
             </div>
             </div>
