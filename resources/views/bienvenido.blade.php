@@ -391,12 +391,6 @@
                         <p>Programadora</p>
                     </div>
                 </div>
-                <div class="card-acciones">
-                    <button class="botones agrandar">
-                        <span class="fas fa-envelope"></span>
-                        Enviar correo
-                    </button>
-                </div>
             </div>
             <!--Tarjeta de presentación número 2-->
             <div class="card">
@@ -413,12 +407,6 @@
                     <div class="info-personal desplazar">
                         <p>Programadora</p>
                     </div>
-                </div>
-                <div class="card-acciones">
-                    <button class="botones agrandar">
-                        <span class="fas fa-envelope"></span>
-                        Enviar correo
-                    </button>
                 </div>
             </div>
 
@@ -438,12 +426,6 @@
                         <p>Programadora</p>
                     </div>
                 </div>
-                <div class="card-acciones">
-                    <button class="botones agrandar">
-                        <span class="fas fa-envelope"></span>
-                        Enviar correo
-                    </button>
-                </div>
             </div>
             <!--Tarjeta de presentación número 4-->
             <div class="card">
@@ -460,12 +442,6 @@
                     <div class="info-personal desplazar">
                         <p>Programadora</p>
                     </div>
-                </div>
-                <div class="card-acciones">
-                    <button class="botones agrandar">
-                        <span class="fas fa-envelope"></span>
-                        Enviar correo
-                    </button>
                 </div>
             </div>
         </div>

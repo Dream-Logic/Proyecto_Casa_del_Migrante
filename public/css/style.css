@@ -12,12 +12,10 @@ html {
 .contenedor{
     display: grid;
     grid-template-columns: repeat(4, 20fr);
-    width: 900px;
     gap: 15px;
     margin: auto;
     justify-items: center;
     align-items: center;
-    justify-content:center;
 }
 .card{
     height: 230px;
@@ -33,7 +31,7 @@ html {
     background: linear-gradient(-135deg, #0d95e8, #c850c0);
 }
 .card:hover{
-    height: 400px;
+    height: 420px;
     border-radius: 5px;
     box-shadow: 0px 2px 10px rgba(0,0,0,0.5);
 }
@@ -70,7 +68,8 @@ html {
     margin: 0 3px;
     line-height: 40px;
     text-align: center;
-
+    transform: scale(0);
+    transition: all 0.5s ease;
 }
 
 .agrandar{
@@ -154,6 +153,7 @@ html {
 @media screen and (max-width: 800px) {
     .contenedor{
         grid-template-columns: 1fr;
+        grid-template-rows: 20fr;
     }
 }
 
