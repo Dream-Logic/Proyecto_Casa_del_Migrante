@@ -126,7 +126,7 @@
                         <input  type="text" class="form-control" maxlength="20"
                                value="{{old('pasaporte')}}"
                                name="pasaporte"
-                               id="pasaporteMadre" placeholder="Número de pasaporte"><br>
+                               id="pasaporteMadre" placeholder="Número de pasaporte (Opcinal)"><br>
                     </div>
                     <br>
                     <div class="col-md-5 justify-content-center">

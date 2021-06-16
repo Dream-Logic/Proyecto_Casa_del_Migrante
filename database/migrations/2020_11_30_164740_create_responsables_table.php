@@ -22,7 +22,7 @@ class CreateResponsablesTable extends Migration
             $table->string('trabaja');
             $table->string('profesionOficio');
             $table->string('identidad')->unique();
-            $table->string('pasaporte')->nullable();
+            $table->string('pasaporte')->nullable()->unique();
             $table->string('civil');
             $table->string('telefono', 8)->unique();
             $table->foreignId('id_huesped')->references('id')->on('huespeds');
