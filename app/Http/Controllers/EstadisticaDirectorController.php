@@ -51,7 +51,7 @@ class EstadisticaDirectorController extends Controller
 
         $edadChart->labels($huespedes->pluck("rango"));
         $edadChart->dataset("Huespedes por edad","pie",$huespedes->pluck("numero_de_huespedes"))
-            ->color($borderColors)->backgroundcolor($fillColors);
+            ->color($borderColors)->backgroundcolor($borderColors);
         $edadChart->options=["fill"=>true];
 
         //muestra el grafico paridad de género//
@@ -61,7 +61,7 @@ class EstadisticaDirectorController extends Controller
 
         $generoChart->labels($generos->pluck("sexo"));
         $generoChart->dataset("Huespedes por género","pie",$generos->pluck("numero_generos"))
-            ->color($borderColors)->backgroundcolor($fillColors);
+            ->color($borderColors)->backgroundcolor($borderColors);
 
         $generoChart->options=["fill"=>true,"beginAtZero"=>true];
 

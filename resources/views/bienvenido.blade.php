@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="fonts/icomoon/style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/jquery-ui.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
@@ -17,74 +16,68 @@
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <script src="http://kit.fontawesome.com/a076d05399.js"></script>
 
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
-<div id="overlayer"></div>
-<div class="loader">
-    <div class="spinner-border text-primary" role="status">
-        <span class="sr-only">Loading...</span>
-    </div>
-</div>
-
-<div class="site-wrap">
-    <div class="site-mobile-menu site-navbar-target">
-        <div class="site-mobile-menu-header">
-            <div class="site-mobile-menu-close mt-3">
-                <span class="icon-close2 js-menu-toggle"></span>
+    <div id="overlayer"></div>
+        <div class="loader">
+            <div class="spinner-border text-primary" role="status">
+                <span class="sr-only">Loading...</span>
             </div>
         </div>
-        <div class="site-mobile-menu-body"></div>
-    </div>
-    <header class="site-navbar  py-4 js-sticky-header site-navbar-target" role="banner" style="width: 100%">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="flex-row justify-content-center align-items-center">
-                    <span class="text-md-left" style="color: #e0a800; font-family: 'Arial Black';  font-size: 15px;">Fundación Alivio del Sufrimiento</span>
+
+    <div class="site-wrap">
+        <div class="site-mobile-menu site-navbar-target">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close mt-3">
+                    <span class="icon-close2 js-menu-toggle"></span>
                 </div>
-                <div class="col-12 col-md-9 d-none d-xl-block">
-                    <nav class="site-navigation  position-relative text-right" role="navigation">
-
-                        <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                            <li><a href="#home-section" class="nav-link">Inicio</a></li>
-                            <li><a href="#about-section" class="nav-link">Acerca de</a></li>
-                            <li><a href="#services-section" class="nav-link">Servicios</a></li>
-                            <li><a href="#contact-section" class="nav-link">Contáctanos</a></li>
-                            <li><a href="#footer-section" class="nav-link">Ayuda</a></li>
-                        </ul>
-                    </nav>
-                </div>
-
-                <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
-
             </div>
+            <div class="site-mobile-menu-body"></div>
         </div>
-    </header>
 
-    <div class="site-blocks-cover overlay" style="background-image: url(images/bienvenido/Niña.jpg);" data-aos="fade" id="home-section">
-
-        <div class="container">
-            <div class="row align-items-center justify-content-center">
-
-                <div class="col-md-8 mt-lg-5 text-center">
-                    <h6 class="text-uppercase" data-aos="fade-up" style=" font-size: 50px; font-family: cursive; color: white">BIENVENIDO(A) A </h6>
-                    <h6 class="mb3- desc"  data-aos="fade-up" data-aos-delay="100"><b style="color: #e0a800; font-size: 30px; font-family: cursive"><strong>CASA DEL MIGRANTE</strong></b></h6>
+        <header class="site-navbar  py-4 js-sticky-header site-navbar-target" role="banner" style="width: 100%">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="flex-row justify-content-center align-items-center">
+                        <span class="text-md-left" style="color: #e0a800; font-family: 'Arial Black';  font-size: 15px;">Fundación Alivio del Sufrimiento</span>
+                    </div>
+                    <div class="col-12 col-md-9 d-none d-xl-block">
+                        <nav class="site-navigation  position-relative text-right" role="navigation">
+                            <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                                <li><a href="#home-section" class="nav-link">Inicio</a></li>
+                                <li><a href="#about-section" class="nav-link">Acerca de</a></li>
+                                <li><a href="#services-section" class="nav-link">Servicios</a></li>
+                                <li><a href="#contact-section" class="nav-link">Contáctanos</a></li>
+                                <li><a href="#footer-section" class="nav-link">Soporte Técnico</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
+                </div>
+            </div>
+        </header>
+        <div class="site-blocks-cover overlay" style="background-image: url(images/bienvenido/Niña.jpg);" data-aos="fade" id="home-section">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-md-8 mt-lg-5 text-center">
+                        <h6 class="text-uppercase" data-aos="fade-up" style=" font-size: 50px; font-family: cursive; color: white">BIENVENIDO(A) A </h6>
+                        <h6 class="mb3- desc"  data-aos="fade-up" data-aos-delay="100"><b style="color: #e0a800; font-size: 30px; font-family: cursive"><strong>CASA DEL MIGRANTE</strong></b></h6>
                     <br>
-                    <div data-aos="fade-up">
-                        <a href="{{route('index.index')}}" class="btn btn-primary mr-2 mb-2">Acceder</a>
+                        <div data-aos="fade-up">
+                            <a href="{{route('index.index')}}" class="btn btn-primary mr-2 mb-2">Acceder</a>
+                        </div>
                     </div>
                 </div>
-
             </div>
+            <a href="#about-section" class="mouse smoothscroll">
+                <span class="mouse-icon">
+                    <span class="mouse-wheel"></span>
+                </span>
+            </a>
         </div>
-
-        <a href="#about-section" class="mouse smoothscroll">
-        <span class="mouse-icon">
-          <span class="mouse-wheel"></span>
-        </span>
-        </a>
-    </div>
 
     <!--seccion casa del árbol-->
     <div class="site-section cta-big-image" id="about-section">
@@ -348,7 +341,7 @@
                                         <p>HOSPITAL CASA DE ALIVIO DEL SUFRIMIENTO BARRIO SAN JOSÉ EL PARAÍSO, EL PARAÍSO HONDURAS C.A.</p>
                                         <address>
                                             <p><i class="fa fa-phone"></i> (504) 98000025</p>
-                                            <p><i class="fa fa-phone"></i> (504) 2793-4894</p>
+                                            <p><i class="fa fa-phone"></i> (504) 273-4894</p>
                                             <p><i class="fa fa-envelope-o"></i>doncastriotti@gmail.com</p>
                                             <p><i class="fa fa-map-marker"></i>El Paraíso, El Paraíso Honduras C.A.</p>
                                         </address>
@@ -378,16 +371,134 @@
                 </div>
         </div>
     </section>
-    <footer class="site-footer" id="footer-section">
-        <div class="container">
-            <h6 style="color: white; font-size: 25px;">Soporte Técnico</h6><br>
+        <!--soporte tecnico-->
+        <section class="site-section justify-content-center" id="footer-section" style="background-color: #95c5ed"><br>
+            <h6 class="section-title mb-3 justify-content-center" style="text-align: center">Soporte Técnico</h6>
+            <div class="contenedor justify-content:center">
+                <!--Tarjeta de presentación número 1-->
+            <div class="card">
+                <div class="card-encabezado">
+                    <img src="/images/bienvenido/SoporteTecnico/1.jpg" alt="" >
+                </div>
+                <div class="card-iconos">
+                    <li class="agrandar"><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                    <li class="agrandar"><a href="https://www.instagram.com/solecito.15d/?hl=es-la"><span class="fab fa-instagram"></span></a></li>
+                </div>
+                <div class="card-contenido">
+                    <div class="info-personal desplazar"> Gaby Marisol Díaz Martínez</div>
+                    <div class="info-personal desplazar"> El Paraíso, El Paraíso</div>
+                    <div class="info-personal desplazar">
+                        <p>Programadora</p>
+                    </div>
+                </div>
+                <div class="card-acciones">
+                    <button class="botones agrandar">
+                        <span class="fas fa-envelope"></span>
+                        Enviar correo
+                    </button>
+                </div>
+            </div>
+            <!--Tarjeta de presentación número 2-->
+            <div class="card">
+                <div class="card-encabezado">
+                    <img src="/images/bienvenido/SoporteTecnico/2.jpg" alt="" >
+                </div>
+                <div class="card-iconos">
+                    <li class="agrandar"><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                    <li class="agrandar"><a href="https://www.instagram.com/melitania11/?hl=es-la"><span class="fab fa-instagram"></span></a></li>
+                </div>
+                <div class="card-contenido">
+                    <div class="info-personal desplazar"> Tania Melissa Sánchez Cálix</div>
+                    <div class="info-personal desplazar"> Danlí, El Paraíso</div>
+                    <div class="info-personal desplazar">
+                        <p>Programadora</p>
+                    </div>
+                </div>
+                <div class="card-acciones">
+                    <button class="botones agrandar">
+                        <span class="fas fa-envelope"></span>
+                        Enviar correo
+                    </button>
+                </div>
+            </div>
+
+            <!--Tarjeta de presentación número 3-->
+            <div class="card">
+                <div class="card-encabezado">
+                    <img src="/images/bienvenido/SoporteTecnico/3.jpg" alt="">
+                </div>
+                <div class="card-iconos">
+                    <li class="agrandar"><a href=""><span class="fab fa-facebook-f"></span></a></li>
+                    <li class="agrandar"><a href="https://www.instagram.com/karina_montiell/?hl=es-la"><span class="fab fa-instagram"></span></a></li>
+                </div>
+                <div class="card-contenido">
+                    <div class="info-personal desplazar">Bessy Karina Montiel Estrada</div>
+                    <div class="info-personal desplazar"> El Paraíso, El Paraíso</div>
+                    <div class="info-personal desplazar">
+                        <p>Programadora</p>
+                    </div>
+                </div>
+                <div class="card-acciones">
+                    <button class="botones agrandar">
+                        <span class="fas fa-envelope"></span>
+                        Enviar correo
+                    </button>
+                </div>
+            </div>
+            <!--Tarjeta de presentación número 4-->
+            <div class="card">
+                <div class="card-encabezado">
+                    <img src="/images/bienvenido/SoporteTecnico/4.jpg" alt="" >
+                </div>
+                <div class="card-iconos">
+                    <li class="agrandar"><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                    <li class="agrandar"><a href="https://www.instagram.com/soydalama09/?hl=es-la"><span class="fab fa-instagram"></span></a></li>
+                </div>
+                <div class="card-contenido">
+                    <div class="info-personal desplazar">Daniela G. Murillo Dalama</div>
+                    <div class="info-personal desplazar">Danlí, El Paraíso</div>
+                    <div class="info-personal desplazar">
+                        <p>Programadora</p>
+                    </div>
+                </div>
+                <div class="card-acciones">
+                    <button class="botones agrandar">
+                        <span class="fas fa-envelope"></span>
+                        Enviar correo
+                    </button>
+                </div>
+            </div>
+        </div>
+        </section>
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+            <!--<h6 style="color: white; font-size: 25px;">Soporte Técnico</h6><br>
             <div class="row">
-                <table align="left">
+                <table align="left" class="table-responsive">
                     <td>
                         <h6 style="color: white; font-size: 15px;">Gaby Marisol Díaz </h6>
                         <img src="/images/bienvenido/SoporteTecnico/1.jpg" width="150px"><br>
-                        <p class="icon-phone text-primary"><a href="#">+50431618783</a></p>
                         <p class="icon-mail_outline text-primary"><a href="#">maridiaz4455@gmail.com</a></p>
+                        <p class="icon-phone text-primary"><a href="#">+50431618783</a></p>
                     </td>
                     <td colspan="2">
                         <h6 style="color: white; font-size: 15px;">Tania Melissa Sánchez</h6>
@@ -413,25 +524,6 @@
                             Tecnológica Danlí</p>
                     </td>
 
-                </table>
-            </div>
-        </div>
-    </footer>
-
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/jquery-ui.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/jquery.countdown.min.js"></script>
-<script src="js/jquery.easing.1.3.js"></script>
-<script src="js/aos.js"></script>
-<script src="js/jquery.fancybox.min.js"></script>
-<script src="js/jquery.sticky.js"></script>
-<script src="js/isotope.pkgd.min.js"></script>
+                </table>-->
 
 
-<script src="js/main.js"></script>
-
-</body>
-</html>
