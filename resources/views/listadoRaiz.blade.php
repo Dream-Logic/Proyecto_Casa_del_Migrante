@@ -31,10 +31,10 @@
         <input class="form-control mr-sm-2 col-4" name="name" style="margin-right: 20px"
                type="search" placeholder="Buscar" aria-label="Search">
         <button class=" mr-sm-2 btn btn-success" type="submit">
-            <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
+            <img src="" class="svg" width="25">
         </button>
         <a href="{{url('/proyectos/listado')}}" class="btn btn-warning">
-            <img src="/imagenes/iconos/recargar (1).svg" class="svg" width="25">
+            <img src="" class="svg" width="25">
         </a>
             <a style="margin-left: 600px" class="btn btn-outline-warning "href="{{route('huesped.nuevo')}}">
                 <img src="/imagenes/iconos/agregarUsuario.svg" class="svg" width="25" >
