@@ -34,18 +34,19 @@
 </div>
 
 
-<div class="hero_boxes" >
-    <div class="hero_boxes_inner"  >
+<div class="hero_boxes justify-content-center" >
+    <div class="hero_boxes_inner justify-content-center"  >
         <div>
-            <div class="row" >
-                <div class="col-lg-3 hero_box_col">
+            <div class="row justify-content-center" >
+
+                <div class="col-lg-3 hero_box_col trans text-center">
                     <br>
                     <a href="{{route('huesped.nuevo')}}" >
-                    <div class="hero_box d-flex flex-row align-items-center justify-content-start" >
+                    <div class="hero_box d-flex flex-row align-items-center justify-content-center" >
                         <img src="images/registro.svg"  class="svg" alt="">
                         <div class="hero_box_content" >
-                            <h6 class="hero_box_title">Ficha de Ingreso</h6>
-                            <a href="{{route('huesped.nuevo')}}" class="hero_box_link">Registro</a>
+                            <h6 class="hero_box_title trans text-center">Ficha de Ingreso</h6>
+                            <a href="{{route('huesped.nuevo')}}" class="hero_box_link justify-content-center">Registro</a>
                         </div>
                     </div>
                     </a>
@@ -75,14 +76,14 @@
                     </div>
                     </a>
                 </div>
-                <div class="col-lg-3 hero_box_col">
+                <div class="col-lg-3 hero_box_col trans text-center">
                     <br>
                     <a href="{{ route('estadisticas.admin')}}" >
-                        <div class="hero_box d-flex flex-row align-items-center justify-content-start">
+                        <div class="hero_box d-flex flex-row align-items-center justify-content-center">
                             <img src="images/creciente.svg" class="svg" alt="">
                             <div class="hero_box_content">
-                                <h6 class="hero_box_title">Estadísticas</h6>
-                                <a href="{{ route('estadisticas.admin') }}" class="hero_box_link">Ver</a>
+                                <h6 class="hero_box_title trans text-center">Estadísticas</h6>
+                                <a href="{{ route('estadisticas.admin') }}" class="hero_box_link trans text-center">Ver</a>
                             </div>
                         </div>
                     </a>
