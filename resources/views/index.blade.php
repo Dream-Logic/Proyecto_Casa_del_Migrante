@@ -54,7 +54,7 @@
                     <br>
                     <a href="{{ route('listado.index') }}">
                         <div class="hero_box d-flex flex-row align-items-center justify-content-start">
-                            <img src="images/bueno.svg" class="svg" alt="">
+                            <img src="images/familia.svg" class="svg" alt="">
                             <div class="hero_box_content">
 
                                 <a style="font-size:15px " href="{{ route('listado.index') }}" class="hero_box_link">Listado Huesped</a>
