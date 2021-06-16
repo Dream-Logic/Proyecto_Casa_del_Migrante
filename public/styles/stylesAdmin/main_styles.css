@@ -654,13 +654,11 @@ section
 {
 	width: 100%;
 	height: 100%;
-    justify-content: center;
 }
 .hero_slide
 {
 	width: 100%;
 	height: 100%;
-    justify-content: center;
 }
 .hero_slide_background
 {
@@ -672,13 +670,12 @@ section
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
-    justify-content: center;
 }
 .hero_slide_container
 {
 	width: 100%;
 	height: 100vh;
-    justify-content: center;
+
 }
 .hero_slide_content
 {
@@ -688,14 +685,12 @@ section
 	-ms-transform: translateY(30px);
 	-o-transform: translateY(30px);
 	transform: translateY(30px);
-    justify-content: center;
 }
 .hero_slide_content h1
 {
 	font-size: 72px;
 	font-weight: 400;
 	color: #fff;
-    justify-content: center;
 }
 .animated
 {
@@ -703,7 +698,6 @@ section
 	animation-duration : 1s !important;
 	-webkit-animation-delay : 500ms;
 	animation-delay : 500ms;
-    justify-content: center;
 }
 .animate-out
 {
@@ -754,17 +748,14 @@ section
 	font-weight: 700;
 	color: #121212;
 	line-height: 1;
-    justify-content: center;
 }
 .hero_slider_left
 {
-
-    justify-content: center;
+	left: 4.32%;
 }
 .hero_slider_right
 {
-    justify-content: center;
-
+	right: 4.32%;
 }
 
 /*********************************
@@ -777,7 +768,6 @@ section
 	height: 0px;
 	z-index: 9;
 	padding-top: 0px;
-    justify-content: center;
 }
 /*********************************
 modificar los cuadro negros
@@ -789,7 +779,6 @@ modificar los cuadro negros
     background-size: cover;
     background-position: center center;
 	position: center;
-    justify-content: center;
     /*********************************
 mover los cuadros negros hacia arriba o abajo
 *********************************/
@@ -813,7 +802,6 @@ mas grande y pequeño el cuadro negro
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    justify-content: center;
 }
 /*********************************
 al pasar el cursor cambiar color
@@ -837,7 +825,6 @@ iconos del mismo color
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    justify-content: center;
 }
 .hero_box svg
 {
@@ -845,7 +832,6 @@ iconos del mismo color
     padding-right: 6px;
 	width: 62px;
 	height: auto;
-    justify-content: center;
 
     background-repeat: no-repeat;
     background-size: cover;
@@ -853,14 +839,13 @@ iconos del mismo color
 }
 .hero_box:hover svg path
 {
-	fill: #FFaFFF;
+	fill: #FFFFFF;
 }
 .hero_box_content
 {
 	padding-left: 13px;
 	padding-top: 11px;
 	margin-top: -6px;
-    justify-content: center;
 }
 /*********************************
 Cambiar tamaño  a las letras de los cuadritoa
@@ -877,7 +862,6 @@ Cambiar tamaño  a las letras de los cuadritoa
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    justify-content: center;
 }
 .hero_box_link
 {
