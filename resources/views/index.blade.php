@@ -180,6 +180,7 @@
 
                                 <a   style="font-size:15px "href="{{ route('listado.descarga')}}" class="hero_box_link">Zona de Descarga</a>
                             </div>
+                            <br>
                         </div>
                     </a>
                 </div>
@@ -187,6 +188,8 @@
         </div>
     </div>
 </div>
+<br>
+<br>
 
 
 
