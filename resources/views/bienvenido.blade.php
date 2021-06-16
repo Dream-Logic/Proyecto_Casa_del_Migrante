@@ -381,7 +381,7 @@
                     <img src="/images/bienvenido/SoporteTecnico/1.jpg" alt="" >
                 </div>
                 <div class="card-iconos">
-                    <li class="agrandar"><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                    <li class="agrandar"><a href="https://www.facebook.com/sau.diaz.1"><span class="fab fa-facebook-f"></span></a></li>
                     <li class="agrandar"><a href="https://www.instagram.com/solecito.15d/?hl=es-la"><span class="fab fa-instagram"></span></a></li>
                 </div>
                 <div class="card-contenido">
@@ -404,7 +404,7 @@
                     <img src="/images/bienvenido/SoporteTecnico/2.jpg" alt="" >
                 </div>
                 <div class="card-iconos">
-                    <li class="agrandar"><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                    <li class="agrandar"><a href="https://www.facebook.com/profile.php?id=100022453103528"><span class="fab fa-facebook-f"></span></a></li>
                     <li class="agrandar"><a href="https://www.instagram.com/melitania11/?hl=es-la"><span class="fab fa-instagram"></span></a></li>
                 </div>
                 <div class="card-contenido">
@@ -428,7 +428,7 @@
                     <img src="/images/bienvenido/SoporteTecnico/3.jpg" alt="">
                 </div>
                 <div class="card-iconos">
-                    <li class="agrandar"><a href=""><span class="fab fa-facebook-f"></span></a></li>
+                    <li class="agrandar"><a href="https://www.facebook.com/karina.montiel.14"><span class="fab fa-facebook-f"></span></a></li>
                     <li class="agrandar"><a href="https://www.instagram.com/karina_montiell/?hl=es-la"><span class="fab fa-instagram"></span></a></li>
                 </div>
                 <div class="card-contenido">
@@ -451,7 +451,7 @@
                     <img src="/images/bienvenido/SoporteTecnico/4.jpg" alt="" >
                 </div>
                 <div class="card-iconos">
-                    <li class="agrandar"><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                    <li class="agrandar"><a href="https://www.facebook.com/dany.dalama/"><span class="fab fa-facebook-f"></span></a></li>
                     <li class="agrandar"><a href="https://www.instagram.com/soydalama09/?hl=es-la"><span class="fab fa-instagram"></span></a></li>
                 </div>
                 <div class="card-contenido">
