@@ -103,9 +103,9 @@ class HuespedController extends Controller
                 'cabello' => 'required',
                 'ojos' => 'required',
                 'piel' => 'required',
-                'identidad' => 'required|digits:13',
+                'identidad' => 'required|unique:huespeds,identidad,{$this->post->id}|digits:13',
                 'nacionalidad' => 'required',
-                'pasaporte' => 'nullable',
+                'pasaporte' => 'nullable|unique:huespeds,pasaporte,{$this->post->id}',
                 'nacimiento' => 'required',
                 'direccion' => 'required',
                 'gradoEscolar' => 'required',
@@ -210,6 +210,8 @@ class HuespedController extends Controller
 
             return redirect()->route("responsable.nuevo", ["id" => $newHuesped->id])
                 ->with("exito", "Se creo el huesped exitosamente");
+
+
         }
     }
 
