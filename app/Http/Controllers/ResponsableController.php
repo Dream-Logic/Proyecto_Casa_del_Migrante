@@ -55,10 +55,10 @@ class ResponsableController extends Controller
             'direccion' => 'required',
             'trabaja' => 'required',
             'profesionOficio' => 'required',
-            'identidad' => 'required|digits:13',
-            'pasaporte' => 'nullable',
+            'identidad' => 'required|unique:responsables,identidad,{$this->post->id}|digits:13',
+            'pasaporte' => 'nullable|unique:responsables,pasaporte,{$this->post->id}',
             'civil' => 'required',
-            'telefono' => 'nullable',
+            'telefono' => 'required|unique:responsables,telefono,{$this->post->id}||digits:8',
             'parentesco' => 'required',
         ]);
 

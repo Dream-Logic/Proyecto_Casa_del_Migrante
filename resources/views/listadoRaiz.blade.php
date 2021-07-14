@@ -14,21 +14,20 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta charset="utf-8">
-
-
-
-
     </head>
     <tbody class="embed-responsive">
-    <div class="w3-container w3-teal mx-4" style="font-family: 'Raleway', sans-serif; text-align: center">
+     <div class="w3-container w3-teal mx-4" style="font-family: 'Raleway', sans-serif; text-align: center">
         <h6 class="mt-3" style="font-size: 30px; color: black;"><b>Listado de Huéspedes</b></h6>
     </div>
     <br>
     <br>
-
-
+     <div class="unit-4 mx-4" style="float: right">
+         <a class="btn btn-outline-warning "href="{{route('huesped.nuevo')}}">
+             <img src="/imagenes/iconos/agregarUsuario.svg" class="svg" width="25">
+         </a>
+     </div>
     <form class="form-inline my-2 my-lg-0 ml-auto" >
-        <input class="form-control mr-sm-2 col-4" name="name" style="margin-right: 20px"
+        <input class="form-control mr-sm-2 col-4" name="name" style="margin-right: 15px"
                type="search" placeholder="Buscar" aria-label="Search">
         <button class=" mr-sm-2 btn btn-success" type="submit">
             <img src="/imagenes/iconos/busque.png" class="svg" width="25">
@@ -36,20 +35,12 @@
         <a href="{{url('/proyectos/listado')}}" class="btn btn-warning">
             <img src="/imagenes/iconos/automatic_updates.png" class="svg" width="25">
         </a>
-            <a style="margin-left: 600px" class="btn btn-outline-warning "href="{{route('huesped.nuevo')}}">
-                <img src="/imagenes/iconos/agregarUsuario.svg" class="svg" width="25" >
-            </a>
-
-
     </form>
     <br>
-
-
     <div class="table-responsive" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
     box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);">
         <table class="table ruler-vertical table-hover mx-sm-0 table-bordered " >
-
-            <thead class="thead-dark" >
+            <thead class="thead-dark" align="center" >
             <tr>
                 <th scope="col">N°</th>
                 <th scope="col">Nombres</th>
@@ -58,12 +49,11 @@
                 <th scope="col">Fecha de Nacimiento</th>
                 <th scope="col">Dirección</th>
                 <th scope="col">Fecha de ingreso</th>
-                <th scope="col"></th>
-                <th scope="col">Acciones</th>
-                <th scope="col"></th>
+                <th scope="col">Ver</th>
+                <th scope="col">Editar</th>
+                <th scope="col">Eliminar</th>
             </tr>
             </thead>
-
             @forelse($listados as $huesped)
                 <tr>
                     <th scope="row">{{ $huesped->id }}</th>
@@ -86,7 +76,6 @@
                         <form method="post" action="{{route('huesped.borrar',['id'=>$huesped->id])}}">
                             @csrf
                             @method('delete')
-
                       <input   src="/imagenes/iconos/eliminar.svg"   type="image" height="45" class="btn btn-outline-danger">
                         </form>
                         </a>

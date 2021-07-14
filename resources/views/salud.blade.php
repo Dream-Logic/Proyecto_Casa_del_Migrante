@@ -15,7 +15,7 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
-
+    <tbody class="embed-responsive">
     <div class="w3-container w3-teal mx-4" style="font-family: 'Raleway', sans-serif; text-align: center">
         <h6 class="mt-3" style="font-size: 30px; color: black;"><b>Listado de Salud</b></h6>
     </div>
@@ -33,17 +33,15 @@
     <br>
     <div class="table-responsive" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
     box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);">
-        <table class="table ruler-vertical table-hover mx-sm-0 table-bordered " >
-
+        <table class="table ruler-vertical table-hover mx-sm-0 table-bordered align-text-top" >
         <thead class="thead-dark" >
         <tr>
-            <th  scope="col" >Id</th>
+            <th scope="col" class="align-text-center" >Id</th>
             <th scope="col">Nombres</th>
             <th  scope="col">Apellidos</th>
             <th scope="col">Enfermedad</th>
             <th  scope="col">Tratamiento</th>
-            <th  scope="col">Acciones</th>
-
+            <th  scope="col">Ver</th>
         </tr>
 
         </thead>
@@ -69,10 +67,12 @@
         @endforelse
 
         </tbody>
-
-
-
     </table>
+    </div>
+    <br>
+    <br>
+    {{ $listados->links()}}
+
     <script src="/js/jquery-3.2.1.min.js"></script>
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="styles/bootstrap4/popper.js"></script>

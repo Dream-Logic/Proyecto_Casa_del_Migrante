@@ -48,7 +48,7 @@
                 <th class="bg-dark text-white"style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
     box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);"  scope="col">Fecha de Egreso</th>
                 <th class="bg-dark text-white"style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
-    box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);"  scope="col">Acciones</th>
+    box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);"  scope="col">Ver</th>
 
             </tr>
 

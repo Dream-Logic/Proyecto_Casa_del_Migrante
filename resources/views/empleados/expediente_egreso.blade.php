@@ -22,7 +22,6 @@
     <br>
         <form class="form-inline my-2 my-lg-0 ml-auto ">
 
-            <a class=" mr-sm-auto btn btn-success btn-warning" href="{{route('index.index')}}">Regresar</a>
             <input class="form-control mr-sm-1 col-3" name="name" type="search" aria-label="Search" placeholder="Buscar">
             <button class=" mr-sm-1 btn btn-success" type="submit">
                 <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
@@ -48,7 +47,7 @@
             <th class="bg-dark text-white"style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
     box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);"  scope="col">Fecha de Egreso</th>
             <th class="bg-dark text-white"style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
-    box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);"  scope="col">Acciones</th>
+    box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);"  scope="col">Ver</th>
 
         </tr>
 

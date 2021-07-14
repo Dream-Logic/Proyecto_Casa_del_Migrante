@@ -35,7 +35,7 @@
         <thead>
         <tr class="w3-hover-green" align="center">
             <th class="bg-dark text-white" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
-    box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);" scope="col">Id</th>
+             box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);" scope="col">Id</th>
             <th class="bg-dark text-white"style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
     box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);" scope="col">Nombres</th>
             <th class="bg-dark text-white" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);

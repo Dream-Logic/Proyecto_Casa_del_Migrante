@@ -53,7 +53,7 @@
                 <div class="col-lg-3 hero_box_col">
                     <br>
                     <a href="{{ route('listado.index') }}">
-                        <div class="hero_box d-flex flex-row align-items-center justify-content-start">
+                        <div class="hero_box   pull-left ">
                             <img src="images/familia.svg" class="svg" alt="">
                             <div class="hero_box_content">
 
@@ -91,9 +91,9 @@
                 <div class="col-lg-3 hero_box_col">
                     <br>
                     <a href="{{ route('personal.personal') }}" >
-                        <div class="hero_box d-flex flex-row align-items-center justify-content-start">
+                        <div class="hero_box   pull-left ">
                             <img src="images/personal.svg" class="svg" alt="">
-                            <div class="hero_box_content">
+                               <div class="hero_box_content">
 
                                 <a  style="font-size:15px  "href="{{ route('personal.personal') }}" class="hero_box_link">Ficha Personal</a>
                             </div>
