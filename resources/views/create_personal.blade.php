@@ -39,8 +39,8 @@
             <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
             <div class="abs-center">
                 <center>
-                    <div class="col-2"><br>
-                        <div class="row">
+                    <div class="col-md-12 justify-content-center"><br>
+                        <div class="col-md-12 justify-content-center">
                             <div class="form-group {{ $errors->has('imagen') ? ' has-error' : '' }}" style="width: 70%">
                                 <h6 style="text-align: center">Imagen (Opcional)</h6>
                                 <img width="150px" id="previewImagen" style="max-height:250px"
@@ -48,7 +48,7 @@
                                      @if($errors->has("imagen"))  src="/imagenes/iconos_formulario/anadir-imagen.svg"
                                      @endif onclick="seleccionarImagen(event)"/>
 
-                                <label id="labelImagen" for="imagen" class="btn btn-large"><span
+                                <label id="labelImagen" for="imagen" class="btn btn-large col-md-12 justify-content-center"><span
                                         style="font-size: 60px">
                                                     </span></label>
                                 <input type="file" accept="image/*"
@@ -85,107 +85,111 @@
                     </div>
                 </center>
 
+                <div class="form-row justify-content-center">
 
-                <div class="form-row">
-
-                    <div class="col-5"><br>
-                        <img src="/imagenes/iconos_formulario/usuario.svg" style="margin-left: 50px" class="svg" width="25" height="35">
+                    <div class="col-md-5 justify-content-center"><br>
+                        <img src="/imagenes/iconos_formulario/usuario.svg" style="margin-left: 50px" class="svg"
+                             width="25" height="35">
                         <label for="nombre_personal" style="color: #000000">Nombres</label><br>
-                        <input style="margin-left: 30px" type="text" class="form-control" name="nombres_personal" value="{{old('nombres_personal')}}"
+                        <input type="text" class="form-control" name="nombres_personal" value="{{old('nombres_personal')}}"
                                id="nombres_personal" placeholder="Nombres"><br>
                     </div>
                     <br>
 
-                    <div class="col-5"><br>
+                    <div class="col-md-5 justify-content-center"><br>
                         <img src="/imagenes/iconos_formulario/usuario.svg" style="margin-left: 50px" class="svg" width="25" height="35">
                         <label for="apellido_personal" style="color: #000000">Apellidos</label><br>
-                        <input style="margin-left: 30px" type="text" class="form-control" name="apellidos_personal"value="{{old('apellidos_personal')}}"
-                               id="apellidos_personal" placeholder="Apellidos">
+                        <input type="text" class="form-control" name="apellidos_personal"value="{{old('apellidos_personal')}}"
+                               id="apellidos_personal" placeholder="Apellidos"><br>
                     </div>
                     <br>
 
                     <?php $fnacimiento_personal = date("d-m-Y");?>
-                    <div class="col-5">
-                        <img src="/imagenes/iconos_formulario/calendario.svg" style="margin-left: 50px" class="svg" width="50" height="35">
-                        <label for="FechaNac_personal" style="color: #000000">Fecha de Nacimiento</label><br>
-                        <input style="margin-left: 30px" type="date" class="form-control" name="fnacimiento_personal"
+                    <div class="col-md-5 justify-content-center"><br>
+                        <img src="/imagenes/iconos_formulario/calendario.svg" style="margin-left: 50px" class="svg"
+                             width="25" height="35">
+                        <label for="FechaNac_personal" style="color: #000000">Fecha de Nacimiento</label>
+                        <input  type="date" class="form-control" name="fnacimiento_personal"
                                id="fnacimiento_personal" value="{{old('fnacimiento_personal')}}"
                                min="<?php echo date('Y-m-d', strtotime($fnacimiento_personal . "- 65 year"));?>"
-                               max="<?php echo date('Y-m-d', strtotime($fnacimiento_personal . " 18 year"));?>"><br><br>
-                    </div>
+                               max="<?php echo date('Y-m-d', strtotime($fnacimiento_personal . " 18 year"));?>"><br>
+                    </div><br>
 
-                    <div class="col-5">
-                        <img src="/imagenes/iconos_formulario/grupo-de-edad.svg" style="margin-left: 50px" class="svg" width="50" height="35">
-                        <label for="edad_personal" style="color: #000000">Edad</label><br>
-                        <input style="margin-left: 30px" type="number" min="0" pattern="^[0-9]+" class="form-control"
+                    <div class="col-md-5 justify-content-center"><br>
+                        <img src="/imagenes/iconos_formulario/grupo-de-edad.svg" style="margin-left: 50px" class="svg" width="25" height="35">
+                        <label for="edad_personal" style="color: #000000">Edad</label>
+                        <input type="number" min="0" pattern="^[0-9]+" class="form-control"
                                name="edad_personal" id="edad_personal" value="{{old('edad_personal')}}" placeholder="Edad"><br>
-                    </div>
-                    <div class="col-5">
-                        <img src="/imagenes/iconos_formulario/sexo.svg" style="margin-left: 50px" class="svg" width="50" height="35">
-                        <label for="sexo_personal" style="color: #000000">Sexo</label><br>
-                        <select style="margin-left: 30px" class="form-control" name="sexo_personal" value="{{old('sexo_personal')}}">
+                    </div><br>
+                    <div class="col-md-5 justify-content-center"><br>
+                        <img src="/imagenes/iconos_formulario/sexo.svg" style="margin-left: 50px" class="svg" width="25" height="35">
+                        <label for="sexo_personal" style="color: #000000">Sexo</label>
+                        <select  class="form-control" name="sexo_personal" value="{{old('sexo_personal')}}">
                             <option value="femenino">Femenino</option>
                             <option value="masculino">Masculino</option>
                         </select><br>
-                    </div>
+                    </div><br>
 
 
-                    <div class="col-5">
-                        <img src="/imagenes/iconos_formulario/tarjeta-de-identificacion.svg" style="margin-left: 50px" class="svg" width="50"
+                    <div class="col-md-5 justify-content-center"><br>
+                        <img src="/imagenes/iconos_formulario/tarjeta-de-identificacion.svg" style="margin-left: 50px" class="svg" width="25"
                              height="35">
-                        <label for="identidad_personal" style="color: #000000">Identidad </label><br>
-                        <input style="margin-left: 30px" type="text" class="form-control" name="identidad_personal"
+                        <label for="identidad_personal" style="color: #000000">Identidad </label>
+                        <input type="text" class="form-control" name="identidad_personal"
                                id="identidad_personal" pattern="[0-9]+" maxlength="13" minlength="13"
-                               value="{{old('identidad_personal')}}"placeholder="0000-0000-00000"><br>
-                    </div>
+                               value="{{old('identidad_personal')}}"placeholder="0000000000000"><br>
+                    </div><br>
 
-                    <div style="margin-left: 45px">
-                        <img src="/imagenes/iconos_formulario/ubicacion.svg" style="margin-left: 50px" class="svg" width="50" height="35">
+
+                    <div class="col-md-10 justify-content-center"><br>
+                        <img src="/imagenes/iconos_formulario/email.svg" style="margin-left: 25px" class="svg" width="25" height="35">
+                        <label for="email" style="color: #000000">Correo Electrónico </label>
+
+                    <input  class="form-control" id="email" name="email"value="{{old('email')}}"
+                          placeholder="Ej. sosaRoger2021@gmail.com (opcional)" ><br>
+                    </div><br>
+
+
+                    <div class="col-md-10 justify-content-center"><br>
+                        <img src="/imagenes/iconos_formulario/telefono.svg" style="margin-left: 25px" class="svg" width="25" height="35">
+                        <label for="telefono_personal" style="color: #000000">Telefono</label>
+                        <input class="form-control" type="text"
+               id="telefono_personal" name="telefono_personal" value="{{old('telefono_personal')}}" pattern="[0-9]+" maxlength="8" minlength="8"
+               placeholder="Número de telefono, Ej. 33665814" ><br>
+                    </div><br>
+
+
+
+                    <div class="col-md-10 justify-content-center"><br>
+                        <img src="/imagenes/iconos_formulario/ubicacion.svg" style="margin-left: 50px" class="svg" width="25" height="35">
                         <label for="direccion_personal" style="color: #000000">Dirección</label>
-                        <span class="col-md-5 col-md-offset-10 text-center">
+                        <span class="text-center col-md-10 justify-content-center">
         <textarea class="form-control" id="direccion_personal" name="direccion_personal"value="{{old('direccion_personal')}}"
-                  placeholder="Dirección" style="margin-left: 35px" cols="138" rows="2"></textarea><br>
+                  placeholder="Dirección" rows="2"></textarea><br>
                     </span></div>
                     <br>
 
 
-                    <div style="margin-left: 45px">
-                        <img src="/imagenes/iconos_formulario/profesion.svg" style="margin-left: 50px" class="svg" width="50" height="35">
+                    <div class="col-md-10 justify-content-center"><br>
+                        <img src="/imagenes/iconos_formulario/profesion.svg" style="margin-left: 50px" class="svg" width="25" height="35">
                         <label for="profesion" style="color: #000000">Profesión u Oficio</label>
-                        <span class="col-md-5 col-md-offset-10 text-center">
+                        <span class="text-center col-md-10 justify-content-center">
         <textarea class="form-control" id="profesionPersonal" name="profesionPersonal"value="{{old('profesionPersonal')}}"
-                  placeholder="Ingrese su profesión u oficio" style="margin-left: 35px" cols="138" rows="2"></textarea><br>
+                  placeholder="Ingrese su profesión u oficio"  cols="138" rows="2"></textarea><br>
                     </span></div>
                     <br>
 
                     <br>
-                    <div style="margin-left: 45px">
-                        <img src="/imagenes/iconos_formulario/cargo.svg" style="margin-left: 50px" class="svg" width="50" height="35">
+                    <div class="col-md-10 justify-content-center"><br>
+                        <img src="/imagenes/iconos_formulario/cargo.svg" style="margin-left: 50px" class="svg" width="25" height="35">
                         <label for="cargo" style="color: #000000">Cargo</label>
-                        <span class="col-md-5 col-md-offset-10 text-center">
+                        <span class="ext-center col-md-10 justify-content-center">
                        <textarea class="form-control" id="cargo" name="cargo"value="{{old('cargo')}}"
-                                 placeholder="Cargo que desempeñará" style="margin-left: 35px" cols="138" rows="2"></textarea><br>
+                                 placeholder="Cargo que desempeñará" rows="2"></textarea><br>
                     </span></div>
                     <br>
                 </div>
-                <div class="col-11">
-                    <img src="/imagenes/iconos_formulario/email.svg" style="margin-left: 25px" class="svg" width="50" height="35">
-                    <label for="email" style="color: #000000">Correo Electrónico </label>
-                    <span class="col-md-5 col-md-offset-10 text-center">
-        <input style="margin-left: 10px" class="form-control" id="email" name="email"value="{{old('email')}}"
-                  placeholder="Ej. sosaRoger2021@gmail.com (opcional)" rows="2"><br>
-                    </span></div>
 
-
-                <div class="col-11">
-                    <img src="/imagenes/iconos_formulario/telefono.svg" style="margin-left: 25px" class="svg" width="50" height="35">
-                    <label for="telefono_personal" style="color: #000000">Telefono</label>
-                    <span class="col-md-5 col-md-offset-10 text-center">
-        <input style="margin-left: 10px" class="form-control" type="text"
-               id="telefono_personal" name="telefono_personal" value="{{old('telefono_personal')}}" pattern="[0-9]+" maxlength="8" minlength="8"
-                  placeholder="Número de telefono, Ej. 33665814" rows="3"><br>
-                    </span></div>
-                <br>
 
 
             <div class="trans text-center">
