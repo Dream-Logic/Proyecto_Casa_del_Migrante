@@ -20,21 +20,34 @@
     </div>
     <br>
     <br>
-    <div class="unit-4 mx-4" style="float: right">
-        <a class="btn btn-outline-warning " href="{{route('personal.personal')}}">
-            <img src="/imagenes/iconos/agregarUsuario.svg" class="svg" width="25">
-        </a>
-    </div>
-    <form class="form-inline my-2  my-lg-0 ml-auto">
 
+<<<<<<< HEAD
         <input class="form-control mr-sm-2 col-3" name="name" type="search" placeholder="Buscar" aria-label="Search">
         <button class="  mr-sm-2 btn btn-success" type="submit">
             <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
         </button>
         <a href="{{url('listadoEmpleado.index')}}" class="btn btn-warning">
             <img src="/imagenes/iconos/recargar (1).svg" class="svg" width="25">
-        </a>
+=======
+    <form class="form-inline  my-lg-0 ml-auto">
 
+            <input class="form-control mr-sm-2 col-4"title="" name="name" type="search" placeholder="Buscar" aria-label="Search">
+        <div class="btn-toolbar" title="Buscar">
+        <button class="mr-sm-2 btn btn-success" type="submit">
+            <img src="/imagenes/iconos/busque.png" class="svg" width="20">
+        </button>
+        </div>
+        <div class="btn-toolbar" title="Recargar el listado de empleados" >
+        <a class="btn btn-warning" href="{{route('listadoEmpleado.index')}}"  >
+            <img src="/imagenes/iconos/automatic_updates.png" class="svg" width="20" title="Recarga el listado de empleados">
+>>>>>>> 1726ddc... Modificación en validaciones y responsive.
+        </a>
+        </div>
+        <div class="card-body d-flex justify-content-lg-end align-items-lg-end" title="Agregue un nuevo empleado">
+            <a class="btn btn-outline-primary" href="{{route('personal.personal')}}">
+                <img src="/imagenes/iconos/agregarUsuario.svg" class="svg" width="20">
+            </a>
+        </div>
     </form>
     <br>
 
@@ -43,6 +56,7 @@
         <table class="table ruler-vertical table-hover mx-sm-0 table-bordered">
             <thead class="thead-dark">
             <tr>
+<<<<<<< HEAD
                 <th scope="col">N°</th>
                 <th scope="col">Nombres</th>
                 <th scope="col">Apellidos</th>
@@ -52,6 +66,17 @@
                 <th scope="col">Ver</th>
                 <th scope="col">Editar</th>
                 <th scope="col">Eliminar</th>
+=======
+                <th scope="col" class="text-center">N°</th>
+                <th scope="col" class="text-center">Nombres</th>
+                <th scope="col" class="text-center">Apellidos</th>
+                <th scope="col" class="text-center">Profesión u Oficio</th>
+                <th scope="col" class="text-center">Cargo</th>
+                <th scope="col" class="text-center">Teléfono</th>
+                <th scope="col"class="text-center"></th>
+                <th scope="col"class="text-center">Acciones</th>
+                <th scope="col"class="text-center"></th>
+>>>>>>> 1726ddc... Modificación en validaciones y responsive.
             </tr>
             </thead>
             <tbody>
@@ -63,19 +88,19 @@
                     <td>{{ $personal->profesionPersonal}}</td>
                     <td>{{ $personal->cargo}}</td>
                     <td>{{ $personal->telefono_personal}}</td>
-                    <td align="center"><a class="btn btn-outline-info" href="{{route('empleado.mostrar',['id' =>$personal->id])}}">
-                            <img src="/imagenes/iconos/ver.svg" width="25" >
+                    <td align="center"><a class="btn btn-outline-info"  href="{{route('empleado.mostrar',['id' =>$personal->id])}}">
+                            <img src="/imagenes/iconos/ver.svg" width="25" title="Ver" >
                         </a></td>
                     <td align="center"><a class="btn btn-outline-warning" href="{{route('personal.edit',['id' =>$personal->id])}}" >
-                            <img src="/imagenes/iconos/editar.svg" class="svg" width="25" >
+                            <img src="/imagenes/iconos/editar.svg" title="Editar" class="svg" width="25" >
                         </a>
                     </td>
                     <td align="center">
-                        <a href="#" onclick="return confirm('Estás seguro que deseas eliminar el registro?');">
+                        <a href="#" onclick="return confirm('¿Está seguro que desea eliminar el registro?');">
                             <form method="post" action="{{route('personal.borrar',['id'=>$personal->id])}}">
                                 @csrf
                                 @method('delete')
-                                <input src="/imagenes/iconos/eliminar.svg" type="image" height="45" class="btn btn-outline-danger">
+                                <input src="/imagenes/iconos/eliminar.svg" title="Eliminar" type="image" height="45" class="btn btn-outline-danger">
                             </form>
                         </a>
                     </td>

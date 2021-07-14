@@ -5,7 +5,7 @@
     <br><br><br>
 
 
-        <div class="card"  class="table-responsive" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
+        <div   class="table-responsive" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
     box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);" >
             <div class="card-header" style="background-color: #4cd213">
             <label class="card-title"  style="color: black">Editar Datos Personales del Niño, Niña o Adolescente</label>

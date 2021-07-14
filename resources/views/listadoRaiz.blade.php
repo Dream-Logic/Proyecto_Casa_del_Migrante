@@ -30,11 +30,19 @@
         <input class="form-control mr-sm-2 col-4" name="name" style="margin-right: 15px"
                type="search" placeholder="Buscar" aria-label="Search">
         <button class=" mr-sm-2 btn btn-success" type="submit">
-            <img src="/imagenes/iconos/busque.png" class="svg" width="25">
+            <img src="/imagenes/iconos/busque.png" class="svg" width="25" title="Buscar">
         </button>
         <a href="{{url('/proyectos/listado')}}" class="btn btn-warning">
-            <img src="/imagenes/iconos/automatic_updates.png" class="svg" width="25">
+            <img src="/imagenes/iconos/automatic_updates.png" class="svg" width="25" title="Recargar el listado de huéspedes">
         </a>
+<<<<<<< HEAD
+=======
+            <a style="margin-left: 600px" class="btn btn-outline-primary "href="{{route('huesped.nuevo')}}" title="Agregue un nuevo huésped">
+                <img src="/imagenes/iconos/agregarUsuario.svg" class="svg" width="25" >
+            </a>
+
+
+>>>>>>> 1726ddc... Modificación en validaciones y responsive.
     </form>
     <br>
     <div class="table-responsive" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
@@ -64,11 +72,11 @@
                     <td>{{ $huesped->direccion}}</td>
                     <td>{{ $huesped->ingreso}}</td>
 
-                    <td align="center"><a class="btn btn-outline-info" href="{{route('huesped.mostrar',['id' =>$huesped->id])}}">
+                    <td align="center"><a class="btn btn-outline-info"  title="Ver" href="{{route('huesped.mostrar',['id' =>$huesped->id])}}">
                             <img src="/imagenes/iconos/ver.svg" width="25" >
                         </a></td>
-                    <td align="center"><a class="btn btn-outline-warning" href="{{route('huesped.edit',['id' =>$huesped->id])}}" >
-                            <img src="/imagenes/iconos/editar.svg" class="svg" width="25" >
+                    <td align="center"><a class="btn btn-outline-warning" width="25" title="Editar" href="{{route('huesped.edit',['id' =>$huesped->id])}}" >
+                            <img src="/imagenes/iconos/editar.svg" class="svg" >
                         </a>
                     </td>
                     <td align="center">
@@ -76,7 +84,12 @@
                         <form method="post" action="{{route('huesped.borrar',['id'=>$huesped->id])}}">
                             @csrf
                             @method('delete')
+<<<<<<< HEAD
                       <input   src="/imagenes/iconos/eliminar.svg"   type="image" height="45" class="btn btn-outline-danger">
+=======
+
+                      <input   src="/imagenes/iconos/eliminar.svg"  title="Eliminar" type="image" height="45" class="btn btn-outline-danger">
+>>>>>>> 1726ddc... Modificación en validaciones y responsive.
                         </form>
                         </a>
                     </td>

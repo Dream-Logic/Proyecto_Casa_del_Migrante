@@ -25,7 +25,7 @@ class CreateEmpleadosTable extends Migration
             $table->string('direccion_personal');
             $table->string('profesionPersonal');
             $table->string('cargo');
-            $table->string('email')->nullable();
+            $table->string('email')->nullable()->unique();
             $table->string('telefono_personal', 8)->unique();
             $table->timestamps();
         });

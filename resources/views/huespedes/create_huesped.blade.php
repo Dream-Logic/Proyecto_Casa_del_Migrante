@@ -38,8 +38,8 @@
             <form method="post" action="{{route('huesped.store')}}" enctype="multipart/form-data">
 
                 @csrf
-                <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
-                <div class="abs-center">
+                <a class="sr-only sr-only-focusable" href="#content"></a>
+                <div class="abs-center" >
                     <center>
                         <div class="col-md-12 justify-content-center"><br>
                             <div class="col-md-12 justify-content-center">
@@ -121,8 +121,8 @@
                             <label for="fnacimiento" style="color: #000000">Fecha de Nacimiento</label><br>
                             <input type="date" class="form-control " name="fnacimiento"
                                    id="fnacimiento" value="{{old('fnacimiento')}}"
-                                   min="<?php echo date('Y-m-d', strtotime($fnacimiento . "- 25 year"));?>"
-                                   max="<?php echo date('Y-m-d', strtotime($fnacimiento . " 10 year"));?>"><br>
+                                   min="<?php echo date('Y-m-d', strtotime($fnacimiento . "- 21 year"));?>"
+                                   max="<?php echo date('Y-m-d', strtotime($fnacimiento . " 0 year"));?>"><br>
                         </div>
                         <br>
 
@@ -144,8 +144,8 @@
                             <label style="color: #000000" for="ingreso">Fecha de Ingreso</label><br>
                             <input type="date" class="form-control" name="ingreso"
                                    value="{{old('ingreso')}}"
-                                   min="<?php echo date('Y-m-d', strtotime($ingreso . "- 25 year"));?>"
-                                   max="<?php echo date('Y-m-d', strtotime($ingreso . " 10 year"));?>"><br>
+                                   min="<?php echo date('Y-m-d', strtotime($ingreso . "- 21 year"));?>"
+                                   max="<?php echo date('Y-m-d', strtotime($ingreso . " 0 year"));?>"><br>
                         </div>
                         <br>
 
@@ -156,8 +156,8 @@
                             <label style="color: #000000" for="egreso">Fecha de Egreso</label><br>
                             <input type="date" class="form-control"
                                    value="{{old('egreso')}}" name="egreso"
-                                   min="<?php echo date('Y-m-d', strtotime($egreso . "- 25 year"));?>"
-                                   max="<?php echo date('Y-m-d', strtotime($egreso . " 10 year"));?>">
+                                   min="<?php echo date('Y-m-d', strtotime($egreso . "- 21 year"));?>"
+                                   max="<?php echo date('Y-m-d', strtotime($egreso . " 0 year"));?>">
                             <br>
                         </div>
                         <br>
@@ -267,8 +267,8 @@
                             <img src="/imagenes/iconos_formulario/tarjeta-de-identificacion.svg"
                                  style="margin-left: 50px" class="svg" width="25" height="35">
                             <label for="identidad" style="color: #000000">Identidad </label><br>
-                            <input type="text" class="form-control" name="identidad"
-                                   maxlength="13"
+                            <input type="text" class="form-control" name="identidad" pattern="[0-9]+"
+                                   maxlength="13" minlength="13"
                                    value="{{old('identidad')}}" id="identidad" placeholder="0000000000000"><br>
                         </div>
                         <br>
@@ -289,8 +289,9 @@
                                  class="svg" width="25" height="35">
                             <label for="pasaporte" style="color: #000000">Pasaporte</label><br>
                             <input type="text" class="form-control" name="pasaporte"
-                                   maxlength="20"
-                                   value="{{old('pasaporte')}}" id="pasaporte" placeholder="Numero de pasaporte (opcional)."><br>
+                                   maxlength="20" minlength="20"
+                                   value="{{old('pasaporte')}}" id="pasaporte"
+                                   placeholder="Numero de pasaporte (opcional)."><br>
                         </div>
                         <br>
 
@@ -323,7 +324,7 @@
                                  class="svg" width="50" height="35">
                             <label for="signos" style="color: #000000">Grado Escolar</label>
                             <span class="text-center col-md-10 justify-content-center">
-                            <textarea class="form-control " id="gradoEscolar" name="gradoEscolar" maxlength="100"
+                            <textarea class="form-control " id="gradoEscolar" name="gradoEscolar" maxlength="500"
                                       placeholder="Describa el grado escolar."
                                       rows="2">{{old('gradoEscolar')}}</textarea></span><br>
                         </div>
@@ -335,7 +336,7 @@
                                  width="50" height="35">
                             <label for="signos" style="color: #000000">Signos Fisicos</label>
                             <span class="text-center col-md-10 justify-content-center ">
-                             <textarea class="form-control" id="signosFisicos" name="signosFisicos" maxlength=""
+                             <textarea class="form-control" id="signosFisicos" name="signosFisicos" maxlength="500"
                                        placeholder="Describa los signos físicos (lunares, cicatrices, otros)."
                                        rows="2">{{old('signosFisicos')}}</textarea></span><br>
                         </div>
@@ -347,7 +348,7 @@
                                  width="50" height="35">
                             <label for="enfermedad" style="color: #000000">Enfermedad </label>
                             <span class="text-center col-md-10 justify-content-center ">
-                                    <textarea class="form-control" id="enfermedad" name="enfermedad" maxlength="100"
+                                    <textarea class="form-control" id="enfermedad" name="enfermedad" maxlength="500"
                                               placeholder="Describa la enfermedad o padecimiento (opcional)."
                                               rows="2">{{old('enfermedad')}}</textarea></span><br>
                         </div>
@@ -358,7 +359,7 @@
                                  class="svg" width="50" height="35">
                             <label for="tratamiento" class="" style="color: #000000">Tratamiento</label>
                             <span class="text-center col-md-10 justify-content-center">
-                             <textarea class="form-control" id="tratamiento" name="tratamiento" maxlength="100"
+                             <textarea class="form-control" id="tratamiento" name="tratamiento" maxlength="500"
                                        placeholder="Describa el tratamiento que necesita (opcional)."
                                        rows="2">{{old('tratamiento')}}</textarea></span><br>
                         </div>
@@ -367,15 +368,18 @@
 
                         <div style="margin: 50px" class="justify-content-center">
 
-                            <button type="submit"  class="btn btn-sm btn-outline-success">
+                            <button type="submit" class="btn btn-sm btn-outline-success">
                                 <i class="fas fa-save "></i>
                                 Guardar
                             </button>
-                        </div><br>
+                        </div>
+                        <br>
                     </div>
                 </div>
-            </form><br>
-        </div><br>
+            </form>
+            <br>
+        </div>
+        <br>
         <script src="/js/jquery-3.2.1.min.js"></script>
         <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
 

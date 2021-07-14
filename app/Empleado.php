@@ -31,7 +31,7 @@ class Empleado extends Model
         if (trim($name) != "") {
 
 
-            $query->where(\DB::raw("CONCAT(nombres_personal, '' , apellidos_personal, cargo, direccion_personal)"),
+            $query->where(\DB::raw("CONCAT(nombres_personal, '', profesionPersonal , apellidos_personal, cargo, direccion_personal)"),
                 'LIKE', "%$name%");
         }
     }

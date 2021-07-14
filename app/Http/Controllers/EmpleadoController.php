@@ -88,7 +88,7 @@ class EmpleadoController extends Controller
             'direccion_personal' => 'required',
             'profesionPersonal' => 'required',
             'cargo' => 'required',
-            'email' => 'nullable',
+            'email' => 'nullable|email|max:255|unique:empleados',
             'telefono_personal' => 'required']);
 
         $newEmpleado = new Empleado();
@@ -135,7 +135,7 @@ class EmpleadoController extends Controller
             'direccion_personal' => 'required',
             'profesionPersonal' => 'required',
             'cargo' => 'required',
-            'email' => 'nullable',
+            'email' => 'nullable|email|max:255|unique:empleados',
             'telefono_personal' => 'required']);
 
 
@@ -231,7 +231,7 @@ class EmpleadoController extends Controller
             'direccion_personal' => 'required',
             'profesionPersonal' => 'required',
             'cargo' => 'required',
-            'email' => 'nullable',
+            'email' => 'nullable|email|max:255|unique:empleados',
             'telefono_personal' => 'required']);
 
         $personal = Empleado::findOrFail($id);
@@ -278,7 +278,7 @@ class EmpleadoController extends Controller
                 'direccion_personal' => 'required',
                 'profesionPersonal' => 'required',
                 'cargo' => 'required',
-                'email' => 'nullable',
+                'email' => 'nullable|email|max:255|unique:empleados',
                 'telefono_personal' => 'required']);
 
             $personal = Empleado::findOrFail($id);
