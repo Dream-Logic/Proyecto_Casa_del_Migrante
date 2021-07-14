@@ -16,7 +16,7 @@
             <p class="page-description text-center">Actividades realizadas en la Fundación</p>
             <div>
                 <img src="/images/actividades/1.jpg"/>
-                <span>Actividad 1</span>
+                <span>Actividad 3</span>
             </div>
             <div>
                 <img src="/images/actividades/2.jpg"/>
@@ -24,12 +24,12 @@
             </div>
             <div>
                 <img src="/images/actividades/4.jpg"/>
-                <span>Actividad 3</span>
+                <span>Actividad 1</span>
             </div>
             <br>
             <div>
                 <img src="/images/actividades/3.jpg"/>
-                <span>Actividad 4</span>
+                <span>Actividad 6</span>
             </div>
             <div>
                 <img src="/images/actividades/11.jpg"/>
@@ -37,19 +37,19 @@
             </div>
             <div>
                 <img src="/images/actividades/7.jpg"/>
-                <span>Actividad 6</span>
+                <span>Actividad 4</span>
             </div>
             <div>
                 <img src="/images/actividades/12.jpg"/>
-                <span>Actividad 7</span>
-            </div>
-            <div>
-                <img src="/images/actividades/4.jpg"/>
                 <span>Actividad 8</span>
             </div>
             <div>
+                <img src="/images/actividades/4.jpg"/>
+                <span>Actividad 7</span>
+            </div>
+            <div>
                 <img src="/images/actividades/9.jpg"/>
-                <span>Actividad 9</span>
+                <span>Actividad 11</span>
             </div>
             <div>
                 <img src="/images/actividades/10.jpg"/>
@@ -57,11 +57,11 @@
             </div>
             <div>
                 <img src="/images/actividades/8.jpg"/>
-                <span>Actividad 11</span>
+                <span>Actividad 9</span>
             </div>
             <div>
                 <img src="/images/actividades/13.jpg"/>
-                <span>Actividad 12</span>
+                <span>Actividad 14</span>
             </div>
             <div>
                 <img src="/images/actividades/14.jpg"/>
@@ -69,7 +69,7 @@
             </div>
             <div>
                 <img src="/images/actividades/15.jpg"/>
-                <span>Actividad 14</span>
+                <span>Actividad 12</span>
             </div>
         </div>
     </div>
