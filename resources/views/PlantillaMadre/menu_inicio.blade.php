@@ -61,7 +61,7 @@
     <header class="site-navbar py-xl-2 js-sticky-header " role="banner">
         <div class="container">
             <div class="row align-items-center">
-                <div class="flex-row justify-content-center align-items-center">
+                <div class="flex-row justify-content-center align-items-center"style="margin: auto">
                     <span class="text-md-left"
                           style="color: #e0a800;  font-family: 'Arial Black';font-size: 16px">Casa del Gran Árbol</span>
                 </div>
