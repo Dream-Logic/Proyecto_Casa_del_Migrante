@@ -1,16 +1,19 @@
 @extends ('PlantillaMadre.menu_inicio')
 @section('titulo', 'Ficha de Ingreso Personal')
 @section('contenido')
-    <br>
-    <br>
-    <br>
-    <head>
-        <!-- CSRF Token -->
-        <meta name="csrf-token" content="{{ csrf_token() }}">
-    </head>
-    <body class="table-responsive">
+    <br><br><br>
+    <section class="container">
+        <head>
+            <!-- CSRF Token -->
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0,
+        minimun-scale=1.0">
+            <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <div class="">
+        </head>
+
+
+        <div class="">
         <div   class="" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
     box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);" >
             <div class="card-header" style="background-color: #4cd213">
@@ -203,5 +206,5 @@
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
     <br>
     <br>
-
+    </section>
 @endsection
