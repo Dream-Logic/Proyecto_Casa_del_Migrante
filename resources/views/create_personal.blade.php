@@ -137,32 +137,32 @@
                                id="identidad_personal" placeholder="0000-0000-00000"><br>
                     </div>
 
-                    <div style="margin-left: 45px">
-                        <img src="/imagenes/iconos_formulario/ubicacion.svg" style="margin-left: 50px" class="svg" width="50" height="35">
+                    <div class="col-11">
+                        <img src="/imagenes/iconos_formulario/ubicacion.svg" style="margin-left: 25px" class="svg" width="50" height="35">
                         <label for="direccion_personal" style="color: #000000">Dirección</label>
                         <span class="col-md-5 col-md-offset-10 text-center">
-        <textarea class="form-control" id="direccion_personal" name="direccion_personal"
-                  placeholder="Dirección" style="margin-left: 35px" cols="138" rows="2"></textarea><br>
+              <textarea style="margin-left: 10px" class="form-control"  id="direccion_personal" name="direccion_personal"
+                  placeholder="Dirección" cols="138 rows="2"></textarea><br>
                     </span></div>
                     <br>
 
 
-                    <div style="margin-left: 45px">
-                        <img src="/imagenes/iconos_formulario/profesion.svg" style="margin-left: 50px" class="svg" width="50" height="35">
+                    <div class="col-11">
+                        <img src="/imagenes/iconos_formulario/profesion.svg" style="margin-left: 25px" class="svg" width="50" height="35">
                         <label for="profesion" style="color: #000000">Profesión u Oficio</label>
                         <span class="col-md-5 col-md-offset-10 text-center">
-        <textarea class="form-control" id="profesionPersonal" name="profesionPersonal"
-                  placeholder="Ingrese su profesión u oficio" style="margin-left: 35px" cols="138" rows="2"></textarea><br>
+        <textarea style="margin-left: 10px" class="form-control" id="profesionPersonal" name="profesionPersonal"
+                  placeholder="Ingrese su profesión u oficio"  cols="138" rows="2"></textarea><br>
                     </span></div>
                     <br>
 
                     <br>
-                    <div style="margin-left: 45px">
-                        <img src="/imagenes/iconos_formulario/cargo.svg" style="margin-left: 50px" class="svg" width="50" height="35">
+                    <div class="col-11">
+                        <img src="/imagenes/iconos_formulario/cargo.svg" style="margin-left: 25px" class="svg" width="50" height="35">
                         <label for="cargo" style="color: #000000">Cargo</label>
                         <span class="col-md-5 col-md-offset-10 text-center">
-                       <textarea class="form-control" id="cargo" name="cargo"
-                                 placeholder="Cargo que desempeñará" style="margin-left: 35px" cols="138" rows="2"></textarea><br>
+                       <textarea style="margin-left: 10px"class="form-control" id="cargo" name="cargo"
+                                 placeholder="Cargo que desempeñará"  cols="138" rows="2"></textarea><br>
                     </span></div>
                     <br>
                 </div>
@@ -170,7 +170,7 @@
                     <img src="/imagenes/iconos_formulario/email.svg" style="margin-left: 25px" class="svg" width="50" height="35">
                     <label for="email" style="color: #000000">Correo Electrónico </label>
                     <span class="col-md-5 col-md-offset-10 text-center">
-        <textarea style="margin-left: 10px" class="form-control" id="email" name="email"
+                 <textarea style="margin-left: 10px" class="form-control" id="email" name="email"
                   placeholder="Ingrese su correo electrónico" rows="2"></textarea><br>
                     </span></div>
 
@@ -187,6 +187,9 @@
 
             <div class="trans text-center">
                 <button type="submit" class="btn btn-outline-success"> Guardar</button>
+                <br>
+                <br>
+                <br>
             </div>
             </div>
         </form>

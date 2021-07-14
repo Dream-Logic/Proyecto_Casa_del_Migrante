@@ -31,9 +31,8 @@
         <button class="  mr-sm-2 btn btn-success" type="submit">
             <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
         </button>
-        <a href="{{route('listadoEmpleado.index')}}" class="btn btn-warning">
-            <img src="/imagenes/iconos/restaurar.svg" class="svg" width="25">
-
+        <a href="{{url('listadoEmpleado.index')}}" class="btn btn-warning">
+            <img src="/imagenes/iconos/recargar (1).svg" class="svg" width="25">
         </a>
 
     </form>
@@ -50,9 +49,9 @@
                 <th scope="col">Profesión u Oficio</th>
                 <th scope="col">Cargo</th>
                 <th scope="col">Teléfono</th>
-                <th scope="col"></th>
-                <th scope="col">Acciones</th>
-                <th scope="col"></th>
+                <th scope="col">Ver</th>
+                <th scope="col">Editar</th>
+                <th scope="col">Eliminar</th>
             </tr>
             </thead>
             <tbody>
