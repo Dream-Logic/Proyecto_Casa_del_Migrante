@@ -84,12 +84,12 @@ class EmpleadoController extends Controller
             'fnacimiento_personal' => 'required',
             'edad_personal' => 'required',
             'sexo_personal' => 'required',
-            'identidad_personal' => 'required',
+            'identidad_personal' => 'required|unique:empleados,identidad_personal,{$this->post->id}|digits:13',
             'direccion_personal' => 'required',
             'profesionPersonal' => 'required',
             'cargo' => 'required',
             'email' => 'nullable|email|max:255|unique:empleados',
-            'telefono_personal' => 'required']);
+            'telefono_personal' => 'required|unique:responsables,telefono,{$this->post->id}||digits:8']);
 
         $newEmpleado = new Empleado();
 
@@ -131,12 +131,12 @@ class EmpleadoController extends Controller
             'fnacimiento_personal' => 'required',
             'edad_personal' => 'required',
             'sexo_personal' => 'required',
-            'identidad_personal' => 'required',
+            'identidad_personal' => 'required|unique:empleados,identidad_personal,{$this->post->id}|digits:13',
             'direccion_personal' => 'required',
             'profesionPersonal' => 'required',
             'cargo' => 'required',
             'email' => 'nullable|email|max:255|unique:empleados',
-            'telefono_personal' => 'required']);
+            'telefono_personal' => 'required|unique:empleados,telefono_personal,{$this->post->id}|digits:8']);
 
 
             $newEmpleado = new Empleado();
@@ -231,7 +231,7 @@ class EmpleadoController extends Controller
             'direccion_personal' => 'required',
             'profesionPersonal' => 'required',
             'cargo' => 'required',
-            'email' => 'nullable|email|max:255|unique:empleados',
+            'email' => 'nullable',
             'telefono_personal' => 'required']);
 
         $personal = Empleado::findOrFail($id);
@@ -278,7 +278,7 @@ class EmpleadoController extends Controller
                 'direccion_personal' => 'required',
                 'profesionPersonal' => 'required',
                 'cargo' => 'required',
-                'email' => 'nullable|email|max:255|unique:empleados',
+                'email' => 'nullable',
                 'telefono_personal' => 'required']);
 
             $personal = Empleado::findOrFail($id);

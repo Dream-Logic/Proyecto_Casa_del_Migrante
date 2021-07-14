@@ -40,21 +40,24 @@
 
             </tbody>
         </table>
-
-        <div class="trans text-center">
-            <a href="{{ asset('/Evento/index') }}" class="btn btn-warning">
-                <img  src="/imagenes/iconos/restaurar.svg" class="svg" width="25" title="Regresar">
-
+        <form class="form-inline  my-lg-0 ml-auto" >
+        <div class="col-md trans text-center">
+            <a href="{{ asset('/Evento/index') }}" class="btn btn-warning" style="width: 50px;">
+                <img  src="/imagenes/iconos/restaurar.svg" class="svg" title="Regresar" height="20">
             </a>
-            <a href="#" onclick="return confirm('Estás seguro que deseas eliminar el registro?');">
+            <a href="#" onclick="return confirm('¿Está seguro que desea eliminar el registro?');">
                 <form method="post" action="{{route('evento.borrar',['id'=>$event->id])}}">
                     @csrf
                     @method('delete')
-                    <input  title="Eliminar" src="/imagenes/iconos/eliminar.svg" type="image" height="45" class="btn btn-danger">
+                    <input  title="Eliminar" src="/imagenes/iconos/eliminar.svg" type="image" width="50" height="35" class="btn btn-danger ">
                 </form>
+                <br>
+
             </a>
+            <br>
         </div>
-    </div>
+        </form>
+    </div><br>
 
 
       <!-- inicio de semana -->

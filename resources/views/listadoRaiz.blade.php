@@ -15,27 +15,31 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta charset="utf-8">
     </head>
-    <tbody class="embed-responsive">
-     <div class="w3-container w3-teal mx-4" style="font-family: 'Raleway', sans-serif; text-align: center">
+    <div class="w3-container w3-teal mx-4" style="font-family: 'Raleway', sans-serif; text-align: center">
+        <br>
         <h6 class="mt-3" style="font-size: 30px; color: black;"><b>Listado de Huéspedes</b></h6>
     </div>
     <br>
     <br>
 
-    <form class="form-inline my-2 my-lg-0 ml-auto" >
-        <input class="form-control mr-sm-2 col-4" name="name" style="margin-right: 15px"
+    <form class="form-inline  my-lg-0 ml-auto" >
+        <input class="form-control mr-sm-2 col-4" name="name"
                type="search" placeholder="Buscar" aria-label="Search">
-        <button class=" mr-sm-2 btn btn-success" type="submit">
-            <img src="/imagenes/iconos/busque.png" class="svg" width="25" title="Buscar">
+        <div class="btn-toolbar" title="Buscar">
+        <button class="mr-sm-2 btn btn-success" type="submit">
+            <img src="/imagenes/iconos/busque.png" class="svg" width="20" title="Buscar">
         </button>
+        </div>
+        <div class="btn-toolbar" title="Recargar el listado de huéspedes" >
         <a href="{{url('/proyectos/listado')}}" class="btn btn-warning">
-            <img src="/imagenes/iconos/automatic_updates.png" class="svg" width="25" title="Recargar el listado de huéspedes">
+            <img src="/imagenes/iconos/automatic_updates.png" class="svg" width="20">
         </a>
-
-            <a style="margin-left: 600px" class="btn btn-outline-primary "href="{{route('huesped.nuevo')}}" title="Agregue un nuevo huésped">
-                <img src="/imagenes/iconos/agregarUsuario.svg" class="svg" width="25" >
+        </div>
+        <div class="card-body d-flex justify-content-lg-end align-items-lg-end" title="Agregue un nuevo huéspedes">
+            <a class="btn btn-outline-primary "href="{{route('huesped.nuevo')}}">
+                <img src="/imagenes/iconos/agregarUsuario.svg" class="svg" width="20" >
             </a>
-
+        </div>
     </form>
     <br>
     <div class="table-responsive" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);

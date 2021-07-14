@@ -20,7 +20,7 @@
     <div class="" style="-moz-box-shadow: 0px 5px 3px 3px rgb(194,194,194);
                     box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);">
         <div class="card-header" style="background-color: #4cd213">
-            <label class="card-title" style="color: black;">Registrar el evento</label>
+            <label class="card-title" style="color: black; font-weight: bold">Registrar el evento</label>
         </div>
 
     @if ($errors->any())

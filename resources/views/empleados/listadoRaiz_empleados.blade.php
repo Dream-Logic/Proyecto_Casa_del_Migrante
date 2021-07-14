@@ -32,6 +32,7 @@
         <div class="btn-toolbar" title="Recargar el listado de empleados" >
         <a class="btn btn-warning" href="{{route('listadoEmpleado.index')}}"  >
             <img src="/imagenes/iconos/automatic_updates.png" class="svg" width="20" title="Recarga el listado de empleados">
+
         </a>
         </div>
         <div class="card-body d-flex justify-content-lg-end align-items-lg-end" title="Agregue un nuevo empleado">

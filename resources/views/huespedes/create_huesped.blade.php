@@ -119,7 +119,7 @@
                             <img src="/imagenes/iconos_formulario/calendario.svg" style="margin-left: 50px"
                                  class="svg" width="25" height="35">
                             <label for="fnacimiento" style="color: #000000">Fecha de Nacimiento</label><br>
-                            <input type="date" class="form-control " name="fnacimiento"
+                            <input type="date" class="form-control" name="fnacimiento"
                                    id="fnacimiento" value="{{old('fnacimiento')}}"
                                    min="<?php echo date('Y-m-d', strtotime($fnacimiento . "- 21 year"));?>"
                                    max="<?php echo date('Y-m-d', strtotime($fnacimiento . " 0 year"));?>"><br>

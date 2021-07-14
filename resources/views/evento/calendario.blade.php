@@ -51,12 +51,18 @@
         <div class="w3-container w3-teal mx-4" style="font-family: 'Raleway', sans-serif; text-align: center;height: 100px" >
             <h6 class="mt-3" style="font-size: 40px; color: black; height: 30px; "><b>Calendario de Eventos</b></h6>
         </div>
-<div style= "text-align: right" >
-    <a class="btn btn-default"  href="{{ asset('/Evento/form') }}">Crear un evento
+
+      <form class="form-inline  my-lg-0 ml-auto" >
+
+        <a class="btn btn-success btn-warning" title="Regresar a la pagina principal del director" href="{{route('index.index')}}">Regresar</a>
+
+        <div class="card-body d-flex justify-content-lg-end align-items-lg-end" title="Agregue un nuevo evento">
+        <a class="btn btn-default"  href="{{ asset('/Evento/form') }}">Crear un evento
         <img src="/images\eventocalendario.svg" class="svg" width="40" ></a>
-</div>
-        <a class="btn btn-success btn-warning" href="{{route('index.index')}}">Regresar</a>
-<hr>
+        </div>
+
+
+      </form>
 
       <div class="row header-calendar "  >
 

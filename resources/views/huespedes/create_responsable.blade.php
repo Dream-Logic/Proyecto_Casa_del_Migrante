@@ -176,7 +176,6 @@
                         <img src="/imagenes/iconos_formulario/telefono.svg" style="margin-left: 50px" class="svg"
                              width="25" height="35">
                         <label for="telefono" style="color: black;">Teléfono</label><br>
-
                         <input  type="text" class="form-control"  name="telefono" maxlength="8" pattern="[0-9]+" minlength="8"
                                 value="{{old('telefono')}}"
                                 id="telefono" placeholder="Número de teléfono, Ej:33568790"><br>
