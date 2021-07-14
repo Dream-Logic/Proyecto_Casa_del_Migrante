@@ -37,9 +37,11 @@
 <div class="hero_boxes" >
     <div class="hero_boxes_inner"  >
         <div>
+
             <div class="row justify-content-center" >
 
                 <div class="col-lg-3 hero_box_col ">
+
                     <br>
                     <a href="{{route('huesped.nuevo')}}" >
                     <div class="hero_box d-flex flex-row align-items-center justify-content-start" >
@@ -52,8 +54,8 @@
                 </div>
                 <div class="col-lg-3 hero_box_col">
                     <br>
-                    <a href="{{ route('listado.index') }}">
-                        <div class="hero_box   pull-left ">
+                    <a href="{{ route('listado.index')}}" >
+                        <div class="hero_box d-flex flex-row align-items-center justify-content-start">
                             <img src="images/familia.svg" class="svg" alt="">
                             <div class="hero_box_content">
 
@@ -88,14 +90,15 @@
                         </div>
                     </a>
                 </div>
+
                 <div class="col-lg-3 hero_box_col">
                     <br>
-                    <a href="{{ route('personal.personal') }}" >
-                        <div class="hero_box   pull-left ">
+                    <a href="{{route('personal.personal')}}" >
+                        <div class="hero_box d-flex flex-row align-items-center justify-content-start">
                             <img src="images/personal.svg" class="svg" alt="">
-                               <div class="hero_box_content">
+                            <div class="hero_box_content">
 
-                                <a  style="font-size:15px  "href="{{ route('personal.personal') }}" class="hero_box_link">Ficha Personal</a>
+                                <a  style="font-size:15px " href="{{route('personal.personal')}}" class="hero_box_link">Ficha Personal</a>
                             </div>
                         </div>
                     </a>

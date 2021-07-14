@@ -58,10 +58,6 @@
         <a class="btn btn-success btn-warning" href="{{route('index.index')}}">Regresar</a>
 <hr>
 
-
-
-
-
       <div class="row header-calendar "  >
 
         <div class="col" style="display: flex; justify-content: space-between; padding: 10px;">
@@ -76,8 +72,6 @@
 
       </div>
 
-
-
       <div class="row " >
         <div class="col header-col">Lunes</div>
         <div class="col header-col">Martes</div>
@@ -87,7 +81,6 @@
         <div class="col header-col">Sábado</div>
         <div class="col header-col">Domingo</div>
       </div>
-
       <!-- inicio de semana -->
       @foreach ($data['calendar'] as $weekdata)
         <div class="row">
@@ -99,7 +92,7 @@
               {{ $dayweek['dia']  }}
               <!-- evento -->
               @foreach  ($dayweek['evento'] as $event)
-                  <a class="" href="{{ asset('/Evento/details/') }}/{{ $event->id }}">
+                  <a class="" title="Ver detalle del Evento" href="{{ asset('/Evento/details/') }}/{{ $event->id }}">
                     {{ $event->titulo }}
                   </a>
               @endforeach
@@ -108,14 +101,11 @@
           <div class="col box-dayoff">
           </div>
           @endif
-
-
           @endforeach
         </div>
       @endforeach
 
     </div> <!-- /container -->
-
     <!-- Footer -->
 <footer class="page-footer font-small blue pt-4">
   <!-- Copyright -->

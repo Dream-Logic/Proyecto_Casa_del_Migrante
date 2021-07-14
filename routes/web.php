@@ -161,6 +161,9 @@ Route::group(["middleware" => "auth"], function () {
         //-------------------------------------------Rutas Detalles de evento-------------------------------------
         Route::get('Evento/details/{id}', 'ControllerEvent@details');
         Route::get('evento/form','ControllerEvent@form');
+        Route::delete('/evento/{id}/borrar', 'ControllerEvent@destroy')
+            ->name('evento.borrar');
+
         //-------------------------------------------Rutas EPORTAR A PDF Y A EXCEL-------------------------------------
         Route::get('/huesped/export','ExportHuespedController@export');
         Route::get('/pdfH/pdf','ExportHuespedController@pdf');
@@ -237,7 +240,8 @@ Route::group(["middleware" => "auth"], function () {
     Route::get('/egresosdirec', 'paginaPrincipal_controller@egresodirec')
         ->name('lista.egresod');
     //---------------------------------------- Calendario--------------------------------------------------
-    Route::get('Evento/index', 'ControllerEvent@index');
+    Route::get('Evento/index', 'ControllerEvent@index')
+    ->name('evento.index');
     Route::get('Evento/index/{month}', 'ControllerEvent@index_month');
     //---------------------------------------- Formulario--------------------------------------------------
     Route::get('Evento/form', 'ControllerEvent@form');
@@ -247,6 +251,7 @@ Route::group(["middleware" => "auth"], function () {
     Route::get('evento/form','ControllerEvent@form');
     //---------------------------------------- Calendario Admin--------------------------------------------------
     Route::get('Evento/admin', 'ControllerEvent@calendarioadmin');
+
 
 
 

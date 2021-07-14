@@ -19,35 +19,43 @@ class ControllerEvent extends Controller
     public function create(Request $request){
 
       // validacion
-        try {
-            $this->validate($request, [
-                'titulo' => 'required',
-                'descripcion' => 'required',
-                'fecha' => 'required'
-            ]);
-        } catch (ValidationException $e) {
-        }
 
-        // guarda la base de datos
-     Event::insert([
-       'titulo'       => $request->input("titulo"),
-       'descripcion'  => $request->input("descripcion"),
-       'fecha'        => $request->input("fecha")
-     ]);
+        $request->validate([
+            'titulo' => 'required',
+            'fecha' => 'required',
+            'descripcion' => 'required',
 
-     // devuelve el mensaje de exito
-     return back()->with('success', 'Enviado exitosamente!');
+           ]);
+
+        $newEvent = new Event();
+
+        //Datos Obtenidos del Formulario
+        $newEvent->titulo = $request->input('titulo');
+        $newEvent->fecha = $request->input('fecha');
+        $newEvent->descripcion = $request->input('descripcion');
+        $newEvent->save();
+
+        // devuelve el mensaje de exito
+        return redirect()->route('evento.index')->with('mensaje', 'El huesped y todos sus datos fueron borrados completamente');
 
    }
 
-   public function details($id){
+   public function details($id)
+   {
 
-      // llamar evento por id
-      $event = Event::find($id);
+       // llamar evento por id
+       $event = Event::find($id);
 
-      return view("evento/evento",[
-        "event" => $event
-      ]);
+       return view("evento/evento", [
+           "event" => $event
+       ]);
+   }
+       public function destroy($id)
+       {
+
+       $event = Event::where('id', '=', $id);
+       $event->delete();
+       return redirect()->route('evento.index')->with('mensaje', 'ElEvento y todos sus datos fueron borrados completamente');
 
     }
 
