@@ -112,7 +112,7 @@
                         <input  type="date" class="form-control" name="fnacimiento_personal"
                                id="fnacimiento_personal" value="{{old('fnacimiento_personal')}}"
                                min="<?php echo date('Y-m-d', strtotime($fnacimiento_personal . "- 65 year"));?>"
-                               max="<?php echo date('Y-m-d', strtotime($fnacimiento_personal . " 18 year"));?>"><br>
+                               max="<?php echo date('Y-m-d', strtotime($fnacimiento_personal . "0 year"));?>"><br>
                     </div><br>
 
                     <div class="col-md-5 justify-content-center"><br>
