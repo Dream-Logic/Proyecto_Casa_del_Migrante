@@ -28,7 +28,7 @@
             </div>
         </div>
 
-    <div class="site-wrap">
+    <div class="site-wrap" >
         <div class="site-mobile-menu site-navbar-target">
             <div class="site-mobile-menu-header">
                 <div class="site-mobile-menu-close mt-3">
@@ -41,7 +41,7 @@
         <header class="site-navbar  py-4 js-sticky-header site-navbar-target" role="banner" style="width: 100%">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="flex-row justify-content-center align-items-center">
+                    <div class="flex-row justify-content-center align-items-center" style="margin: auto">
                         <span class="text-md-left" style="color: #e0a800; font-family: 'Arial Black';  font-size: 15px;">Fundación Alivio del Sufrimiento</span>
                     </div>
                     <div class="col-12 col-md-9 d-none d-xl-block">
