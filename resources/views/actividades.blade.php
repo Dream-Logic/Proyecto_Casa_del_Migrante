@@ -1,17 +1,17 @@
 <!doctype html>
 <html lang="en">
+<section class="container" >
 <head>
     <title>Actividades</title>
     <link rel="stylesheet" href="/css/CSSactividades/estilos.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
     <link rel="stylesheet" href="/css/CSSactividades/gallery-grid.css">
+    <link rel="stylesheet" type="text/css" href="styles/responsive.css">
 </head>
 <body>
-<section>
-    <div class="container gallery-container">
-        <div id="container">
+    <div class="container gallery-container" >
+        <div id="container" style="margin: auto;">
             <h1>Galeria Histórica</h1>
             <p class="page-description text-center">Actividades realizadas en la Fundación</p>
             <div>
@@ -69,10 +69,10 @@
             </div>
             <div>
                 <img src="/images/actividades/15.jpg"/>
-                <span>Actividad 15</span>
+                <span>Actividad 14</span>
             </div>
         </div>
     </div>
-</section>
 </body>
+</section>
 </html>

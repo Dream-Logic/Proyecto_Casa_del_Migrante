@@ -104,20 +104,21 @@
                     </div>
                     <br>
 
-
+                    <?php $fnacimiento_personal = date("d-m-Y");?>
                     <div class="col-5">
                         <img src="/imagenes/iconos_formulario/calendario.svg" style="margin-left: 50px" class="svg" width="50" height="35">
                         <label for="FechaNac_personal" style="color: #000000">Fecha de Nacimiento</label><br>
                         <input style="margin-left: 30px" type="date" class="form-control" name="fnacimiento_personal"
-                               id="fnacimiento_personal"><br>
+                               id="fnacimiento_personal" value="{{old('fnacimiento_personal')}}"
+                               min="<?php echo date('Y-m-d', strtotime($fnacimiento_personal . "- 65 year"));?>"
+                               max="<?php echo date('Y-m-d', strtotime($fnacimiento_personal . " 18 year"));?>"><br><br>
                     </div>
-
 
                     <div class="col-5">
                         <img src="/imagenes/iconos_formulario/grupo-de-edad.svg" style="margin-left: 50px" class="svg" width="50" height="35">
                         <label for="edad_personal" style="color: #000000">Edad</label><br>
-                        <input style="margin-left: 30px" type="number" class="form-control" name="edad_personal"
-                               id="edad_personal" placeholder="Edad"><br>
+                        <input style="margin-left: 30px" type="number" min="0" pattern="^[0-9]+" class="form-control"
+                               name="edad_personal" id="edad_personal" value="{{old('edad')}}" placeholder="Edad"><br>
                     </div>
                     <div class="col-5">
                         <img src="/imagenes/iconos_formulario/sexo.svg" style="margin-left: 50px" class="svg" width="50" height="35">
@@ -134,7 +135,8 @@
                              height="35">
                         <label for="identidad_personal" style="color: #000000">Identidad </label><br>
                         <input style="margin-left: 30px" type="text" class="form-control" name="identidad_personal"
-                               id="identidad_personal" placeholder="0000-0000-00000"><br>
+                               id="identidad_personal" pattern="[0-9]+" maxlength="13" minlength="13"
+                               value="{{old('identidad')}}"placeholder="0000-0000-00000"><br>
                     </div>
 
                     <div style="margin-left: 45px">

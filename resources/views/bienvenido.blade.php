@@ -246,7 +246,7 @@
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="unit-4">
-                        <img src="images/bienvenido/iconos/kit-de-primeros-auxilios.svg" class="svg" width="50">
+                        <img src="images/bienvenido/iconos/kit-de-primeros-auxilios.svg" class="svg" width="60">
                         <div>
                             <h6 style="color: black; font-size: 1.3em;">Atención médica</h6>
                             <p style="text-align: justify">La buena atención médica es el tipo de medicina que practican y enseñan los líderes
@@ -256,7 +256,7 @@
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="unit-4">
-                        <img src="images/bienvenido/iconos/ropa-limpia.svg" class="svg" width="50">
+                        <img src="images/bienvenido/iconos/ropa-limpia.svg" class="svg" width="60">
                         <div>
                             <h6 style="color: black; font-size: 1.3em;">Vestuario</h6>
                             <p style="text-align: justify">Conjunto de prendas de vestir para los niños, niñas y jóvenes</p>
@@ -372,7 +372,7 @@
         </div>
     </section>
         <!--soporte tecnico-->
-        <section class="site-section justify-content-center" id="footer-section" style="background-color: #95c5ed"><br>
+        <section class="site-section justify-content-center" id="footer-section" style="background-color: #b9c9fe"><br>
             <h6 class="section-title mb-3 justify-content-center" style="text-align: center">Soporte Técnico</h6>
             <div class="contenedor justify-content:center">
                 <!--Tarjeta de presentación número 1-->

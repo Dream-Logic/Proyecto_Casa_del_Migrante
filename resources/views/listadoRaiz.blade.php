@@ -42,7 +42,7 @@
     box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);">
         <table class="table ruler-vertical table-hover mx-sm-0 table-bordered " >
             <thead class="thead-dark" align="center" >
-            <tr>
+            <tr align="center">
                 <th scope="col">N°</th>
                 <th scope="col">Nombres</th>
                 <th scope="col">Apellidos</th>
@@ -56,7 +56,7 @@
             </tr>
             </thead>
             @forelse($listados as $huesped)
-                <tr>
+                <tr align="center">
                     <th scope="row">{{ $huesped->id }}</th>
                     <td>{{ $huesped->nombres}} </td>
                     <td> {{ $huesped->apellidos }}</td>
