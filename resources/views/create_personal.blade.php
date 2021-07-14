@@ -124,9 +124,9 @@
                     <div class="col-md-5 justify-content-center"><br>
                         <img src="/imagenes/iconos_formulario/sexo.svg" style="margin-left: 50px" class="svg" width="25" height="35">
                         <label for="sexo_personal" style="color: #000000">Sexo</label>
-                        <select  class="form-control" name="sexo_personal" value="{{old('sexo_personal')}}">
-                            <option value="femenino">Femenino</option>
-                            <option value="masculino">Masculino</option>
+                        <select  class="form-control" name="sexo_personal" >
+                            <option value="femenino"@if(old('sexo_personal') === "femenino") selected='selected' @endif>Femenino</option>
+                            <option value="masculino" @if(old('sexo_personal') === "masculino") selected='selected' @endif>Masculino</option>
                         </select><br>
                     </div><br>
 
@@ -164,8 +164,8 @@
                         <img src="/imagenes/iconos_formulario/ubicacion.svg" style="margin-left: 50px" class="svg" width="25" height="35">
                         <label for="direccion_personal" style="color: #000000">Dirección</label>
                         <span class="text-center col-md-10 justify-content-center">
-        <textarea class="form-control" id="direccion_personal" name="direccion_personal"value="{{old('direccion_personal')}}"
-                  placeholder="Dirección" rows="2"></textarea><br>
+        <textarea class="form-control" id="direccion_personal" name="direccion_personal"
+                  placeholder="Dirección" rows="2">{{old('direccion_personal')}}</textarea><br>
                     </span></div>
                     <br>
 
@@ -174,8 +174,8 @@
                         <img src="/imagenes/iconos_formulario/profesion.svg" style="margin-left: 50px" class="svg" width="25" height="35">
                         <label for="profesion" style="color: #000000">Profesión u Oficio</label>
                         <span class="text-center col-md-10 justify-content-center">
-        <textarea class="form-control" id="profesionPersonal" name="profesionPersonal"value="{{old('profesionPersonal')}}"
-                  placeholder="Ingrese su profesión u oficio"  cols="138" rows="2"></textarea><br>
+        <textarea class="form-control" id="profesionPersonal" name="profesionPersonal"
+                  placeholder="Ingrese su profesión u oficio"  cols="138" rows="2">{{old('profesionPersonal')}}</textarea><br>
                     </span></div>
                     <br>
 
@@ -184,8 +184,8 @@
                         <img src="/imagenes/iconos_formulario/cargo.svg" style="margin-left: 50px" class="svg" width="25" height="35">
                         <label for="cargo" style="color: #000000">Cargo</label>
                         <span class="ext-center col-md-10 justify-content-center">
-                       <textarea class="form-control" id="cargo" name="cargo"value="{{old('cargo')}}"
-                                 placeholder="Cargo que desempeñará" rows="2"></textarea><br>
+                       <textarea class="form-control" id="cargo" name="cargo"
+                                 placeholder="Cargo que desempeñará" rows="2">{{old('cargo')}}</textarea><br>
                     </span></div>
                     <br>
                 </div>
