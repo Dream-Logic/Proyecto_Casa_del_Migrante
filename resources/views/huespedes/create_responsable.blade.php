@@ -125,13 +125,10 @@
                         <img src="/imagenes/iconos_formulario/tarjeta-de-identificacion.svg" style="margin-left: 50px"
                              class="svg" width="25" height="35">
                         <label for="identidad" style="color: black;">Identidad</label><br>
-<<<<<<< HEAD
+
                         <input  type="text" class="form-control"maxlength="13" pattern="[0-9]+" minlength="13"
                                 value="{{old('identidad')}}"
-=======
-                        <input type="text" class="form-control" maxlength="13"
-                               value="{{old('identidad')}}"
->>>>>>> 1726ddc... Modificación en validaciones y responsive.
+
                                name="identidad"
                                id="identidadMadre" placeholder="Número de identidad"><br>
                     </div>
@@ -140,11 +137,8 @@
                         <img src="/imagenes/iconos_formulario/pasaporte.svg" style="margin-left: 50px" class="svg"
                              width="25" height="35">
                         <label for="pasaporte" style="color: black;">Pasaporte</label><br>
-<<<<<<< HEAD
                         <input  type="text" class="form-control" maxlength="20" minlength="20"
-=======
-                        <input type="text" class="form-control" maxlength="20"
->>>>>>> 1726ddc... Modificación en validaciones y responsive.
+
                                value="{{old('pasaporte')}}"
                                name="pasaporte"
                                id="pasaporteMadre" placeholder="Número de pasaporte (Opcinal)"><br>
@@ -182,13 +176,11 @@
                         <img src="/imagenes/iconos_formulario/telefono.svg" style="margin-left: 50px" class="svg"
                              width="25" height="35">
                         <label for="telefono" style="color: black;">Teléfono</label><br>
-<<<<<<< HEAD
+
                         <input  type="text" class="form-control"  name="telefono" maxlength="8" pattern="[0-9]+" minlength="8"
+                                value="{{old('telefono')}}"
                                 id="telefono" placeholder="Número de teléfono, Ej:33568790"><br>
-=======
-                        <input type="text" class="form-control" name="telefono" maxlength="8"
-                               id="telefono" placeholder="Número de teléfono"><br>
->>>>>>> 1726ddc... Modificación en validaciones y responsive.
+
                     </div>
                 </div>
                 <br>

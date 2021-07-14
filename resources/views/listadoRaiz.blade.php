@@ -21,11 +21,7 @@
     </div>
     <br>
     <br>
-     <div class="unit-4 mx-4" style="float: right">
-         <a class="btn btn-outline-warning "href="{{route('huesped.nuevo')}}">
-             <img src="/imagenes/iconos/agregarUsuario.svg" class="svg" width="25">
-         </a>
-     </div>
+
     <form class="form-inline my-2 my-lg-0 ml-auto" >
         <input class="form-control mr-sm-2 col-4" name="name" style="margin-right: 15px"
                type="search" placeholder="Buscar" aria-label="Search">
@@ -35,14 +31,11 @@
         <a href="{{url('/proyectos/listado')}}" class="btn btn-warning">
             <img src="/imagenes/iconos/automatic_updates.png" class="svg" width="25" title="Recargar el listado de huéspedes">
         </a>
-<<<<<<< HEAD
-=======
+
             <a style="margin-left: 600px" class="btn btn-outline-primary "href="{{route('huesped.nuevo')}}" title="Agregue un nuevo huésped">
                 <img src="/imagenes/iconos/agregarUsuario.svg" class="svg" width="25" >
             </a>
 
-
->>>>>>> 1726ddc... Modificación en validaciones y responsive.
     </form>
     <br>
     <div class="table-responsive" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
@@ -80,16 +73,13 @@
                         </a>
                     </td>
                     <td align="center">
-                        <a href="#" onclick="return confirm('Estás seguro que deseas eliminar el registro?');">
+                        <a href="#" onclick="return confirm('¿Está seguro que desea eliminar el registro?');">
                         <form method="post" action="{{route('huesped.borrar',['id'=>$huesped->id])}}">
                             @csrf
                             @method('delete')
-<<<<<<< HEAD
-                      <input   src="/imagenes/iconos/eliminar.svg"   type="image" height="45" class="btn btn-outline-danger">
-=======
 
                       <input   src="/imagenes/iconos/eliminar.svg"  title="Eliminar" type="image" height="45" class="btn btn-outline-danger">
->>>>>>> 1726ddc... Modificación en validaciones y responsive.
+
                         </form>
                         </a>
                     </td>
