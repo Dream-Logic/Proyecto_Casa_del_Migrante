@@ -35,7 +35,7 @@
                         <div class="row">
                             <div class="form-group {{ $errors->has('imagen') ? ' has-error' : '' }}" style="width: 90%">
                                 <h6 style="text-align: center">Imagen (Opcional)</h6>
-                                <img  width="200px" id="previewImagen" style="max-height:200px; margin-left: 35px"
+                                <img  width="200px" id="previewImagen" style="max-height:250px;"
                                      src="{{"/foto/".$huesped->imagen}}"
                                      onclick="seleccionarImagen(event)"/>
 
