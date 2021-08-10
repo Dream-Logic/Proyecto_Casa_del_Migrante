@@ -37,14 +37,16 @@
 				<span class="login100-form-title p-b-41">
                     <strong>Restablecer Contraseña</strong>
 				</span>
-            <form class="login100-form validate-form p-b-33 p-t-5" method="POST" action="{{ route('password.request1') }}">
+            <form class="login100-form validate-form p-b-33 p-t-5" method="POST" action="{{ route('password.request') }}">
                 {{ csrf_field() }}
 
                 <input type="hidden" name="token" value="{{ $token }}">
                 <div class="wrap-input100 validate-input" data-validate="Enter username">
-                    <input class="input100" type="text" name="email"
-                           value="{{old("email")}}" placeholder="Correo Electronico">
-                    <span class="focus-input100" data-placeholder="&#x2709;"></span>
+                    <h4  class="justify-content-center" style="text-align: center ">Correo Electronico</h4>
+                    <br>
+                    <input class="form-control input100 justify-content-center" type="text" name="email"
+                           value="{{old("email")}}" >
+                    <span class="focus-input100 justify-content-center" data-placeholder="&#x2709;"></span>
                     @if ($errors->has('email'))
                         <span class="help-block">
                                         <strong>{{ $errors->first('email') }}</strong>
@@ -54,9 +56,11 @@
 
                 </div>
 
-                <div class="wrap-input100 validate-input" data-validate="Enter password">
-                    <input class="input100" type="password" name="password" placeholder="Contraseña">
-                    <span class="focus-input100" data-placeholder="&#x1F512;"></span>
+                <div  class="wrap-input100 validate-input" data-validate="Enter password">
+                    <h4  class="justify-content-center" style="text-align: center ">Contraseña</h4>
+                    <br>
+                    <input  class="form-control input100 justify-content-center" type="password" name="password" >
+                    <span class="focus-input100 justify-content-center" data-placeholder="&#x1F512;"></span>
                     @if ($errors->has('password'))
                         <span class="help-block">
                                         <strong>{{ $errors->first('password') }}</strong>
@@ -65,7 +69,9 @@
                 </div>
 
                 <div class="wrap-input100 validate-input" data-validate="Enter password">
-                    <input class="input100" type="password" name="password_confirmation" placeholder="Confirmar Contraseña">
+                    <h4  class="justify-content-center" style="text-align: center ">Confirmar Contraseña</h4>
+                    <br>
+                    <input  class="form-control input100 justify-content-center"type="password" name="password_confirmation" >
                     <span class="focus-input100" data-placeholder="&#x1F512;"></span>
                     @if ($errors->has('password_confirmation'))
                         <span class="help-block">

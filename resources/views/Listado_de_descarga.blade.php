@@ -109,13 +109,13 @@
                     <td>Listado de Salud</td>
 
 
-                    <td align="center">  <a href="{{ asset('/empleado/export') }}"class="btn btn-success" style="color: white">  Descargar
+                    <td align="center">  <a href="{{ asset('/salud/export') }}"class="btn btn-success" style="color: white">  Descargar
 
                         </a>
 
 
 
-                    <td> <a href="{{ asset('/pruebaemple/pdf') }}"class="btn btn-danger">  Descargar
+                    <td> <a href="{{ asset('/pruebasalud/pdf') }}"class="btn btn-danger">  Descargar
 
                         </a>
                     </td>
@@ -125,13 +125,13 @@
                     <td>Listado de Egresos</td>
 
 
-                    <td align="center">  <a href="{{ asset('/empleado/export') }}"class="btn btn-success" style="color: white">  Descargar
+                    <td align="center">  <a href="{{ asset('/egreso/export') }}"class="btn btn-success" style="color: white">  Descargar
 
                         </a>
 
 
 
-                    <td> <a href="{{ asset('/pruebaemple/pdf') }}"class="btn btn-danger">  Descargar
+                    <td> <a href="{{ asset('/pruebaegreso/pdf') }}"class="btn btn-danger">  Descargar
 
                         </a>
                     </td>

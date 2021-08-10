@@ -1,5 +1,5 @@
 <section class="container">
-    <br><br>
+
     <head>
         <!-- CSRF Token -->
         <meta charset="utf-8">
@@ -57,7 +57,7 @@
                              width="25" height="35">
                         <label for="titulo" style="color: #000000">Título</label>
                         <input type="text" class="form-control"  name="titulo"
-                               id="titulo" placeholder="Título del evento"><br>
+                               id="titulo" placeholder="Título del evento"value="{{old('titulo')}}"><br>
                 </div>
                 <br>
 
@@ -65,7 +65,7 @@
                         <img src="/imagenes/iconos_formulario/calendario.svg"  style="margin-left: 15px" class="svg"
                              width="25" height="35">
                         <label for="fecha" style="color: #000000">Fecha</label><br>
-                        <input type="date" class="form-control" name="fecha"
+                        <input type="date" class="form-control" name="fecha"value="{{old('fecha')}}"
                                id="fecha"><br>
                     </div><br>
 
@@ -76,7 +76,7 @@
                     <label for="descripcion" style="color: black;">Descripción</label>
                     <span class="text-center col-md-10 justify-content-center">
                      <textarea class="form-control"  id="descripcion" name="descripcion"
-                               placeholder="Descripción del evento"></textarea>
+                               placeholder="Descripción del evento" rows="2">{{old('descripcion')}}</textarea><br>
                         </span></div>
                 <br>
                 <div class="trans text-center">

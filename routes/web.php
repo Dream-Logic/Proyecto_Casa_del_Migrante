@@ -165,9 +165,7 @@ Route::group(["middleware" => "auth"], function () {
             ->name('evento.borrar');
 
         //-------------------------------------------Rutas EPORTAR A PDF Y A EXCEL-------------------------------------
-        Route::get('/huesped/export','ExportHuespedController@export');
-        Route::get('/pdfH/pdf','ExportHuespedController@pdf');
-        Route::get('/pruebas/pdf','ExportHuespedController@prueba');
+
 
     });
 //-------------------------------------------Aqui van todas las rutas de Administrador-------------------------------------
@@ -225,7 +223,14 @@ Route::group(["middleware" => "auth"], function () {
     Route::get('/empleado/export','ExportEmpleadoController@export');
 
     Route::get('/pruebaemple/pdf','ExportEmpleadoController@prueba');
+    //---------------------------------------- ExPORTAR A PDF Y A EXCEL Administrado Empleado------------------------------
+    Route::get('/egreso/export','ExportHuespedController@egreso');
 
+    Route::get('/pruebaegreso/pdf','ExportHuespedController@egresopdf');
+
+    Route::get('/salud/export','ExportHuespedController@salud');
+
+    Route::get('/pruebasalud/pdf','ExportHuespedController@saludpdf');
     //---------------------------------------- ExPORTAR A PDF Y A EXCEL Administrado EScolaridad---------------------------
     Route::get('/estudiante/export','ExportEscolaridadController@export');
     Route::get('/pruebaestule/pdf','ExportEscolaridadController@prueba');

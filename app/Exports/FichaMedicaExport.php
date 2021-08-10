@@ -3,19 +3,22 @@
 namespace App\Exports;
 
 use App\Ficha;
+use App\Huesped;
+use Illuminate\Contracts\View\View;
 use Maatwebsite\Excel\Concerns\Exportable;
 use Maatwebsite\Excel\Concerns\FromCollection;
+use Maatwebsite\Excel\Concerns\FromView;
+use Maatwebsite\Excel\Concerns\ShouldAutoSize;
+use Maatwebsite\Excel\Concerns\WithHeadings;
+use Maatwebsite\Excel\Concerns\WithMapping;
 
-class FichaMedicaExport implements FromCollection
+class FichaMedicaExport implements  FromView,ShouldAutoSize ,WithMapping, WithHeadings
 {
     use Exportable;
     /**
     * @return \Illuminate\Support\Collection
     */
-    public function collection()
-    {
-        return Ficha::all();
-    }
+
     public function map($Ficha): array
     {
         return [
@@ -58,5 +61,10 @@ class FichaMedicaExport implements FromCollection
 
         ];
     }
+    public function view(): View
+    {
+        $Ficha= Ficha::all();
+        return View('exportar.ficha')->withmedica($Ficha);
 
+    }
 }

@@ -4,26 +4,25 @@ namespace App\Exports;
 
 use App\Huesped;
 use Illuminate\Contracts\Support\Responsable;
+use Illuminate\Contracts\View\View;
 use Maatwebsite\Excel\Concerns\Exportable;
 use Maatwebsite\Excel\Concerns\FromCollection;
+use Maatwebsite\Excel\Concerns\FromView;
 use Maatwebsite\Excel\Concerns\ShouldAutoSize;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\WithMapping;
 
 
-class HuespedExport implements FromCollection,ShouldAutoSize ,WithMapping, WithHeadings
+class HuespedExport implements FromView,ShouldAutoSize ,WithMapping, WithHeadings
 
 {
     //para descargar pdf
-    use Exportable;
 
+    use Exportable;
     /**
     * @return \Illuminate\Support\Collection
     */
-    public function collection()
-    {
-        return Huesped::all();
-    }
+
 
     public function map($Huesped): array
     {
@@ -83,5 +82,10 @@ class HuespedExport implements FromCollection,ShouldAutoSize ,WithMapping, WithH
 
         ];
     }
+    public function view(): View
+{
+    $Huesped= Huesped::all()->where("egreso", "=", "");
+    return View('exportar.huesped')->withhuespedes($Huesped);
 
+}
 }

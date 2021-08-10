@@ -3,22 +3,22 @@
 namespace App\Exports;
 
 use App\Estudiante;
+use App\Ficha;
+use Illuminate\Contracts\View\View;
 use Maatwebsite\Excel\Concerns\Exportable;
 use Maatwebsite\Excel\Concerns\FromCollection;
+use Maatwebsite\Excel\Concerns\FromView;
 use Maatwebsite\Excel\Concerns\ShouldAutoSize;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\WithMapping;
 
-class EscolaridadExport implements FromCollection,ShouldAutoSize ,WithMapping, WithHeadings
+class EscolaridadExport implements FromView,ShouldAutoSize ,WithMapping, WithHeadings
 {
     use Exportable;
     /**
     * @return \Illuminate\Support\Collection
     */
-    public function collection()
-    {
-        return Estudiante::all();
-    }
+
     public function map($Estudiante): array
     {
         return [
@@ -50,5 +50,11 @@ class EscolaridadExport implements FromCollection,ShouldAutoSize ,WithMapping, W
 
 
         ];
+    }
+    public function view(): View
+    {
+        $Estudiante= Estudiante::all();
+        return View('exportar.escolaridad')->withescolaridad($Estudiante);
+
     }
 }

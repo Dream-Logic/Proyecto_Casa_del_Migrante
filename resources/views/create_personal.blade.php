@@ -145,7 +145,7 @@
 
 
                     <div class="col-md-10 justify-content-center"><br>
-                        <img src="/imagenes/iconos_formulario/email.svg" style="margin-left: 25px" class="svg" width="25" height="35">
+                        <img src="/imagenes/iconos_formulario/email.svg" style="margin-left: 50px" class="svg" width="25" height="35">
                         <label for="email" style="color: #000000">Correo Electrónico </label>
 
                     <input  class="form-control" id="email" name="email"value="{{old('email')}}"
@@ -154,7 +154,7 @@
 
 
                     <div class="col-md-10 justify-content-center"><br>
-                        <img src="/imagenes/iconos_formulario/telefono.svg" style="margin-left: 25px" class="svg" width="25" height="35">
+                        <img src="/imagenes/iconos_formulario/telefono.svg" style="margin-left: 50px" class="svg" width="25" height="35">
                         <label for="telefono_personal" style="color: #000000">Telefono</label>
                         <input class="form-control" type="text"
                id="telefono_personal" name="telefono_personal" value="{{old('telefono_personal')}}" pattern="[0-9]+" maxlength="8" minlength="8"

@@ -139,9 +139,9 @@
                         <label for="pasaporte" style="color: black;">Pasaporte</label><br>
                         <input  type="text" class="form-control" maxlength="20" minlength="20"
 
-                               value="{{old('pasaporte')}}"
+                               value="{{old('pasaporte')}}" is=""
                                name="pasaporte"
-                               id="pasaporteMadre" placeholder="Número de pasaporte (Opcinal)"><br>
+                               id="pasaporteMadre" placeholder="Número de pasaporte (Opcional)"><br>
                     </div>
                     <br>
                     <div class="col-md-5 justify-content-center">
