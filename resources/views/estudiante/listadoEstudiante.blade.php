@@ -37,7 +37,7 @@
     box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);">
         <table class="table ruler-vertical table-hover mx-sm-0 table-bordered">
             <thead class="thead-dark">
-            <tr align="center">
+            <tr class="w3-hover-green" align="center">
                 <th scope="col">N°</th>
                 <th scope="col">Nombres</th>
                 <th scope="col">Apellidos</th>
@@ -46,7 +46,7 @@
                 <th scope="col">Nivel de Escritura</th>
                 <th scope="col">Nivel de Lectura</th>
 
-                <th scope="col">Acciones</th>
+                <th scope="col">Ver</th>
 
 
             </tr>

@@ -25,7 +25,7 @@
                 <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
             </button>
             <a href="{{url('/saludDi')}}" class="btn btn-warning">
-                <img src="/imagenes/iconos/recargar.svg" class="svg" width="25">
+                <img src="/imagenes/iconos/automatic_updates.png" class="svg" width="25">
             </a>
         </form>
    <br>
@@ -45,7 +45,7 @@
             <th class="bg-dark text-white"style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
     box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);"  scope="col">Tratamiento</th>
             <th class="bg-dark text-white"style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
-    box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);"  scope="col">Acciones</th>
+    box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);"  scope="col">Ver</th>
 
         </tr>
 

@@ -27,7 +27,7 @@
             <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
         </button>
         <a href="{{url('/fichaMedica/lista')}}" class="btn btn-warning">
-            <img src="/imagenes/iconos/restaurar.svg" class="svg" width="25">
+            <img src="/imagenes/iconos/automatic_updates.png" class="svg" width="25">
         </a>
     </form>
     <br>
@@ -36,7 +36,7 @@
     box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);">
         <table class="table ruler-vertical table-hover mx-sm-0 table-bordered " >
 
-            <thead class="thead-dark" >
+            <thead class="thead-dark" align="center" >
             <tr>
                 <th scope="col">N°</th>
                 <th scope="col">Hospital o Clínica</th>
@@ -45,7 +45,7 @@
                 <th scope="col">Apellidos del Paciente</th>
                 <th scope="col">Enfermedad</th>
                 <th scope="col">Tratamiento</th>
-                <th scope="col">Acciones</th>
+                <th scope="col">Ver</th>
 
             </tr>
             </thead>

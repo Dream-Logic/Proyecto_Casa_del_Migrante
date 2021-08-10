@@ -21,10 +21,11 @@
         <label class="card-title" style="color: black; height: 75px; margin-left: 40px; margin-top: 18px">
             Información de {{$huesped->nombres}} {{$huesped->apellidos}} </label>
 
-        <input  class="btn btn-warning mr-sm-2 "  width="25" type="button" value="Imprimir"  onclick="window.print()"
-               style="margin-left: 800px;" >
-
-
+        <button  class="mr-sm-2 btn btn-warning float-right "  title="Imprimir"
+                 style="margin-top: 4px"
+                 type="button"   onclick="window.print()" >
+            <img src="/imagenes/iconos/impre.png" class="svg" width="30px" title="Imprimir">
+        </button>
     </div>
     <center>
         <div class="col-2" ><br>
@@ -55,9 +56,6 @@
     box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);">
         <table  class="table ruler-vertical table-hover mx-sm-0 table-bordered ">
             <thead class="mx-4" style="background-color: #0d95e8">
-
-
-
             <tr class="mx-4" >
                 <th scope="col"><h6  style="  font-weight: bold;">Datos personales del huesped</h6></th>
                 <th scope="col"><h6  style="  font-weight: bold;">Detalles</h6></th>

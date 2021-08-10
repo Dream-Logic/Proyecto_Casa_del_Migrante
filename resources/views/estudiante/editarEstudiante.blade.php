@@ -10,7 +10,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
     <body>
-    <div class="card" class="table-responsive" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
+    <div class="table-responsive" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
     box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);">
         <div class="card-header" style="background-color: #4cd213">
             <label class="card-title" style="color: black;">Editar datos del Estudiante</label>
@@ -171,8 +171,8 @@
                         <br>
                         <br>
                     </div>
-                    <div class="botones">
-                    <button type="submit" class="btn btn-sm btn-success"><i class="fas fa-save"></i> Guardar</button>
+                    <div >
+                    <button style="margin-left: 545px" type="submit" class="btn btn-sm btn-success justify-content-center "><i class="fas fa-save"></i> Guardar</button>
 
                     </div>
                 </div>
@@ -182,6 +182,7 @@
             <script src="/js/jquery-3.2.1.min.js"></script>
             <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
         </div>
+    </div>
     </body>
 
 

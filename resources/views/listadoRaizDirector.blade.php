@@ -28,7 +28,7 @@
             <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
         </button>
         <a href="{{url('/proyectos/listado')}}" class="btn btn-warning">
-            <img src="/imagenes/iconos/recargar (1).svg" class="svg" width="25">
+            <img src="/imagenes/iconos/automatic_updates.png" class="svg" width="25">
         </a>
     </form>
     <br>
@@ -37,7 +37,7 @@
     box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);">
         <table class="table ruler-vertical table-hover mx-sm-0 table-bordered">
             <thead class="thead-dark">
-            <tr>
+            <tr class="w3-hover-green" align="center">
                 <th scope="col">N°</th>
                 <th scope="col">Nombres</th>
                 <th scope="col">Apellidos</th>
@@ -46,7 +46,7 @@
                 <th scope="col">Dirección</th>
                 <th scope="col">Fecha de Ingreso</th>
                 <th scope="col">Fecha de Egreso</th>
-                <th scope="col">Acciones</th>
+                <th scope="col">Ver</th>
             </tr>
             </thead>
             @forelse($listados as $huesped)
