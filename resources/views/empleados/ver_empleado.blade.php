@@ -1,9 +1,13 @@
 @extends ('PlantillaMadre.menu_inicio')
-@section('titulo', 'Datos del huésped')
+@section('titulo', 'Datos del empleado')
 @section('contenido')
-    <br>
-    <br>
-    <br>
+    <br><br><br>
+    <section class="container">
+        <head>
+            <!-- CSRF Token -->
+            <meta name="csrf-token" content="{{ csrf_token() }}">
+            <meta charset="utf-8">
+        </head>
 
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -14,21 +18,25 @@
             </ul>
         </div>
     @endif
-    <div style="background-color:  #0d95e8; height: 60px" >
-    <label class="card-title" style="color: black; height: 75px;  margin-left: 40px; margin-top: 18px">Información de {{$personal->nombres_personal}} {{$personal->apellidos_personal}} </label>
-    <input  class="btn btn-warning "  width="25" type="button" value="Imprimir" onclick="window.print()"
-            style="margin-left: 800px;" >
-   </div>
+        <br>
+    <form class="col-md-12" style="background-color:  #0d95e8; height: 60px; font-weight: bold; text-align: justify">
+    <label class="j" style="color: black; padding: 3px; margin-top: 12px;">Información de {{$personal->nombres_personal}} {{$personal->apellidos_personal}} </label>
+        <button  class="mr-sm-2 btn btn-warning float-right"  title="Imprimir"
+                 style="margin-top: 4px"
+                 type="button"   onclick="window.print()" >
+            <img src="/imagenes/iconos/imprimir.svg" class="svg" width="25px"  title="Imprimir">
+        </button>
+    </form>
     <center>
-        <div class="col-2" ><br>
-            <div class="row" >
+        <div class="col-md-12 justify justify-content-center"><br>
+            <div class="col-md-12 justify-content-center">
                 <div class="form-group {{ $errors->has('imagen') ? ' has-error' : '' }}"style="width: 90%">
-                    <img width="200px"  id="previewImagen" style="max-height:200px"
-                         src="{{"/foto/".$personal->imagen}}"
-                    />
+                    <img width="200px"  id="previewImagen" style="max-height:250px; margin-left: 35px"
+                         src="{{"/foto/".$personal->imagen}}"/>
 
-                    <label id="labelImagen" for="imagen" class="btn btn-large" ><span style="font-size: 60px">
-                                                    </span></label>
+                    <label id="labelImagen" for="imagen" class="btn btn-large" >
+                        <span style="font-size: 60px">
+                        </span></label>
                     <input type="file" accept="image/*"
                            onchange="loadFile(event)"
                            @if($errors->has("imagen"))
@@ -114,6 +122,6 @@
     </div>
     <div class="footer-copyright text-center py-3" style="color: #0d95e8">
         Proyecto Casa del Migrante
-
     </div>
+    </section>
 @endsection
