@@ -313,7 +313,7 @@
                             <label for="direccionProcede" style="color: #000000">Dirección</label>
                             <span class="text-center col-md-10 justify-content-center">
                             <textarea class="form-control " id="direccion" name="direccion" maxlength="100"
-                                      placeholder="Describa la dirección excata de dónde procede."
+                                      placeholder="Describa la dirección exacta de dónde procede."
                                       rows="2">{{old('direccion')}}</textarea><br></span>
                         </div>
                         <br>

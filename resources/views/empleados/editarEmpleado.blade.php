@@ -1,5 +1,5 @@
 @extends ('PlantillaMadre.menu_inicio')
-@section('titulo', 'Editar datos del personal')
+@section('titulo', 'Editar datos del Personal')
 @section('contenido')
 
     <br><br><br>

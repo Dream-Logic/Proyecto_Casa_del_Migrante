@@ -84,7 +84,7 @@
                     <div class="col-md-5 justify-content-center"><br>
                         <img src="/imagenes/iconos_formulario/usuario.svg" style="margin-left: 50px" class="svg" width="25" height="35">
                         <label for="nombre">Nombres</label><br>
-                        <input type="text" class="form-control" name="nombres"
+                        <input type="text" class="form-control" name="nombres" maxlength="50"
                                id="nombres" placeholder="Nombres" value="{{$huesped->nombres}}"><br>
                     </div>
                     <br>
@@ -92,39 +92,49 @@
                     <div class="col-md-5 justify-content-center"><br>
                         <img src="/imagenes/iconos_formulario/usuario.svg" style="margin-left: 50px" class="svg" width="25" height="35">
                         <label for="apellido">Apellidos</label><br>
-                        <input type="text" class="form-control" name="apellidos"
+                        <input type="text" class="form-control" name="apellidos" maxlength="50"
                                id="apellidos" placeholder="Apellidos" value="{{$huesped->apellidos}}"><br>
                     </div>
                     <br>
 
+                    <?php $fnacimiento = date("d-m-Y");?>
                     <div class="col-md-5 justify-content-center"><br>
                         <img src="/imagenes/iconos_formulario/calendario.svg" style="margin-left: 50px" class="svg" width="25" height="35">
                         <label for="FechaNac">Fecha de Nacimiento</label><br>
                         <input type="date" class="form-control" name="fnacimiento"
-                               id="fnacimiento" value="{{$huesped->fnacimiento}}"><br>
+                               id="fnacimiento" value="{{$huesped->fnacimiento}}"
+                               min="<?php echo date('Y-m-d', strtotime($fnacimiento . "- 21 year"));?>"
+                               max="<?php echo date('Y-m-d', strtotime($fnacimiento . " 0 year"));?>"><br>
                     </div>
                     <br>
 
                     <div class="col-md-5 justify-content-center"><br>
                         <img src="/imagenes/iconos_formulario/grupo-de-edad.svg" style="margin-left: 50px" class="svg" width="25" height="35">
                         <label for="edad">Edad</label><br>
-                        <input type="number" class="form-control" name="edad"
+                        <input type="number" class="form-control" name="edad" min="0" pattern="^[0-9]+"
                                id="edad" placeholder="Edad" value="{{$huesped->edad}}"><br>
                     </div>
                     <br>
 
+                    <?php $ingreso = date("d-m-Y");?>
                     <div class="col-md-5 justify-content-center"><br>
                         <img src="/imagenes/iconos_formulario/calendario.svg" style="margin-left: 50px" class="svg" width="25" height="35">
                         <label style="color: #000000" for="ingreso">Fecha de Ingreso</label><br>
                         <input type="date" class="form-control" name="ingreso"
-                               id="ingreso" value="{{$huesped->ingreso}}"><br>
+                               id="ingreso" value="{{$huesped->ingreso}}"
+                               min="<?php echo date('Y-m-d', strtotime($ingreso . "- 21 year"));?>"
+                               max="<?php echo date('Y-m-d', strtotime($ingreso . " 0 year"));?>"><br>
                     </div>
                     <br>
+
+                    <?php $egreso = date("d-m-Y");?>
                     <div class="col-md-5 justify-content-center"><br>
                         <img src="/imagenes/iconos_formulario/calendario.svg" style="margin-left: 50px" class="svg" width="25" height="35">
                         <label style="color: #000000" for="egreso">Fecha de Egreso</label><br>
                         <input type="date" class="form-control" name="egreso"
-                               id="egreso" value="{{$huesped->egreso}}"><br>
+                               id="egreso" value="{{$huesped->egreso}}"
+                               min="<?php echo date('Y-m-d', strtotime($egreso . "- 21 year"));?>"
+                               max="<?php echo date('Y-m-d', strtotime($egreso . " 0 year"));?>"><br>
                     </div>
                     <br>
                     <div class="col-md-5 justify-content-center"><br>
@@ -212,7 +222,8 @@
                         <img src="/imagenes/iconos_formulario/tarjeta-de-identificacion.svg" style="margin-left: 50px" class="svg" width="25"
                              height="35">
                         <label for="identidad">Identidad </label><br>
-                        <input type="text" class="form-control" name="identidad" value="{{$huesped->identidad}}"
+                        <input type="text" class="form-control" name="identidad" pattern="[0-9]+"
+                               maxlength="13" minlength="13" value="{{$huesped->identidad}}"
                                id="identidad" placeholder="0000-0000-00000"><br>
                     </div>
                     <br>
@@ -220,15 +231,15 @@
                     <div class="col-md-5 justify-content-center"><br>
                         <img style="margin-left: 50px" src="/imagenes/iconos_formulario/nacionalidad.svg" class="svg" width="25" height="35">
                         <label for="nacionalidad">Nacionalidad</label><br>
-                        <input type="text" class="form-control" name="nacionalidad" value="{{$huesped->nacionalidad}}"
-                               id="nacionalidad" placeholder="Nacionalidad">
+                        <input type="text" class="form-control" name="nacionalidad" maxlength="20"
+                               value="{{$huesped->nacionalidad}}" id="nacionalidad" placeholder="Nacionalidad">
                     </div><br>
 
                     <div class="col-md-5 justify-content-center"><br>
                         <img style="margin-left: 50px" src="/imagenes/iconos_formulario/pasaporte.svg" class="svg" width="25" height="35">
                         <label for="pasaporte">Pasaporte</label><br>
-                        <input  type="text" class="form-control" name="pasaporte" value="{{$huesped->pasaporte}}"
-                               id="pasaporte" placeholder="Numero de pasaporte">
+                        <input  type="text" class="form-control" name="pasaporte" maxlength="20" minlength="20"
+                                value="{{$huesped->pasaporte}}" id="pasaporte" placeholder="Numero de pasaporte">
                     </div>
                     <br>
 
@@ -241,22 +252,23 @@
                     </div>
 
                     <br>
-                    <div class="col-md-5 justify-content-center"><br>
+                    <div class="col-md-10 justify-content-center"><br>
                         <img src="/imagenes/iconos_formulario/ubicacion.svg" style="margin-left: 50px" class="svg" width="25" height="35">
                         <label for="direccionProcede">Dirección</label>
-                        <span class="col-md-5 col-md-offset-10 text-center">
-        <textarea class="form-control" id="direccion" name="direccion"
-                  placeholder="Dirección de dónde procede" cols="136"  rows="2">{{$huesped->direccion}}</textarea><br>
-                </span></div>
+                        <span class="col-md-5 col-md-offset-10 text-center justify-content-center">
+                        <textarea class="form-control" id="direccion" name="direccion" maxlength="100"
+                                  placeholder="Dirección exacta de dónde procede" rows="2">{{$huesped->direccion}}</textarea><br>
+                        </span></div>
                     <br>
 
                     <div class="col-md-5 justify-content-center"><br>
                         <img src="/imagenes/iconos_formulario/material-escolar.svg" style="margin-left: 50px" class="svg" width="25" height="35">
                         <label for="signos" style="color: #000000">Grado Escolar</label>
                         <span class="col-md-5 col-md-offset-10 text-center">
-        <textarea class="form-control" id="gradoEscolar" name="gradoEscolar"
-                  placeholder="Describa el grado escolar del niño, niña o adolescente" cols="136"
-                  rows="2">{{$huesped->gradoEscolar}}</textarea><br>
+                        <textarea class="form-control" id="gradoEscolar" name="gradoEscolar" maxlength="500"
+                                  placeholder="Describa el grado escolar del niño, niña o adolescente"
+                                  rows="2">{{$huesped->gradoEscolar}}
+                        </textarea><br>
                     </span></div>
                     <br>
 
@@ -265,9 +277,10 @@
                         <img src="/imagenes/iconos_formulario/fisico.svg" style="margin-left: 50px" class="svg" width="25" height="35">
                         <label for="signos">Signos Fisicos</label>
                         <span class="col-md-5 col-md-offset-10 text-center">
-        <textarea class="form-control" id="signosFisicos" name="signosFisicos"
-                  placeholder="Lunares, cicatrices y otros. Describir" cols="136"
-                  rows="2">{{$huesped->signosFisicos}}</textarea><br>
+                        <textarea class="form-control" id="signosFisicos" name="signosFisicos" maxlength="500"
+                                  placeholder="Lunares, cicatrices y otros. Describir"
+                                  rows="2">{{$huesped->signosFisicos}}
+                        </textarea><br>
                 </span></div>
                     <br>
 
@@ -276,8 +289,9 @@
                         <img src="/imagenes/iconos_formulario/fiebre.svg" style="margin-left: 50px" class="svg" width="25" height="35">
                         <label for="enfermedad">Enfermedad o padecimiento </label>
                         <span class="col-md-5 col-md-offset-10 text-center">
-        <textarea class="form-control" id="enfermedad" name="enfermedad"  cols="136"
-                  placeholder="Describa la enfermedad o padecimiento" rows="2">{{$huesped->enfermedad}}</textarea><br>
+                        <textarea class="form-control" id="enfermedad" name="enfermedad"  maxlength="500"
+                                    placeholder="Describa la enfermedad o padecimiento" rows="2">{{$huesped->enfermedad}}
+                        </textarea><br>
                 </span></div>
                     <br>
 
@@ -286,8 +300,9 @@
                         <img src="/imagenes/iconos_formulario/medicamento.svg" style="margin-left: 50px" class="svg" width="25" height="35">
                         <label for="tratamiento">Tratamiento</label>
                         <span class="col-md-5 col-md-offset-10 text-center">
-        <textarea class="form-control" id="tratamiento" name="tratamiento"
-                  placeholder="Describa el tratamiento que necesita" rows="2"  cols="136">{{$huesped->tratamiento}}</textarea><br>
+                        <textarea class="form-control" id="tratamiento" name="tratamiento" maxlength="500"
+                                placeholder="Describa el tratamiento que necesita" rows="2"  cols="136">{{$huesped->tratamiento}}
+                        </textarea><br>
                 </span></div>
                     <br>
                 </div>
