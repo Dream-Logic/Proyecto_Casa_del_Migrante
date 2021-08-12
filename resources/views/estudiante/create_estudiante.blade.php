@@ -4,6 +4,7 @@
     <br>
     <br>
     <br>
+    <section class="container">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0,
@@ -72,10 +73,9 @@
                                id="grado" placeholder="Grado">
                     </div>
                     <br>
-
                     <div class="col-md-5 justify-content-center"><br>
-                        <img src="/imagenes/iconos_formulario/Ca1.svg" class="svg" style="margin-left: 50px"  class="svg" width="25" height="35"    >
-                        <label for="carrera" style="color: #000000">Carrera</label><br>
+                        <img src="/imagenes/iconos_formulario/Ca1.svg" class="svg" style="margin-left: 50px"  class="svg" width="25" height="35" >
+                        <label for="carrera" style="color: #000000">Carrera</label><br><br>
                         <input type="text" class="form-control" name="carrera" maxlength="100"
                                id="carrera" placeholder="Carrera">
                     </div>
@@ -132,8 +132,9 @@
                     </div>
                     <br>
                 </div>
-                <div style="margin: 50px" class="justify-content-center">
-                    <button style="margin-left: 100px" type="submit" class="btn btn-sm btn-success r" ><i class="fas fa-save"></i> Guardar</button>
+                <br>
+                <div class="trans text-center">
+                    <button type="submit" class="btn btn-sm btn-success " ><i class="fas fa-save"></i> Guardar</button>
                 </div>
                 <br>
             </div>
@@ -146,4 +147,5 @@
     </body>
     <br>
     <br>
+    </section>
 @endsection

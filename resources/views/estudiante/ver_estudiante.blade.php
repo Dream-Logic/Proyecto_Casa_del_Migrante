@@ -4,6 +4,8 @@
     <br>
     <br>
     <br>
+    <section class="container">
+
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -18,8 +20,8 @@
     <label class="card-title" style="color: black; height: 75px;  margin-left: 40px; margin-top: 18px">
         Informacion de {{$estudiante->nombres_alumno}} {{$estudiante->apellidos_alumno}} </label>
         <button  class="mr-sm-2 btn btn-warning float-right "  title="Imprimir"
-                   style="margin-top: 4px"
-                   type="button"   onclick="window.print()" >
+                 style="margin-top: 4px"
+                 type="button"   onclick="window.print()" >
             <img src="/imagenes/iconos/impre.png" class="svg" width="30px" title="Imprimir">
         </button>
     </div>
@@ -85,4 +87,5 @@
         Proyecto Casa del Migrante
 
     </div>
+    </section>
 @endsection

@@ -103,8 +103,7 @@
                                    id="nombres" placeholder="Nombres"><br>
                         </div>
                         <br>
-
-                        megavatio>
+                        <div class="col-md-5 justify-content-center"><br>
                             <img src="/imagenes/iconos_formulario/usuario.svg" style="margin-left: 50px" class="svg"
                                  width="25" height="35">
                             <label for="apellido" style="color: #000000">Apellidos</label><br>

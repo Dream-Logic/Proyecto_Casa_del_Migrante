@@ -5,6 +5,7 @@
     <br>
     <br>
     <br>
+    <section class="container">
     <head>
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -35,7 +36,6 @@
                 {{session("exito")}}
             </div>
         @endif
-        <div class="card-body">
             <form method="post" action="{{route('estudiante.update',["id"=>$estudiante->id])}}">
                 @method('PUT')
                 @csrf
@@ -167,9 +167,10 @@
 
                         </select>
                         <br>
-                        <br>
+
                     </div>
-                    <div >
+                    <div>
+                        <div class="trans text-center">
                     <button style="margin-left: 100px" type="submit" class="btn btn-sm btn-success justify-content-center "><i class="fas fa-save"></i> Guardar</button>
 
                     </div>
@@ -183,5 +184,7 @@
     </div>
     </body>
 
-
+    </section>
+    <br>
+    <br>
 @endsection
