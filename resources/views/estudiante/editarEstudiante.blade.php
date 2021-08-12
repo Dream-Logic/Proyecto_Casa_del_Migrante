@@ -51,7 +51,8 @@
 
                 <div class="form-row justify-content-center">
                     <div class="col-md-5 justify-content-center"><br>
-                        <img src="/imagenes/iconos_formulario/usuario.svg" class="svg" width="25" height="35" >
+                        <img src="/imagenes/iconos_formulario/usuario.svg" style="margin-left: 50px" class="svg"
+                             width="25" height="35" >
                         <label for="nombres_alumno" style="color: #000000">Nombres</label><br>
                         <input type="text" class="form-control"  name="nombres_alumno"
                                id="nombres_alumno" placeholder="Nombres"  value="{{$estudiante->nombres_alumno}}">
@@ -59,28 +60,32 @@
                     <br>
 
                     <div class="col-md-5 justify-content-center"><br>
-                        <img src="/imagenes/iconos_formulario/usuario.svg" class="svg" width="25" height="35"  >
+                        <img src="/imagenes/iconos_formulario/usuario.svg"   style="margin-left: 50px" class="svg"
+                             width="25" height="35">
                         <label for="apellidos_alumno" style="color: #000000">Apellidos</label><br>
                         <input type="text" class="form-control"   name="apellidos_alumno"
                                id="apellidos_alumno" placeholder="Apellidos"  value="{{$estudiante->apellidos_alumno}}">
                     </div>
                       <br>
                     <div class="col-md-5 justify-content-center"><br>
-                        <img src="/imagenes/iconos_formulario/Grado.svg" class="svg" width="25" height="35"  >
+                        <img src="/imagenes/iconos_formulario/Grado.svg"  style="margin-left: 50px" class="svg"
+                             width="25" height="35">
                         <label for="grado" style="color: #000000">Grado</label><br>
                         <input type="text" class="form-control"   name="grado"
                                id="grado" placeholder="Grado"  value="{{$estudiante->grado}}">
                     </div>
                     <br>
                     <div class="col-md-5 justify-content-center"><br>
-                        <img src="/imagenes/iconos_formulario/Ca1.svg" class="svg" width="25" height="35"  >
+                        <img src="/imagenes/iconos_formulario/Ca1.svg"  style="margin-left: 50px" class="svg"
+                             width="25" height="35" >
                         <label for="carrera" style="color: #000000">Carrera</label><br>
                         <input type="text" class="form-control"  name="carrera"
-                               id="carrera" placeholder="Carrera"  value="{{$estudiante->carrera}}"><br>
+                               id="carrera" placeholder="Carrera"  value="{{$estudiante->carrera}}">
                     </div>
                    <br>
                     <div class="col-md-5 justify-content-center"><br>
-                        <img src="/imagenes/iconos_formulario/Escritura.svg" class="svg" width="50" height="35"  >
+                        <img src="/imagenes/iconos_formulario/Escritura.svg" style="margin-left: 50px" class="svg"
+                             width="25" height="35"  >
                         <label for="escritura" style="color: #000000">Nivel de escritura</label><br>
                         <select class="form-control"  name="escritura" >
                             <option  value="ninguno" @if($estudiante->escritura === "ninguno") selected='selected' @endif>
@@ -100,7 +105,8 @@
                    <br>
 
                     <div class="col-md-5 justify-content-center"><br>
-                        <img src="/imagenes/iconos_formulario/Reed.svg" class="svg" width="50" height="35"  >
+                        <img src="/imagenes/iconos_formulario/Reed.svg"  style="margin-left: 50px" class="svg"
+                             width="25" height="35" >
                         <label for="lectura" style="color: #000000">Nivel de Lectura</label><br>
                         <select class="form-control" name="lectura">
                             <option  value="ninguno" @if($estudiante->escritura === "ninguno") selected='selected' @endif>
@@ -120,7 +126,8 @@
 
                    <br>
                     <div class="col-md-5 justify-content-center"><br>
-                        <img src="/imagenes/iconos_formulario/Arte.svg" class="svg" width="50" height="35"  >
+                        <img src="/imagenes/iconos_formulario/Arte.svg"  style="margin-left: 50px" class="svg"
+                             width="25" height="35" >
                         <label for="habilidades" style="color: #000000">Habilidades Artisticas</label><br>
                         <select class="form-control"  name="habilidades">
                             <option  value="arte" @if($estudiante->habilidades === "arte") selected='selected' @endif>
@@ -140,7 +147,8 @@
 <br>
 
                     <div class="col-md-5 justify-content-center"><br>
-                        <img src="/imagenes/iconos_formulario/Musica.svg" class="svg" width="50" height="35"  >
+                        <img src="/imagenes/iconos_formulario/Musica.svg"  style="margin-left: 50px" class="svg"
+                             width="25" height="35" >
                         <label for="instrumento" style="color: #000000">Ejecuta algun instrumento</label><br>
                         <select class="form-control"   name="instrumento">
                             <option  value="ninguno" @if($estudiante->instrumento === "ninguno") selected='selected' @endif>
@@ -171,17 +179,17 @@
                     </div>
                     <div>
                         <div class="trans text-center">
-                    <button style="margin-left: 100px" type="submit" class="btn btn-sm btn-success justify-content-center "><i class="fas fa-save"></i> Guardar</button>
-
+                    <button style="margin-left: 65px"  type="submit" class="btn btn-sm btn-success justify-content-center "><i class="fas fa-save"></i> Guardar</button>
                     </div>
+                        <br>
+                        <br>
                 </div>
-
+                </div>
             </form>
 
+              </div>
             <script src="/js/jquery-3.2.1.min.js"></script>
             <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-        </div>
-    </div>
     </body>
 
     </section>

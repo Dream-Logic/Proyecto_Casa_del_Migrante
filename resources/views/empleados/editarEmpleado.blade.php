@@ -76,12 +76,8 @@
                                 }
                             </script>
                         </div>
-
                     </div>
-
                 </center>
-
-
 
                 <div class="form-row justify-content-center">
 
