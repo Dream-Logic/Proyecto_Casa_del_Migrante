@@ -104,7 +104,7 @@
                         </div>
                         <br>
 
-                        <div class="col-md-5 justify-content-center"><br>
+                        megavatio>
                             <img src="/imagenes/iconos_formulario/usuario.svg" style="margin-left: 50px" class="svg"
                                  width="25" height="35">
                             <label for="apellido" style="color: #000000">Apellidos</label><br>

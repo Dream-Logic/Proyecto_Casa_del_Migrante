@@ -67,7 +67,7 @@
 
                     <div class="col-md-5 justify-content-center"><br>
                         <img src="/imagenes/iconos_formulario/Grado.svg" class="svg"style="margin-left: 50px"  class="svg" width="25" height="35"    >
-                        <label for="grado" style="color: #000000">Grado</label><br>
+                        <label for="grado" style="color: #000000">Grado</label><br><br>
                         <input type="text" class="form-control"  name="grado" maxlength="10"
                                id="grado" placeholder="Grado">
                     </div>
@@ -79,7 +79,7 @@
                         <input type="text" class="form-control" name="carrera" maxlength="100"
                                id="carrera" placeholder="Carrera">
                     </div>
-<br>
+                     <br>
                     <div class="col-md-5 justify-content-center"><br>
                         <img src="/imagenes/iconos_formulario/Escritura.svg" class="svg" style="margin-left: 50px"  class="svg" width="25" height="35"    >
                         <label for="escritura" style="color: #000000">Nivel de escritura</label><br>
@@ -90,7 +90,7 @@
                             <option value="alto">Alto</option>
                         </select><br>
                     </div>
-<br>
+                   <br>
                     <div class="col-md-5 justify-content-center"><br>
                         <img src="/imagenes/iconos_formulario/Reed.svg" class="svg" style="margin-left: 50px"  class="svg" width="25" height="35">
                         <label for="lectura" style="color: #000000">Nivel de Lectura</label><br>
@@ -101,7 +101,7 @@
                             <option value="alto">Alto</option>
                         </select><br>
                     </div>
-<br>
+                    <br>
                     <div class="col-md-5 justify-content-center"><br>
                         <img src="/imagenes/iconos_formulario/Arte.svg" class="svg" style="margin-left: 50px"  class="svg" width="25" height="35"    >
                         <label for="habilidades" style="color: #000000">Habilidades Artisticas</label><br>
@@ -115,7 +115,7 @@
                         </select><br>
                     </div>
 
-<br>
+                    <br>
                     <div class="col-md-5 justify-content-center"><br>
                         <img src="/imagenes/iconos_formulario/Musica.svg" class="svg" style="margin-left: 50px"  class="svg" width="25" height="35"    >
                         <label for="instrumento" style="color: #000000">Ejecuta algun instrumento</label><br>
@@ -133,7 +133,7 @@
                     <br>
                 </div>
                 <div style="margin: 50px" class="justify-content-center">
-                    <button style="margin-left: 545px" type="submit" class="btn btn-sm btn-success r" ><i class="fas fa-save"></i> Guardar</button>
+                    <button style="margin-left: 100px" type="submit" class="btn btn-sm btn-success r" ><i class="fas fa-save"></i> Guardar</button>
                 </div>
                 <br>
             </div>
