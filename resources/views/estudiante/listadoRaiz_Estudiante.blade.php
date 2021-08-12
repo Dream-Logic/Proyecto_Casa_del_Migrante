@@ -50,7 +50,7 @@
                 <th scope="col">Carrera</th>
                 <th scope="col">Ver</th>
                 <th scope="col">Editar</th>
-                <th scope="col">Elimninar</th>
+                <th scope="col">Eliminar</th>
             </tr>
             </thead>
             <tbody>

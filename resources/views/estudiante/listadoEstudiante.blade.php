@@ -45,7 +45,6 @@
                 <th scope="col">Carrera</th>
                 <th scope="col">Nivel de Escritura</th>
                 <th scope="col">Nivel de Lectura</th>
-
                 <th scope="col">Ver</th>
 
 

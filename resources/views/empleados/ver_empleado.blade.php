@@ -24,7 +24,7 @@
         <button  class="mr-sm-2 btn btn-warning float-right"  title="Imprimir"
                  style="margin-top: 4px"
                  type="button"   onclick="window.print()" >
-            <img src="/imagenes/iconos/imprimir.svg" class="svg" width="25px"  title="Imprimir">
+            <img src="/imagenes/iconos/impre.png" class="svg" width="25px"  title="Imprimir">
         </button>
     </form>
     <center>
