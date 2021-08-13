@@ -178,6 +178,7 @@
 
                     </div>
                     <div>
+                        <br>
                         <div class="trans text-center">
                     <button style="margin-left: 65px"  type="submit" class="btn btn-sm btn-success justify-content-center "><i class="fas fa-save"></i> Guardar</button>
                     </div>
