@@ -14,16 +14,20 @@
             </ul>
         </div>
     @endif
-    <div style="background-color:  #0d95e8; height: 60px" >
-        <label class="card-title" style="color: black; height: 75px;  margin-left: 40px; margin-top: 18px"> Información de {{$ficha->nombres_paciente}} {{$ficha->apellidos_paciente}} </label>
-        <button  class="mr-sm-2 btn btn-warning float-right "  title="Imprimir"
-                 style="margin-top: 4px"
-                 type="button"   onclick="window.print()" >
-            <img src="/imagenes/iconos/impre.png" class="svg" width="30px" title="Imprimir">
-        </button>
-    </div>
-    <br>
-    <br>
+        <br>
+        <form class="form-inline  my-lg-0 ml-auto"  style="background-color:
+         #0d95e8;" >
+            <label class="card-title" style="color: black; height: 75px;  margin-left: 40px; margin-top: 18px">
+                Información de {{$ficha->nombres_paciente}} {{$ficha->apellidos_paciente}} </label>
+            <div class="card-body d-flex justify-content-lg-end align-items-lg-end" >
+                <a class="btn btn-warning "
+                   onclick="window.print()" >
+                    <img src="/imagenes/iconos/impre.png" class="svg" width="25px" title="Imprimir">
+                </a>
+            </div>
+        </form>
+        <br>
+        <br>
 
     <div class="ver">
         <div class="table-responsive" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);

@@ -19,14 +19,17 @@
         </div>
     @endif
         <br>
-    <form class="col-md-12" style="background-color:  #0d95e8; height: 60px; font-weight: bold; text-align: justify">
-    <label class="j" style="color: black; padding: 3px; margin-top: 12px;">Información de {{$personal->nombres_personal}} {{$personal->apellidos_personal}} </label>
-        <button  class="mr-sm-2 btn btn-warning float-right"  title="Imprimir"
-                 style="margin-top: 4px"
-                 type="button"   onclick="window.print()" >
-            <img src="/imagenes/iconos/impre.png" class="svg" width="25px"  title="Imprimir">
-        </button>
-    </form>
+        <form class="form-inline  my-lg-0 ml-auto"  style="background-color:
+         #0d95e8;" >
+            <label class="j" style="color: black; padding: 3px; margin-top: 12px;">
+                Información de {{$personal->nombres_personal}} {{$personal->apellidos_personal}} </label>
+            <div class="card-body d-flex justify-content-lg-end align-items-lg-end" >
+                <a class="btn btn-warning "
+                   onclick="window.print()" >
+                    <img src="/imagenes/iconos/impre.png" class="svg" width="25px" title="Imprimir">
+                </a>
+            </div>
+        </form>
     <center>
         <div class="col-md-12 justify justify-content-center"><br>
             <div class="col-md-12 justify-content-center">
