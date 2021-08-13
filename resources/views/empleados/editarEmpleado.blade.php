@@ -15,7 +15,7 @@
         <body class="table-responsive">
         <div class="" style="-moz-box-shadow: 0px 5px 3px 3px rgb(194,194,194);
                     box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);">
-            <div class="" style="background-color: #4cd213; color:black" >
+            <div class="card-header" style="background-color: #4cd213; color:black" >
             <label class="card-title">Editar Datos del Personal</label>
         </div>
         @if ($errors->any())
@@ -198,7 +198,7 @@
 
     <script src="/js/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-
+        </body>
     </section>
 
 @endsection
