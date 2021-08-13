@@ -1,15 +1,15 @@
 @extends ('PlantillaMadre.Plantilla_menu_director')
 @section('titulo', 'Listado de Expedientes Médicos')
 @section('contenido')
-
+    <br>
+    <br>
+    <br>
     @if(session('mensaje'))
         <div class="alert alert-success">
             {{session('mensaje')}}
         </div>
     @endif
-    <br>
-    <br>
-    <br>
+
     <head>
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -21,10 +21,10 @@
     <br>
 
     <form class="form-inline my-2 my-lg-0 ml-auto" >
-        <input class="form-control mr-sm-2 col-3" name="name"
+        <input class="form-control mr-sm-2 col-4" name="name"
                type="search" placeholder="Buscar" aria-label="Search">
         <button class=" mr-sm-2 btn btn-success" type="submit">
-            <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
+            <img src="/imagenes/iconos/busque.png" class="svg" width="25">
         </button>
         <a href="{{url('/fichaMedica/lista')}}" class="btn btn-warning">
             <img src="/imagenes/iconos/automatic_updates.png" class="svg" width="25">
@@ -51,7 +51,7 @@
             </thead>
             <tbody>
             @forelse($pacientes as $ficha)
-                <tr>
+                <tr align="center">
                     <th scope="row">{{ $ficha->id }}</th>
                     <td>{{ $ficha->nombre_hospital}} </td>
                     <td> {{ $ficha->medico }}</td>

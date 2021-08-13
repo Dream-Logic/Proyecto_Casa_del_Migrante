@@ -15,23 +15,28 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta charset="utf-8">
     </head>
-    <tbody class="embed-responsive">
-    <div class="w3-container w3-teal mx-4" style="font-family: 'Raleway', sans-serif;">
-        <h6 class="mt-3" style="font-size: 30px; color: black; text-align: center"><b>Listado de Huéspedes</b></h6>
+
+    <div class="w3-container w3-teal mx-4" style="font-family: 'Raleway', sans-serif; text-align: center">
+        <br>
+        <h6 class="mt-3" style="font-size: 30px; color: black;"><b>Listado de Huéspedes</b></h6>
     </div>
     <br>
     <br>
-    <form class="form-inline my-2 my-lg-0 ml-auto" >
+    <form class="form-inline  my-lg-0 ml-auto"  >
         <input class="form-control mr-sm-2 col-4" name="name" style="margin-right: 20px"
                type="search" placeholder="Buscar" aria-label="Search">
-        <button class=" mr-sm-2 btn btn-success" type="submit">
-            <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
+        <div class="btn-toolbar" title="Buscar">
+        <button class=" mr-sm-2 btn btn-success" type="submit" title="Buscar" >
+            <img src="/imagenes/iconos/busque.png" class="svg" width="20" title="Buscar">
         </button>
-        <a href="{{url('/proyectos/listado')}}" class="btn btn-warning">
-            <img src="/imagenes/iconos/automatic_updates.png" class="svg" width="25">
+        </div>
+        <div class="btn-toolbar" title="Recargar el listado de huéspedes" >
+        <a href="{{url('/huesped/listadoDirector')}}" class="btn btn-warning">
+            <img src="/imagenes/iconos/automatic_updates.png" class="svg" width="20" title="Recargar el listado de huéspedes ">
         </a>
+        </div>
     </form>
-    <br>
+    <br><br>
     <!--FIN BUSCADOR-->
     <div class="table-responsive" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
     box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);">
@@ -45,12 +50,11 @@
                 <th scope="col">Fecha de Nacimiento</th>
                 <th scope="col">Dirección</th>
                 <th scope="col">Fecha de Ingreso</th>
-                <th scope="col">Fecha de Egreso</th>
                 <th scope="col">Ver</th>
             </tr>
             </thead>
             @forelse($listados as $huesped)
-                <tr >
+                <tr align="center" >
                     <th scope="row">{{ $huesped->id }}</th>
                     <td>{{ $huesped->nombres}} </td>
                     <td> {{ $huesped->apellidos }}</td>
@@ -58,7 +62,6 @@
                     <td>{{ $huesped->fnacimiento }}</td>
                     <td>{{ $huesped->direccion}}</td>
                     <td>{{ $huesped->ingreso}}</td>
-                    <td>{{ $huesped->egreso}}</td>
                     <td align="center"><a class="btn btn-info" href="{{route('huesped.mostrar',['id' =>$huesped->id])}}">
                             <img src="/imagenes/iconos/ver.svg" width="25">
                         </a>
@@ -66,7 +69,7 @@
                 </tr>
             @empty
                 <tr>
-                    <td colspan="4">No hay Registros</td>
+                    <td colspan="6">No hay Registros</td>
                 </tr>
             @endforelse
             </tbody>

@@ -10,44 +10,43 @@
     <br>
     <br>
     <br>
-    <br>
     <head>
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
+        <meta charset="utf-8">
     </head>
 
     <div class="w3-container w3-teal mx-4" style="font-family: 'Raleway', sans-serif; text-align: center">
+        <br>
         <h6 class="mt-3" style="font-size: 30px; color: black;"><b>Listado de Egresados</b></h6>
     </div>
     <br>
+    <br>
         <form class="form-inline my-2 my-lg-0 ml-auto ">
 
-            <input class="form-control mr-sm-1 col-3" name="name" type="search" aria-label="Search" placeholder="Buscar">
-            <button class=" mr-sm-1 btn btn-success" type="submit">
-                <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
+            <input class="form-control mr-sm-1 col-4" name="name" type="search" aria-label="Search" placeholder="Buscar">
+          <div class="btn-toolbar" title="Buscar">
+            <button class=" mr-sm-1 btn btn-success" type="submit" title="Buscar">
+                <img src="/imagenes/iconos/busque.png" class="svg" width="25" title="Buscar">
             </button>
-            <a href="{{url('/egresos')}}" class="btn btn-warning">
-                <img src="/imagenes/iconos/restaurar.svg" class="svg" width="25">
+          </div>
+            <div class="btn-toolbar" >
+            <a href="{{url('/egresos')}}" class="btn btn-warning" title="Recargar el listado de egresados">
+                <img src="/imagenes/iconos/automatic_updates.png" class="svg" width="25" title="Recargar el listado de egresados">
             </a>
+            </div>
         </form>
    <br>
     <div class="table-responsive" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
     box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);">
-    <table class="table ruler-vertical table-hover mx-sm-0 table-bordered "  >
-        <thead>
-        <tr class="w3-hover-green" align="center">
-            <th class="bg-dark text-white" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
-    box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);" scope="col">Id</th>
-            <th class="bg-dark text-white"style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
-    box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);" scope="col">Nombres</th>
-            <th class="bg-dark text-white" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
-    box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);"  scope="col">Apellidos</th>
-            <th class="bg-dark text-white"style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
-    box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);"  scope="col">Fecha de Ingreso</th>
-            <th class="bg-dark text-white"style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
-    box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);"  scope="col">Fecha de Egreso</th>
-            <th class="bg-dark text-white"style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
-    box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);"  scope="col">Ver</th>
+        <table class="table ruler-vertical table-hover mx-sm-0 table-bordered" >
+            <thead class="thead-dark" align="center" >
+            <th  scope="col">Id</th>
+            <th scope="col">Nombres</th>
+            <th   scope="col">Apellidos</th>
+            <th scope="col">Fecha de Ingreso</th>
+            <th   scope="col">Fecha de Egreso</th>
+            <th scope="col">Ver</th>
 
         </tr>
 
@@ -56,14 +55,14 @@
         @forelse($listados as $huesped)
 
 
-            <tr>
+            <tr align="center">
                 <th scope="row">{{ $huesped->id }}</th>
                 <td>{{ $huesped->nombres}} </td>
                 <td> {{ $huesped->apellidos }}</td>
                 <td>{{ $huesped->ingreso }}</td>
                 <td>{{ $huesped->egreso}}</td>
-                <td align="center"><a class="btn btn-outline-info" href="{{route('huesped.mostrar',['id' =>$huesped->id])}}">
-                        <img src="/imagenes/iconos/ver.svg" width="25" >
+                <td align="center"><a class="btn btn-outline-info" title="Ver" href="{{route('huesped.mostrar',['id' =>$huesped->id])}}">
+                        <img src="/imagenes/iconos/ver.svg" width="25" title="Ver" >
                     </a></td>
 
             </tr>

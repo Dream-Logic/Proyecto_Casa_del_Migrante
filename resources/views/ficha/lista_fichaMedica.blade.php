@@ -14,27 +14,33 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
+
     <div class="w3-container w3-teal mx-4" style="font-family: 'Raleway', sans-serif; text-align: center">
         <h6 class="mt-3" style="font-size: 30px; color: black;"><b>Listado de Expedientes Médicos</b></h6>
     </div>
     <br>
     <br>
-    <div class="unit-4 mx-4" style="float: right">
-        <a class="btn btn-outline-warning "href="{{route('ficha.index')}}">
-            <img src="/imagenes/iconos/agregarUsuario.svg" class="svg" width="25" >
-        </a>
 
-    </div>
 
-    <form class="form-inline my-2 my-lg-0 ml-auto" >
-        <input class="form-control mr-sm-2 col-3" name="name"
+    <form class="form-inline  my-lg-0 ml-auto" >
+        <input class="form-control mr-sm-2 col-4" name="name"
                type="search" placeholder="Buscar" aria-label="Search">
+        <div class="btn-toolbar" title="Buscar">
         <button class=" mr-sm-2 btn btn-success" type="submit">
-            <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
+            <img src="/imagenes/iconos/buscar.svg" class="svg" width="25" title="Buscar">
         </button>
+        </div>
+        <div class="btn-toolbar" title="Recargar el listado de huéspedes" >
         <a href="{{url('/fichaMedica/listados')}}" class="btn btn-warning">
-            <img src="/imagenes/iconos/automatic_updates.png" class="svg" width="25">
+            <img src="/imagenes/iconos/automatic_updates.png" class="svg" width="25" title="Recargar el listado de ficha médica">
         </a>
+        </div>
+        <div class="card-body d-flex justify-content-lg-end align-items-lg-end" title="">
+            <a class="btn btn-outline-primary "href="{{route('ficha.index')}}">
+                <img src="/imagenes/iconos/agregarUsuario.svg" class="svg" width="25" title="Agregar Nuevo" >
+            </a>
+        </div>
+
     </form>
     <br>
 
@@ -43,7 +49,7 @@
         <table class="table ruler-vertical table-hover mx-sm-0 table-bordered " >
 
             <thead class="thead-dark" >
-            <tr>
+            <tr align="center">
                 <th scope="col">N°</th>
                 <th scope="col">Hospital o Clínica</th>
                 <th scope="col">Médico</th>
@@ -53,12 +59,12 @@
                 <th scope="col">Tratamiento</th>
                 <th scope="col">Ver</th>
                 <th scope="col">Editar</th>
-                <th scope="col">Eliminar</th>
+                <th scope="col">Borrar</th>
             </tr>
             </thead>
             <tbody>
             @forelse($pacientes as $ficha)
-                <tr>
+                <tr >
                     <th scope="row">{{ $ficha->id }}</th>
                     <td>{{ $ficha->nombre_hospital}} </td>
                     <td> {{ $ficha->medico }}</td>
@@ -67,20 +73,20 @@
                     <td>{{ $ficha->enfermedad_paciente}}</td>
                     <td>{{ $ficha->tratamiento_paciente}}</td>
 
-                    <td><a class="btn btn-outline-info" href="{{route('fichas.mostrar', ['id' =>$ficha->id])}}">
-                            <img src="/imagenes/iconos/ver.svg" width="25" >
+                    <td><a class="btn btn-outline-info" title="Ver" href="{{route('fichas.mostrar', ['id' =>$ficha->id])}}">
+                            <img src="/imagenes/iconos/ver.svg" width="25" title="Ver" >
                         </a></td>
-                    <td><a class="btn btn-outline-warning" href="{{route('ficha.edit',['id' =>$ficha->id])}}" >
-                            <img src="/imagenes/iconos/editar.svg" class="svg" width="25" >
+                    <td><a class="btn btn-outline-warning" title="Editar" href="{{route('ficha.edit',['id' =>$ficha->id])}}" >
+                            <img src="/imagenes/iconos/editar.svg"  title="Editar" class="svg" width="25" >
                         </a>
                     </td>
                     <td>
-                        <a href="#" onclick="return confirm('Estás seguro que deseas eliminar el registro?');">
+                        <a href="#" title="Borrar" onclick="return confirm('¿Está seguro que desea eliminar el registro?');">
                             <form method="post" action="{{route('ficha.borrar',['id'=>$ficha->id])}}">
                                 @csrf
                                 @method('delete')
 
-                                <input  src="/imagenes/iconos/eliminar.svg" type="image" height="45" class="btn btn-outline-danger">
+                                <input title="Borrar" src="/imagenes/iconos/eliminar.svg" type="image" height="45" class="btn btn-outline-danger">
                             </form>
                         </a>
                     </td>

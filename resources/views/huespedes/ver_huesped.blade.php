@@ -4,6 +4,12 @@
     <br>
     <br>
     <br>
+    <section class="container">
+    <head>
+        <!-- CSRF Token -->
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        <meta charset="utf-8">
+    </head>
 
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -17,21 +23,24 @@
 
     @endif
     <br>
-    <div   style="background-color:  #0d95e8; height: 60px" >
-        <label class="card-title" style="color: black; height: 75px; margin-left: 40px; margin-top: 18px">
-            Información de {{$huesped->nombres}} {{$huesped->apellidos}} </label>
+        <form class="form-inline  my-lg-0 ml-auto"  style="background-color:
+         #0d95e8;" >
+            <label class="j" style="color: black; margin-top: 0px">
+              Información de {{$huesped->nombres}} {{$huesped->apellidos}} </label>
 
-        <button  class="mr-sm-2 btn btn-warning float-right "  title="Imprimir"
-                 style="margin-top: 4px"
-                 type="button"   onclick="window.print()" >
-            <img src="/imagenes/iconos/impre.png" class="svg" width="30px" title="Imprimir">
-        </button>
-    </div>
+            <div class="card-body d-flex justify-content-lg-end align-items-lg-end" >
+                <a class="btn btn-warning "
+                    onclick="window.print()" >
+                    <img src="/imagenes/iconos/impre.png" class="svg" width="25px" title="Imprimir">
+                </a>
+            </div>
+        </form>
+
     <center>
-        <div class="col-2" ><br>
-            <div class="row" >
+        <form class="col-md-12 justify-content-center" ><br>
+            <div class="" >
                 <div class="form-group {{ $errors->has('imagen') ? ' has-error' : '' }}"style="width: 90%">
-                    <img width="200px"  id="previewImagen" style="max-height:200px"
+                    <img width="150px"  id="previewImagen" style="max-height:150px"
                          src="{{"/foto/".$huesped->imagen}}"
                          />
 
@@ -49,15 +58,18 @@
                     />
                 </div>
             </div>
-        </div>
+        </form>
     </center>
     <div class="ver">
         <div class="table-responsive" style="-moz-box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);
     box-shadow: 0px 5px 3px 3px rgba(194,194,194,1);">
         <table  class="table ruler-vertical table-hover mx-sm-0 table-bordered ">
             <thead class="mx-4" style="background-color: #0d95e8">
-            <tr class="mx-4" >
-                <th scope="col"><h6  style="  font-weight: bold;">Datos personales del huesped</h6></th>
+
+
+
+            <tr class="col-md-10 text-align-last: center" >
+                <th class="" scope="col"><h6  style="  font-weight: bold;">Datos personales del huésped</h6></th>
                 <th scope="col"><h6  style="  font-weight: bold;">Detalles</h6></th>
 
             </tr>
@@ -137,8 +149,8 @@
             </tr>
 
             @foreach($responsables as $responsable)
-                <tr style="background-color: #0d95e8">
-                    <th><h6>Datos Personales de la Madre, Padre y/o Resposable Legal</h6></th>
+                <tr class="col-md-10 text-align-last: center" style="background-color: #0d95e8; font-weight: bold" >
+                    <th><h6 style="font-weight: bold">Datos Personales de la Madre, Padre y/o Resposable Legal</h6></th>
                     <th></th>
                 </tr>
 
@@ -196,8 +208,8 @@
 
 
             @foreach($narracion as $narra)
-                <tr style="background-color: #0d95e8">
-                    <th align="center"><h6 >Narración de los Hechos</h6></th>
+                <tr class="col-md-10 text-align-last: center" style="background-color: #0d95e8">
+                    <th align="center" ><h6 style="font-weight: bold">Narración de los Hechos</h6></th>
 
                     <th></th>
                 </tr>
@@ -222,8 +234,10 @@
     </div>
     <br>
     <br>
-        <div class="footer-copyright text-center py-3" style="color: #0d95e8">
+        <div class="footer-copyright text-center py-3" style="color: #0d95e8; font-weight: bold">
             Proyecto Casa del Migrante
 
         </div>
+    </div>
+    </section>
 @endsection
