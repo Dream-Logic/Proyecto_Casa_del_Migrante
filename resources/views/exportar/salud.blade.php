@@ -17,6 +17,7 @@
                 <tr class="mx-4" >
 
                     <th scope="col"><h6  style="  font-weight: bold;">Datos personales del Listado de Salud</h6></th>
+                    <th scope="col"><h6 style="  font-weight: bold;">Detalles</h6></th>
 
                 </tr>
                 </thead>
@@ -93,6 +94,88 @@
                     <th scope="row">Tratamiento</th>
                     <td>{{ $huesped->tratamiento }}</td>
                 </tr>
+                @foreach($responsables as $responsable)
+                    @if( $responsable->id_huesped == $huesped->id )
+                        <tr class="col-md-10 text-align-last: center" style="background-color: #0d95e8; font-weight: bold" >
+                            <th><h6 style="font-weight: bold">Datos Personales de la Madre, Padre y/o Resposable Legal</h6></th>
+                            <th></th>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Parentesco</th>
+                            <td>{{ $responsable->parentesco}}</td>
+
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Nombres</th>
+                            <td>{{ $responsable->nombres}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Apellidos</th>
+                            <td>{{ $responsable->apellidos}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Fecha de Nacimiento</th>
+                            <td>{{ $responsable->fnacimiento}}</td>
+                        </tr>
+                        <tr>
+                        <tr>
+                            <th scope="row">Dirección</th>
+                            <td>{{ $responsable->direccion }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Trabaja</th>
+                            <td>{{ $responsable->trabaja}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Profesión u Oficio</th>
+                            <td>{{ $responsable->profesionOficio }}</td>
+                        </tr>
+                        <tr>
+                        <tr>
+                            <th scope="row">Identidad</th>
+                            <td>{{ $responsable->identidad }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Pasaporte</th>
+                            <td>{{ $responsable->pasaporte }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Estado Civil</th>
+                            <td>{{ $responsable->civil }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Teléfono</th>
+                            <td>{{ $responsable->telefono }}</td>
+                        </tr>
+
+                    @endif
+                @endforeach
+
+
+                @foreach($narracion as $narra)
+                    @if( $narra->id_huesped == $huesped->id)
+                        <tr class="col-md-10 text-align-last: center" style="background-color: #0d95e8">
+                            <th align="center" ><h6 style="font-weight: bold">Narración de los Hechos</h6></th>
+
+                            <th></th>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Vulneración de derechos</th>
+                            <td>{{ $narra->vulneracion}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Medidas de protección</th>
+                            <td>{{ $narra->proteccion}}</td>
+                        </tr>
+                        <tr>
+
+                        <tr>
+                    @endif
+                @endforeach
+
                 <tr></tr>
                 </tbody>
             </table>

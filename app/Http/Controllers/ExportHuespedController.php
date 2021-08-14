@@ -18,33 +18,33 @@ class ExportHuespedController extends Controller
 
      public function export()
     {
-return Excel::download(new HuespedExport, 'Huesped.xlsx');
+return Excel::download(new HuespedExport, 'Listado de Huesped.xlsx');
         // return (new HuespedExport)->download('Huesped.pdf', \Maatwebsite\Excel\Excel::DOMPDF);
     }
 
     public function prueba(){
-        return (new HuespedExport)->download('Huesped.pdf', \Maatwebsite\Excel\Excel::DOMPDF);
+        return (new HuespedExport)->download('Listado de Huesped.pdf', \Maatwebsite\Excel\Excel::DOMPDF);
    }
 
 
     public function egreso()
     {
-        return Excel::download(new EgresosExport, 'egreso.xlsx');
+        return Excel::download(new EgresosExport, 'Listado de egreso.xlsx');
         // return (new HuespedExport)->download('Huesped.pdf', \Maatwebsite\Excel\Excel::DOMPDF);
     }
 
     public function egresopdf(){
-        return (new EgresosExport)->download('egreso.pdf', \Maatwebsite\Excel\Excel::DOMPDF);
+        return (new EgresosExport)->download('Listado de egreso.pdf', \Maatwebsite\Excel\Excel::DOMPDF);
     }
 
     public function salud()
     {
-        return Excel::download(new SaludExport(), 'salud.xlsx');
+        return Excel::download(new SaludExport(), 'Listado de salud.xlsx');
         // return (new HuespedExport)->download('Huesped.pdf', \Maatwebsite\Excel\Excel::DOMPDF);
     }
 
     public function saludpdf(){
-        return (new SaludExport())->download('salud.pdf', \Maatwebsite\Excel\Excel::DOMPDF);
+        return (new SaludExport())->download('Listado de salud.pdf', \Maatwebsite\Excel\Excel::DOMPDF);
     }
 
 //}

@@ -3,6 +3,7 @@
 namespace App\Exports;
 
 use App\Huesped;
+use App\NarracionHecho;
 use Illuminate\Contracts\View\View;
 use Maatwebsite\Excel\Concerns\Exportable;
 use Maatwebsite\Excel\Concerns\FromCollection;
@@ -88,7 +89,9 @@ class SaludExport implements FromView,ShouldAutoSize ,WithMapping, WithHeadings
     public function view(): View
     {
         $Huesped= Huesped::all()->where("enfermedad", "!=", "")->where("egreso", "=", "");
-        return View('exportar.salud')->withSalud($Huesped);
+        $responsables = \App\Responsable::all();
+        $narracion = NarracionHecho::all();
+        return View('exportar.salud')->withSalud($Huesped)->withResponsables($responsables)->withNarracion($narracion);
 
     }
 }

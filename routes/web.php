@@ -165,7 +165,44 @@ Route::group(["middleware" => "auth"], function () {
             ->name('evento.borrar');
 
         //-------------------------------------------Rutas EPORTAR A PDF Y A EXCEL-------------------------------------
+        //---------------------------------------- ExPORTAR A PDF Y A EXCEL Administrador------------------------------------------
+        Route::get('/huesped/export','ExportHuespedController@export');
+        Route::get('/pdfH/pdf','ExportHuespedController@pdf');
+        Route::get('/pruebas/pdf','ExportHuespedController@prueba');
 
+        //---------------------------------------- ExPORTAR A PDF Y A EXCEL Administrado Empleado--------------------------------------
+        Route::get('/empleado/export','ExportEmpleadoController@export');
+
+        Route::get('/pruebaemple/pdf','ExportEmpleadoController@prueba');
+        //---------------------------------------- ExPORTAR A PDF Y A EXCEL Administrado Empleado------------------------------
+        Route::get('/egreso/export','ExportHuespedController@egreso');
+
+        Route::get('/pruebaegreso/pdf','ExportHuespedController@egresopdf');
+
+        Route::get('/salud/export','ExportHuespedController@salud');
+
+        Route::get('/pruebasalud/pdf','ExportHuespedController@saludpdf');
+        //---------------------------------------- ExPORTAR A PDF Y A EXCEL Administrado EScolaridad---------------------------
+        Route::get('/estudiante/export','ExportEscolaridadController@export');
+        Route::get('/pruebaestule/pdf','ExportEscolaridadController@prueba');
+        //---------------------------------------- ExPORTAR A PDF Y A EXCEL Administrado FichaMedica---------------------------
+        Route::get('/fichamedic/export','ExportFichaMedicaController@export');
+
+        Route::get('/pruebafichame/pdf','ExportFichaMedicaController@prueba');
+        //---------------------------------------- listado egreso Administrador--------------------------------------------------
+        Route::get('/descarga', 'paginaPrincipal_controller@descarga')
+            ->name('listado.descarga');
+
+        //---------------------------------------- Calendario--------------------------------------------------
+        Route::get('Evento/index', 'ControllerEvent@index')
+            ->name('evento.index');
+        Route::get('Evento/index/{month}', 'ControllerEvent@index_month');
+        //---------------------------------------- Formulario--------------------------------------------------
+        Route::get('Evento/form', 'ControllerEvent@form');
+        Route::post('Evento/create', 'ControllerEvent@create');
+        //---------------------------------------- Detalles de evento--------------------------------------------------
+        Route::get('Evento/details/{id}', 'ControllerEvent@details');
+        Route::get('evento/form','ControllerEvent@form');
 
     });
 //-------------------------------------------Aqui van todas las rutas de Administrador-------------------------------------
@@ -214,46 +251,11 @@ Route::group(["middleware" => "auth"], function () {
     Route::get('/estudiante/{id}', 'EstudianteController@show')
         ->name('estudiante.mostrar')
         ->where('id', '[0-9]+');
-    //---------------------------------------- ExPORTAR A PDF Y A EXCEL Administrador------------------------------------------
-    Route::get('/huesped/export','ExportHuespedController@export');
-    Route::get('/pdfH/pdf','ExportHuespedController@pdf');
-    Route::get('/pruebas/pdf','ExportHuespedController@prueba');
 
-    //---------------------------------------- ExPORTAR A PDF Y A EXCEL Administrado Empleado--------------------------------------
-    Route::get('/empleado/export','ExportEmpleadoController@export');
-
-    Route::get('/pruebaemple/pdf','ExportEmpleadoController@prueba');
-    //---------------------------------------- ExPORTAR A PDF Y A EXCEL Administrado Empleado------------------------------
-    Route::get('/egreso/export','ExportHuespedController@egreso');
-
-    Route::get('/pruebaegreso/pdf','ExportHuespedController@egresopdf');
-
-    Route::get('/salud/export','ExportHuespedController@salud');
-
-    Route::get('/pruebasalud/pdf','ExportHuespedController@saludpdf');
-    //---------------------------------------- ExPORTAR A PDF Y A EXCEL Administrado EScolaridad---------------------------
-    Route::get('/estudiante/export','ExportEscolaridadController@export');
-    Route::get('/pruebaestule/pdf','ExportEscolaridadController@prueba');
-    //---------------------------------------- ExPORTAR A PDF Y A EXCEL Administrado FichaMedica---------------------------
-    Route::get('/fichamedic/export','ExportFichaMedicaController@export');
-
-    Route::get('/pruebafichame/pdf','ExportFichaMedicaController@prueba');
-    //---------------------------------------- listado egreso Administrador--------------------------------------------------
-    Route::get('/descarga', 'paginaPrincipal_controller@descarga')
-        ->name('listado.descarga');
     //---------------------------------------- listado egreso Administrador--------------------------------------------------
     Route::get('/egresosdirec', 'paginaPrincipal_controller@egresodirec')
         ->name('lista.egresod');
-    //---------------------------------------- Calendario--------------------------------------------------
-    Route::get('Evento/index', 'ControllerEvent@index')
-    ->name('evento.index');
-    Route::get('Evento/index/{month}', 'ControllerEvent@index_month');
-    //---------------------------------------- Formulario--------------------------------------------------
-    Route::get('Evento/form', 'ControllerEvent@form');
-    Route::post('Evento/create', 'ControllerEvent@create');
-    //---------------------------------------- Detalles de evento--------------------------------------------------
-    Route::get('Evento/details/{id}', 'ControllerEvent@details');
-    Route::get('evento/form','ControllerEvent@form');
+
     //---------------------------------------- Calendario Admin--------------------------------------------------
     Route::get('Evento/admin', 'ControllerEvent@calendarioadmin');
 

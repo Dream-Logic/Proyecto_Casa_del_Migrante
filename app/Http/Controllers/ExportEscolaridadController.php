@@ -11,12 +11,12 @@ class ExportEscolaridadController extends Controller
     //
     public function export()
     {
-        return Excel::download(new EscolaridadExport, 'Estudiante.xlsx');
+        return Excel::download(new EscolaridadExport, 'Listado de Escolaridad Escolaridad.xlsx');
         // return (new HuespedExport)->download('Huesped.pdf', \Maatwebsite\Excel\Excel::DOMPDF);
     }
 
     public function prueba(){
-        return (new EscolaridadExport)->download('Estudiante.pdf', \Maatwebsite\Excel\Excel::DOMPDF);
+        return (new EscolaridadExport)->download('Listado de Escolaridad.pdf', \Maatwebsite\Excel\Excel::DOMPDF);
     }
 
 }

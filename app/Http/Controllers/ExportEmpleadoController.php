@@ -12,12 +12,12 @@ class ExportEmpleadoController extends Controller
 
     public function export()
     {
-        return Excel::download(new EmpleadsExport, 'Empleado.xlsx');
+        return Excel::download(new EmpleadsExport, 'Listado del Personal.xlsx');
         // return (new HuespedExport)->download('Huesped.pdf', \Maatwebsite\Excel\Excel::DOMPDF);
     }
 
     public function prueba(){
-        return (new EmpleadsExport)->download('Empleado.pdf', \Maatwebsite\Excel\Excel::DOMPDF);
+        return (new EmpleadsExport)->download('Listado del Personal.pdf', \Maatwebsite\Excel\Excel::DOMPDF);
     }
 
 

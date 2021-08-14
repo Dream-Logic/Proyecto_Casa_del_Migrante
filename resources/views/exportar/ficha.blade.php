@@ -16,7 +16,8 @@
 
                 <tr class="mx-4" >
 
-                    <th scope="col"><h6  style="  font-weight: bold;">Datos personales del Egresado</h6></th>
+                    <th scope="col"><h6  style="  font-weight: bold;">Datos de la Fica Médica</h6></th>
+                    <th scope="col"><h6 style="  font-weight: bold;">Detalles</h6></th>
 
                 </tr>
                 </thead>

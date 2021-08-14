@@ -141,7 +141,7 @@
                         <img src="/imagenes/iconos_formulario/sexo.svg" style="margin-left: 50px" class="svg" width="25" height="35">
                         <label for="sexo">sexo</label><br>
                         <select class="form-control" name="sexo">
-                            <option value="femenina" @if($huesped->sexo === "femenino") selected='selected' @endif>
+                            <option value="femenino" @if($huesped->sexo === "femenino") selected='selected' @endif>
                                 Femenino
                             </option>
                             <option value="masculino" @if($huesped->sexo === "masculino") selected='selected' @endif>

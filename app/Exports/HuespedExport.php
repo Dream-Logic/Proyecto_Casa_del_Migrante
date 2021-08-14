@@ -3,6 +3,7 @@
 namespace App\Exports;
 
 use App\Huesped;
+use App\NarracionHecho;
 use Illuminate\Contracts\Support\Responsable;
 use Illuminate\Contracts\View\View;
 use Maatwebsite\Excel\Concerns\Exportable;
@@ -85,7 +86,10 @@ class HuespedExport implements FromView,ShouldAutoSize ,WithMapping, WithHeading
     public function view(): View
 {
     $Huesped= Huesped::all()->where("egreso", "=", "");
-    return View('exportar.huesped')->withhuespedes($Huesped);
+    $responsables = \App\Responsable::all();
+    $narracion = NarracionHecho::all();
+    return View('exportar.huesped')->withhuespedes($Huesped)->withResponsables($responsables)->withNarracion($narracion);
 
 }
+
 }
