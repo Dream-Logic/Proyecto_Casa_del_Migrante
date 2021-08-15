@@ -9,7 +9,7 @@
     @endif
     <br>
     <br>
-    <br>
+
     <head>
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -20,16 +20,19 @@
     </div>
     <br>
     <br>
-
-    </div>
-    <form class="form-inline my-2  my-lg-0 ml-auto">
-        <input class="form-control mr-sm-2 col-3" name="name" type="search" aria-label="Search" placeholder="Buscar">
-        <button class="mr-sm-2 btn btn-success" type="submit">
-            <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
+    <form class="form-inline  my-lg-0 ml-auto" >
+        <input class="form-control mr-sm-2 col-4" name="name" type="search"
+               aria-label="Search" placeholder="Buscar">
+        <div class="btn-toolbar" title="Buscar">
+        <button class="mr-sm-2 btn btn-success" type="submit" title="Buscar">
+            <img src="/imagenes/iconos/busque.png" class="svg" width="20" title="Buscar">
         </button>
-        <a href="{{url('/empleado/lista')}}" class="btn btn-warning">
-            <img src="/imagenes/iconos/restaurar.svg" class="svg" width="25">
+        </div>
+        <div class="btn-toolbar" title="Recargar el listado de huéspedes" >
+        <a href="{{url('/empleado/lista')}}" class="btn btn-warning" title="Recargar listado de empleados">
+            <img src="/imagenes/iconos/automatic_updates.png" class="svg" width="20" title="Recagar listado de emppleados">
         </a>
+        </div>
     </form>
     <br>
 
@@ -38,7 +41,8 @@
         <table class="table ruler-vertical table-hover mx-sm-0 table-bordered">
             <thead class="thead-dark">
             <tr align="center">
-                <th scope="col">N°</th>
+
+            <th scope="col">N°</th>
                 <th scope="col">Nombres</th>
                 <th scope="col">Apellidos</th>
                 <th scope="col">Profesión u Oficio</th>
@@ -74,8 +78,6 @@
             @endforelse
 
             </tbody>
-
-
         </table>
     </div>
     <br>

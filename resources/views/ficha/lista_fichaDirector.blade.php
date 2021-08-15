@@ -23,11 +23,11 @@
     <form class="form-inline my-2 my-lg-0 ml-auto" >
         <input class="form-control mr-sm-2 col-4" name="name"
                type="search" placeholder="Buscar" aria-label="Search">
-        <button class=" mr-sm-2 btn btn-success" type="submit">
-            <img src="/imagenes/iconos/busque.png" class="svg" width="25">
+        <button class=" mr-sm-2 btn btn-success" type="submit" title="Buscar">
+            <img src="/imagenes/iconos/busque.png" class="svg" width="20" title="Buscar">
         </button>
-        <a href="{{url('/fichaMedica/lista')}}" class="btn btn-warning">
-            <img src="/imagenes/iconos/automatic_updates.png" class="svg" width="25">
+        <a href="{{url('/fichaMedica/lista')}}" class="btn btn-warning" title="Recargar listado médico">
+            <img src="/imagenes/iconos/automatic_updates.png" class="svg" width="20" title="Recargar listado médico">
         </a>
     </form>
     <br>
@@ -60,8 +60,8 @@
                     <td>{{ $ficha->enfermedad_paciente}}</td>
                     <td>{{ $ficha->tratamiento_paciente}}</td>
 
-                    <td><a class="btn btn-outline-info" href="{{route('fichas.mostrar',['id' =>$ficha->id])}}">
-                            <img src="/imagenes/iconos/ver.svg" width="25" >
+                    <td><a class="btn btn-outline-info" title="Ver" href="{{route('fichas.mostrar',['id' =>$ficha->id])}}">
+                            <img src="/imagenes/iconos/ver.svg" title="Ver" width="25" >
                         </a></td>
                 </tr>
             @empty

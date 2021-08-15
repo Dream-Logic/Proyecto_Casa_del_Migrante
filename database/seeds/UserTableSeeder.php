@@ -13,17 +13,17 @@ class UserTableSeeder extends Seeder
     {
         //
         $user = new \App\User();
-        $user->name = "Administrador";
-        $user->email = "montielkarina1@gmail.com";
-        $user->password = bcrypt("admin");
+        $user->name = "Director";
+        $user->email = "casadeladirec@gmail.com";
+        $user->password = bcrypt("direc2020");
         $user->is_admin = true;
         $user->save();
-        $user = new \App\User();
+      /*  $user = new \App\User();
         $user->name = "Director";
         $user->email = "direc@admin.com";
         $user->password = bcrypt("direc");
         $user->is_admin = true;
-        $user->save();
+        $user->save();*/
         $user = new \App\User();
         $user->name = "Administrador";
         $user->email = "admin@admin.com";

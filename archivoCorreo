@@ -1,0 +1,8 @@
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=465
+MAIL_USERNAME=casadelmigrante0703@gmail.com
+MAIL_PASSWORD=gwnsvauryknvbwme
+MAIL_ENCRYPTION=ssl
+MAIL_FROM_ADDRESS=casadelmigrante0703@gmail.com
+MAIL_FROM_NAME="Casa del Migrante"

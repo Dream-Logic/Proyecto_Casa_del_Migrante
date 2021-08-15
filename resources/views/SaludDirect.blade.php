@@ -20,12 +20,12 @@
     <br>
 
         <form class="form-inline my-2 my-lg-0 ">
-            <input class="form-control mr-sm-2 col-3 " name="name" type="search" aria-label="Search" placeholder="Buscar">
-            <button class=" mr-sm-2 btn btn-success" type="submit">
-                <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
+            <input class="form-control mr-sm-2 col-4 " name="name" type="search" aria-label="Search" placeholder="Buscar">
+            <button class=" mr-sm-2 btn btn-success" type="submit" title="Buscar">
+                <img src="/imagenes/iconos/busque.png" class="svg" width="20" title="Buscar">
             </button>
-            <a href="{{url('/saludDi')}}" class="btn btn-warning">
-                <img src="/imagenes/iconos/automatic_updates.png" class="svg" width="25">
+            <a href="{{url('/saludDi')}}" class="btn btn-warning" title="Recargar listado de salud">
+                <img src="/imagenes/iconos/automatic_updates.png" class="svg" width="20" title="Recargar listado de salud">
             </a>
         </form>
    <br>
@@ -58,8 +58,8 @@
                 <td> {{ $huesped->apellidos }}</td>
                 <td>{{ $huesped->enfermedad }}</td>
                 <td>{{ $huesped->tratamiento}}</td>
-                <td align="center"><a class="btn btn-outline-info" href="{{route('huesped.mostrar',['id' =>$huesped->id])}}">
-                        <img src="/imagenes/iconos/ver.svg" width="25" >
+                <td align="center"><a class="btn btn-outline-info" title="Ver" href="{{route('huesped.mostrar',['id' =>$huesped->id])}}">
+                        <img src="/imagenes/iconos/ver.svg" width="25" title="Ver" >
                     </a></td>
 
             </tr>
@@ -72,7 +72,7 @@
         </tbody>
     </table>
 
-
+    </div>
 
     <script src="/js/jquery-3.2.1.min.js"></script>
     <script src="js/jquery-3.2.1.min.js"></script>

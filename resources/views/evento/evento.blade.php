@@ -44,14 +44,15 @@
         </table>
         <div class="form-inline  my-lg-0 ml-auto" >
         <div class="col-md trans text-center">
-            <a href="{{ asset('/Evento/index') }}" class="btn btn-warning" style="width: 50px;">
-                <img  src="/imagenes/iconos/restaurar.svg" class="svg" title="Regresar" height="20">
-            </a>
+
             <a href="#" onclick="return confirm('¿Está seguro que desea eliminar el registro?');">
                 <form method="post" action="{{route('evento.borrar',['id'=>$event->id])}}">
                     @csrf
                     @method('delete')
                     <input  title="Eliminar" src="/imagenes/iconos/eliminar.svg" type="image" width="50" height="35" class="btn btn-danger ">
+                    <a href="{{ asset('/Evento/index') }}" class="btn btn-warning" style="width: 50px;">
+                        <img  src="/imagenes/iconos/restaurar.svg" class="svg" title="Regresar" height="20">
+                    </a>
                 </form>
                 <br>
 

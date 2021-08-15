@@ -123,7 +123,7 @@
         <br>
         <script src="/js/jquery-3.2.1.min.js"></script>
     </div>
-    <div class="footer-copyright text-center py-3" style="color: #0d95e8">
+    <div  class="footer-copyright text-center py-3" style="color: #0d95e8; font-weight: bold" >
         Proyecto Casa del Migrante
     </div>
     </section>

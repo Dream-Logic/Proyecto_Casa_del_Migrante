@@ -231,8 +231,8 @@ class EmpleadoController extends Controller
             'direccion_personal' => 'required',
             'profesionPersonal' => 'required',
             'cargo' => 'required',
-            'email' => 'nullable',
-            'telefono_personal' => 'required']);
+            'email' => 'nullable|email|max:255|unique:empleados',
+            'telefono_personal' => '']);
 
         $personal = Empleado::findOrFail($id);
 

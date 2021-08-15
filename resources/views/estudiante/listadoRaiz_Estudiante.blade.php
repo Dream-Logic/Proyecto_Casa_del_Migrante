@@ -20,20 +20,26 @@
     </div>
     <br>
     <br>
-    <div class="unit-4 mx-4" style="float: right">
-        <a class="btn btn-outline-warning " href="{{route('estudiante.estudiante')}}">
-            <img src="/imagenes/iconos/agregarUsuario.svg" class="svg" width="25">
-        </a>
-    </div>
-    <form class="form-inline my-2  my-lg-0 ml-auto">
 
-        <input class="form-control mr-sm-2 col-3" name="name" type="search" placeholder="Buscar" aria-label="Search">
+    <form class="form-inline  my-lg-0 ml-auto">
+
+        <input class="form-control mr-sm-2 col-4" name="name" type="search"
+               placeholder="Buscar" aria-label="Search">
+        <div class="btn-toolbar" title="Buscar">
         <button class="  mr-sm-2 btn btn-success" type="submit">
             <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
         </button>
-        <a href="{{route('listadoEstudiante.index')}}" class="btn btn-warning">
-            <img src="/imagenes/iconos/automatic_updates.png" class="svg" width="25">
+        </div>
+        <div class="btn-toolbar"  >
+        <a href="{{route('listadoEstudiante.index')}}" class="btn btn-warning"  title="Recargar el listado de estudiantes">
+            <img src="/imagenes/iconos/automatic_updates.png" class="svg" width="25"  title="Recargar el listado de estudiantes">
         </a>
+        </div>
+        <div class="card-body d-flex justify-content-lg-end align-items-lg-end" >
+            <a class="btn btn-outline-primary" href="{{route('estudiante.estudiante')}}"  title="Agregue nuevo estudiante">
+                <img src="/imagenes/iconos/agregarUsuario.svg" class="svg" width="25"  title="Agregue nuevo estudiante">
+            </a>
+        </div>
 
     </form>
     <br>
@@ -62,20 +68,20 @@
                     <td>{{ $estudiante->grado}}</td>
                     <td>{{ $estudiante->carrera}}</td>
 
-                    <td align="center"><a class="btn btn-outline-info" href="{{route('estudiante.mostrar',['id' =>$estudiante->id])}}">
-                            <img src="/imagenes/iconos/ver.svg" width="25" >
+                    <td align="center"><a class="btn btn-outline-info" title="Ver" href="{{route('estudiante.mostrar',['id' =>$estudiante->id])}}">
+                            <img src="/imagenes/iconos/ver.svg" width="25" title="Ver" >
                         </a></td>
-                    <td align="center"><a class="btn btn-outline-warning" href="{{route('estudiante.edit',['id' =>$estudiante->id])}}" >
-                            <img src="/imagenes/iconos/editar.svg" class="svg" width="25" >
+                    <td align="center"><a title="Editar" class="btn btn-outline-warning" href="{{route('estudiante.edit',['id' =>$estudiante->id])}}" >
+                            <img title="Editar" src="/imagenes/iconos/editar.svg" class="svg" width="25" >
                         </a>
                     </td>
                     <td align="center">
-                        <a href="#" onclick="return confirm('Estás seguro que deseas eliminar el registro?');">
+                        <a href="#" title="Eliminar" onclick="return confirm('¿Está seguro que desea eliminar el registro?');">
                             <form method="post" action="{{route('estudiante.borrar',['id'=>$estudiante->id])}}">
                                 @csrf
                                  @method('delete')
 
-                                <input   src="/imagenes/iconos/eliminar.svg" type="image" height="45" value="Eliminar" class="btn btn-outline-danger">
+                                <input title="Eliminar"  src="/imagenes/iconos/eliminar.svg" type="image" height="45" value="Eliminar" class="btn btn-outline-danger">
                             </form>
                         </a>
                     </td>

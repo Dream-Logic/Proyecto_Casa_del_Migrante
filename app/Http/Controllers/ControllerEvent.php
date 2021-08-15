@@ -36,7 +36,7 @@ class ControllerEvent extends Controller
         $newEvent->save();
 
         // devuelve el mensaje de exito
-        return redirect()->route('evento.index')->with('mensaje', 'El huesped y todos sus datos fueron borrados completamente');
+        return redirect()->route('evento.index')->with('mensaje', 'El evento y todos sus datos fueron borrados completamente');
 
    }
 
@@ -55,7 +55,7 @@ class ControllerEvent extends Controller
 
        $event = Event::where('id', '=', $id);
        $event->delete();
-       return redirect()->route('evento.index')->withExito( 'ElEvento y todos sus datos fueron borrados completamente');
+       return redirect()->route('evento.index')->withExito( 'El evento y todos sus datos fueron borrados completamente');
 
     }
 

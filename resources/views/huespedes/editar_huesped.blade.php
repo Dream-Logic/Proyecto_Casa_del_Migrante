@@ -261,10 +261,10 @@
                         </span></div>
                     <br>
 
-                    <div class="col-md-5 justify-content-center"><br>
+                    <div class="col-md-10 justify-content-center"><br>
                         <img src="/imagenes/iconos_formulario/material-escolar.svg" style="margin-left: 50px" class="svg" width="25" height="35">
                         <label for="signos" style="color: #000000">Grado Escolar</label>
-                        <span class="col-md-5 col-md-offset-10 text-center">
+                        <span class="col-md-10 col-md-offset-10 text-center">
                         <textarea class="form-control" id="gradoEscolar" name="gradoEscolar" maxlength="500"
                                   placeholder="Describa el grado escolar del niño, niña o adolescente"
                                   rows="2">{{$huesped->gradoEscolar}}
@@ -273,10 +273,10 @@
                     <br>
 
 
-                    <div class="col-md-5 justify-content-center"><br>
+                    <div class="col-md-10 justify-content-center"><br>
                         <img src="/imagenes/iconos_formulario/fisico.svg" style="margin-left: 50px" class="svg" width="25" height="35">
                         <label for="signos">Signos Fisicos</label>
-                        <span class="col-md-5 col-md-offset-10 text-center">
+                        <span class="col-md-10 col-md-offset-10 text-center">
                         <textarea class="form-control" id="signosFisicos" name="signosFisicos" maxlength="500"
                                   placeholder="Lunares, cicatrices y otros. Describir"
                                   rows="2">{{$huesped->signosFisicos}}
@@ -285,23 +285,23 @@
                     <br>
 
 
-                    <div class="col-md-5 justify-content-center"><br>
+                    <div class="col-md-10 justify-content-center"><br>
                         <img src="/imagenes/iconos_formulario/fiebre.svg" style="margin-left: 50px" class="svg" width="25" height="35">
                         <label for="enfermedad">Enfermedad o padecimiento </label>
-                        <span class="col-md-5 col-md-offset-10 text-center">
+                        <span class="col-md-10 col-md-offset-10 text-center">
                         <textarea class="form-control" id="enfermedad" name="enfermedad"  maxlength="500"
-                                    placeholder="Describa la enfermedad o padecimiento" rows="2">{{$huesped->enfermedad}}
+                                    placeholder="Describa la enfermedad o padecimiento" >{{$huesped->enfermedad}}
                         </textarea><br>
                 </span></div>
                     <br>
 
 
-                    <div class="col-md-5 justify-content-center"><br>
+                    <div class="col-md-10 justify-content-center"><br>
                         <img src="/imagenes/iconos_formulario/medicamento.svg" style="margin-left: 50px" class="svg" width="25" height="35">
                         <label for="tratamiento">Tratamiento</label>
-                        <span class="col-md-5 col-md-offset-10 text-center">
+                        <span class="col-md-10 col-md-offset-10 text-center">
                         <textarea class="form-control" id="tratamiento" name="tratamiento" maxlength="500"
-                                placeholder="Describa el tratamiento que necesita" rows="2"  cols="136">{{$huesped->tratamiento}}
+                                placeholder="Describa el tratamiento que necesita" >{{$huesped->tratamiento}}
                         </textarea><br>
                 </span></div>
                     <br>

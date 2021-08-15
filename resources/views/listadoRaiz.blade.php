@@ -30,14 +30,14 @@
             <img src="/imagenes/iconos/busque.png" class="svg" width="20" title="Buscar">
         </button>
         </div>
-        <div class="btn-toolbar" title="Recargar el listado de huéspedes" >
-        <a href="{{url('/proyectos/listado')}}" class="btn btn-warning">
-            <img src="/imagenes/iconos/automatic_updates.png" class="svg" width="20">
+        <div class="btn-toolbar" >
+        <a href="{{url('/proyectos/listado')}}" class="btn btn-warning" title="Recargar listado de huéspedes">
+            <img src="/imagenes/iconos/automatic_updates.png" class="svg" width="20" title="Recargar listado de huéspedes" >
         </a>
         </div>
-        <div class="card-body d-flex justify-content-lg-end align-items-lg-end" title="Agregue un nuevo huéspedes">
-            <a class="btn btn-outline-primary "href="{{route('huesped.nuevo')}}">
-                <img src="/imagenes/iconos/agregarUsuario.svg" class="svg" width="20" >
+        <div class="card-body d-flex justify-content-lg-end align-items-lg-end" >
+            <a class="btn btn-outline-primary "href="{{route('huesped.nuevo')}}" title="Agregue un nuevo huéspedes">
+                <img src="/imagenes/iconos/agregarUsuario.svg" class="svg" width="20" title="Agregue un nuevo huéspedes">
             </a>
         </div>
     </form>

@@ -23,11 +23,11 @@
     <br>
         <form class="form-inline my-3 my-lg-0 ml-auto " >
             <input class="form-control mr-sm-2 col-3"  name="name" type="search" aria-label="Search" placeholder="Buscar">
-            <button class="   mr-sm-1 btn btn-success" type="submit">
-                <img src="/imagenes/iconos/busque.png" class="svg" width="25">
+            <button class="   mr-sm-1 btn btn-success" title="Buscar" type="submit">
+                <img src="/imagenes/iconos/busque.png" class="svg" title="Buscar" width="20">
             </button>
-            <a href="{{url('salud')}}" class="btn btn-warning">
-                <img src="/imagenes/iconos/automatic_updates.png" class="svg" width="25">
+            <a href="{{url('salud')}}" class="btn btn-warning" title="Recargar listado de salud">
+                <img src="/imagenes/iconos/automatic_updates.png" class="svg" width="20" title="Recargar listado de salud">
             </a>
         </form>
     <br>
@@ -54,8 +54,8 @@
                 <td> {{ $huesped->apellidos }}</td>
                 <td>{{ $huesped->enfermedad }}</td>
                 <td>{{ $huesped->tratamiento}}</td>
-                <td align="center"><a class="btn btn-outline-info" href="{{route('huesped.mostrar',['id' =>$huesped->id])}}">
-                        <img src="/imagenes/iconos/ver.svg" width="25" >
+                <td align="center"><a title="Ver" class="btn btn-outline-info" href="{{route('huesped.mostrar',['id' =>$huesped->id])}}">
+                        <img title="Ver" src="/imagenes/iconos/ver.svg" width="25" >
                     </a></td>
 
             </tr>

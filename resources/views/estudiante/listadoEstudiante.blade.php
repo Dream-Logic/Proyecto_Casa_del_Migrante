@@ -23,12 +23,12 @@
 
 
     <form class="form-inline my-2  my-lg-0 ml-auto">
-        <input class="form-control mr-sm-2 col-3" name="name" type="search" aria-label="Search" placeholder="Buscar">
-        <button class="mr-sm-2 btn btn-success" type="submit">
-            <img src="/imagenes/iconos/buscar.svg" class="svg" width="25">
+        <input class="form-control mr-sm-2 col-4" name="name" type="search" aria-label="Search" placeholder="Buscar">
+        <button class="mr-sm-2 btn btn-success" type="submit" title="Buscar">
+            <img src="/imagenes/iconos/busque.png" class="svg" width="20" title="Buscar">
         </button>
-        <a href="{{url('/estudiante/lista')}}" class="btn btn-warning">
-            <img src="/imagenes/iconos/restaurar.svg" class="svg" width="25">
+        <a href="{{url('/estudiante/lista')}}" class="btn btn-warning" title="Recargar listado de estudiantes">
+            <img src="/imagenes/iconos/automatic_updates.png" class="svg" width="20" title="Recargar listado de estudiantes">
         </a>
     </form>
     <br>
@@ -60,8 +60,8 @@
                     <td>{{ $estudiante->carrera}}</td>
                     <td>{{ $estudiante->escritura}}</td>
                     <td>{{ $estudiante->lectura}}</td>
-                    <td align="center"><a class="btn btn-info" href="{{route('estudiante.mostrar',['id' =>$estudiante->id])}}">
-                            <img src="/imagenes/iconos/ver.svg" width="25">
+                    <td align="center"><a class="btn btn-info" title="Ver" href="{{route('estudiante.mostrar',['id' =>$estudiante->id])}}">
+                            <img src="/imagenes/iconos/ver.svg" title="Ver" width="25">
                         </a>
                     </td>
 
