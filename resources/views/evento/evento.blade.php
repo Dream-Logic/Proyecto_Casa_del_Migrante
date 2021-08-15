@@ -13,6 +13,8 @@
         minimun-scale=1.0">
           <meta name="csrf-token" content="{{ csrf_token() }}">
 
+
+
           <br><br><br>
     <body>
     <div class="" style="-moz-box-shadow: 0px 5px 3px 3px rgb(194,194,194);
@@ -40,7 +42,7 @@
 
             </tbody>
         </table>
-        <form class="form-inline  my-lg-0 ml-auto" >
+        <div class="form-inline  my-lg-0 ml-auto" >
         <div class="col-md trans text-center">
             <a href="{{ asset('/Evento/index') }}" class="btn btn-warning" style="width: 50px;">
                 <img  src="/imagenes/iconos/restaurar.svg" class="svg" title="Regresar" height="20">
@@ -56,7 +58,7 @@
             </a>
             <br>
         </div>
-        </form>
+        </div>
     </div><br>
 
 

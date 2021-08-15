@@ -37,7 +37,7 @@
 				<span class="login100-form-title p-b-41">
                     <strong>Restablecer Contraseña</strong>
 				</span>
-            <form class="login100-form validate-form p-b-33 p-t-5" method="POST" action="{{ route('password.request') }}">
+            <form class="login100-form validate-form p-b-33 p-t-5" method="POST" action="{{ route('password.request1') }}">
                 {{ csrf_field() }}
 
                 <input type="hidden" name="token" value="{{ $token }}">

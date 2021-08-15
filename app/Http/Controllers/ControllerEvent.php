@@ -55,7 +55,7 @@ class ControllerEvent extends Controller
 
        $event = Event::where('id', '=', $id);
        $event->delete();
-       return redirect()->route('evento.index')->with('mensaje', 'ElEvento y todos sus datos fueron borrados completamente');
+       return redirect()->route('evento.index')->withExito( 'ElEvento y todos sus datos fueron borrados completamente');
 
     }
 

@@ -51,8 +51,17 @@
         <div class="w3-container w3-teal mx-4" style="font-family: 'Raleway', sans-serif; text-align: center;height: 100px" >
             <h6 class="mt-3" style="font-size: 40px; color: black; height: 30px; "><b>Calendario de Eventos</b></h6>
         </div>
+        @if(session("exito"))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{session("exito")}}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        @endif
 
       <form class="form-inline  my-lg-0 ml-auto" >
+
 
         <a class="btn btn-success btn-warning" title="Regresar a la pagina principal del director" href="{{route('index.index')}}">Regresar</a>
 
