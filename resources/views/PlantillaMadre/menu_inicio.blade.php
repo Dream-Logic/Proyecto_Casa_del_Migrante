@@ -92,6 +92,7 @@
                                     <a class="dropdown-item" href="{{ route('lista.egreso') }}">Egresados</a>
                                     <a class="dropdown-item" href="{{ route('ficha.listasFicha') }}">Ficha Medica</a>
                                     <a class="dropdown-item" href="{{ route('listadoEstudiante.index') }}">Listado de Estudiantes</a>
+                                    <a class="dropdown-item" href="{{ route('listado.descarga')}}">Listado de Zona de Descarga</a>
                                 </div>
                             </li>
                             <li><a href="{{ route('estadisticas.admin')}}" class="nav-link"><strong  style="font-size: 18px">Estadísticas</strong></a></li>

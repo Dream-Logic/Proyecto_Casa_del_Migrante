@@ -28,6 +28,8 @@
                 <div class="hero_slide_background"></div>
                 <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
                     <div class="hero_slide_content text-center" style="height:560px ">
+                        <br>
+                        <br>
                         <h6 style="color: white; font-size: 25px;height: 500px">Bienvenido Administrador(a) :</h6>
                     </div>
                 </div>
@@ -35,6 +37,7 @@
         </div>
     </div>
 </div>
+<br><br>
 
 <div class="hero_boxes"  >
     <div class="hero_boxes_inner"  >

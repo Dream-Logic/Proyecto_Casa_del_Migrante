@@ -38,8 +38,8 @@
             <tr align="center">
 
                 <th scope="col">Descarga de Archivos</th>
-                <th scope="col">Excel</th>
-                <th scope="col">Pdf</th>
+                <th scope="col">EXCEL</th>
+                <th scope="col">PDF</th>
 
             </tr>
             </thead>
@@ -56,7 +56,7 @@
 
 
 
-                    <td> <a href="{{ asset('/pruebas/pdf') }}"class="btn btn-danger">  Descargar
+                    <td align="center"> <a href="{{ asset('/pruebas/pdf') }}"class="btn btn-danger">  Descargar
 
                         </a>
                     </td>
@@ -70,7 +70,7 @@
 
 
 
-                    <td> <a href="{{ asset('/pruebaemple/pdf') }}"class="btn btn-danger">  Descargar
+                    <td align="center"> <a href="{{ asset('/pruebaemple/pdf') }}"class="btn btn-danger">  Descargar
 
                         </a>
                     </td>
@@ -85,7 +85,7 @@
 
 
 
-                    <td> <a href="{{ asset('/pruebaestule/pdf') }}"class="btn btn-danger">  Descargar
+                    <td align="center"> <a href="{{ asset('/pruebaestule/pdf') }}"class="btn btn-danger">  Descargar
 
                         </a>
                     </td>
@@ -100,7 +100,7 @@
 
 
 
-                    <td> <a href="{{ asset('/pruebafichame/pdf') }}"class="btn btn-danger">  Descargar
+                    <td align="center"> <a href="{{ asset('/pruebafichame/pdf') }}"class="btn btn-danger">  Descargar
 
                         </a>
                     </td>
@@ -115,7 +115,7 @@
 
 
 
-                    <td> <a href="{{ asset('/pruebasalud/pdf') }}"class="btn btn-danger">  Descargar
+                    <td align="center"> <a href="{{ asset('/pruebasalud/pdf') }}"class="btn btn-danger">  Descargar
 
                         </a>
                     </td>
@@ -131,7 +131,7 @@
 
 
 
-                    <td> <a href="{{ asset('/pruebaegreso/pdf') }}"class="btn btn-danger">  Descargar
+                    <td align="center"> <a href="{{ asset('/pruebaegreso/pdf') }}"class="btn btn-danger">  Descargar
 
                         </a>
                     </td>

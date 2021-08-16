@@ -97,10 +97,11 @@
                                     <a class="dropdown-item" href="{{ route('saludDire.salu') }}">Listado de salud</a>
                                     <a class="dropdown-item" href="{{ route('listadoEst.director') }}">Listado de Estudiantes</a>
                                     <a class="dropdown-item" href="{{route('ficha.fichaDire')}}">Listado de Ficha Medica</a>
+
                                 </div>
                             </li>
                             <li><a href="{{ route('estadisticas.direc')}}" class="nav-link"><strong style="font-size: 18px">Estadísticas</strong></a></li>
-                            <li><a href="{{ asset('/Evento/index/') }}" class="nav-link"><strong style="font-size: 18px">Calendario</strong></a></li>
+                            <li><a href="{{asset('Evento/admin') }}" class="nav-link"><strong style="font-size: 18px">Calendario</strong></a></li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" style="font-size: 18px" class="nav-link dropdown-toggle" href="#" role="button"
                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
