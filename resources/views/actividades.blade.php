@@ -10,8 +10,13 @@
     <link rel="stylesheet" type="text/css" href="styles/responsive.css">
 </head>
 <body>
+
     <div class="container gallery-container" >
         <div id="container" style="margin: auto;">
+
+            <br>
+            <br>
+            <a class="btn btn-success btn-warning" title="Regresar a la pagina principal del director" href="{{route('index.index')}}">Volver</a>
             <h1>Galeria Histórica</h1>
             <p class="page-description text-center">Actividades realizadas en la Fundación</p>
             <div>

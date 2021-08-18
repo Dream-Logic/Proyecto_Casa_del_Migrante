@@ -98,15 +98,15 @@
                             <li><a href="{{ route('estadisticas.admin')}}" class="nav-link"><strong  style="font-size: 18px">Estadísticas</strong></a></li>
                             <li><a href="{{ asset('/Evento/index/') }}" class="nav-link"><strong  style="font-size:  18px">Calendario</strong></a></li>
                             <li class="nav-item dropdown">
-                                <a   style="font-size: 18px"id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                <a   style="font-size: 18px; font-weight: bold"id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre >
-                                    {{ Auth::user()->name }}
+                                     {{ Auth::user()->name }}
                                 </a>
                                 <div  class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a    class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Cerrar Sesión') }}
+                                        <strong>{{ __('Cerrar Sesión') }}</strong>
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none" >

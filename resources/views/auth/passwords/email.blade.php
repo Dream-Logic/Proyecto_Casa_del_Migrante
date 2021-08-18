@@ -69,6 +69,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
                     <button class="login100-form-btn">
                         Restablecer
                     </button>
+                    <a class=" login100-form-btn btn-danger" title="Regresar al Login" href="/login">Cancelar</a>
+
                 </div>
 
             </form>

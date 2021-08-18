@@ -81,7 +81,7 @@
                 <br>
                 <div class="trans text-center">
                 <input type="submit" class="btn btn-success" value="Guardar">
-
+                    <a class=" btn btn-danger" title="Regresar al Login" href="{{ asset('/Evento/index') }}">Cancelar</a>
 
                 </div>
                 <br>
