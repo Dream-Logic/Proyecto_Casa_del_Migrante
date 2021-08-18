@@ -68,6 +68,32 @@ Route::group(["middleware" => "auth"], function () {
         Route::put('/huesped/{id}/editar', 'HuespedController@update')
             ->name('huesped.update')
             ->where('id', '[0-9]+');
+
+
+
+
+        Route::get('/responsable/{id}/editar', 'ResponsableController@edit')
+            ->name('responsable.edit')
+            ->where('id', '[0-9]+');
+        Route::put('/responsable/{id}/editar', 'ResponsableController@update')
+            ->name('responsable.update')
+            ->where('id', '[0-9]+');
+
+
+        Route::get('/narracion/{id}/editar', 'NarracionController@edit')
+            ->name('narracion.edit')
+            ->where('id', '[0-9]+');
+        Route::put('/narracion/{id}/editar', 'NarracionController@update')
+            ->name('narracion.update')
+            ->where('id', '[0-9]+');
+
+
+
+
+
+
+
+
         Route::delete('/huesped/{id}/borrar', 'HuespedController@destroy')
             ->name('huesped.borrar')
             ->where('id', '[0-9]+');

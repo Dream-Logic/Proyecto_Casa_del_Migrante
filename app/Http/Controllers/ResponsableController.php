@@ -94,6 +94,8 @@ class ResponsableController extends Controller
     public function show($id)
     {
         //
+
+
     }
 
     /**
@@ -105,6 +107,8 @@ class ResponsableController extends Controller
     public function edit($id)
     {
         //
+        $responsables = Responsable::where('id_huesped', "=", $id)->get();
+        return view('huespedes.responsable_editar')->with('responsables', $responsables);
     }
 
     /**
@@ -117,6 +121,48 @@ class ResponsableController extends Controller
     public function update(Request $request, $id)
     {
         //
+        //select de la fichas ninios
+        $request->trabajaMadre;
+        $request->civil;
+        $request->parentesco;
+
+
+        $request->validate([
+
+            'nombres' => 'required',
+            'apellidos' => 'required',
+            'fnacimiento' => 'required',
+            'direccion' => 'required',
+            'trabaja' => 'required',
+            'profesionOficio' => 'required',
+            'identidad' => 'required',
+            'pasaporte' => 'nullable',
+            'civil' => 'required',
+            'telefono' => 'required|digits:8',
+            'parentesco' => 'required',
+        ]);
+
+        $responsables = Responsable::findOrFail($id);
+
+
+        //Datos Obtenidos del Formulario
+        $responsables->nombres = $request->input('nombres');
+        $responsables->apellidos = $request->input('apellidos');
+        $responsables->fnacimiento = $request->input('fnacimiento');
+        $responsables->direccion =$request->input('direccion');
+        $responsables->trabaja = $request->input('trabaja');
+        $responsables->profesionOficio = $request->input('profesionOficio');
+        $responsables->identidad = $request->input('identidad');
+        $responsables->pasaporte= $request->input('pasaporte');
+        $responsables->civil = $request->input('civil');
+        $responsables->telefono = $request->input('telefono');
+        $responsables->parentesco = $request->input('parentesco');
+        $responsables->save();
+        //todo retornar la vista del formulario crear responsable
+
+
+        return redirect()->route('listado.index',["id"=>$responsables->id])
+            ->with("exito", "Se edito correctamente el huesped");
     }
 
     /**

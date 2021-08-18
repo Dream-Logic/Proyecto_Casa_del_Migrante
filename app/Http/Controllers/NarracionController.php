@@ -81,6 +81,10 @@ class NarracionController extends Controller
     public function edit($id)
     {
         //
+        $narracion = NarracionHecho::findOrFail($id);
+
+        return view('huespedes.editar_responsable')
+            ->with('narracion', $narracion);
     }
 
     /**
@@ -93,6 +97,25 @@ class NarracionController extends Controller
     public function update(Request $request, $id)
     {
         //
+        //VALIDAR
+        $request->validate([
+
+            'vulneracion' => 'required',
+            'proteccion' => 'required',]);
+
+        $narracion = NarracionHecho::findOrFail($id);
+
+
+        //Datos Obtenidos del Formulario
+        $narracion->vulneracion = $request->input('vulneracion');
+        $narracion->proteccion = $request->input('proteccion');
+
+        $narracion->save();
+        //todo retornar la vista del formulario crear responsable
+
+
+        return redirect()->route('listado.index',["id"=>$narracion->id])
+            ->with("exito", "Se edito correctamente el huesped");
     }
 
     /**

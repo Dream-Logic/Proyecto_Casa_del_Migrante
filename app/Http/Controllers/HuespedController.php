@@ -244,9 +244,11 @@ class HuespedController extends Controller
     {
         //
         $huesped = Huesped::findOrFail($id);
+       // $narracion = NarracionHecho::where('id_huesped', "=", $id)->get();
+       $responsables = Responsable::where('id_huesped', "=", $id)->get();
 
         return view('huespedes.editar_huesped')
-            ->with('huesped', $huesped);
+            ->withResponsables($responsables)->with('huesped', $huesped);
     }
 
     /**
@@ -322,18 +324,27 @@ class HuespedController extends Controller
             $huesped->save();
             //todo retornar la vista del formulario crear responsable
 
+            $responsables = Responsable::where('id_huesped', "=", $id)->get();
 
-            return redirect()->route("listado.index")
-                ->with("exito", "Se edito correctamente el huesped");
+            if ($responsables->count()>0) {
+
+
+                return redirect()->route('responsable.update', ["id" => $huesped->id])
+                    ->with("exito", "Se edito correctamente el huesped");
+            }
+            else{
+                return redirect()->route('listado.index')
+                    ->with("exito", "Se edito correctamente el huesped");
+            }
 
         } else {
             $image_resize = Image::make($request->imagen->getRealPath());
-            $image_resize->resize(800, null, function($constraint) {
+            $image_resize->resize(800, null, function ($constraint) {
                 $constraint->aspectRatio();
                 $constraint->upsize();
             });
             $image_resize->orientate();
-            $nombre_archivo =time() . "." . $request->imagen->extension();
+            $nombre_archivo = time() . "." . $request->imagen->extension();
 
             $image_resize->save(public_path('foto/' . $nombre_archivo));
 
@@ -392,11 +403,21 @@ class HuespedController extends Controller
             $huesped->save();
 
             //todo retornar la vista del formulario crear responsable
+            $responsables = Responsable::where('id_huesped', "=", $id)->get();
 
+            if ($responsables->count() > 0) {
 
-            return redirect()->route("listado.index")
-                ->with("exito", "Se edito correctamente el huesped");
-        }
+                return redirect()->route('responsable.update', ["id" => $huesped->id])
+                    ->with("exito", "Se edito correctamente el huesped");
+            }
+        else{
+
+                return redirect()->route('listado.index')
+                    ->with("exito", "Se edito correctamente el huesped");
+            }
+
+    }
+
     }
 
     /**
